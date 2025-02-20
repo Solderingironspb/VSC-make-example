@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build project",
+            "type": "shell",
+            "command": "powershell.exe",
+            "args": [
+                "make all -j12"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Скомпилировать проект"
+        },
+        {
+            "label": "Clean project",
+            "type": "shell",
+            "command": "powershell.exe",
+            "args": [
+                "make clean"
+            ],
+            "problemMatcher": [],
+            "detail": "Очистить проект"
+        }
+    ]
+}

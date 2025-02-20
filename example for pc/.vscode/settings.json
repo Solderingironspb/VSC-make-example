@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "rtd_calculator.h": "c",
+        "stdint.h": "c",
+        "stdio.h": "c"
+    }
+}
