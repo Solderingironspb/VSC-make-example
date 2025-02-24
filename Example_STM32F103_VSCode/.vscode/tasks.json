@@ -1,0 +1,130 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Project", //Сборка проекта
+            "type": "shell",
+            "command": "make -j8 all",  // Команда для сборки проекта
+            "problemMatcher": [],
+            "detail": "Сборка проекта"
+        },
+        {
+            "label": "Get Memory Usage", //Получить информацию по состоянию памяти
+            "type": "shell",
+            "command": "powershell.exe",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", ".vscode/ps_scripts/memory_report.ps1",
+                "Debug/Example_STM32F103_VSCode.elf",
+                "Debug/Example_STM32F103_VSCode.map",
+                "20", //Размер RAM (KB)  Смотри ld файл
+                "64" //Размер FLASH (KB) Смотри ld файл
+            ],
+            "problemMatcher": [],
+            "detail": "Получение информации о памяти"
+        },
+        {
+            "label": "update_json_files", //Обновление JSON файлов в соответствии с Makefile
+            "type": "shell",
+            "command": "make update_json",  
+            "problemMatcher": [],
+            "detail": "Сборка проекта"
+        },
+        {
+            "label": "Run All Tasks", //Выполнить все задачи
+            "dependsOrder": "sequence",  // Выполнять задачи последовательно
+            "dependsOn": [
+                "Build Project",
+                "Get Memory Usage"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Запуск всех задач по очереди"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

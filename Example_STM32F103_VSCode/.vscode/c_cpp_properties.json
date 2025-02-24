@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Example_STM32F103_VSCode",
+            "includePath": [
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Drivers/CMSIS"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "-DSTM32F103xB"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "compilerPath": "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe",
+            "compilerArgs": [
+                "-mcpu=cortex-m3",
+                "-mthumb"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

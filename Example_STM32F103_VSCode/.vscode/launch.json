@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "Debug/Example_STM32F103_VSCode.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "gdbPath": "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb.exe",
+            "servertype": "openocd",
+            "serverpath": "C:/ST/tools/OpenOCD-20240916-0.12.0/bin/openocd.exe",  
+            "configFiles": [
+                "C:/ST/tools/OpenOCD-20240916-0.12.0/share/openocd/scripts/interface/stlink.cfg",
+                "C:/ST/tools/OpenOCD-20240916-0.12.0/share/openocd/scripts/target/stm32f1x.cfg"
+            ],
+            "svdFile": "C:/ST/tools/cmsis-svd-stm32/stm32f1/STM32F103.svd",
+            "liveWatch": {
+                "enabled": true
+            },
+            "preLaunchTask": "Run All Tasks"
+        }
+    ]
+}
