@@ -6,6 +6,12 @@
             "type": "shell",
             "command": "make -j8 all",  // Команда для сборки проекта
             "problemMatcher": [],
+            "presentation": {
+               "echo": false, // Отключает вывод команды задачи (* Executing task: ...)
+                "reveal": "always", // Показывает терминал (если нужно)
+                "focus": false, // Не переводить фокус на терминал
+                "panel": "shared" // Использовать общий терминал
+            },
             "detail": "Сборка проекта"
         },
         {
@@ -21,6 +27,12 @@
                 "64" //Размер FLASH (KB) Смотри ld файл
             ],
             "problemMatcher": [],
+            "presentation": {
+                "echo": false, // Отключает вывод команды задачи (* Executing task: ...)
+                 "reveal": "always", // Показывает терминал (если нужно)
+                 "focus": false, // Не переводить фокус на терминал
+                 "panel": "shared", // Использовать общий терминал
+            },
             "detail": "Получение информации о памяти"
         },
         {

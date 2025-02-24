@@ -3,8 +3,8 @@
         {
             "name": "Example_STM32F103_VSCode",
             "includePath": [
-                "${workspaceFolder}/Core/Inc",
-                "${workspaceFolder}/Drivers/CMSIS"
+                "Core/Inc",
+                "Drivers/CMSIS"
             ],
             "defines": [
                 "_DEBUG",

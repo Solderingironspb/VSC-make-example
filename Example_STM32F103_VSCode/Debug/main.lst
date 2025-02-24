@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s 			page 1
   45              		@ args = 0, pretend = 0, frame = 0
   46              		@ frame_needed = 1, uses_anonymous_args = 0
   47 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s 			page 2
 
 
   48              	.LCFI0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s 			page 1
   91              		.loc 1 17 21 discriminator 1
   92 0040 4FF40052 		mov	r2, #8192
   93 0044 1A61     		str	r2, [r3, #16]
-ARM GAS  C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s 			page 3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s 			page 3
 
 
   18:Core/Src/main.c ****         Delay_ms(100);
@@ -154,18 +154,18 @@ ARM GAS  C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s 			page 1
  122              		.file 3 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h"
  123              		.file 4 "Drivers/CMSIS/stm32f103xb.h"
  124              		.file 5 "Core/Inc/stm32f103xx_CMSIS.h"
-ARM GAS  C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s 			page 4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s:22     .bss.Counter:00000000 Counter
-C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s:19     .bss.Counter:00000000 $d
-C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s:29     .data.Text:00000000 Text
-C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s:26     .data.Text:00000000 $d
-C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s:34     .text.main:00000000 $t
-C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s:40     .text.main:00000000 main
-C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s:112    .text.main:00000064 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s:22     .bss.Counter:00000000 Counter
+C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s:19     .bss.Counter:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s:29     .data.Text:00000000 Text
+C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s:26     .data.Text:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s:34     .text.main:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s:40     .text.main:00000000 main
+C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s:112    .text.main:00000064 $d
                            .group:00000000 wm4.0.d9432509ec5305882a7a94b501b92427
                            .group:00000000 wm4.stm32f1xx.h.39.208bb8a61c892b7c37d899c49a031330
                            .group:00000000 wm4.stm32f103xb.h.38.ec967d5ad9d3269cb0788eebda048e38
@@ -214,7 +214,7 @@ C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s:112    .text.main:00000064 $d
 UNDEFINED SYMBOLS
 CMSIS_Debug_init
 CMSIS_RCC_SystemClock_72MHz
-ARM GAS  C:\Users\Oleg\AppData\Local\Temp\ccQtftn0.s 			page 5
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cckbUTRQ.s 			page 5
 
 
 CMSIS_SysTick_Timer_init
