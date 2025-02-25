@@ -1,0 +1,126 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "-workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
+    },
+    {
+        "key": "f11",
+        "command": "-workbench.action.toggleFullScreen",
+        "when": "!isIOS"
+    },
+    {
+        "key": "f11",
+        "command": "-workbench.action.debug.stepInto",
+        "when": "debugState != 'inactive'"
+    },
+    {
+        "key": "f11",
+        "command": "-extension.node-debug.startWithStopOnEntry",
+        "when": "!inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'node' || !inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'pwa-extensionHost' || !inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'pwa-node'"
+    },
+    {
+        "key": "ctrl+f11",
+        "command": "-workbench.action.debug.stepIntoTarget",
+        "when": "inDebugMode && stepIntoTargetsSupported && debugState == 'stopped'"
+    },
+    {
+        "key": "f11",
+        "command": "workbench.action.debug.start",
+        "when": "!inDebugMode"
+    },
+    {
+        "key": "ctrl+f11",
+        "command": "-workbench.action.debug.start",
+        "when": "!inDebugMode"
+    },
+    {
+        "key": "f6",
+        "command": "-workbench.action.debug.stepOver",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "f6",
+        "command": "-workbench.action.focusNextPart"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-workbench.debug.viewlet.action.copyValue",
+        "when": "focusedView == 'workbench.debug.variablesView' || focusedView == 'workbench.debug.watchExpressionsView'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-search.action.copyMatch",
+        "when": "fileMatchOrMatchFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-remote.tunnel.copyAddressInline",
+        "when": "tunnelViewFocus && tunnelType == 'Detected' && tunnelViewMultiSelection == 'undefined' || tunnelViewFocus && tunnelType == 'Forwarded' && tunnelViewMultiSelection == 'undefined'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-problems.action.copy",
+        "when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-keybindings.editor.copyKeybindingEntry",
+        "when": "inKeybindings && keybindingFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-keybindings.editor.copyKeybindingEntry",
+        "when": "inKeybindings && keybindingFocus && !whenFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-filesExplorer.copy",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-execCopy"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-editor.action.webvieweditor.copy",
+        "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-chat.inlineResourceAnchor.copyResource",
+        "when": "chatAttachmentResource"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-workbench.action.terminal.copyAndClearSelection",
+        "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-editor.action.clipboardCopyAction",
+        "when": "textInputFocus"
+    }
+
+]
