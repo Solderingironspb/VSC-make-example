@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<EmbeddedProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ToolchainID>6997eea3-ec00-40f1-b702-67bd5bc3d64c</ToolchainID>
+  <ToolchainVersion>
+    <GCC>10.3.1</GCC>
+    <GDB>(GNU</GDB>
+    <Revision>0</Revision>
+  </ToolchainVersion>
+  <BspID>com.sysprogs.arm.stm32</BspID>
+  <BspVersion>2025.01</BspVersion>
+  <McuID>STM32F103C8</McuID>
+  <MCUDefinitionFile>STM32F1xxxx/DeviceDefinitions/stm32f103xb.xml</MCUDefinitionFile>
+  <MCUProperties>
+    <Entries>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.primary_memory</Key>
+        <Value>flash</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.mcuoptions.ignore_startup_file</Key>
+      </KeyValue>
+    </Entries>
+  </MCUProperties>
+  <BSPSourceFolderName>Device-specific files</BSPSourceFolderName>
+  <MCUMakFile>stm32.mak</MCUMakFile>
+  <ReferencedFrameworks />
+  <FrameworkProperties>
+    <Entries />
+  </FrameworkProperties>
+  <TestFrameworkProperties>
+    <Entries />
+  </TestFrameworkProperties>
+</EmbeddedProfile>
