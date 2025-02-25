@@ -4,12 +4,12 @@
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
-            "executable": "Debug/Example_STM32F103_VSCode.elf",
+            "executable": "Debug/Example_STM32F103_VSCode.elf", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
             "request": "launch",
             "type": "cortex-debug",
             "gdbPath": "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb.exe",
             "servertype": "openocd",
-            "serverpath": "C:/ST/tools/OpenOCD-20240916-0.12.0/bin/openocd.exe",  
+            "serverpath": "C:/ST/tools/OpenOCD-20240916-0.12.0/bin/openocd.exe",
             "configFiles": [
                 "C:/ST/tools/OpenOCD-20240916-0.12.0/share/openocd/scripts/interface/stlink.cfg",
                 "C:/ST/tools/OpenOCD-20240916-0.12.0/share/openocd/scripts/target/stm32f1x.cfg"
@@ -18,7 +18,8 @@
             "liveWatch": {
                 "enabled": true
             },
-            "preLaunchTask": "Run All Tasks"
+            "preLaunchTask": "Run All Tasks",
+            "runToEntryPoint": "main", // Запустить программу до точки входа (main)
         }
     ]
 }

@@ -1,53 +1,107 @@
-{
+﻿{
     "version": "2.0.0",
     "tasks": [
+       
+       /*=============================== Сборка проекта ===================================*/
         {
             "label": "Build Project", //Сборка проекта
             "type": "shell",
-            "command": "make -j8 all",  // Команда для сборки проекта
+            "command": "make -j12 all",  // Команда для сборки проекта
+            "icon": {
+                "color": "terminal.ansiYellow",
+                "id": "tools"
+            },
             "problemMatcher": [],
             "presentation": {
-               "echo": false, // Отключает вывод команды задачи (* Executing task: ...)
+               "echo": true, // Отключает вывод команды задачи (* Executing task: ...)
                 "reveal": "always", // Показывает терминал (если нужно)
                 "focus": false, // Не переводить фокус на терминал
-                "panel": "shared" // Использовать общий терминал
+                "panel": "dedicated", // Использовать отдельный терминал
+                "clear": true //Стереть все, что было в терминале
             },
-            "detail": "Сборка проекта"
+            "detail": "Собрать проект"
         },
+        /*=============================== Сборка проекта ===================================*/
+        
+        /*=============================== Очистка проекта ===================================*/
         {
-            "label": "Get Memory Usage", //Получить информацию по состоянию памяти
+            "label": "Clean Project", //Очистка проекта
+            "type": "shell",
+            "command": "make -j12 clean",  // Команда для сборки проекта
+            "problemMatcher": [],
+            "icon": {
+                "color": "terminal.ansiRed",
+                "id": "trash"
+            },
+            "presentation": {
+               "echo": true, // Отключает вывод команды задачи (* Executing task: ...)
+                "reveal": "always", // Показывает терминал (если нужно)
+                "focus": false, // Не переводить фокус на терминал
+                "panel": "shared", // Использовать отдельный терминал
+                "clear": true //Стереть все, что было в терминале
+            },
+            "detail": "Собрать проект"
+        },
+        /*=============================== Очистка проекта ===================================*/
+
+        /*===================== Получить инфо по используемой памяти ========================*/
+        {
+            "label": "Build Analyzer", //Получить информацию по состоянию памяти
             "type": "shell",
             "command": "powershell.exe",
+            "icon": {
+                "color": "terminal.ansiGreen",
+                "id": "graph"
+            },
             "args": [
-                "-ExecutionPolicy", "Bypass",
-                "-File", ".vscode/ps_scripts/memory_report.ps1",
-                "Debug/Example_STM32F103_VSCode.elf",
-                "Debug/Example_STM32F103_VSCode.map",
+                "-ExecutionPolicy", "Bypass",   //Политика для powershell, чтоб дал запустить скрипт
+                "-File", ".vscode/ps_scripts/Build_Analyzer.ps1", //Расположение скрипта
+                //Введите свои настройки:
+                "Debug/Example_STM32F103_VSCode.elf",   //Расположение *.elf файла
+                "Debug/Example_STM32F103_VSCode.map",   //Расположение *.map файла
                 "20", //Размер RAM (KB)  Смотри ld файл
-                "64" //Размер FLASH (KB) Смотри ld файл
+                "64", //Размер FLASH (KB) Смотри ld файл
+                "false" //Отображать Memory Details(true/false)
             ],
             "problemMatcher": [],
             "presentation": {
                 "echo": false, // Отключает вывод команды задачи (* Executing task: ...)
                  "reveal": "always", // Показывает терминал (если нужно)
                  "focus": false, // Не переводить фокус на терминал
-                 "panel": "shared", // Использовать общий терминал
+                 "panel": "dedicated", // Использовать отдельный терминал
+                 "clear": true //Стереть все, что было в терминале
             },
             "detail": "Получение информации о памяти"
         },
+        /*===================== Получить инфо по используемой памяти ========================*/
+
+        /*================ Обновить JSON файлы в соответствии с Makefile ====================*/
         {
-            "label": "update_json_files", //Обновление JSON файлов в соответствии с Makefile
+            "label": "Makefile: Update JSON files (Experimental)", //Обновление JSON файлов в соответствии с Makefile
             "type": "shell",
-            "command": "make update_json",  
+            "command": "make update-json",  
+            "icon": {
+                "color": "terminal.ansiCyan",
+                "id": "json"
+            },
             "problemMatcher": [],
+            "presentation": {
+               "echo": true, // Отключает вывод команды задачи (* Executing task: ...)
+                "reveal": "always", // Показывает терминал (если нужно)
+                "focus": false, // Не переводить фокус на терминал
+                "panel": "dedicated", // Использовать отдельный терминал
+                "clear": true //Стереть все, что было в терминале
+            },
             "detail": "Сборка проекта"
         },
+                /*================ Обновить JSON файлы в соответствии с Makefile ====================*/
+
         {
             "label": "Run All Tasks", //Выполнить все задачи
             "dependsOrder": "sequence",  // Выполнять задачи последовательно
             "dependsOn": [
                 "Build Project",
-                "Get Memory Usage"
+                "Build Analyzer"
             ],
             "problemMatcher": [],
             "group": {
@@ -58,6 +112,35 @@
         }
     ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

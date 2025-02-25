@@ -1,5 +1,5 @@
 #include "main.h"
-
+#define HPP 2
 uint32_t Counter = 0;
 unsigned char Text[64] = "Привет Мир!\r\n";
 

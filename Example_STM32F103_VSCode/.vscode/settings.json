@@ -1,5 +1,3 @@
 {
-    "files.associations": {
-        "main.h": "c"
-    }
+    "cortex-debug.variableUseNaturalFormat": false
 }

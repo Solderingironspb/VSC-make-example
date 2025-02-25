@@ -162,7 +162,7 @@ $(BUILD_DIR):
 ##########################################################################
 
 update-json:
-	powershell.exe -executionpolicy bypass -File .vscode/ps_scripts/update_json.ps1 $(TARGET) $(BUILD_DIR)
+	powershell.exe -executionpolicy bypass -File .vscode/ps_scripts/Makefile_update_json.ps1 $(TARGET) $(BUILD_DIR)
 
 ##########################################################################
 # clean up (for Windows)
