@@ -3,8 +3,8 @@
         {
             "name": "Example_STM32F103_VSCode", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
             "includePath": [
-                "${workspaceFolder}/Core/Inc",
-                "${workspaceFolder}/Drivers/CMSIS"
+                "${workspaceFolder}/Core/Inc/**",
+                "${workspaceFolder}/Drivers/CMSIS/**"
             ],
             "defines": [
                 "DEBUG",

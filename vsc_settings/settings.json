@@ -10,32 +10,45 @@
     "workbench.startupEditor": "none",
     "chat.commandCenter.enabled": false,
     "workbench.colorTheme": "Default Dark+",
-    "editor.fontSize": 15,
-    "window.zoomLevel": -0.5,
-    "editor.fontFamily": "Consolas, 'Courier New', monospace",
-    "editor.lineHeight": 1.20,
-    "window.commandCenter": false,
+    "editor.fontFamily": "Consolas",
+    "editor.fontSize": 13,
+    "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
     "editor.quickSuggestionsDelay": 0,
     "editor.glyphMargin": true,
-    "editor.codeActionsOnSave": {
-
-    },
+    "editor.stickyScroll.enabled": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.codeActionsOnSave": {},
     "explorer.compactFolders": false,
-    "debug.console.fontSize": 14,
+    "debug.console.fontSize": 13,
     "security.workspace.trust.enabled": false,
     "C_Cpp.autocompleteAddParentheses": true,
     "C_Cpp.default.cppStandard": "c++17",
     "C_Cpp.default.cStandard": "c11",
     "workbench.activityBar.location": "top",
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
     "git.openRepositoryInParentFolders": "never",
     "terminal.integrated.showExitAlert": false,
     "terminal.integrated.lineHeight": 0,
     "terminal.integrated.fontFamily": "Consolas",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 13,
     "debug.toolBarLocation": "floating",
-    "editor.stickyScroll.enabled": false,
-    "vsicons.dontShowNewVersionMessage": true
-    
+    "mrsplugin.search.engineUsedEncoding": "UTF-8",
+    "window.commandCenter": false,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyleInactive": "underline",
+    "ShortcutMenuBar.navigateBack": false,
+    "ShortcutMenuBar.navigateForward": false,
+    "ShortcutMenuBar.openFilesList": false,
+    "ShortcutMenuBar.toggleTerminal": false,
+    "ShortcutMenuBar.beautify": false,
+    "ShortcutMenuBar.userButton01Command": "workbench.action.tasks.runTask|Build Project",
+    "macros": {
+        "stopDebugAndSwitchToExplorer": [
+            "workbench.action.debug.stop", // Остановить отладку
+            "workbench.view.explorer", // Переключиться на Explorer
+            "outline.focus" // Перевести фокус на Outline
+        ]
+    }
 }

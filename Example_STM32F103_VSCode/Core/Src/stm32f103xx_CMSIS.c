@@ -34,7 +34,6 @@
  *  Наверное это нужно настраивать в самом начале, еще до тактирования...
  ***************************************************************************************
  */
-
 void CMSIS_Debug_init(void) {
 	/**
 	*  Alternate function GPIO port
@@ -93,7 +92,6 @@ void CMSIS_Debug_init(void) {
  *  Reference Manual/см. п.3.2 Memory organization (стр. 49)
  ***************************************************************************************
  */
-
 void CMSIS_RCC_SystemClock_72MHz(void) {
 
 	/* Начнем с п. 7.3.1 Clock control register (RCC_CR)*/
@@ -461,7 +459,7 @@ When the processor is halted for debugging the counter does not decrement.*/
  *  PM0056 STM32F10xxx/20xxx/21xxx/L1xxxx Cortex®-M3 programming manual/
  *  см. п.4.5 SysTick timer (STK) (стр. 150)
  ***************************************************************************************
- */
+ **/
 void CMSIS_SysTick_Timer_init(void) {
 	/* п. 4.5.1 SysTick control and status register (STK_CTRL) (стр. 151)*/
 
@@ -562,7 +560,7 @@ volatile uint32_t Timeout_counter_ms = 0; //Переменная для тайм
  *  @breif Delay_ms
  *  @param   uint32_t Milliseconds - Длина задержки в миллисекундах
  ******************************************************************************
- */
+ **/
 void Delay_ms(uint32_t Milliseconds) {
 	Delay_counter_ms = Milliseconds;
 	while (Delay_counter_ms != 0) ;
@@ -574,7 +572,7 @@ void Delay_ms(uint32_t Milliseconds) {
  *  Список векторов(прерываний) можно найти в файле startup_stm32f103c8tx.S
  ******************************************************************************
  */
-void SysTick_Handler(void) {
+__WEAK void SysTick_Handler(void) {
 
 	SysTimer_ms++;
 
@@ -793,7 +791,6 @@ static void CMSIS_GPIO_Reg_Set(GPIO_TypeDef *GPIO, uint8_t* GPIO_Pin, uint8_t Co
  *		           GPIO_SPEED_50_MHZ 
  ***************************************************************************************
  */
-
 void CMSIS_GPIO_init(GPIO_TypeDef *GPIO, uint8_t GPIO_Pin, uint8_t Configuration_mode, uint8_t Type, uint8_t Speed) {
 	uint8_t CNF_Pos = 0;
 	if (GPIO == GPIOA) {
@@ -1663,8 +1660,8 @@ void CMSIS_USART1_Init(void) {
 
 	*/
 
-	MODIFY_REG(USART1->BRR, USART_BRR_DIV_Mantissa_Msk, 0x1D4 << USART_BRR_DIV_Mantissa_Pos);
-	MODIFY_REG(USART1->BRR, USART_BRR_DIV_Fraction_Msk, 0xC << USART_BRR_DIV_Fraction_Pos);
+	MODIFY_REG(USART1->BRR, USART_BRR_DIV_Mantissa_Msk, 0x27 << USART_BRR_DIV_Mantissa_Pos);
+	MODIFY_REG(USART1->BRR, USART_BRR_DIV_Fraction_Msk, 0x1 << USART_BRR_DIV_Fraction_Pos);
 
 	//27.6.4 Control register 1(USART_CR1)(см. стр 821 Reference Manual)
 	SET_BIT(USART1->CR1, USART_CR1_UE); //USART enable
