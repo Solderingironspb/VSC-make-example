@@ -1,23 +1,13 @@
-{
+﻿{
     "configurations": [
         {
             "name": "Example_STM32F103_VSCode", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
-            "includePath": [
-                "${workspaceFolder}/Core/Inc/**",
-                "${workspaceFolder}/Drivers/CMSIS/**"
-            ],
-            "defines": [
-                "DEBUG",
-                "STM32F103xB"
-                
-            ],
-            "intelliSenseMode": "gcc-arm",
-            "compilerPath": "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe",
-            "compilerArgs": [
-                "-mcpu=cortex-m3",
-                "-mthumb"
-            ],
-            "cStandard": "c11"
+            "includePath": ["${workspaceFolder}/Core/Inc/**", "${workspaceFolder}/Drivers/CMSIS/**"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "defines": ["DEBUG", "STM32F103xB"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "intelliSenseMode": "gcc-arm", //Стандартно "gcc-arm"
+            "compilerPath": "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "compilerArgs": ["-mcpu=cortex-m3", "-mfloat-abi=soft", "-specs=nano.specs", "-g3", "-O0", "-std=gnu11", "-DDEBUG", "-DSTM32F103xB", "-ICore/Inc", "-IDrivers/CMSIS", "-Wall", "-fdata-sections", "-ffunction-sections", "-MMD", "-MP", "-MF"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "cStandard": "c11" //Стандартно C11
         }
     ],
     "version": 4

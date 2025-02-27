@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s 			page 1
   41              		.global	main
   42              		.syntax unified
   43              		.thumb
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s 			page 2
 
 
   44              		.thumb_func
@@ -76,103 +76,100 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s 			page 1
   51              		@ args = 0, pretend = 0, frame = 0
   52              		@ frame_needed = 1, uses_anonymous_args = 0
   53 0000 80B5     		push	{r7, lr}
-  54              	.LCFI0:
-  55              		.cfi_def_cfa_offset 8
-  56              		.cfi_offset 7, -8
-  57              		.cfi_offset 14, -4
-  58 0002 82B0     		sub	sp, sp, #8
-  59              	.LCFI1:
-  60              		.cfi_def_cfa_offset 16
-  61 0004 02AF     		add	r7, sp, #8
-  62              	.LCFI2:
-  63              		.cfi_def_cfa 7, 8
+  54              		.cfi_def_cfa_offset 8
+  55              		.cfi_offset 7, -8
+  56              		.cfi_offset 14, -4
+  57 0002 82B0     		sub	sp, sp, #8
+  58              		.cfi_def_cfa_offset 16
+  59 0004 02AF     		add	r7, sp, #8
+  60              		.cfi_def_cfa 7, 8
    7:Core/Src/main.c ****     CMSIS_Debug_init();
-  64              		.loc 1 7 5
-  65 0006 FFF7FEFF 		bl	CMSIS_Debug_init
+  61              		.loc 1 7 5
+  62 0006 FFF7FEFF 		bl	CMSIS_Debug_init
    8:Core/Src/main.c ****     CMSIS_RCC_SystemClock_72MHz();
-  66              		.loc 1 8 5
-  67 000a FFF7FEFF 		bl	CMSIS_RCC_SystemClock_72MHz
+  63              		.loc 1 8 5
+  64 000a FFF7FEFF 		bl	CMSIS_RCC_SystemClock_72MHz
    9:Core/Src/main.c ****     CMSIS_SysTick_Timer_init();
-  68              		.loc 1 9 5
-  69 000e FFF7FEFF 		bl	CMSIS_SysTick_Timer_init
+  65              		.loc 1 9 5
+  66 000e FFF7FEFF 		bl	CMSIS_SysTick_Timer_init
   10:Core/Src/main.c ****     CMSIS_USART1_Init(); //115200 8N1
-  70              		.loc 1 10 5
-  71 0012 FFF7FEFF 		bl	CMSIS_USART1_Init
+  67              		.loc 1 10 5
+  68 0012 FFF7FEFF 		bl	CMSIS_USART1_Init
   11:Core/Src/main.c ****     CMSIS_GPIO_init(GPIOC, 13, GPIO_GENERAL_PURPOSE_OUTPUT, GPIO_OUTPUT_PUSH_PULL, GPIO_SPEED_50_MH
-  72              		.loc 1 11 5
-  73 0016 0323     		movs	r3, #3
-  74 0018 0093     		str	r3, [sp]
-  75 001a 0023     		movs	r3, #0
-  76 001c 0022     		movs	r2, #0
-  77 001e 0D21     		movs	r1, #13
-  78 0020 0C48     		ldr	r0, .L3
-  79 0022 FFF7FEFF 		bl	CMSIS_GPIO_init
-  80              	.L2:
+  69              		.loc 1 11 5
+  70 0016 0323     		movs	r3, #3
+  71 0018 0093     		str	r3, [sp]
+  72 001a 0023     		movs	r3, #0
+  73 001c 0022     		movs	r2, #0
+  74 001e 0D21     		movs	r1, #13
+  75 0020 0C48     		ldr	r0, .L3
+  76 0022 FFF7FEFF 		bl	CMSIS_GPIO_init
+  77              	.L2:
   12:Core/Src/main.c ****     
   13:Core/Src/main.c **** 
   14:Core/Src/main.c ****     while (1) {
   15:Core/Src/main.c ****         Counter++;
-  81              		.loc 1 15 16 discriminator 1
-  82 0026 0C4B     		ldr	r3, .L3+4
-  83 0028 1B68     		ldr	r3, [r3]
-  84 002a 0133     		adds	r3, r3, #1
-  85 002c 0A4A     		ldr	r2, .L3+4
-  86 002e 1360     		str	r3, [r2]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s 			page 3
-
-
+  78              		.loc 1 15 16 discriminator 1
+  79 0026 0C4B     		ldr	r3, .L3+4
+  80 0028 1B68     		ldr	r3, [r3]
+  81 002a 0133     		adds	r3, r3, #1
+  82 002c 0A4A     		ldr	r2, .L3+4
+  83 002e 1360     		str	r3, [r2]
   16:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
-  87              		.loc 1 16 9 discriminator 1
-  88 0030 094B     		ldr	r3, .L3+4
-  89 0032 1B68     		ldr	r3, [r3]
-  90 0034 1A46     		mov	r2, r3
-  91 0036 0949     		ldr	r1, .L3+8
-  92 0038 0948     		ldr	r0, .L3+12
-  93 003a FFF7FEFF 		bl	sprintf
+  84              		.loc 1 16 9 discriminator 1
+  85 0030 094B     		ldr	r3, .L3+4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s 			page 3
+
+
+  86 0032 1B68     		ldr	r3, [r3]
+  87 0034 1A46     		mov	r2, r3
+  88 0036 0949     		ldr	r1, .L3+8
+  89 0038 0948     		ldr	r0, .L3+12
+  90 003a FFF7FEFF 		bl	sprintf
   17:Core/Src/main.c ****         CMSIS_USART_Transmit(USART1, (unsigned char*)&Text, strlen((const char*)Text), 100);
-  94              		.loc 1 17 61 discriminator 1
-  95 003e 0848     		ldr	r0, .L3+12
-  96 0040 FFF7FEFF 		bl	strlen
-  97 0044 0346     		mov	r3, r0
-  98              		.loc 1 17 9 discriminator 1
-  99 0046 9AB2     		uxth	r2, r3
- 100 0048 6423     		movs	r3, #100
- 101 004a 0549     		ldr	r1, .L3+12
- 102 004c 0548     		ldr	r0, .L3+16
- 103 004e FFF7FEFF 		bl	CMSIS_USART_Transmit
+  91              		.loc 1 17 61 discriminator 1
+  92 003e 0848     		ldr	r0, .L3+12
+  93 0040 FFF7FEFF 		bl	strlen
+  94 0044 0346     		mov	r3, r0
+  95              		.loc 1 17 9 discriminator 1
+  96 0046 9AB2     		uxth	r2, r3
+  97 0048 6423     		movs	r3, #100
+  98 004a 0549     		ldr	r1, .L3+12
+  99 004c 0548     		ldr	r0, .L3+16
+ 100 004e FFF7FEFF 		bl	CMSIS_USART_Transmit
   15:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
- 104              		.loc 1 15 16 discriminator 1
- 105 0052 E8E7     		b	.L2
- 106              	.L4:
- 107              		.align	2
- 108              	.L3:
- 109 0054 00100140 		.word	1073811456
- 110 0058 00000000 		.word	Counter
- 111 005c 00000000 		.word	.LC0
- 112 0060 00000000 		.word	Text
- 113 0064 00380140 		.word	1073821696
- 114              		.cfi_endproc
- 115              	.LFE68:
- 117              		.text
- 118              	.Letext0:
- 119              		.file 2 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_default_
- 120              		.file 3 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h"
- 121              		.file 4 "Drivers/CMSIS/stm32f103xb.h"
- 122              		.file 5 "Core/Inc/stm32f103xx_CMSIS.h"
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s 			page 4
+ 101              		.loc 1 15 16 discriminator 1
+ 102 0052 E8E7     		b	.L2
+ 103              	.L4:
+ 104              		.align	2
+ 105              	.L3:
+ 106 0054 00100140 		.word	1073811456
+ 107 0058 00000000 		.word	Counter
+ 108 005c 00000000 		.word	.LC0
+ 109 0060 00000000 		.word	Text
+ 110 0064 00380140 		.word	1073821696
+ 111              		.cfi_endproc
+ 112              	.LFE68:
+ 114              		.text
+ 115              	.Letext0:
+ 116              		.file 2 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_default_
+ 117              		.file 3 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 118              		.file 4 "Drivers/CMSIS/stm32f103xb.h"
+ 119              		.file 5 "Core/Inc/stm32f103xx_CMSIS.h"
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:22     .bss.Counter:00000000 Counter
-C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:19     .bss.Counter:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:29     .bss.Text:00000000 Text
-C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:26     .bss.Text:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:32     .rodata:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:40     .text.main:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:46     .text.main:00000000 main
-C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:109    .text.main:00000054 $d
-                           .group:00000000 wm4.0.d9432509ec5305882a7a94b501b92427
+C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s:22     .bss.Counter:00000000 Counter
+C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s:19     .bss.Counter:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s:29     .bss.Text:00000000 Text
+C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s:26     .bss.Text:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s:32     .rodata:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s:40     .text.main:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s:46     .text.main:00000000 main
+C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s:106    .text.main:00000054 $d
+                           .group:00000000 wm4.0.57948b105342b2a9a91afe6dac72b4ef
                            .group:00000000 wm4.stm32f1xx.h.39.208bb8a61c892b7c37d899c49a031330
                            .group:00000000 wm4.stm32f103xb.h.38.ec967d5ad9d3269cb0788eebda048e38
                            .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
@@ -188,9 +185,9 @@ C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:109    .text.main:00000054 $d
                            .group:00000000 wm4.stm32f103xb.h.573.10249aa7473ca93be896fed94046a725
                            .group:00000000 wm4.stm32f1xx.h.162.96b09079a093c34dbd7f0b85cbd0ddee
                            .group:00000000 wm4.stdbool.h.29.07dce69c3b78884144b7f7bd19483461
-                           .group:00000000 wm4.newlib.h.8.7cb3972cd43265932d4782d5eb589854
+                           .group:00000000 wm4.newlib.h.8.4679f89e52c9f69cd44f3a27cd28c759
                            .group:00000000 wm4.ieeefp.h.77.25247dc27dbe3b23bfe98c2dc18f6ac5
-                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4.config.h.224.79362c3cdb280fe0b8d95bd0bc4d5c54
                            .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
                            .group:00000000 wm4.stdio.h.31.7c0e28c411445f3f9c5b11accf882760
                            .group:00000000 wm4.stddef.h.181.c3f52a3b0f4c288bddb5dda1562858e2
@@ -202,7 +199,9 @@ C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:109    .text.main:00000054 $d
                            .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
                            .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
                            .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
-                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.reent.h.77.32fd7d280fc2a40b0797abce5beaf6e3
+                           .group:00000000 wm4.assert.h.11.db24e541f16414db224bf986d21017e2
+                           .group:00000000 wm4.reent.h.504.40d20ade344680fbcb6a0178bf7ae09e
                            .group:00000000 wm4.types.h.40.8b6acba56cefbb11746718204edc8f5e
                            .group:00000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
                            .group:00000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
@@ -213,15 +212,15 @@ C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s:109    .text.main:00000054 $d
                            .group:00000000 wm4.sched.h.22.c60982713a5c428609783c78f9c78d95
                            .group:00000000 wm4._pthreadtypes.h.36.fcee9961c35163dde6267ef772ad1972
                            .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
-                           .group:00000000 wm4.stdio.h.81.932d0c162786b883f622b8d05c120c78
+                           .group:00000000 wm4.stdio.h.81.60a2ded7dae310b81f9d6907fe5e3dbf
                            .group:00000000 wm4.string.h.8.c4b8571ce60dff2817f43fec8b86aecd
                            .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
 
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccERINb5.s 			page 5
+
+
 UNDEFINED SYMBOLS
 CMSIS_Debug_init
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccirO9dY.s 			page 5
-
-
 CMSIS_RCC_SystemClock_72MHz
 CMSIS_SysTick_Timer_init
 CMSIS_USART1_Init

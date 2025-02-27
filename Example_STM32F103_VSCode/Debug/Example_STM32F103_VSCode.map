@@ -99,9 +99,13 @@ Discarded input sections
  .group         0x00000000        0xc Debug/main.o
  .group         0x00000000        0xc Debug/main.o
  .group         0x00000000        0xc Debug/main.o
+ .group         0x00000000        0xc Debug/main.o
+ .group         0x00000000        0xc Debug/main.o
  .text          0x00000000        0x0 Debug/main.o
  .data          0x00000000        0x0 Debug/main.o
  .bss           0x00000000        0x0 Debug/main.o
+ .group         0x00000000        0xc Debug/stm32f103xx_CMSIS.o
+ .group         0x00000000        0xc Debug/stm32f103xx_CMSIS.o
  .group         0x00000000        0xc Debug/stm32f103xx_CMSIS.o
  .group         0x00000000        0xc Debug/stm32f103xx_CMSIS.o
  .group         0x00000000        0xc Debug/stm32f103xx_CMSIS.o
@@ -219,7 +223,7 @@ Discarded input sections
                 0x00000000      0x11c Debug/stm32f103xx_CMSIS.o
  .text.FLASH_Read_data
                 0x00000000       0xa4 Debug/stm32f103xx_CMSIS.o
- .debug_macro   0x00000000      0xa60 Debug/stm32f103xx_CMSIS.o
+ .debug_macro   0x00000000      0xa66 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x2e Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x22 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x22 Debug/stm32f103xx_CMSIS.o
@@ -235,9 +239,9 @@ Discarded input sections
  .debug_macro   0x00000000     0xe09e Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x6d Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x22 Debug/stm32f103xx_CMSIS.o
- .debug_macro   0x00000000       0x64 Debug/stm32f103xx_CMSIS.o
+ .debug_macro   0x00000000       0x52 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x18 Debug/stm32f103xx_CMSIS.o
- .debug_macro   0x00000000       0x35 Debug/stm32f103xx_CMSIS.o
+ .debug_macro   0x00000000       0x3c Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x34 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x16 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x97 Debug/stm32f103xx_CMSIS.o
@@ -249,7 +253,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x34 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x10 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x58 Debug/stm32f103xx_CMSIS.o
- .debug_macro   0x00000000      0x182 Debug/stm32f103xx_CMSIS.o
+ .debug_macro   0x00000000       0x71 Debug/stm32f103xx_CMSIS.o
+ .debug_macro   0x00000000       0x1c Debug/stm32f103xx_CMSIS.o
+ .debug_macro   0x00000000      0x12a Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x10 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x1c Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x52 Debug/stm32f103xx_CMSIS.o
@@ -260,9 +266,11 @@ Discarded input sections
  .debug_macro   0x00000000       0x1c Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x3d Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x16 Debug/stm32f103xx_CMSIS.o
- .debug_macro   0x00000000      0x16f Debug/stm32f103xx_CMSIS.o
+ .debug_macro   0x00000000      0x145 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x16 Debug/stm32f103xx_CMSIS.o
  .debug_macro   0x00000000       0x35 Debug/stm32f103xx_CMSIS.o
+ .group         0x00000000        0xc Debug/stm32f103xx_it.o
+ .group         0x00000000        0xc Debug/stm32f103xx_it.o
  .group         0x00000000        0xc Debug/stm32f103xx_it.o
  .group         0x00000000        0xc Debug/stm32f103xx_it.o
  .group         0x00000000        0xc Debug/stm32f103xx_it.o
@@ -310,7 +318,7 @@ Discarded input sections
  .text          0x00000000        0x0 Debug/stm32f103xx_it.o
  .data          0x00000000        0x0 Debug/stm32f103xx_it.o
  .bss           0x00000000        0x0 Debug/stm32f103xx_it.o
- .debug_macro   0x00000000      0xa60 Debug/stm32f103xx_it.o
+ .debug_macro   0x00000000      0xa66 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x2e Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x22 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x22 Debug/stm32f103xx_it.o
@@ -326,9 +334,9 @@ Discarded input sections
  .debug_macro   0x00000000     0xe09e Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x6d Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x22 Debug/stm32f103xx_it.o
- .debug_macro   0x00000000       0x64 Debug/stm32f103xx_it.o
+ .debug_macro   0x00000000       0x52 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x18 Debug/stm32f103xx_it.o
- .debug_macro   0x00000000       0x35 Debug/stm32f103xx_it.o
+ .debug_macro   0x00000000       0x3c Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x34 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x16 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x97 Debug/stm32f103xx_it.o
@@ -340,7 +348,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x34 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x10 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x58 Debug/stm32f103xx_it.o
- .debug_macro   0x00000000      0x182 Debug/stm32f103xx_it.o
+ .debug_macro   0x00000000       0x71 Debug/stm32f103xx_it.o
+ .debug_macro   0x00000000       0x1c Debug/stm32f103xx_it.o
+ .debug_macro   0x00000000      0x12a Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x10 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x1c Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x52 Debug/stm32f103xx_it.o
@@ -351,9 +361,11 @@ Discarded input sections
  .debug_macro   0x00000000       0x1c Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x3d Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x16 Debug/stm32f103xx_it.o
- .debug_macro   0x00000000      0x16f Debug/stm32f103xx_it.o
+ .debug_macro   0x00000000      0x145 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x16 Debug/stm32f103xx_it.o
  .debug_macro   0x00000000       0x35 Debug/stm32f103xx_it.o
+ .group         0x00000000        0xc Debug/syscalls.o
+ .group         0x00000000        0xc Debug/syscalls.o
  .group         0x00000000        0xc Debug/syscalls.o
  .group         0x00000000        0xc Debug/syscalls.o
  .group         0x00000000        0xc Debug/syscalls.o
@@ -423,19 +435,18 @@ Discarded input sections
  .text._link    0x00000000       0x20 Debug/syscalls.o
  .text._fork    0x00000000       0x16 Debug/syscalls.o
  .text._execve  0x00000000       0x22 Debug/syscalls.o
- .debug_info    0x00000000      0x73a Debug/syscalls.o
- .debug_abbrev  0x00000000      0x182 Debug/syscalls.o
- .debug_loc     0x00000000      0x5b8 Debug/syscalls.o
+ .debug_info    0x00000000      0x6b2 Debug/syscalls.o
+ .debug_abbrev  0x00000000      0x180 Debug/syscalls.o
  .debug_aranges
                 0x00000000       0xa8 Debug/syscalls.o
  .debug_ranges  0x00000000       0x98 Debug/syscalls.o
- .debug_macro   0x00000000      0x23d Debug/syscalls.o
- .debug_macro   0x00000000      0xa60 Debug/syscalls.o
+ .debug_macro   0x00000000      0x24c Debug/syscalls.o
+ .debug_macro   0x00000000      0xa66 Debug/syscalls.o
  .debug_macro   0x00000000       0x22 Debug/syscalls.o
- .debug_macro   0x00000000       0x5e Debug/syscalls.o
+ .debug_macro   0x00000000       0x4c Debug/syscalls.o
  .debug_macro   0x00000000       0x18 Debug/syscalls.o
  .debug_macro   0x00000000       0x94 Debug/syscalls.o
- .debug_macro   0x00000000       0x35 Debug/syscalls.o
+ .debug_macro   0x00000000       0x3c Debug/syscalls.o
  .debug_macro   0x00000000       0x34 Debug/syscalls.o
  .debug_macro   0x00000000       0x57 Debug/syscalls.o
  .debug_macro   0x00000000      0x174 Debug/syscalls.o
@@ -445,7 +456,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x34 Debug/syscalls.o
  .debug_macro   0x00000000       0x10 Debug/syscalls.o
  .debug_macro   0x00000000       0x58 Debug/syscalls.o
- .debug_macro   0x00000000      0x182 Debug/syscalls.o
+ .debug_macro   0x00000000       0x71 Debug/syscalls.o
+ .debug_macro   0x00000000       0x1c Debug/syscalls.o
+ .debug_macro   0x00000000      0x12a Debug/syscalls.o
  .debug_macro   0x00000000       0x10 Debug/syscalls.o
  .debug_macro   0x00000000       0x35 Debug/syscalls.o
  .debug_macro   0x00000000       0x10 Debug/syscalls.o
@@ -471,12 +484,12 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 Debug/syscalls.o
  .debug_macro   0x00000000       0x10 Debug/syscalls.o
  .debug_macro   0x00000000       0x16 Debug/syscalls.o
- .debug_macro   0x00000000      0x16f Debug/syscalls.o
+ .debug_macro   0x00000000      0x145 Debug/syscalls.o
  .debug_macro   0x00000000      0x189 Debug/syscalls.o
  .debug_macro   0x00000000       0x16 Debug/syscalls.o
  .debug_macro   0x00000000       0xce Debug/syscalls.o
- .debug_line    0x00000000      0x581 Debug/syscalls.o
- .debug_str     0x00000000     0x848e Debug/syscalls.o
+ .debug_line    0x00000000      0x5da Debug/syscalls.o
+ .debug_str     0x00000000     0x89c1 Debug/syscalls.o
  .comment       0x00000000       0x4a Debug/syscalls.o
  .debug_frame   0x00000000      0x2ac Debug/syscalls.o
  .ARM.attributes
@@ -501,16 +514,18 @@ Discarded input sections
  .group         0x00000000        0xc Debug/sysmem.o
  .group         0x00000000        0xc Debug/sysmem.o
  .group         0x00000000        0xc Debug/sysmem.o
+ .group         0x00000000        0xc Debug/sysmem.o
+ .group         0x00000000        0xc Debug/sysmem.o
  .text          0x00000000        0x0 Debug/sysmem.o
  .data          0x00000000        0x0 Debug/sysmem.o
  .bss           0x00000000        0x0 Debug/sysmem.o
- .debug_macro   0x00000000      0xa60 Debug/sysmem.o
+ .debug_macro   0x00000000      0xa66 Debug/sysmem.o
  .debug_macro   0x00000000       0x10 Debug/sysmem.o
  .debug_macro   0x00000000       0x22 Debug/sysmem.o
- .debug_macro   0x00000000       0x5e Debug/sysmem.o
+ .debug_macro   0x00000000       0x4c Debug/sysmem.o
  .debug_macro   0x00000000       0x18 Debug/sysmem.o
  .debug_macro   0x00000000       0x94 Debug/sysmem.o
- .debug_macro   0x00000000       0x35 Debug/sysmem.o
+ .debug_macro   0x00000000       0x3c Debug/sysmem.o
  .debug_macro   0x00000000       0x34 Debug/sysmem.o
  .debug_macro   0x00000000      0x174 Debug/sysmem.o
  .debug_macro   0x00000000       0x16 Debug/sysmem.o
@@ -519,7 +534,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x34 Debug/sysmem.o
  .debug_macro   0x00000000       0x10 Debug/sysmem.o
  .debug_macro   0x00000000       0x58 Debug/sysmem.o
- .debug_macro   0x00000000      0x182 Debug/sysmem.o
+ .debug_macro   0x00000000       0x71 Debug/sysmem.o
+ .debug_macro   0x00000000       0x1c Debug/sysmem.o
+ .debug_macro   0x00000000      0x12a Debug/sysmem.o
  .debug_macro   0x00000000      0x103 Debug/sysmem.o
  .debug_macro   0x00000000       0x6a Debug/sysmem.o
  .debug_macro   0x00000000      0x1df Debug/sysmem.o
@@ -549,7 +566,7 @@ Discarded input sections
                 0x00000000        0x8 Debug/system_stm32f1xx.o
  .text.SystemCoreClockUpdate
                 0x00000000       0xe4 Debug/system_stm32f1xx.o
- .debug_macro   0x00000000      0xa60 Debug/system_stm32f1xx.o
+ .debug_macro   0x00000000      0xa66 Debug/system_stm32f1xx.o
  .debug_macro   0x00000000       0x2e Debug/system_stm32f1xx.o
  .debug_macro   0x00000000       0x22 Debug/system_stm32f1xx.o
  .debug_macro   0x00000000       0x22 Debug/system_stm32f1xx.o
@@ -1134,28 +1151,21 @@ LOAD c:/st/tools/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
 LOAD c:/st/tools/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 LOAD c:/st/tools/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a
 
-.debug_info     0x00000000     0x2171
- .debug_info    0x00000000      0x279 Debug/main.o
- .debug_info    0x00000279     0x194a Debug/stm32f103xx_CMSIS.o
- .debug_info    0x00001bc3      0x1c0 Debug/stm32f103xx_it.o
- .debug_info    0x00001d83      0x16e Debug/sysmem.o
- .debug_info    0x00001ef1      0x25e Debug/system_stm32f1xx.o
- .debug_info    0x0000214f       0x22 Debug/startup_stm32f103c8tx.o
+.debug_info     0x00000000     0x1ee6
+ .debug_info    0x00000000      0x252 Debug/main.o
+ .debug_info    0x00000252     0x173d Debug/stm32f103xx_CMSIS.o
+ .debug_info    0x0000198f      0x1a0 Debug/stm32f103xx_it.o
+ .debug_info    0x00001b2f      0x15f Debug/sysmem.o
+ .debug_info    0x00001c8e      0x236 Debug/system_stm32f1xx.o
+ .debug_info    0x00001ec4       0x22 Debug/startup_stm32f103c8tx.o
 
-.debug_abbrev   0x00000000      0x63d
- .debug_abbrev  0x00000000       0xe2 Debug/main.o
- .debug_abbrev  0x000000e2      0x29f Debug/stm32f103xx_CMSIS.o
- .debug_abbrev  0x00000381       0xc5 Debug/stm32f103xx_it.o
- .debug_abbrev  0x00000446       0xa8 Debug/sysmem.o
- .debug_abbrev  0x000004ee      0x13d Debug/system_stm32f1xx.o
- .debug_abbrev  0x0000062b       0x12 Debug/startup_stm32f103c8tx.o
-
-.debug_loc      0x00000000     0x1020
- .debug_loc     0x00000000       0x38 Debug/main.o
- .debug_loc     0x00000038      0xeb4 Debug/stm32f103xx_CMSIS.o
- .debug_loc     0x00000eec       0x44 Debug/stm32f103xx_it.o
- .debug_loc     0x00000f30       0x50 Debug/sysmem.o
- .debug_loc     0x00000f80       0xa0 Debug/system_stm32f1xx.o
+.debug_abbrev   0x00000000      0x655
+ .debug_abbrev  0x00000000       0xe0 Debug/main.o
+ .debug_abbrev  0x000000e0      0x2bf Debug/stm32f103xx_CMSIS.o
+ .debug_abbrev  0x0000039f       0xc3 Debug/stm32f103xx_it.o
+ .debug_abbrev  0x00000462       0xa6 Debug/sysmem.o
+ .debug_abbrev  0x00000508      0x13b Debug/system_stm32f1xx.o
+ .debug_abbrev  0x00000643       0x12 Debug/startup_stm32f103c8tx.o
 
 .debug_aranges  0x00000000      0x268
  .debug_aranges
@@ -1179,78 +1189,80 @@ LOAD c:/st/tools/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
  .debug_ranges  0x000001d8       0x18 Debug/system_stm32f1xx.o
  .debug_ranges  0x000001f0       0x20 Debug/startup_stm32f103c8tx.o
 
-.debug_macro    0x00000000    0x115bb
- .debug_macro   0x00000000      0x261 Debug/main.o
- .debug_macro   0x00000261      0xa60 Debug/main.o
- .debug_macro   0x00000cc1       0x2e Debug/main.o
- .debug_macro   0x00000cef       0x22 Debug/main.o
- .debug_macro   0x00000d11       0x22 Debug/main.o
- .debug_macro   0x00000d33       0x8e Debug/main.o
- .debug_macro   0x00000dc1       0x51 Debug/main.o
- .debug_macro   0x00000e12      0x103 Debug/main.o
- .debug_macro   0x00000f15       0x6a Debug/main.o
- .debug_macro   0x00000f7f      0x1df Debug/main.o
- .debug_macro   0x0000115e       0x1c Debug/main.o
- .debug_macro   0x0000117a       0x22 Debug/main.o
- .debug_macro   0x0000119c       0xbd Debug/main.o
- .debug_macro   0x00001259      0xd23 Debug/main.o
- .debug_macro   0x00001f7c     0xe09e Debug/main.o
- .debug_macro   0x0001001a       0x6d Debug/main.o
- .debug_macro   0x00010087       0x22 Debug/main.o
- .debug_macro   0x000100a9       0x64 Debug/main.o
- .debug_macro   0x0001010d       0x18 Debug/main.o
- .debug_macro   0x00010125       0x35 Debug/main.o
- .debug_macro   0x0001015a       0x34 Debug/main.o
- .debug_macro   0x0001018e       0x16 Debug/main.o
- .debug_macro   0x000101a4       0x97 Debug/main.o
- .debug_macro   0x0001023b      0x341 Debug/main.o
- .debug_macro   0x0001057c       0xfd Debug/main.o
- .debug_macro   0x00010679       0x10 Debug/main.o
- .debug_macro   0x00010689       0x16 Debug/main.o
- .debug_macro   0x0001069f       0x43 Debug/main.o
- .debug_macro   0x000106e2       0x34 Debug/main.o
- .debug_macro   0x00010716       0x10 Debug/main.o
- .debug_macro   0x00010726       0x58 Debug/main.o
- .debug_macro   0x0001077e      0x182 Debug/main.o
- .debug_macro   0x00010900       0x10 Debug/main.o
- .debug_macro   0x00010910       0x1c Debug/main.o
- .debug_macro   0x0001092c       0x52 Debug/main.o
- .debug_macro   0x0001097e       0x22 Debug/main.o
- .debug_macro   0x000109a0       0x10 Debug/main.o
- .debug_macro   0x000109b0       0x52 Debug/main.o
- .debug_macro   0x00010a02       0xd5 Debug/main.o
- .debug_macro   0x00010ad7       0x1c Debug/main.o
- .debug_macro   0x00010af3       0x3d Debug/main.o
- .debug_macro   0x00010b30       0x16 Debug/main.o
- .debug_macro   0x00010b46      0x16f Debug/main.o
- .debug_macro   0x00010cb5       0x16 Debug/main.o
- .debug_macro   0x00010ccb       0x35 Debug/main.o
- .debug_macro   0x00010d00      0x261 Debug/stm32f103xx_CMSIS.o
- .debug_macro   0x00010f61      0x26b Debug/stm32f103xx_it.o
- .debug_macro   0x000111cc       0xec Debug/sysmem.o
- .debug_macro   0x000112b8      0x23b Debug/sysmem.o
- .debug_macro   0x000114f3       0xc8 Debug/system_stm32f1xx.o
+.debug_macro    0x00000000    0x11601
+ .debug_macro   0x00000000      0x270 Debug/main.o
+ .debug_macro   0x00000270      0xa66 Debug/main.o
+ .debug_macro   0x00000cd6       0x2e Debug/main.o
+ .debug_macro   0x00000d04       0x22 Debug/main.o
+ .debug_macro   0x00000d26       0x22 Debug/main.o
+ .debug_macro   0x00000d48       0x8e Debug/main.o
+ .debug_macro   0x00000dd6       0x51 Debug/main.o
+ .debug_macro   0x00000e27      0x103 Debug/main.o
+ .debug_macro   0x00000f2a       0x6a Debug/main.o
+ .debug_macro   0x00000f94      0x1df Debug/main.o
+ .debug_macro   0x00001173       0x1c Debug/main.o
+ .debug_macro   0x0000118f       0x22 Debug/main.o
+ .debug_macro   0x000011b1       0xbd Debug/main.o
+ .debug_macro   0x0000126e      0xd23 Debug/main.o
+ .debug_macro   0x00001f91     0xe09e Debug/main.o
+ .debug_macro   0x0001002f       0x6d Debug/main.o
+ .debug_macro   0x0001009c       0x22 Debug/main.o
+ .debug_macro   0x000100be       0x52 Debug/main.o
+ .debug_macro   0x00010110       0x18 Debug/main.o
+ .debug_macro   0x00010128       0x3c Debug/main.o
+ .debug_macro   0x00010164       0x34 Debug/main.o
+ .debug_macro   0x00010198       0x16 Debug/main.o
+ .debug_macro   0x000101ae       0x97 Debug/main.o
+ .debug_macro   0x00010245      0x341 Debug/main.o
+ .debug_macro   0x00010586       0xfd Debug/main.o
+ .debug_macro   0x00010683       0x10 Debug/main.o
+ .debug_macro   0x00010693       0x16 Debug/main.o
+ .debug_macro   0x000106a9       0x43 Debug/main.o
+ .debug_macro   0x000106ec       0x34 Debug/main.o
+ .debug_macro   0x00010720       0x10 Debug/main.o
+ .debug_macro   0x00010730       0x58 Debug/main.o
+ .debug_macro   0x00010788       0x71 Debug/main.o
+ .debug_macro   0x000107f9       0x1c Debug/main.o
+ .debug_macro   0x00010815      0x12a Debug/main.o
+ .debug_macro   0x0001093f       0x10 Debug/main.o
+ .debug_macro   0x0001094f       0x1c Debug/main.o
+ .debug_macro   0x0001096b       0x52 Debug/main.o
+ .debug_macro   0x000109bd       0x22 Debug/main.o
+ .debug_macro   0x000109df       0x10 Debug/main.o
+ .debug_macro   0x000109ef       0x52 Debug/main.o
+ .debug_macro   0x00010a41       0xd5 Debug/main.o
+ .debug_macro   0x00010b16       0x1c Debug/main.o
+ .debug_macro   0x00010b32       0x3d Debug/main.o
+ .debug_macro   0x00010b6f       0x16 Debug/main.o
+ .debug_macro   0x00010b85      0x145 Debug/main.o
+ .debug_macro   0x00010cca       0x16 Debug/main.o
+ .debug_macro   0x00010ce0       0x35 Debug/main.o
+ .debug_macro   0x00010d15      0x270 Debug/stm32f103xx_CMSIS.o
+ .debug_macro   0x00010f85      0x27a Debug/stm32f103xx_it.o
+ .debug_macro   0x000111ff       0xff Debug/sysmem.o
+ .debug_macro   0x000112fe      0x23b Debug/sysmem.o
+ .debug_macro   0x00011539       0xc8 Debug/system_stm32f1xx.o
 
-.debug_line     0x00000000     0x23d8
- .debug_line    0x00000000      0x408 Debug/main.o
- .debug_line    0x00000408     0x15a3 Debug/stm32f103xx_CMSIS.o
- .debug_line    0x000019ab      0x444 Debug/stm32f103xx_it.o
- .debug_line    0x00001def      0x277 Debug/sysmem.o
- .debug_line    0x00002066      0x2ee Debug/system_stm32f1xx.o
- .debug_line    0x00002354       0x84 Debug/startup_stm32f103c8tx.o
+.debug_line     0x00000000     0x253c
+ .debug_line    0x00000000      0x461 Debug/main.o
+ .debug_line    0x00000461     0x15fc Debug/stm32f103xx_CMSIS.o
+ .debug_line    0x00001a5d      0x49d Debug/stm32f103xx_it.o
+ .debug_line    0x00001efa      0x2d0 Debug/sysmem.o
+ .debug_line    0x000021ca      0x2ee Debug/system_stm32f1xx.o
+ .debug_line    0x000024b8       0x84 Debug/startup_stm32f103c8tx.o
 
-.debug_str      0x00000000    0x58f09
- .debug_str     0x00000000    0x57f2c Debug/main.o
-                              0x581ce (size before relaxing)
- .debug_str     0x00057f2c      0x9e1 Debug/stm32f103xx_CMSIS.o
-                              0x58c7f (size before relaxing)
- .debug_str     0x0005890d       0x53 Debug/stm32f103xx_it.o
-                              0x5813a (size before relaxing)
- .debug_str     0x00058960      0x4cf Debug/sysmem.o
-                               0x573f (size before relaxing)
- .debug_str     0x00058e2f       0xa7 Debug/system_stm32f1xx.o
-                              0x54586 (size before relaxing)
- .debug_str     0x00058ed6       0x33 Debug/startup_stm32f103c8tx.o
+.debug_str      0x00000000    0x59435
+ .debug_str     0x00000000    0x58458 Debug/main.o
+                              0x58701 (size before relaxing)
+ .debug_str     0x00058458      0x9e1 Debug/stm32f103xx_CMSIS.o
+                              0x591b2 (size before relaxing)
+ .debug_str     0x00058e39       0x53 Debug/stm32f103xx_it.o
+                              0x5866d (size before relaxing)
+ .debug_str     0x00058e8c      0x4cf Debug/sysmem.o
+                               0x5d17 (size before relaxing)
+ .debug_str     0x0005935b       0xa7 Debug/system_stm32f1xx.o
+                              0x5458f (size before relaxing)
+ .debug_str     0x00059402       0x33 Debug/startup_stm32f103c8tx.o
                                  0x58 (size before relaxing)
 
 .comment        0x00000000       0x49
