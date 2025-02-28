@@ -24,11 +24,13 @@ OPEN_OCD_BIN_PATH = $(OPEN_OCD_PATH)/bin/openocd.exe
 OPEN_OCD_INTERFACE_PATH = $(OPEN_OCD_PATH)/share/openocd/scripts/interface/stlink.cfg
 OPEN_OCD_TARGET_PATH = $(OPEN_OCD_PATH)/share/openocd/scripts/target/stm32f1x.cfg
 
+# SVD файл для описания периферии микроконтроллера
+SVD_FILE_PATH = C:/ST/tools/cmsis-svd-stm32/stm32f1/STM32F103.svd
 
 #####################################################################################
 # Название проекта
 #####################################################################################
-TARGET = Example_STM32F103_VSCode
+TARGET = Clean_project
 
 #####################################################################################
 # Build path
@@ -164,7 +166,7 @@ $(BUILD_DIR):
 ##########################################################################
 
 update-json:
-	powershell.exe -executionpolicy bypass -File .vscode/ps_scripts/Makefile_update_json.ps1 "$(TARGET)" "$(BUILD_DIR)" "$(C_INCLUDES)" "$(C_DEFS)" "$(GNU_TOOLCHAIN_GCC_PATH)" "$(CFLAGS)"
+	powershell.exe -executionpolicy bypass -File .vscode/ps_scripts/Makefile_update_json.ps1 "$(TARGET)" "$(BUILD_DIR)" "$(C_INCLUDES)" "$(C_DEFS)" "$(GNU_TOOLCHAIN_GCC_PATH)" "$(CFLAGS)" "$(GNU_TOOLCHAIN_GDB_PATH)" "$(OPEN_OCD_BIN_PATH)" "$(OPEN_OCD_INTERFACE_PATH) $(OPEN_OCD_TARGET_PATH)" "$(SVD_FILE_PATH)" "$(GNU_TOOLCHAIN_SIZE_PATH)"
 
 ##########################################################################
 # clean up (for Windows)
@@ -177,7 +179,7 @@ clean:
 ##########################################################################
 flash: all
 	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
-  
+
 ##########################################################################
 # dependencies
 ##########################################################################

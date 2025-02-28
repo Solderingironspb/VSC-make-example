@@ -1,142 +1,26 @@
-{
+﻿{
     "version": "0.2.0",
     "configurations": [
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
-            "executable": "Debug/Example_STM32F103_VSCode.elf", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "executable": "Debug/Clean_project.elf", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
             "request": "launch",
             "type": "cortex-debug", //Отладчик. В нашем случае Extension Cortex-debug
-            "gdbPath": "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb.exe",  //Путь в тулчейну
+            "gdbPath": "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb.exe", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
             "servertype": "openocd", //тип отладчика
-            "serverArgs": ["-d3"],
-            "serverpath": "C:/ST/tools/OpenOCD-20240916-0.12.0/bin/openocd.exe", //Путь до OpenOCD
-            "configFiles": [
-                "C:/ST/tools/OpenOCD-20240916-0.12.0/share/openocd/scripts/interface/stlink.cfg", //Конфиг для ST-Link
-                "C:/ST/tools/OpenOCD-20240916-0.12.0/share/openocd/scripts/target/stm32f1x.cfg"   //Конфиг для STM32F103C8T6
+            "serverArgs": [
+                "-d3"
             ],
-            "svdFile": "C:/ST/tools/cmsis-svd-stm32/stm32f1/STM32F103.svd", //Путь до svd файла, чтоб смотреть периферию
+            "serverpath": "C:/ST/tools/OpenOCD-20240916-0.12.0/bin/openocd.exe", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "configFiles": ["C:/ST/tools/OpenOCD-20240916-0.12.0/share/openocd/scripts/interface/stlink.cfg", "C:/ST/tools/OpenOCD-20240916-0.12.0/share/openocd/scripts/target/stm32f1x.cfg"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "svdFile": "C:/ST/tools/cmsis-svd-stm32/stm32f1/STM32F103.svd", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
             "liveWatch": {
                 "enabled": true //Использовать LiveWatch
             },
             "preLaunchTask": "Run All Tasks", //Соберем проект перед отладкой
-            "runToEntryPoint": "main",
-            "postDebugTask": "Monitor resume"
+            "runToEntryPoint": "main", //Поставим точку останова в main
+            "postDebugTask": "Monitor resume" //Запустим задачу Monitor resume, чтоб после завершения дебага микроконтроллер снялся с паузы и продолжил работать дальше
         }
     ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

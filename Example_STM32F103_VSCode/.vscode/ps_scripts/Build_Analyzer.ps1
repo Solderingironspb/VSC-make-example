@@ -8,7 +8,7 @@
 #   Яндекс Дзен: https://dzen.ru/id/622208eed2eb4c6d0cd16749
 
 #Укажите путь до arm-none-eabi-size.exe
-$GCC_PATH = "C:\ST\tools\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-size.exe"
+$GNU_TOOLCHAIN_SIZE_PATH = "C:\ST\tools\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-size.exe"
 
 # Путь к .elf файлу
 $elfFile = $args[0]
@@ -84,12 +84,12 @@ $flash_End_address = [int]$FLASH.Origin + [int]$FLASH.Length
 
 if (($memory_details -eq "true") -or ($memory_details -eq "True") -or ($memory_details -eq 1)) {
 Write-Host "Memory Details:" -ForegroundColor Green
-& $GCC_PATH -A $elfFile
+& $GNU_TOOLCHAIN_SIZE_PATH -A $elfFile
 }
 
 
 # Запуск arm-none-eabi-size и получение вывода
-$sizeOutput = & $GCC_PATH -A $elfFile
+$sizeOutput = & $GNU_TOOLCHAIN_SIZE_PATH -A $elfFile
 
 # Извлечение значений
 $isr_vectorLine = $sizeOutput | Select-String -Pattern '\.isr_vector'
@@ -169,3 +169,8 @@ $data | Format-Table -AutoSize
 } else {
     Write-Host "Ошибка: Не удалось извлечь данные из вывода arm-none-eabi-size." -ForegroundColor Red
 }
+
+
+
+
+

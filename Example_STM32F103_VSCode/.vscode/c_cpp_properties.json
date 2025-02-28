@@ -1,7 +1,7 @@
 ﻿{
     "configurations": [
         {
-            "name": "Example_STM32F103_VSCode", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "name": "Clean_project", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
             "includePath": ["${workspaceFolder}/Core/Inc/**", "${workspaceFolder}/Drivers/CMSIS/**"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
             "defines": ["DEBUG", "STM32F103xB"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
             "intelliSenseMode": "gcc-arm", //Стандартно "gcc-arm"

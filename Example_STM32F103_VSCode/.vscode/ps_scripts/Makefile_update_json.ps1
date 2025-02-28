@@ -1,6 +1,6 @@
 #   Makefile update json
 #   Автор: Волков Олег
-#   Дата создания скрипта: 26.02.2025
+#   Дата создания скрипта: 28.02.2025
 #   GitHub: https://github.com/Solderingironspb
 #   Группа Вконтакте: https://vk.com/solderingiron.stm32
 #   YouTube: https://www.youtube.com/channel/UCzZKTNVpcMSALU57G1THoVw
@@ -17,6 +17,11 @@ $C_DEFS = $args[3] #Defines GNU C
 $GNU_TOOLCHAIN_GCC_PATH = $args[4] #arm-none-eabi-gcc.exe
 $updatedArgs5 = $args[5] -replace "update-json", "" #костыль, но пусть так...я не знаю почему сюда затисалось это :)
 $CFLAGS = $updatedArgs5 #Все аргументы CFLAGS
+$GNU_TOOLCHAIN_GDB_PATH = $args[6] #Путь до arm-none-eabi-gdb.exe
+$OPEN_OCD_BIN_PATH = $args[7] #Путь до OpenOCD.exe
+$OPEN_OCD_INTERFACE_AND_TARGET_PATH = $args[8] #Путь до интерфейса stlink и target файла микроконтроллера
+$SVD_FILE_PATH = $args[9] #SVD файл для описания периферии микроконтроллера
+$GNU_TOOLCHAIN_SIZE_PATH = $args[10] #Путь до arm-none-eabi-size.exe
 
 
 #Функция для преобразования аргументов, записанных через пробел в строку с соответствующими параметрами
@@ -122,29 +127,106 @@ Update_Json_Parameter -JsonFilePath $C_CPP_PROPERTIES_PATH -NewValue $GNU_TOOLCH
 $formattedCFLAGS = Parser_args -inputString $CFLAGS -Prefix "" -Suffix ""
 Write-Host "Makefile CFLAGS = $CFLAGS -> 'compilerArgs: [$formattedCFLAGS]' " -ForegroundColor White
 Update_Json_Array_of_parameters -JsonFilePath $C_CPP_PROPERTIES_PATH -NewValue "$formattedCFLAGS" -ParameterName "compilerArgs" 
-
 ############################################ Читаем и правим файл c_cpp_properties.json ############################################
 
 
 ################################################# Читаем и правим файл launch.json #################################################
 # Читаем файл launch.json
 $LAUNCH_PATH = ".vscode/launch.json"
+Write-Host "file $LAUNCH_PATH`: " -ForegroundColor DarkYellow 
+
 # Заменяем текущее значение поля "executable" из файла
 # Преобразуем TARGET/BUILD в формат, удобоваримыя для launch.json
-Write-Host "file $LAUNCH_PATH`: " -ForegroundColor DarkYellow 
 Write-Host "Makefile BUILD_DIR/TARGET = $BUILD_DIR/$TARGET -> `"executable`": `"$BUILD_DIR/$TARGET.elf`" " -ForegroundColor White
-Update_Json_Parameter -JsonFilePath $LAUNCH_PATH -NewValue $BUILD_DIR/$TARGET -ParameterName "executable"
+Update_Json_Parameter -JsonFilePath $LAUNCH_PATH -NewValue "$BUILD_DIR/$TARGET.elf" -ParameterName "executable"  
 
-Write-Host "string replacement 'executable: .$oldname' -> 'executable: $BUILD_DIR/$TARGET.elf' " -ForegroundColor Green
-(Get-Content .vscode/launch.json -Raw -Encoding utf8) -replace '"executable": ".*"', ('"executable": "' + $BUILD_DIR + '/' + $TARGET + '.elf' + '"') | Out-File .vscode/launch.json -Encoding utf8
+# Заменяем текущее значение поля "gdbPath" из файла
+# Преобразуем TARGET/BUILD в формат, удобоваримыя для launch.json
+Write-Host "Makefile GNU_TOOLCHAIN_GDB_PATH = $GNU_TOOLCHAIN_GDB_PATH -> `"gdbPath`": `"$GNU_TOOLCHAIN_GDB_PATH`" " -ForegroundColor White
+Update_Json_Parameter -JsonFilePath $LAUNCH_PATH -NewValue $GNU_TOOLCHAIN_GDB_PATH -ParameterName "gdbPath"
+
+# Заменяем текущее значение поля "serverpath" из файла
+# Преобразуем OPEN_OCD_BIN_PATH в формат, удобоваримыя для launch.json
+Write-Host "Makefile OPEN_OCD_BIN_PATH = $OPEN_OCD_BIN_PATH -> `"serverpath`": `"$OPEN_OCD_BIN_PATH`" " -ForegroundColor White
+Update_Json_Parameter -JsonFilePath $LAUNCH_PATH -NewValue $OPEN_OCD_BIN_PATH -ParameterName "serverpath"
+
+# Заменяем текущее значение поля "configFiles" из файла
+#Преобразуем OPEN_OCD_INTERFACE_AND_TARGET_PATH в формат, удобоваримый для launch.json
+$formattedOpenOCDFiles = Parser_args -inputString $OPEN_OCD_INTERFACE_AND_TARGET_PATH -Prefix "" -Suffix ""
+Write-Host "Makefile OPEN_OCD_INTERFACE_AND_TARGET_PATH = $OPEN_OCD_INTERFACE_AND_TARGET_PATH -> 'configFiles: [$formattedOpenOCDFiles]' " -ForegroundColor White
+Update_Json_Array_of_parameters -JsonFilePath $LAUNCH_PATH -NewValue "$formattedOpenOCDFiles" -ParameterName "configFiles"
+
+# Заменяем текущее значение поля "svdFile" из файла
+# Преобразуем SVD_FILE_PATH в формат, удобоваримыя для launch.json
+Write-Host "Makefile OPEN_OCD_BIN_PATH = $SVD_FILE_PATH -> `"svdFile`": `"$SVD_FILE_PATH`" " -ForegroundColor White
+Update_Json_Parameter -JsonFilePath $LAUNCH_PATH -NewValue $SVD_FILE_PATH -ParameterName "svdFile"
+################################################# Читаем и правим файл launch.json #################################################
+
+
+
+################################################# Читаем и правим файл launch.json #################################################
+####        ВНИМАНИЕ, ДАННАЯ ФУНКЦИЯ БУДЕТ РАБОТАТЬ ХОРОШО, ЕСЛИ В task.json БОЛЬШЕ НЕ БУДЕТ СТРОКИ ПАРАМЕТРОВ С "args": [ ]
 
 # Читаем файл tasks.json, заменяем строку с .elf и сохраняем изменения
-Write-Host "file tasks.json: " -ForegroundColor DarkYellow -NoNewline
+Write-Host "file tasks.json: " -ForegroundColor DarkYellow
+
 Write-Host "string replacement 'args: $BUILD_DIR/$TARGET.elf' " -ForegroundColor Green
 (Get-Content .vscode/tasks.json -Raw -Encoding utf8) -replace '([\"''])([^\"'']*\.elf)([\"''])', "`$1$BUILD_DIR/$TARGET.elf`$3" | Out-File .vscode/tasks.json -Encoding utf8
-
+Start-Sleep -Milliseconds $DELAY
 
 # Читаем файл tasks.json, заменяем строку с .map и сохраняем изменения
-Write-Host "file tasks.json: " -ForegroundColor DarkYellow -NoNewline
 Write-Host "string replacement 'args: $BUILD_DIR/$TARGET.map' " -ForegroundColor Green
 (Get-Content .vscode/tasks.json -Raw -Encoding utf8) -replace '([\"''])([^\"'']*\.map)([\"''])', "`$1$BUILD_DIR/$TARGET.map`$3" | Out-File .vscode/tasks.json -Encoding utf8
+################################################# Читаем и правим файл launch.json #################################################
+
+
+
+####################################################### BONUS ######################################################################
+
+Write-Host "Bonus :) Update files:" -ForegroundColor DarkBlue
+############################ Читаем и правим файл .vscode/ps_scripts/monitor_resume_part1.ps1
+Write-Host "file .vscode/ps_scripts/monitor_resume_part1.ps1" -ForegroundColor DarkBlue
+
+# Путь к OPEN_OCD
+$content = Get-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" -Raw -Encoding utf8
+$updatedContent = $content -replace '(\$OPEN_OCD_BIN_PATH\s*=\s*).*', "`$OPEN_OCD_BIN_PATH = `"$OPEN_OCD_BIN_PATH`""
+Set-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" $updatedContent -Encoding utf8
+
+# Путь к INTERFACE и TARGET
+
+# Исходная строка
+$text = $OPEN_OCD_INTERFACE_AND_TARGET_PATH
+# Разделение строки по пробелу
+$variables = $text -split ' '
+# Присвоение значений переменным
+$OPEN_OCD_INTERFACE = $variables[0] 
+$OPEN_OCD_TARGET = $variables[1]
+ 
+# OpenOCD interface
+$content = Get-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" -Raw -Encoding utf8
+$updatedContent = $content -replace '(\$OPEN_OCD_INTERFACE_PATH\s*=\s*).*', "`$OPEN_OCD_INTERFACE_PATH = `"$OPEN_OCD_INTERFACE`""
+Set-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" $updatedContent -Encoding utf8
+Start-Sleep -Milliseconds $DELAY
+
+# OpenOCD target
+$content = Get-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" -Raw -Encoding utf8
+$updatedContent = $content -replace '(\$OPEN_OCD_TARGET_PATH\s*=\s*).*', "`$OPEN_OCD_TARGET_PATH = `"$OPEN_OCD_TARGET`""
+Set-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" $updatedContent -Encoding utf8
+Write-Host "Success" -ForegroundColor Green
+
+############################ Читаем и правим файл .vscode/ps_scripts/monitor_resume_part2.ps1
+Write-Host "file .vscode/ps_scripts/monitor_resume_part1.ps1" -ForegroundColor DarkBlue
+
+# arm-none-eabi-gdb.exe
+$content = Get-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" -Raw -Encoding utf8
+$updatedContent = $content -replace '(\$GNU_TOOLCHAIN_GDB_PATH\s*=\s*).*', "`$GNU_TOOLCHAIN_GDB_PATH = `"$GNU_TOOLCHAIN_GDB_PATH`""
+Set-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" $updatedContent -Encoding utf8
+Write-Host "Success" -ForegroundColor Green
+
+############################ Читаем и правим файл .vscode/ps_scripts/Build_Analyzer.ps1
+Write-Host "file .vscode/ps_scripts/Build_Analyzer.ps1" -ForegroundColor DarkBlue
+$newPath = $GNU_TOOLCHAIN_SIZE_PATH.Replace("/", "\")
+$content = Get-Content ".vscode/ps_scripts/Build_Analyzer.ps1" -Raw -Encoding utf8
+$updatedContent = $content -replace '(\$GNU_TOOLCHAIN_SIZE_PATH\s*=\s*).*', "`$GNU_TOOLCHAIN_SIZE_PATH = `"$newPath`""
+Set-Content ".vscode/ps_scripts/Build_Analyzer.ps1" $updatedContent -Encoding utf8
+Write-Host "Success" -ForegroundColor Green
