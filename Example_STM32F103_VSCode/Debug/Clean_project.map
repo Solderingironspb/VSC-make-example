@@ -489,7 +489,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 Debug/syscalls.o
  .debug_macro   0x00000000       0xce Debug/syscalls.o
  .debug_line    0x00000000      0x5da Debug/syscalls.o
- .debug_str     0x00000000     0x89c1 Debug/syscalls.o
+ .debug_str     0x00000000     0x89ee Debug/syscalls.o
  .comment       0x00000000       0x4a Debug/syscalls.o
  .debug_frame   0x00000000      0x2ac Debug/syscalls.o
  .ARM.attributes
@@ -1251,19 +1251,19 @@ LOAD c:/st/tools/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
  .debug_line    0x000021ca      0x2ee Debug/system_stm32f1xx.o
  .debug_line    0x000024b8       0x84 Debug/startup_stm32f103c8tx.o
 
-.debug_str      0x00000000    0x59435
- .debug_str     0x00000000    0x58458 Debug/main.o
-                              0x58701 (size before relaxing)
- .debug_str     0x00058458      0x9e1 Debug/stm32f103xx_CMSIS.o
-                              0x591b2 (size before relaxing)
- .debug_str     0x00058e39       0x53 Debug/stm32f103xx_it.o
-                              0x5866d (size before relaxing)
- .debug_str     0x00058e8c      0x4cf Debug/sysmem.o
-                               0x5d17 (size before relaxing)
- .debug_str     0x0005935b       0xa7 Debug/system_stm32f1xx.o
-                              0x5458f (size before relaxing)
- .debug_str     0x00059402       0x33 Debug/startup_stm32f103c8tx.o
-                                 0x58 (size before relaxing)
+.debug_str      0x00000000    0x59462
+ .debug_str     0x00000000    0x58485 Debug/main.o
+                              0x5872e (size before relaxing)
+ .debug_str     0x00058485      0x9e1 Debug/stm32f103xx_CMSIS.o
+                              0x591df (size before relaxing)
+ .debug_str     0x00058e66       0x53 Debug/stm32f103xx_it.o
+                              0x5869a (size before relaxing)
+ .debug_str     0x00058eb9      0x4cf Debug/sysmem.o
+                               0x5d44 (size before relaxing)
+ .debug_str     0x00059388       0xa7 Debug/system_stm32f1xx.o
+                              0x545bc (size before relaxing)
+ .debug_str     0x0005942f       0x33 Debug/startup_stm32f103c8tx.o
+                                 0x85 (size before relaxing)
 
 .comment        0x00000000       0x49
  .comment       0x00000000       0x49 Debug/main.o

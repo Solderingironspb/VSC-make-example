@@ -1,4 +1,4 @@
-#   Build Analyzer
+#   Build Analyzer v1.0
 #   Автор: Волков Олег
 #   Дата создания скрипта: 26.02.2025
 #   GitHub: https://github.com/Solderingironspb
@@ -16,23 +16,23 @@ $elfFile = $args[0]
 # Путь к .map файлу
 $mapFile = $args[1]
 
-# Размер памяти RAM (KB)
-$ram_size_ld_file = $args[2]
+# Размер памяти RAM (KB) Смотри ld файл
+$ram_size_ld_file = "20"
 
-# Размер памяти FLASH (KB)
-$flash_size_ld_file = $args[3]
+# Размер памяти FLASH (KB) Смотри ld файл
+$flash_size_ld_file = "64"
 
-# Memory Details (true/false)
-$memory_details = $args[4]
+# Memory Details (true/false) Показывать или нет детальную информацию
+$memory_details = "false"
 
 
-# Проверка, существует ли файл
+# Проверка, существует ли *.elf файл
 if (-Not (Test-Path $elfFile)) {
     Write-Host "File $elfFile not found." -ForegroundColor Red
     exit
 }
 
-# Проверка, существует ли файл
+# Проверка, существует ли *.map файл
 if (-Not (Test-Path $mapFile)) {
     Write-Host "File $mapFile not found." -ForegroundColor Red
     exit
@@ -81,7 +81,7 @@ $RAM_End_address = [int]$RAM.Origin + [int]$RAM.Length
 $Flash_Start_address = [int]$FLASH.Origin
 $flash_End_address = [int]$FLASH.Origin + [int]$FLASH.Length 
 
-
+# Показывать или нет детальную информацию?
 if (($memory_details -eq "true") -or ($memory_details -eq "True") -or ($memory_details -eq 1)) {
 Write-Host "Memory Details:" -ForegroundColor Green
 & $GNU_TOOLCHAIN_SIZE_PATH -A $elfFile
@@ -169,6 +169,7 @@ $data | Format-Table -AutoSize
 } else {
     Write-Host "Ошибка: Не удалось извлечь данные из вывода arm-none-eabi-size." -ForegroundColor Red
 }
+
 
 
 

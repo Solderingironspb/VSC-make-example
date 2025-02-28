@@ -20,3 +20,4 @@ $GNU_TOOLCHAIN_GDB_PATH = "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-no
 
 
 
+
