@@ -42,11 +42,16 @@ BUILD_DIR = Debug
 # Пример: SRC_DIRS = Core/Src Drivers/CMSIS ModbusRTU
 #####################################################################################
 # GNU C 
-SRC_DIRS = Core/Src Drivers/CMSIS/Src
-C_SOURCES =  $(foreach dir, $(SRC_DIRS), $(wildcard $(dir)/*.c))
+C_SOURCES = \
+Core/Src/main.c \
+Core/Src/stm32f103xx_CMSIS.c \
+Core/Src/stm32f103xx_it.c \
+Core/Src/syscalls.c \
+Core/Src/sysmem.c \
+Core/Src/system_stm32f1xx.c
 # Assembly
-ASM_DIRS = Core/Startup
-ASM_SOURCES = $(foreach dir, $(ASM_DIRS), $(wildcard $(dir)/*.S))
+ASM_SOURCES = \
+Core/Startup/startup_stm32f103c8tx.s
 
 #####################################################################################
 # Include location (Папки вводим через пробел).
@@ -120,7 +125,8 @@ BIN = $(CP) -O binary -S
 # LDFLAGS
 #####################################################################################
 # link script
-LDSCRIPT = STM32F103C8Tx_FLASH.ld
+LDSCRIPT = \
+STM32F103C8TX_FLASH.ld
 
 # libraries
 LIBS = -lc -lm -lnosys 
@@ -138,13 +144,13 @@ all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET
 OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o)))
 vpath %.c $(sort $(dir $(C_SOURCES)))
 # list of ASM program objects
-OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.S=.o)))
-vpath %.S $(sort $(dir $(ASM_SOURCES)))
+OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.s=.o)))
+vpath %.s $(sort $(dir $(ASM_SOURCES)))
 
 $(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR) 
 	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 
-$(BUILD_DIR)/%.o: %.S Makefile | $(BUILD_DIR)
+$(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)
 	$(AS) -c $(ASFLAGS) $< -o $@
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile

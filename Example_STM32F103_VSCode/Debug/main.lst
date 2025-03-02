@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s 			page 1
   41              		.global	main
   42              		.syntax unified
   43              		.thumb
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 2
 
 
   44              		.thumb_func
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s 			page 1
   16:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
   84              		.loc 1 16 9 discriminator 1
   85 0030 094B     		ldr	r3, .L3+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s 			page 3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 3
 
 
   86 0032 1B68     		ldr	r3, [r3]
@@ -156,19 +156,19 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s 			page 1
  117              		.file 3 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h"
  118              		.file 4 "Drivers/CMSIS/stm32f103xb.h"
  119              		.file 5 "Core/Inc/stm32f103xx_CMSIS.h"
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s 			page 4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:22     .bss.Counter:00000000 Counter
-C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:19     .bss.Counter:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:29     .bss.Text:00000000 Text
-C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:26     .bss.Text:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:32     .rodata:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:40     .text.main:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:46     .text.main:00000000 main
-C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:106    .text.main:00000054 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:22     .bss.Counter:00000000 Counter
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:19     .bss.Counter:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:29     .bss.Text:00000000 Text
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:26     .bss.Text:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:32     .rodata:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:40     .text.main:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:46     .text.main:00000000 main
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:106    .text.main:00000054 $d
                            .group:00000000 wm4.0.57948b105342b2a9a91afe6dac72b4ef
                            .group:00000000 wm4.stm32f1xx.h.39.208bb8a61c892b7c37d899c49a031330
                            .group:00000000 wm4.stm32f103xb.h.38.ec967d5ad9d3269cb0788eebda048e38
@@ -216,7 +216,7 @@ C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s:106    .text.main:00000054 $d
                            .group:00000000 wm4.string.h.8.c4b8571ce60dff2817f43fec8b86aecd
                            .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccXvcwt0.s 			page 5
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 5
 
 
 UNDEFINED SYMBOLS
