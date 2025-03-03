@@ -1,0 +1,60 @@
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc1z5gOv.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32l1xx_hal_tim_ex.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              	.Letext0:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc1z5gOv.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l1xx_hal_tim_ex.c
+                           .group:00000000 wm4.0.7208a4f1159f7563e5a3c98e917e78ea
+                           .group:00000000 wm4.stm32l1xx_hal_conf.h.37.6f4ad034cd0fae16c71589731e1d3893
+                           .group:00000000 wm4.stm32l1xx.h.39.e0d89f765e6228edd2d07f7d0817bcd8
+                           .group:00000000 wm4.stm32l151xba.h.37.a6e9532bd093c2a203d12d168d13167e
+                           .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.cmsis_version.h.32.4d5822004c01a829a975260e854b5f8e
+                           .group:00000000 wm4.core_cm3.h.66.fc46cac19810db8f98d67da7ef88f42c
+                           .group:00000000 wm4.cmsis_gcc.h.26.4f5798e999d5690b80e6ded3ecc94b37
+                           .group:00000000 wm4.core_cm3.h.127.552ab6bb923680fc31d1142d4ea8743c
+                           .group:00000000 wm4.mpu_armv7.h.32.27b4593cb2f8d3152ca5d97a9d72b321
+                           .group:00000000 wm4.stm32l151xba.h.562.85f2a02125efc3b0700b06ee1b5b83e7
+                           .group:00000000 wm4.stm32l1xx.h.188.884cd6efb98206df5cd0c303eb0771fb
+                           .group:00000000 wm4.stm32_hal_legacy.h.23.4caecc6d9e081e04fa2c0bc654646384
+                           .group:00000000 wm4.stddef.h.39.144cf5ddcd53cbfdac30259dc1a6c87f
+                           .group:00000000 wm4.stm32l1xx_hal_def.h.58.10c500df30faeb1fa16afd36d46e1ba5
+                           .group:00000000 wm4.stm32l1xx_hal_rcc.h.48.7aac246abb8a85d0d2aa6192ea8742ce
+                           .group:00000000 wm4.stm32l1xx_hal_rcc_ex.h.22.d8e6f48664255020cb04bc2dadba6c5d
+                           .group:00000000 wm4.stm32l1xx_hal_gpio.h.22.3ca3b7aa358d476454694f01adf692e6
+                           .group:00000000 wm4.stm32l1xx_hal_gpio_ex.h.22.27ab914f694b65e32683f896478b1e43
+                           .group:00000000 wm4.stm32l1xx_hal_dma.h.22.b347843d8366866f9db3a74a45c6ec19
+                           .group:00000000 wm4.stm32l1xx_hal_cortex.h.22.d9367fefb01ff1ce24aa22897bc6b6aa
+                           .group:00000000 wm4.stm32l1xx_hal_flash.h.22.a9321185db3487d735cd57e0209e130c
+                           .group:00000000 wm4.stm32l1xx_hal_flash_ex.h.22.6d421ff2169cdd4785a0e089f62c0b66
+                           .group:00000000 wm4.stm32l1xx_hal_pwr.h.22.b9782bf82907a6f9cc11b48e4bbbd39f
+                           .group:00000000 wm4.stm32l1xx_hal_pwr_ex.h.22.7a0296b358d7a46f3411697cd28c4060
+                           .group:00000000 wm4.stm32l1xx_hal_uart.h.22.e342491b9dfc7c2668d500ebb911970f
+                           .group:00000000 wm4.stm32l1xx_hal_exti.h.22.e466ba38c16bb4377db5ccc70057e402
+                           .group:00000000 wm4.stm32l1xx_hal.h.50.d478bd919f6859a9754dea37e78cfbf7
+
+NO UNDEFINED SYMBOLS

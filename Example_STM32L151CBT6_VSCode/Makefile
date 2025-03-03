@@ -1,0 +1,218 @@
+#   Makefile for STM32F103C8T6
+#   Автор: Волков Олег
+#   Дата создания скрипта: 26.02.2025
+#   GitHub: https://github.com/Solderingironspb
+#   Группа Вконтакте: https://vk.com/solderingiron.stm32
+#   YouTube: https://www.youtube.com/channel/UCzZKTNVpcMSALU57G1THoVw
+#   RuTube: https://rutube.ru/channel/36234184/
+#   Яндекс Дзен: https://dzen.ru/id/622208eed2eb4c6d0cd16749
+
+######################################################################################
+# Пути для проекта
+######################################################################################
+# GNU Arm Embedded Toolchain:
+GNU_TOOLCHAIN = C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin
+GNU_TOOLCHAIN_GCC_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-gcc.exe
+GNU_TOOLCHAIN_GDB_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-gdb.exe
+GNU_TOOLCHAIN_SIZE_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-size.exe
+
+# OpenOCD:
+OPEN_OCD_PATH = C:/ST/tools/OpenOCD-20240916-0.12.0
+OPEN_OCD_BIN_PATH = $(OPEN_OCD_PATH)/bin/openocd.exe
+
+# OpenOCD, кофигурационные файлы под St-Link и микроконтроллер:
+OPEN_OCD_INTERFACE_PATH = $(OPEN_OCD_PATH)/share/openocd/scripts/interface/stlink.cfg
+OPEN_OCD_TARGET_PATH = $(OPEN_OCD_PATH)/share/openocd/scripts/target/stm32l1.cfg
+
+# SVD файл для описания периферии микроконтроллера
+SVD_FILE_PATH = C:/ST/tools/cmsis-svd-stm32/stm32l1/STM32L151.svd
+
+#####################################################################################
+# Название проекта
+#####################################################################################
+TARGET = Example_STM32L151CBT6_VSCode
+
+#####################################################################################
+# Build path
+#####################################################################################
+BUILD_DIR = Debug
+
+#####################################################################################
+# Source location (Папки вводим через пробел).GCC_SIZE_PATHC_INCLUDES
+# Пример: SRC_DIRS = Core/Src Drivers/CMSIS ModbusRTU
+#####################################################################################
+# GNU C 
+C_SOURCES = \
+Core/Src/main.c \
+Core/Src/stm32l1xx_hal_msp.c \
+Core/Src/stm32l1xx_it.c \
+Core/Src/syscalls.c \
+Core/Src/sysmem.c \
+Core/Src/system_stm32l1xx.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c \
+Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c
+# Assembly
+ASM_SOURCES = \
+Core/Startup/startup_stm32l151cbtxa.s
+
+#####################################################################################
+# Include location (Папки вводим через пробел).
+# Пример: C_INCLUDES = Core/Inc Drivers/CMSIS 
+#####################################################################################
+# C includes
+C_INCLUDES = \
+Drivers/STM32L1xx_HAL_Driver/Inc/ \
+Core/Inc/ \
+Drivers/CMSIS/Device/ST/STM32L1xx/Include/ \
+Drivers/CMSIS/Include/ \
+Drivers/STM32L1xx_HAL_Driver/Inc/Legacy/
+# Assembly includes
+AS_INCLUDES = 
+
+#####################################################################################
+# MCU_Settings
+#####################################################################################
+
+CPU = -mcpu=cortex-m3
+INSTRUCTION_SET = -mthumb
+FPU = 
+FLOAT_ABI = -mfloat-abi=soft
+
+MCU = $(CPU) $(INCTRUCTION_SET) $(FPU) $(FLOAT_ABI) -specs=nano.specs
+
+#####################################################################################
+# MCU_GCC_Compiler (CFLAGS) (ASFLAGS)
+#####################################################################################
+
+# Defines (Записываются через пробел. Пример: C_DEFS =  DEBUG STM32F103xB)
+# GNU C
+C_DEFS =  DEBUG USE_HAL_DRIVER STM32L151xBA
+# Assembly
+AS_DEFS = DEBUG
+
+# Language standard
+LANG_STD = -std=gnu11
+
+# Optimization
+#(None "-O0", Optimize for Debug "-Og", Optimize "-O1", Optimize more "-O2",
+# Optimize most "-O3", Optimize for size "-Os", Optimize for speed "-Ofast") 
+OPT = -O0 
+
+# Debug level(None " ", Minimal "-g1", Default "-g", Maximum "-g3" )
+DEBUG = -g3
+
+# compile gcc flags
+ASFLAGS = $(MCU) $(DEBUG) $(OPT) $(addprefix -, $(AS_DEFS)) $(AS_INCLUDES) 
+CFLAGS = $(MCU) $(DEBUG) $(OPT) $(LANG_STD) $(addprefix -D, $(C_DEFS)) $(addprefix -I, $(C_INCLUDES)) -Wall -fdata-sections -ffunction-sections -fstack-usage
+
+# Generate dependency information
+CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
+ASFLAGS += -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@"
+
+#####################################################################################
+# Binaries
+#####################################################################################
+PREFIX = arm-none-eabi-
+
+ifdef GNU_TOOLCHAIN
+CC = $(GNU_TOOLCHAIN)/$(PREFIX)gcc
+AS = $(GNU_TOOLCHAIN)/$(PREFIX)gcc -x assembler-with-cpp
+CP = $(GNU_TOOLCHAIN)/$(PREFIX)objcopy
+SZ = $(GNU_TOOLCHAIN)/$(PREFIX)size
+else
+CC = $(PREFIX)gcc
+AS = $(PREFIX)gcc -x assembler-with-cpp
+CP = $(PREFIX)objcopy
+SZ = $(PREFIX)size
+endif
+HEX = $(CP) -O ihex
+BIN = $(CP) -O binary -S
+
+#####################################################################################
+# LDFLAGS
+#####################################################################################
+# link script
+LDSCRIPT = \
+STM32L151CBTXA_FLASH.ld
+
+# libraries
+LIBS = -Wl,--start-group -lc -lm -Wl,--end-group 
+LIBDIR = 
+LDFLAGS = $(MCU) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map -Wl,--gc-sections
+
+# default action: build all
+all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+
+
+#####################################################################################
+# build the application
+#####################################################################################
+# list of objects
+OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o)))
+vpath %.c $(sort $(dir $(C_SOURCES)))
+# list of ASM program objects
+OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.s=.o)))
+vpath %.s $(sort $(dir $(ASM_SOURCES)))
+
+$(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR) 
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+$(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)
+	$(AS) -c $(ASFLAGS) $< -o $@
+
+$(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
+	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+	$(SZ) $@
+
+$(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
+	$(HEX) $< $@
+	
+$(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
+	$(BIN) $< $@	
+	
+$(BUILD_DIR):
+	mkdir $@		
+
+
+##########################################################################
+# update json files (Обновить JSON файлы в соответствие с данным Makefile)
+##########################################################################
+
+update-json:
+	powershell.exe -executionpolicy bypass -File .vscode/ps_scripts/Makefile_update_json.ps1 "$(TARGET)" "$(BUILD_DIR)" "$(C_INCLUDES)" "$(C_DEFS)" "$(GNU_TOOLCHAIN_GCC_PATH)" "$(CFLAGS)" "$(GNU_TOOLCHAIN_GDB_PATH)" "$(OPEN_OCD_BIN_PATH)" "$(OPEN_OCD_INTERFACE_PATH) $(OPEN_OCD_TARGET_PATH)" "$(SVD_FILE_PATH)" "$(GNU_TOOLCHAIN_SIZE_PATH)"
+
+##########################################################################
+# clean up (for Windows)
+##########################################################################
+clean:
+	rmdir /S /Q $(BUILD_DIR)
+
+##########################################################################
+# OpenOCD
+##########################################################################
+flash: all
+	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
+
+erase: 
+	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "init; reset halt; stm32l1x mass_erase 0; reset run; exit"
+
+
+##########################################################################
+# dependencies
+##########################################################################
+-include $(wildcard $(BUILD_DIR)/*.d)
+
+# *** EOF ***
