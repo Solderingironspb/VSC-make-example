@@ -37,9 +37,11 @@
 Я папку bin добавлю в PATH, чтоб использовать MinGW для компиляции проектов на си под Windows, но последующие установки gcc-arm-none-eabi и OpenOCD буду использовать по прямому пути, без добавления в PATH, т.к. данные утилиты под разные фирмы мк обычно модернизируются производителями и лучше использовать фирмовые ~~но это не точно~~.
 
 Сделаем вот так *(Нужное выделено желтым):*
+
 ![Image](https://github.com/user-attachments/assets/e5901112-628c-4359-871a-d82d75a0bafe)
 
 Проверим:
+
 ![Image](https://github.com/user-attachments/assets/8e5d9a8f-4d85-4e65-81ec-83789c51fd6d)
 
 ## Установка arm-none-eabi и OpenOCD
@@ -50,6 +52,7 @@
 **arm-none-eabi** у меня находится по адресу: `C:\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\bin`
 
 ![Image](https://github.com/user-attachments/assets/227b41e3-e16c-4fb4-bf42-b5bbdec8c003)
+
 ![Image](https://github.com/user-attachments/assets/3abd9939-5a53-4558-80c3-c40b44ca35bd)
 
 
@@ -122,13 +125,15 @@ if { [info exists CPUTAPID] } {
 
 По итогу **CubeIDE 1.17.0** наполовину нас всем снабдил. Это и будем использовать. Я думаю для других мк, тех же CH32V также можно все выдрать из **MounriverStudio**
 
-Нам еще для дебага, чтоб использовать регистры периферии, понадобится svd файл под наш микроконтроллер. Взять можно здесь: https://github.com/Solderingironspb/cmsis-svd-stm32
+Нам еще для дебага, чтоб использовать регистры периферии, понадобится svd файл под наш микроконтроллер. 
+
+Взять можно здесь: https://github.com/Solderingironspb/cmsis-svd-stm32
 
 Собираем папку со всем необходимым. Не хочу пользоваться путями из **CubeIDE 1.17.0**, т.к. там черт ногу сломит в этом длинном названии. В названии папок пробелы не используем. Получилось так:
 
 ![Image](https://github.com/user-attachments/assets/19dbddca-f59e-4ea4-8180-862db74e86dd)
 
-На этом подготовительные работы закончены. Теперь самое сложно - создать Makefile под проект.
+На этом подготовительные работы закончены. Теперь самое сложное - создать Makefile под проект.
 
 Я постарался сделать максимально доступно для понимания. Комментарии и все такое. 
 
