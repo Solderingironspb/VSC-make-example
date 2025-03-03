@@ -82,7 +82,7 @@ GDB could not start as expected. Bad installation or version mismatch. See if yo
 
 `C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.make.win32_2.2.0.202409170845`
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/ae003f6a-c5c7-444b-b08f-3693bf3cdb7a)
 
 ## Interface и target.
 Итак, make, arm-none-eabi и OpenOCD (скачанный с https://gnutoolchains.com/arm-eabi/openocd/) у нас есть. 
