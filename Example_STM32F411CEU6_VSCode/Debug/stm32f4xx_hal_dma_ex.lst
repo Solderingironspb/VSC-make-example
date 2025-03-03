@@ -1,0 +1,3828 @@
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32f4xx_hal_dma_ex.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.HAL_DMAEx_MultiBufferStart,"ax",%progbits
+  20              		.align	1
+  21              		.global	HAL_DMAEx_MultiBufferStart
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_DMAEx_MultiBufferStart:
+  27              	.LFB130:
+  28              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"
+   1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /**
+   2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   ******************************************************************************
+   3:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @file    stm32f4xx_hal_dma_ex.c
+   4:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @author  MCD Application Team
+   5:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @brief   DMA Extension HAL module driver
+   6:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *         This file provides firmware functions to manage the following 
+   7:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *         functionalities of the DMA Extension peripheral:
+   8:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *           + Extended features functions
+   9:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *
+  10:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   @verbatim
+  11:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   ==============================================================================
+  12:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****                         ##### How to use this driver #####
+  13:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   ==============================================================================
+  14:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   [..]
+  15:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   The DMA Extension HAL driver can be used as follows:
+  16:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****    (#) Start a multi buffer transfer using the HAL_DMA_MultiBufferStart() function
+  17:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****        for polling mode or HAL_DMA_MultiBufferStart_IT() for interrupt mode.
+  18:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****                    
+  19:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****      -@-  In Memory-to-Memory transfer mode, Multi (Double) Buffer mode is not allowed.
+  20:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****      -@-  When Multi (Double) Buffer mode is enabled the, transfer is circular by default.
+  21:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****      -@-  In Multi (Double) buffer mode, it is possible to update the base address for 
+  22:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****           the AHB memory port on the fly (DMA_SxM0AR or DMA_SxM1AR) when the stream is enabled. 
+  23:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+  24:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   @endverbatim
+  25:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   ******************************************************************************
+  26:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @attention
+  27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *
+  28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * <h2><center>&copy; Copyright (c) 2017 STMicroelectronics.
+  29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * All rights reserved.</center></h2>
+  30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 2
+
+
+  31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * the "License"; You may not use this file except in compliance with the
+  33:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * License. You may obtain a copy of the License at:
+  34:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  35:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *
+  36:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   ******************************************************************************
+  37:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+  38:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  39:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /* Includes ------------------------------------------------------------------*/
+  40:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** #include "stm32f4xx_hal.h"
+  41:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  42:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /** @addtogroup STM32F4xx_HAL_Driver
+  43:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @{
+  44:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+  45:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  46:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /** @defgroup DMAEx DMAEx
+  47:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @brief DMA Extended HAL module driver
+  48:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @{
+  49:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+  50:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  51:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** #ifdef HAL_DMA_MODULE_ENABLED
+  52:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  53:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /* Private types -------------------------------------------------------------*/
+  54:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /* Private variables ---------------------------------------------------------*/
+  55:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /* Private Constants ---------------------------------------------------------*/
+  56:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /* Private macros ------------------------------------------------------------*/
+  57:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /* Private functions ---------------------------------------------------------*/
+  58:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /** @addtogroup DMAEx_Private_Functions
+  59:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @{
+  60:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+  61:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** static void DMA_MultiBufferSetConfig(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddr
+  62:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /**
+  63:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @}
+  64:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+  65:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  66:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /* Exported functions ---------------------------------------------------------*/
+  67:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  68:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /** @addtogroup DMAEx_Exported_Functions
+  69:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @{
+  70:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+  71:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  72:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  73:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /** @addtogroup DMAEx_Exported_Functions_Group1
+  74:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *
+  75:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** @verbatim   
+  76:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****  ===============================================================================
+  77:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****                 #####  Extended features functions  #####
+  78:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****  ===============================================================================  
+  79:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     [..]  This section provides functions allowing to:
+  80:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       (+) Configure the source, destination address and data length and 
+  81:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****           Start MultiBuffer DMA transfer
+  82:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       (+) Configure the source, destination address and data length and 
+  83:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****           Start MultiBuffer DMA transfer with interrupt
+  84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       (+) Change on the fly the memory0 or memory1 address.
+  85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       
+  86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** @endverbatim
+  87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @{
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 3
+
+
+  88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+  89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  90:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+  91:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /**
+  92:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @brief  Starts the multi_buffer DMA Transfer.
+  93:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  hdma       pointer to a DMA_HandleTypeDef structure that contains
+  94:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                     the configuration information for the specified DMA Stream.  
+  95:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  SrcAddress The source memory Buffer address
+  96:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  DstAddress The destination memory Buffer address
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  SecondMemAddress The second memory Buffer address in case of multi buffer Transfer  
+  98:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  DataLength The length of data to be transferred from source to destination
+  99:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @retval HAL status
+ 100:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+ 101:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t
+ 102:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** {
+  29              		.loc 1 102 1
+  30              		.cfi_startproc
+  31              		@ args = 4, pretend = 0, frame = 24
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 80B5     		push	{r7, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 86B0     		sub	sp, sp, #24
+  38              		.cfi_def_cfa_offset 32
+  39 0004 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  41 0006 F860     		str	r0, [r7, #12]
+  42 0008 B960     		str	r1, [r7, #8]
+  43 000a 7A60     		str	r2, [r7, #4]
+  44 000c 3B60     		str	r3, [r7]
+ 103:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
+  45              		.loc 1 103 21
+  46 000e 0023     		movs	r3, #0
+  47 0010 FB75     		strb	r3, [r7, #23]
+ 104:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+ 105:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Check the parameters */
+ 106:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   assert_param(IS_DMA_BUFFER_SIZE(DataLength));
+ 107:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+ 108:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Memory-to-memory transfer not supported in double buffering mode */
+ 109:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   if (hdma->Init.Direction == DMA_MEMORY_TO_MEMORY)
+  48              		.loc 1 109 17
+  49 0012 FB68     		ldr	r3, [r7, #12]
+  50 0014 9B68     		ldr	r3, [r3, #8]
+  51              		.loc 1 109 6
+  52 0016 802B     		cmp	r3, #128
+  53 0018 06D1     		bne	.L2
+ 110:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
+ 111:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->ErrorCode = HAL_DMA_ERROR_NOT_SUPPORTED;
+  54              		.loc 1 111 21
+  55 001a FB68     		ldr	r3, [r7, #12]
+  56 001c 4FF48072 		mov	r2, #256
+  57 0020 5A65     		str	r2, [r3, #84]
+ 112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     status = HAL_ERROR;
+  58              		.loc 1 112 12
+  59 0022 0123     		movs	r3, #1
+  60 0024 FB75     		strb	r3, [r7, #23]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 4
+
+
+  61 0026 31E0     		b	.L3
+  62              	.L2:
+ 113:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   else
+ 115:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
+ 116:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Process Locked */
+ 117:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_LOCK(hdma);
+  63              		.loc 1 117 5
+  64 0028 FB68     		ldr	r3, [r7, #12]
+  65 002a 93F83430 		ldrb	r3, [r3, #52]	@ zero_extendqisi2
+  66 002e 012B     		cmp	r3, #1
+  67 0030 01D1     		bne	.L4
+  68              		.loc 1 117 5 is_stmt 0 discriminator 1
+  69 0032 0223     		movs	r3, #2
+  70 0034 2BE0     		b	.L5
+  71              	.L4:
+  72              		.loc 1 117 5 discriminator 2
+  73 0036 FB68     		ldr	r3, [r7, #12]
+  74 0038 0122     		movs	r2, #1
+  75 003a 83F83420 		strb	r2, [r3, #52]
+ 118:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 119:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     if(HAL_DMA_STATE_READY == hdma->State)
+  76              		.loc 1 119 35 is_stmt 1 discriminator 2
+  77 003e FB68     		ldr	r3, [r7, #12]
+  78 0040 93F83530 		ldrb	r3, [r3, #53]
+  79 0044 DBB2     		uxtb	r3, r3
+  80              		.loc 1 119 7 discriminator 2
+  81 0046 012B     		cmp	r3, #1
+  82 0048 1ED1     		bne	.L6
+ 120:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     {
+ 121:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       /* Change DMA peripheral state */
+ 122:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       hdma->State = HAL_DMA_STATE_BUSY; 
+  83              		.loc 1 122 19
+  84 004a FB68     		ldr	r3, [r7, #12]
+  85 004c 0222     		movs	r2, #2
+  86 004e 83F83520 		strb	r2, [r3, #53]
+ 123:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       
+ 124:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       /* Enable the double buffer mode */
+ 125:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       hdma->Instance->CR |= (uint32_t)DMA_SxCR_DBM;
+  87              		.loc 1 125 11
+  88 0052 FB68     		ldr	r3, [r7, #12]
+  89 0054 1B68     		ldr	r3, [r3]
+  90              		.loc 1 125 26
+  91 0056 1A68     		ldr	r2, [r3]
+  92              		.loc 1 125 11
+  93 0058 FB68     		ldr	r3, [r7, #12]
+  94 005a 1B68     		ldr	r3, [r3]
+  95              		.loc 1 125 26
+  96 005c 42F48022 		orr	r2, r2, #262144
+  97 0060 1A60     		str	r2, [r3]
+ 126:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       
+ 127:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       /* Configure DMA Stream destination address */
+ 128:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       hdma->Instance->M1AR = SecondMemAddress;
+  98              		.loc 1 128 11
+  99 0062 FB68     		ldr	r3, [r7, #12]
+ 100 0064 1B68     		ldr	r3, [r3]
+ 101              		.loc 1 128 28
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 5
+
+
+ 102 0066 3A68     		ldr	r2, [r7]
+ 103 0068 1A61     		str	r2, [r3, #16]
+ 129:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       
+ 130:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       /* Configure the source, destination address and the data length */
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       DMA_MultiBufferSetConfig(hdma, SrcAddress, DstAddress, DataLength);
+ 104              		.loc 1 131 7
+ 105 006a 3B6A     		ldr	r3, [r7, #32]
+ 106 006c 7A68     		ldr	r2, [r7, #4]
+ 107 006e B968     		ldr	r1, [r7, #8]
+ 108 0070 F868     		ldr	r0, [r7, #12]
+ 109 0072 FFF7FEFF 		bl	DMA_MultiBufferSetConfig
+ 132:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       
+ 133:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       /* Enable the peripheral */
+ 134:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       __HAL_DMA_ENABLE(hdma);
+ 110              		.loc 1 134 7
+ 111 0076 FB68     		ldr	r3, [r7, #12]
+ 112 0078 1B68     		ldr	r3, [r3]
+ 113 007a 1A68     		ldr	r2, [r3]
+ 114 007c FB68     		ldr	r3, [r7, #12]
+ 115 007e 1B68     		ldr	r3, [r3]
+ 116 0080 42F00102 		orr	r2, r2, #1
+ 117 0084 1A60     		str	r2, [r3]
+ 118 0086 01E0     		b	.L3
+ 119              	.L6:
+ 135:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     }
+ 136:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     else
+ 137:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     {
+ 138:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       /* Return error status */
+ 139:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       status = HAL_BUSY;
+ 120              		.loc 1 139 14
+ 121 0088 0223     		movs	r3, #2
+ 122 008a FB75     		strb	r3, [r7, #23]
+ 123              	.L3:
+ 140:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     }
+ 141:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   return status;
+ 124              		.loc 1 142 10
+ 125 008c FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+ 126              	.L5:
+ 143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** }
+ 127              		.loc 1 143 1
+ 128 008e 1846     		mov	r0, r3
+ 129 0090 1837     		adds	r7, r7, #24
+ 130              		.cfi_def_cfa_offset 8
+ 131 0092 BD46     		mov	sp, r7
+ 132              		.cfi_def_cfa_register 13
+ 133              		@ sp needed
+ 134 0094 80BD     		pop	{r7, pc}
+ 135              		.cfi_endproc
+ 136              	.LFE130:
+ 138              		.section	.text.HAL_DMAEx_MultiBufferStart_IT,"ax",%progbits
+ 139              		.align	1
+ 140              		.global	HAL_DMAEx_MultiBufferStart_IT
+ 141              		.syntax unified
+ 142              		.thumb
+ 143              		.thumb_func
+ 145              	HAL_DMAEx_MultiBufferStart_IT:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 6
+
+
+ 146              	.LFB131:
+ 144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+ 145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /**
+ 146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @brief  Starts the multi_buffer DMA Transfer with interrupt enabled.
+ 147:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  hdma       pointer to a DMA_HandleTypeDef structure that contains
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                     the configuration information for the specified DMA Stream.  
+ 149:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  SrcAddress The source memory Buffer address
+ 150:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  DstAddress The destination memory Buffer address
+ 151:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  SecondMemAddress The second memory Buffer address in case of multi buffer Transfer  
+ 152:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  DataLength The length of data to be transferred from source to destination
+ 153:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @retval HAL status
+ 154:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+ 155:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint3
+ 156:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** {
+ 147              		.loc 1 156 1
+ 148              		.cfi_startproc
+ 149              		@ args = 4, pretend = 0, frame = 24
+ 150              		@ frame_needed = 1, uses_anonymous_args = 0
+ 151 0000 80B5     		push	{r7, lr}
+ 152              		.cfi_def_cfa_offset 8
+ 153              		.cfi_offset 7, -8
+ 154              		.cfi_offset 14, -4
+ 155 0002 86B0     		sub	sp, sp, #24
+ 156              		.cfi_def_cfa_offset 32
+ 157 0004 00AF     		add	r7, sp, #0
+ 158              		.cfi_def_cfa_register 7
+ 159 0006 F860     		str	r0, [r7, #12]
+ 160 0008 B960     		str	r1, [r7, #8]
+ 161 000a 7A60     		str	r2, [r7, #4]
+ 162 000c 3B60     		str	r3, [r7]
+ 157:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 163              		.loc 1 157 21
+ 164 000e 0023     		movs	r3, #0
+ 165 0010 FB75     		strb	r3, [r7, #23]
+ 158:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+ 159:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Check the parameters */
+ 160:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   assert_param(IS_DMA_BUFFER_SIZE(DataLength));
+ 161:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+ 162:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Memory-to-memory transfer not supported in double buffering mode */
+ 163:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   if (hdma->Init.Direction == DMA_MEMORY_TO_MEMORY)
+ 166              		.loc 1 163 17
+ 167 0012 FB68     		ldr	r3, [r7, #12]
+ 168 0014 9B68     		ldr	r3, [r3, #8]
+ 169              		.loc 1 163 6
+ 170 0016 802B     		cmp	r3, #128
+ 171 0018 06D1     		bne	.L8
+ 164:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
+ 165:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->ErrorCode = HAL_DMA_ERROR_NOT_SUPPORTED;
+ 172              		.loc 1 165 21
+ 173 001a FB68     		ldr	r3, [r7, #12]
+ 174 001c 4FF48072 		mov	r2, #256
+ 175 0020 5A65     		str	r2, [r3, #84]
+ 166:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     return HAL_ERROR;
+ 176              		.loc 1 166 12
+ 177 0022 0123     		movs	r3, #1
+ 178 0024 01F011B9 		b	.L9
+ 179              	.L8:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 7
+
+
+ 167:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 168:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+ 169:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Check callback functions */
+ 170:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   if ((NULL == hdma->XferCpltCallback) || (NULL == hdma->XferM1CpltCallback) || (NULL == hdma->Xfer
+ 180              		.loc 1 170 20
+ 181 0028 FB68     		ldr	r3, [r7, #12]
+ 182 002a DB6B     		ldr	r3, [r3, #60]
+ 183              		.loc 1 170 6
+ 184 002c 002B     		cmp	r3, #0
+ 185 002e 07D0     		beq	.L10
+ 186              		.loc 1 170 56 discriminator 1
+ 187 0030 FB68     		ldr	r3, [r7, #12]
+ 188 0032 5B6C     		ldr	r3, [r3, #68]
+ 189              		.loc 1 170 40 discriminator 1
+ 190 0034 002B     		cmp	r3, #0
+ 191 0036 03D0     		beq	.L10
+ 192              		.loc 1 170 94 discriminator 2
+ 193 0038 FB68     		ldr	r3, [r7, #12]
+ 194 003a DB6C     		ldr	r3, [r3, #76]
+ 195              		.loc 1 170 78 discriminator 2
+ 196 003c 002B     		cmp	r3, #0
+ 197 003e 05D1     		bne	.L11
+ 198              	.L10:
+ 171:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
+ 172:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->ErrorCode = HAL_DMA_ERROR_PARAM;
+ 199              		.loc 1 172 21
+ 200 0040 FB68     		ldr	r3, [r7, #12]
+ 201 0042 4022     		movs	r2, #64
+ 202 0044 5A65     		str	r2, [r3, #84]
+ 173:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     return HAL_ERROR;
+ 203              		.loc 1 173 12
+ 204 0046 0123     		movs	r3, #1
+ 205 0048 01F0FFB8 		b	.L9
+ 206              	.L11:
+ 174:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 175:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+ 176:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Process locked */
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   __HAL_LOCK(hdma);
+ 207              		.loc 1 177 3
+ 208 004c FB68     		ldr	r3, [r7, #12]
+ 209 004e 93F83430 		ldrb	r3, [r3, #52]	@ zero_extendqisi2
+ 210 0052 012B     		cmp	r3, #1
+ 211 0054 02D1     		bne	.L12
+ 212              		.loc 1 177 3 is_stmt 0 discriminator 1
+ 213 0056 0223     		movs	r3, #2
+ 214 0058 01F0F7B8 		b	.L9
+ 215              	.L12:
+ 216              		.loc 1 177 3 discriminator 2
+ 217 005c FB68     		ldr	r3, [r7, #12]
+ 218 005e 0122     		movs	r2, #1
+ 219 0060 83F83420 		strb	r2, [r3, #52]
+ 178:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+ 179:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   if(HAL_DMA_STATE_READY == hdma->State)
+ 220              		.loc 1 179 33 is_stmt 1 discriminator 2
+ 221 0064 FB68     		ldr	r3, [r7, #12]
+ 222 0066 93F83530 		ldrb	r3, [r3, #53]
+ 223 006a DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 8
+
+
+ 224              		.loc 1 179 5 discriminator 2
+ 225 006c 012B     		cmp	r3, #1
+ 226 006e 41F0E580 		bne	.L13
+ 180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
+ 181:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Change DMA peripheral state */
+ 182:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->State = HAL_DMA_STATE_BUSY;
+ 227              		.loc 1 182 17
+ 228 0072 FB68     		ldr	r3, [r7, #12]
+ 229 0074 0222     		movs	r2, #2
+ 230 0076 83F83520 		strb	r2, [r3, #53]
+ 183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Initialize the error code */
+ 185:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->ErrorCode = HAL_DMA_ERROR_NONE;
+ 231              		.loc 1 185 21
+ 232 007a FB68     		ldr	r3, [r7, #12]
+ 233 007c 0022     		movs	r2, #0
+ 234 007e 5A65     		str	r2, [r3, #84]
+ 186:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 187:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Enable the Double buffer mode */
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->CR |= (uint32_t)DMA_SxCR_DBM;
+ 235              		.loc 1 188 9
+ 236 0080 FB68     		ldr	r3, [r7, #12]
+ 237 0082 1B68     		ldr	r3, [r3]
+ 238              		.loc 1 188 24
+ 239 0084 1A68     		ldr	r2, [r3]
+ 240              		.loc 1 188 9
+ 241 0086 FB68     		ldr	r3, [r7, #12]
+ 242 0088 1B68     		ldr	r3, [r3]
+ 243              		.loc 1 188 24
+ 244 008a 42F48022 		orr	r2, r2, #262144
+ 245 008e 1A60     		str	r2, [r3]
+ 189:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 190:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Configure DMA Stream destination address */
+ 191:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->M1AR = SecondMemAddress;
+ 246              		.loc 1 191 9
+ 247 0090 FB68     		ldr	r3, [r7, #12]
+ 248 0092 1B68     		ldr	r3, [r3]
+ 249              		.loc 1 191 26
+ 250 0094 3A68     		ldr	r2, [r7]
+ 251 0096 1A61     		str	r2, [r3, #16]
+ 192:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 193:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Configure the source, destination address and the data length */
+ 194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     DMA_MultiBufferSetConfig(hdma, SrcAddress, DstAddress, DataLength); 
+ 252              		.loc 1 194 5
+ 253 0098 3B6A     		ldr	r3, [r7, #32]
+ 254 009a 7A68     		ldr	r2, [r7, #4]
+ 255 009c B968     		ldr	r1, [r7, #8]
+ 256 009e F868     		ldr	r0, [r7, #12]
+ 257 00a0 FFF7FEFF 		bl	DMA_MultiBufferSetConfig
+ 195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Clear all flags */
+ 197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TC_FLAG_INDEX(hdma));
+ 258              		.loc 1 197 5
+ 259 00a4 FB68     		ldr	r3, [r7, #12]
+ 260 00a6 1B68     		ldr	r3, [r3]
+ 261 00a8 1A46     		mov	r2, r3
+ 262 00aa 8D4B     		ldr	r3, .L527
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 9
+
+
+ 263 00ac 9A42     		cmp	r2, r3
+ 264 00ae 60D9     		bls	.L14
+ 265              		.loc 1 197 5 is_stmt 0 discriminator 1
+ 266 00b0 FB68     		ldr	r3, [r7, #12]
+ 267 00b2 1B68     		ldr	r3, [r3]
+ 268 00b4 8B4A     		ldr	r2, .L527+4
+ 269 00b6 9342     		cmp	r3, r2
+ 270 00b8 57D0     		beq	.L15
+ 271              		.loc 1 197 5 discriminator 3
+ 272 00ba FB68     		ldr	r3, [r7, #12]
+ 273 00bc 1B68     		ldr	r3, [r3]
+ 274 00be 8A4A     		ldr	r2, .L527+8
+ 275 00c0 9342     		cmp	r3, r2
+ 276 00c2 50D0     		beq	.L16
+ 277              		.loc 1 197 5 discriminator 5
+ 278 00c4 FB68     		ldr	r3, [r7, #12]
+ 279 00c6 1B68     		ldr	r3, [r3]
+ 280 00c8 884A     		ldr	r2, .L527+12
+ 281 00ca 9342     		cmp	r3, r2
+ 282 00cc 49D0     		beq	.L17
+ 283              		.loc 1 197 5 discriminator 7
+ 284 00ce FB68     		ldr	r3, [r7, #12]
+ 285 00d0 1B68     		ldr	r3, [r3]
+ 286 00d2 874A     		ldr	r2, .L527+16
+ 287 00d4 9342     		cmp	r3, r2
+ 288 00d6 42D0     		beq	.L18
+ 289              		.loc 1 197 5 discriminator 9
+ 290 00d8 FB68     		ldr	r3, [r7, #12]
+ 291 00da 1B68     		ldr	r3, [r3]
+ 292 00dc 854A     		ldr	r2, .L527+20
+ 293 00de 9342     		cmp	r3, r2
+ 294 00e0 3AD0     		beq	.L19
+ 295              		.loc 1 197 5 discriminator 11
+ 296 00e2 FB68     		ldr	r3, [r7, #12]
+ 297 00e4 1B68     		ldr	r3, [r3]
+ 298 00e6 844A     		ldr	r2, .L527+24
+ 299 00e8 9342     		cmp	r3, r2
+ 300 00ea 32D0     		beq	.L20
+ 301              		.loc 1 197 5 discriminator 13
+ 302 00ec FB68     		ldr	r3, [r7, #12]
+ 303 00ee 1B68     		ldr	r3, [r3]
+ 304 00f0 824A     		ldr	r2, .L527+28
+ 305 00f2 9342     		cmp	r3, r2
+ 306 00f4 2AD0     		beq	.L21
+ 307              		.loc 1 197 5 discriminator 15
+ 308 00f6 FB68     		ldr	r3, [r7, #12]
+ 309 00f8 1B68     		ldr	r3, [r3]
+ 310 00fa 814A     		ldr	r2, .L527+32
+ 311 00fc 9342     		cmp	r3, r2
+ 312 00fe 22D0     		beq	.L22
+ 313              		.loc 1 197 5 discriminator 17
+ 314 0100 FB68     		ldr	r3, [r7, #12]
+ 315 0102 1B68     		ldr	r3, [r3]
+ 316 0104 7F4A     		ldr	r2, .L527+36
+ 317 0106 9342     		cmp	r3, r2
+ 318 0108 1AD0     		beq	.L23
+ 319              		.loc 1 197 5 discriminator 19
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 10
+
+
+ 320 010a FB68     		ldr	r3, [r7, #12]
+ 321 010c 1B68     		ldr	r3, [r3]
+ 322 010e 7E4A     		ldr	r2, .L527+40
+ 323 0110 9342     		cmp	r3, r2
+ 324 0112 12D0     		beq	.L24
+ 325              		.loc 1 197 5 discriminator 21
+ 326 0114 FB68     		ldr	r3, [r7, #12]
+ 327 0116 1B68     		ldr	r3, [r3]
+ 328 0118 7C4A     		ldr	r2, .L527+44
+ 329 011a 9342     		cmp	r3, r2
+ 330 011c 0AD0     		beq	.L25
+ 331              		.loc 1 197 5 discriminator 23
+ 332 011e FB68     		ldr	r3, [r7, #12]
+ 333 0120 1B68     		ldr	r3, [r3]
+ 334 0122 7B4A     		ldr	r2, .L527+48
+ 335 0124 9342     		cmp	r3, r2
+ 336 0126 02D1     		bne	.L26
+ 337              		.loc 1 197 5 discriminator 25
+ 338 0128 4FF40013 		mov	r3, #2097152
+ 339 012c 1EE0     		b	.L38
+ 340              	.L26:
+ 341              		.loc 1 197 5 discriminator 26
+ 342 012e 4FF00063 		mov	r3, #134217728
+ 343 0132 1BE0     		b	.L38
+ 344              	.L25:
+ 345              		.loc 1 197 5 discriminator 24
+ 346 0134 4FF40013 		mov	r3, #2097152
+ 347 0138 18E0     		b	.L38
+ 348              	.L24:
+ 349              		.loc 1 197 5 discriminator 22
+ 350 013a 4FF40013 		mov	r3, #2097152
+ 351 013e 15E0     		b	.L38
+ 352              	.L23:
+ 353              		.loc 1 197 5 discriminator 20
+ 354 0140 4FF40013 		mov	r3, #2097152
+ 355 0144 12E0     		b	.L38
+ 356              	.L22:
+ 357              		.loc 1 197 5 discriminator 18
+ 358 0146 4FF40063 		mov	r3, #2048
+ 359 014a 0FE0     		b	.L38
+ 360              	.L21:
+ 361              		.loc 1 197 5 discriminator 16
+ 362 014c 4FF40063 		mov	r3, #2048
+ 363 0150 0CE0     		b	.L38
+ 364              	.L20:
+ 365              		.loc 1 197 5 discriminator 14
+ 366 0152 4FF40063 		mov	r3, #2048
+ 367 0156 09E0     		b	.L38
+ 368              	.L19:
+ 369              		.loc 1 197 5 discriminator 12
+ 370 0158 4FF40063 		mov	r3, #2048
+ 371 015c 06E0     		b	.L38
+ 372              	.L18:
+ 373              		.loc 1 197 5 discriminator 10
+ 374 015e 2023     		movs	r3, #32
+ 375 0160 04E0     		b	.L38
+ 376              	.L17:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 11
+
+
+ 377              		.loc 1 197 5 discriminator 8
+ 378 0162 2023     		movs	r3, #32
+ 379 0164 02E0     		b	.L38
+ 380              	.L16:
+ 381              		.loc 1 197 5 discriminator 6
+ 382 0166 2023     		movs	r3, #32
+ 383 0168 00E0     		b	.L38
+ 384              	.L15:
+ 385              		.loc 1 197 5 discriminator 4
+ 386 016a 2023     		movs	r3, #32
+ 387              	.L38:
+ 388              		.loc 1 197 5 discriminator 50
+ 389 016c 694A     		ldr	r2, .L527+52
+ 390 016e D360     		str	r3, [r2, #12]
+ 391 0170 4FE1     		b	.L39
+ 392              	.L14:
+ 393              		.loc 1 197 5 discriminator 2
+ 394 0172 FB68     		ldr	r3, [r7, #12]
+ 395 0174 1B68     		ldr	r3, [r3]
+ 396 0176 1A46     		mov	r2, r3
+ 397 0178 674B     		ldr	r3, .L527+56
+ 398 017a 9A42     		cmp	r2, r3
+ 399 017c 60D9     		bls	.L40
+ 400              		.loc 1 197 5 discriminator 51
+ 401 017e FB68     		ldr	r3, [r7, #12]
+ 402 0180 1B68     		ldr	r3, [r3]
+ 403 0182 584A     		ldr	r2, .L527+4
+ 404 0184 9342     		cmp	r3, r2
+ 405 0186 57D0     		beq	.L41
+ 406              		.loc 1 197 5 discriminator 53
+ 407 0188 FB68     		ldr	r3, [r7, #12]
+ 408 018a 1B68     		ldr	r3, [r3]
+ 409 018c 564A     		ldr	r2, .L527+8
+ 410 018e 9342     		cmp	r3, r2
+ 411 0190 50D0     		beq	.L42
+ 412              		.loc 1 197 5 discriminator 55
+ 413 0192 FB68     		ldr	r3, [r7, #12]
+ 414 0194 1B68     		ldr	r3, [r3]
+ 415 0196 554A     		ldr	r2, .L527+12
+ 416 0198 9342     		cmp	r3, r2
+ 417 019a 49D0     		beq	.L43
+ 418              		.loc 1 197 5 discriminator 57
+ 419 019c FB68     		ldr	r3, [r7, #12]
+ 420 019e 1B68     		ldr	r3, [r3]
+ 421 01a0 534A     		ldr	r2, .L527+16
+ 422 01a2 9342     		cmp	r3, r2
+ 423 01a4 42D0     		beq	.L44
+ 424              		.loc 1 197 5 discriminator 59
+ 425 01a6 FB68     		ldr	r3, [r7, #12]
+ 426 01a8 1B68     		ldr	r3, [r3]
+ 427 01aa 524A     		ldr	r2, .L527+20
+ 428 01ac 9342     		cmp	r3, r2
+ 429 01ae 3AD0     		beq	.L45
+ 430              		.loc 1 197 5 discriminator 61
+ 431 01b0 FB68     		ldr	r3, [r7, #12]
+ 432 01b2 1B68     		ldr	r3, [r3]
+ 433 01b4 504A     		ldr	r2, .L527+24
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 12
+
+
+ 434 01b6 9342     		cmp	r3, r2
+ 435 01b8 32D0     		beq	.L46
+ 436              		.loc 1 197 5 discriminator 63
+ 437 01ba FB68     		ldr	r3, [r7, #12]
+ 438 01bc 1B68     		ldr	r3, [r3]
+ 439 01be 4F4A     		ldr	r2, .L527+28
+ 440 01c0 9342     		cmp	r3, r2
+ 441 01c2 2AD0     		beq	.L47
+ 442              		.loc 1 197 5 discriminator 65
+ 443 01c4 FB68     		ldr	r3, [r7, #12]
+ 444 01c6 1B68     		ldr	r3, [r3]
+ 445 01c8 4D4A     		ldr	r2, .L527+32
+ 446 01ca 9342     		cmp	r3, r2
+ 447 01cc 22D0     		beq	.L48
+ 448              		.loc 1 197 5 discriminator 67
+ 449 01ce FB68     		ldr	r3, [r7, #12]
+ 450 01d0 1B68     		ldr	r3, [r3]
+ 451 01d2 4C4A     		ldr	r2, .L527+36
+ 452 01d4 9342     		cmp	r3, r2
+ 453 01d6 1AD0     		beq	.L49
+ 454              		.loc 1 197 5 discriminator 69
+ 455 01d8 FB68     		ldr	r3, [r7, #12]
+ 456 01da 1B68     		ldr	r3, [r3]
+ 457 01dc 4A4A     		ldr	r2, .L527+40
+ 458 01de 9342     		cmp	r3, r2
+ 459 01e0 12D0     		beq	.L50
+ 460              		.loc 1 197 5 discriminator 71
+ 461 01e2 FB68     		ldr	r3, [r7, #12]
+ 462 01e4 1B68     		ldr	r3, [r3]
+ 463 01e6 494A     		ldr	r2, .L527+44
+ 464 01e8 9342     		cmp	r3, r2
+ 465 01ea 0AD0     		beq	.L51
+ 466              		.loc 1 197 5 discriminator 73
+ 467 01ec FB68     		ldr	r3, [r7, #12]
+ 468 01ee 1B68     		ldr	r3, [r3]
+ 469 01f0 474A     		ldr	r2, .L527+48
+ 470 01f2 9342     		cmp	r3, r2
+ 471 01f4 02D1     		bne	.L52
+ 472              		.loc 1 197 5 discriminator 75
+ 473 01f6 4FF40013 		mov	r3, #2097152
+ 474 01fa 1EE0     		b	.L64
+ 475              	.L52:
+ 476              		.loc 1 197 5 discriminator 76
+ 477 01fc 4FF00063 		mov	r3, #134217728
+ 478 0200 1BE0     		b	.L64
+ 479              	.L51:
+ 480              		.loc 1 197 5 discriminator 74
+ 481 0202 4FF40013 		mov	r3, #2097152
+ 482 0206 18E0     		b	.L64
+ 483              	.L50:
+ 484              		.loc 1 197 5 discriminator 72
+ 485 0208 4FF40013 		mov	r3, #2097152
+ 486 020c 15E0     		b	.L64
+ 487              	.L49:
+ 488              		.loc 1 197 5 discriminator 70
+ 489 020e 4FF40013 		mov	r3, #2097152
+ 490 0212 12E0     		b	.L64
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 13
+
+
+ 491              	.L48:
+ 492              		.loc 1 197 5 discriminator 68
+ 493 0214 4FF40063 		mov	r3, #2048
+ 494 0218 0FE0     		b	.L64
+ 495              	.L47:
+ 496              		.loc 1 197 5 discriminator 66
+ 497 021a 4FF40063 		mov	r3, #2048
+ 498 021e 0CE0     		b	.L64
+ 499              	.L46:
+ 500              		.loc 1 197 5 discriminator 64
+ 501 0220 4FF40063 		mov	r3, #2048
+ 502 0224 09E0     		b	.L64
+ 503              	.L45:
+ 504              		.loc 1 197 5 discriminator 62
+ 505 0226 4FF40063 		mov	r3, #2048
+ 506 022a 06E0     		b	.L64
+ 507              	.L44:
+ 508              		.loc 1 197 5 discriminator 60
+ 509 022c 2023     		movs	r3, #32
+ 510 022e 04E0     		b	.L64
+ 511              	.L43:
+ 512              		.loc 1 197 5 discriminator 58
+ 513 0230 2023     		movs	r3, #32
+ 514 0232 02E0     		b	.L64
+ 515              	.L42:
+ 516              		.loc 1 197 5 discriminator 56
+ 517 0234 2023     		movs	r3, #32
+ 518 0236 00E0     		b	.L64
+ 519              	.L41:
+ 520              		.loc 1 197 5 discriminator 54
+ 521 0238 2023     		movs	r3, #32
+ 522              	.L64:
+ 523              		.loc 1 197 5 discriminator 100
+ 524 023a 364A     		ldr	r2, .L527+52
+ 525 023c 9360     		str	r3, [r2, #8]
+ 526 023e E8E0     		b	.L39
+ 527              	.L40:
+ 528              		.loc 1 197 5 discriminator 52
+ 529 0240 FB68     		ldr	r3, [r7, #12]
+ 530 0242 1B68     		ldr	r3, [r3]
+ 531 0244 1A46     		mov	r2, r3
+ 532 0246 354B     		ldr	r3, .L527+60
+ 533 0248 9A42     		cmp	r2, r3
+ 534 024a 40F28280 		bls	.L66
+ 535              		.loc 1 197 5 discriminator 102
+ 536 024e FB68     		ldr	r3, [r7, #12]
+ 537 0250 1B68     		ldr	r3, [r3]
+ 538 0252 244A     		ldr	r2, .L527+4
+ 539 0254 9342     		cmp	r3, r2
+ 540 0256 78D0     		beq	.L67
+ 541              		.loc 1 197 5 discriminator 104
+ 542 0258 FB68     		ldr	r3, [r7, #12]
+ 543 025a 1B68     		ldr	r3, [r3]
+ 544 025c 224A     		ldr	r2, .L527+8
+ 545 025e 9342     		cmp	r3, r2
+ 546 0260 71D0     		beq	.L68
+ 547              		.loc 1 197 5 discriminator 106
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 14
+
+
+ 548 0262 FB68     		ldr	r3, [r7, #12]
+ 549 0264 1B68     		ldr	r3, [r3]
+ 550 0266 214A     		ldr	r2, .L527+12
+ 551 0268 9342     		cmp	r3, r2
+ 552 026a 6AD0     		beq	.L69
+ 553              		.loc 1 197 5 discriminator 108
+ 554 026c FB68     		ldr	r3, [r7, #12]
+ 555 026e 1B68     		ldr	r3, [r3]
+ 556 0270 1F4A     		ldr	r2, .L527+16
+ 557 0272 9342     		cmp	r3, r2
+ 558 0274 63D0     		beq	.L70
+ 559              		.loc 1 197 5 discriminator 110
+ 560 0276 FB68     		ldr	r3, [r7, #12]
+ 561 0278 1B68     		ldr	r3, [r3]
+ 562 027a 1E4A     		ldr	r2, .L527+20
+ 563 027c 9342     		cmp	r3, r2
+ 564 027e 5BD0     		beq	.L71
+ 565              		.loc 1 197 5 discriminator 112
+ 566 0280 FB68     		ldr	r3, [r7, #12]
+ 567 0282 1B68     		ldr	r3, [r3]
+ 568 0284 1C4A     		ldr	r2, .L527+24
+ 569 0286 9342     		cmp	r3, r2
+ 570 0288 53D0     		beq	.L72
+ 571              		.loc 1 197 5 discriminator 114
+ 572 028a FB68     		ldr	r3, [r7, #12]
+ 573 028c 1B68     		ldr	r3, [r3]
+ 574 028e 1B4A     		ldr	r2, .L527+28
+ 575 0290 9342     		cmp	r3, r2
+ 576 0292 4BD0     		beq	.L73
+ 577              		.loc 1 197 5 discriminator 116
+ 578 0294 FB68     		ldr	r3, [r7, #12]
+ 579 0296 1B68     		ldr	r3, [r3]
+ 580 0298 194A     		ldr	r2, .L527+32
+ 581 029a 9342     		cmp	r3, r2
+ 582 029c 43D0     		beq	.L74
+ 583              		.loc 1 197 5 discriminator 118
+ 584 029e FB68     		ldr	r3, [r7, #12]
+ 585 02a0 1B68     		ldr	r3, [r3]
+ 586 02a2 184A     		ldr	r2, .L527+36
+ 587 02a4 9342     		cmp	r3, r2
+ 588 02a6 3BD0     		beq	.L75
+ 589              		.loc 1 197 5 discriminator 120
+ 590 02a8 FB68     		ldr	r3, [r7, #12]
+ 591 02aa 1B68     		ldr	r3, [r3]
+ 592 02ac 164A     		ldr	r2, .L527+40
+ 593 02ae 9342     		cmp	r3, r2
+ 594 02b0 12D0     		beq	.L76
+ 595              		.loc 1 197 5 discriminator 122
+ 596 02b2 FB68     		ldr	r3, [r7, #12]
+ 597 02b4 1B68     		ldr	r3, [r3]
+ 598 02b6 154A     		ldr	r2, .L527+44
+ 599 02b8 9342     		cmp	r3, r2
+ 600 02ba 0AD0     		beq	.L77
+ 601              		.loc 1 197 5 discriminator 124
+ 602 02bc FB68     		ldr	r3, [r7, #12]
+ 603 02be 1B68     		ldr	r3, [r3]
+ 604 02c0 134A     		ldr	r2, .L527+48
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 15
+
+
+ 605 02c2 9342     		cmp	r3, r2
+ 606 02c4 02D1     		bne	.L78
+ 607              		.loc 1 197 5 discriminator 126
+ 608 02c6 4FF40013 		mov	r3, #2097152
+ 609 02ca 3FE0     		b	.L90
+ 610              	.L78:
+ 611              		.loc 1 197 5 discriminator 127
+ 612 02cc 4FF00063 		mov	r3, #134217728
+ 613 02d0 3CE0     		b	.L90
+ 614              	.L77:
+ 615              		.loc 1 197 5 discriminator 125
+ 616 02d2 4FF40013 		mov	r3, #2097152
+ 617 02d6 39E0     		b	.L90
+ 618              	.L76:
+ 619              		.loc 1 197 5 discriminator 123
+ 620 02d8 4FF40013 		mov	r3, #2097152
+ 621 02dc 36E0     		b	.L90
+ 622              	.L528:
+ 623 02de 00BF     		.align	2
+ 624              	.L527:
+ 625 02e0 58640240 		.word	1073898584
+ 626 02e4 10600240 		.word	1073897488
+ 627 02e8 10640240 		.word	1073898512
+ 628 02ec 70600240 		.word	1073897584
+ 629 02f0 70640240 		.word	1073898608
+ 630 02f4 28600240 		.word	1073897512
+ 631 02f8 28640240 		.word	1073898536
+ 632 02fc 88600240 		.word	1073897608
+ 633 0300 88640240 		.word	1073898632
+ 634 0304 40600240 		.word	1073897536
+ 635 0308 40640240 		.word	1073898560
+ 636 030c A0600240 		.word	1073897632
+ 637 0310 A0640240 		.word	1073898656
+ 638 0314 00640240 		.word	1073898496
+ 639 0318 B8600240 		.word	1073897656
+ 640 031c 58600240 		.word	1073897560
+ 641              	.L75:
+ 642              		.loc 1 197 5 discriminator 121
+ 643 0320 4FF40013 		mov	r3, #2097152
+ 644 0324 12E0     		b	.L90
+ 645              	.L74:
+ 646              		.loc 1 197 5 discriminator 119
+ 647 0326 4FF40063 		mov	r3, #2048
+ 648 032a 0FE0     		b	.L90
+ 649              	.L73:
+ 650              		.loc 1 197 5 discriminator 117
+ 651 032c 4FF40063 		mov	r3, #2048
+ 652 0330 0CE0     		b	.L90
+ 653              	.L72:
+ 654              		.loc 1 197 5 discriminator 115
+ 655 0332 4FF40063 		mov	r3, #2048
+ 656 0336 09E0     		b	.L90
+ 657              	.L71:
+ 658              		.loc 1 197 5 discriminator 113
+ 659 0338 4FF40063 		mov	r3, #2048
+ 660 033c 06E0     		b	.L90
+ 661              	.L70:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 16
+
+
+ 662              		.loc 1 197 5 discriminator 111
+ 663 033e 2023     		movs	r3, #32
+ 664 0340 04E0     		b	.L90
+ 665              	.L69:
+ 666              		.loc 1 197 5 discriminator 109
+ 667 0342 2023     		movs	r3, #32
+ 668 0344 02E0     		b	.L90
+ 669              	.L68:
+ 670              		.loc 1 197 5 discriminator 107
+ 671 0346 2023     		movs	r3, #32
+ 672 0348 00E0     		b	.L90
+ 673              	.L67:
+ 674              		.loc 1 197 5 discriminator 105
+ 675 034a 2023     		movs	r3, #32
+ 676              	.L90:
+ 677              		.loc 1 197 5 discriminator 151
+ 678 034c 8C4A     		ldr	r2, .L529
+ 679 034e D360     		str	r3, [r2, #12]
+ 680 0350 5FE0     		b	.L39
+ 681              	.L66:
+ 682              		.loc 1 197 5 discriminator 103
+ 683 0352 FB68     		ldr	r3, [r7, #12]
+ 684 0354 1B68     		ldr	r3, [r3]
+ 685 0356 8B4A     		ldr	r2, .L529+4
+ 686 0358 9342     		cmp	r3, r2
+ 687 035a 57D0     		beq	.L92
+ 688              		.loc 1 197 5 discriminator 153
+ 689 035c FB68     		ldr	r3, [r7, #12]
+ 690 035e 1B68     		ldr	r3, [r3]
+ 691 0360 894A     		ldr	r2, .L529+8
+ 692 0362 9342     		cmp	r3, r2
+ 693 0364 50D0     		beq	.L93
+ 694              		.loc 1 197 5 discriminator 155
+ 695 0366 FB68     		ldr	r3, [r7, #12]
+ 696 0368 1B68     		ldr	r3, [r3]
+ 697 036a 884A     		ldr	r2, .L529+12
+ 698 036c 9342     		cmp	r3, r2
+ 699 036e 49D0     		beq	.L94
+ 700              		.loc 1 197 5 discriminator 157
+ 701 0370 FB68     		ldr	r3, [r7, #12]
+ 702 0372 1B68     		ldr	r3, [r3]
+ 703 0374 864A     		ldr	r2, .L529+16
+ 704 0376 9342     		cmp	r3, r2
+ 705 0378 42D0     		beq	.L95
+ 706              		.loc 1 197 5 discriminator 159
+ 707 037a FB68     		ldr	r3, [r7, #12]
+ 708 037c 1B68     		ldr	r3, [r3]
+ 709 037e 854A     		ldr	r2, .L529+20
+ 710 0380 9342     		cmp	r3, r2
+ 711 0382 3AD0     		beq	.L96
+ 712              		.loc 1 197 5 discriminator 161
+ 713 0384 FB68     		ldr	r3, [r7, #12]
+ 714 0386 1B68     		ldr	r3, [r3]
+ 715 0388 834A     		ldr	r2, .L529+24
+ 716 038a 9342     		cmp	r3, r2
+ 717 038c 32D0     		beq	.L97
+ 718              		.loc 1 197 5 discriminator 163
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 17
+
+
+ 719 038e FB68     		ldr	r3, [r7, #12]
+ 720 0390 1B68     		ldr	r3, [r3]
+ 721 0392 824A     		ldr	r2, .L529+28
+ 722 0394 9342     		cmp	r3, r2
+ 723 0396 2AD0     		beq	.L98
+ 724              		.loc 1 197 5 discriminator 165
+ 725 0398 FB68     		ldr	r3, [r7, #12]
+ 726 039a 1B68     		ldr	r3, [r3]
+ 727 039c 804A     		ldr	r2, .L529+32
+ 728 039e 9342     		cmp	r3, r2
+ 729 03a0 22D0     		beq	.L99
+ 730              		.loc 1 197 5 discriminator 167
+ 731 03a2 FB68     		ldr	r3, [r7, #12]
+ 732 03a4 1B68     		ldr	r3, [r3]
+ 733 03a6 7F4A     		ldr	r2, .L529+36
+ 734 03a8 9342     		cmp	r3, r2
+ 735 03aa 1AD0     		beq	.L100
+ 736              		.loc 1 197 5 discriminator 169
+ 737 03ac FB68     		ldr	r3, [r7, #12]
+ 738 03ae 1B68     		ldr	r3, [r3]
+ 739 03b0 7D4A     		ldr	r2, .L529+40
+ 740 03b2 9342     		cmp	r3, r2
+ 741 03b4 12D0     		beq	.L101
+ 742              		.loc 1 197 5 discriminator 171
+ 743 03b6 FB68     		ldr	r3, [r7, #12]
+ 744 03b8 1B68     		ldr	r3, [r3]
+ 745 03ba 7C4A     		ldr	r2, .L529+44
+ 746 03bc 9342     		cmp	r3, r2
+ 747 03be 0AD0     		beq	.L102
+ 748              		.loc 1 197 5 discriminator 173
+ 749 03c0 FB68     		ldr	r3, [r7, #12]
+ 750 03c2 1B68     		ldr	r3, [r3]
+ 751 03c4 7A4A     		ldr	r2, .L529+48
+ 752 03c6 9342     		cmp	r3, r2
+ 753 03c8 02D1     		bne	.L103
+ 754              		.loc 1 197 5 discriminator 175
+ 755 03ca 4FF40013 		mov	r3, #2097152
+ 756 03ce 1EE0     		b	.L115
+ 757              	.L103:
+ 758              		.loc 1 197 5 discriminator 176
+ 759 03d0 4FF00063 		mov	r3, #134217728
+ 760 03d4 1BE0     		b	.L115
+ 761              	.L102:
+ 762              		.loc 1 197 5 discriminator 174
+ 763 03d6 4FF40013 		mov	r3, #2097152
+ 764 03da 18E0     		b	.L115
+ 765              	.L101:
+ 766              		.loc 1 197 5 discriminator 172
+ 767 03dc 4FF40013 		mov	r3, #2097152
+ 768 03e0 15E0     		b	.L115
+ 769              	.L100:
+ 770              		.loc 1 197 5 discriminator 170
+ 771 03e2 4FF40013 		mov	r3, #2097152
+ 772 03e6 12E0     		b	.L115
+ 773              	.L99:
+ 774              		.loc 1 197 5 discriminator 168
+ 775 03e8 4FF40063 		mov	r3, #2048
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 18
+
+
+ 776 03ec 0FE0     		b	.L115
+ 777              	.L98:
+ 778              		.loc 1 197 5 discriminator 166
+ 779 03ee 4FF40063 		mov	r3, #2048
+ 780 03f2 0CE0     		b	.L115
+ 781              	.L97:
+ 782              		.loc 1 197 5 discriminator 164
+ 783 03f4 4FF40063 		mov	r3, #2048
+ 784 03f8 09E0     		b	.L115
+ 785              	.L96:
+ 786              		.loc 1 197 5 discriminator 162
+ 787 03fa 4FF40063 		mov	r3, #2048
+ 788 03fe 06E0     		b	.L115
+ 789              	.L95:
+ 790              		.loc 1 197 5 discriminator 160
+ 791 0400 2023     		movs	r3, #32
+ 792 0402 04E0     		b	.L115
+ 793              	.L94:
+ 794              		.loc 1 197 5 discriminator 158
+ 795 0404 2023     		movs	r3, #32
+ 796 0406 02E0     		b	.L115
+ 797              	.L93:
+ 798              		.loc 1 197 5 discriminator 156
+ 799 0408 2023     		movs	r3, #32
+ 800 040a 00E0     		b	.L115
+ 801              	.L92:
+ 802              		.loc 1 197 5 discriminator 154
+ 803 040c 2023     		movs	r3, #32
+ 804              	.L115:
+ 805              		.loc 1 197 5 discriminator 200
+ 806 040e 5C4A     		ldr	r2, .L529
+ 807 0410 9360     		str	r3, [r2, #8]
+ 808              	.L39:
+ 198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
+ 809              		.loc 1 198 5 is_stmt 1
+ 810 0412 FB68     		ldr	r3, [r7, #12]
+ 811 0414 1B68     		ldr	r3, [r3]
+ 812 0416 1A46     		mov	r2, r3
+ 813 0418 664B     		ldr	r3, .L529+52
+ 814 041a 9A42     		cmp	r2, r3
+ 815 041c 60D9     		bls	.L116
+ 816              		.loc 1 198 5 is_stmt 0 discriminator 1
+ 817 041e FB68     		ldr	r3, [r7, #12]
+ 818 0420 1B68     		ldr	r3, [r3]
+ 819 0422 584A     		ldr	r2, .L529+4
+ 820 0424 9342     		cmp	r3, r2
+ 821 0426 57D0     		beq	.L117
+ 822              		.loc 1 198 5 discriminator 3
+ 823 0428 FB68     		ldr	r3, [r7, #12]
+ 824 042a 1B68     		ldr	r3, [r3]
+ 825 042c 564A     		ldr	r2, .L529+8
+ 826 042e 9342     		cmp	r3, r2
+ 827 0430 50D0     		beq	.L118
+ 828              		.loc 1 198 5 discriminator 5
+ 829 0432 FB68     		ldr	r3, [r7, #12]
+ 830 0434 1B68     		ldr	r3, [r3]
+ 831 0436 554A     		ldr	r2, .L529+12
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 19
+
+
+ 832 0438 9342     		cmp	r3, r2
+ 833 043a 49D0     		beq	.L119
+ 834              		.loc 1 198 5 discriminator 7
+ 835 043c FB68     		ldr	r3, [r7, #12]
+ 836 043e 1B68     		ldr	r3, [r3]
+ 837 0440 534A     		ldr	r2, .L529+16
+ 838 0442 9342     		cmp	r3, r2
+ 839 0444 42D0     		beq	.L120
+ 840              		.loc 1 198 5 discriminator 9
+ 841 0446 FB68     		ldr	r3, [r7, #12]
+ 842 0448 1B68     		ldr	r3, [r3]
+ 843 044a 524A     		ldr	r2, .L529+20
+ 844 044c 9342     		cmp	r3, r2
+ 845 044e 3AD0     		beq	.L121
+ 846              		.loc 1 198 5 discriminator 11
+ 847 0450 FB68     		ldr	r3, [r7, #12]
+ 848 0452 1B68     		ldr	r3, [r3]
+ 849 0454 504A     		ldr	r2, .L529+24
+ 850 0456 9342     		cmp	r3, r2
+ 851 0458 32D0     		beq	.L122
+ 852              		.loc 1 198 5 discriminator 13
+ 853 045a FB68     		ldr	r3, [r7, #12]
+ 854 045c 1B68     		ldr	r3, [r3]
+ 855 045e 4F4A     		ldr	r2, .L529+28
+ 856 0460 9342     		cmp	r3, r2
+ 857 0462 2AD0     		beq	.L123
+ 858              		.loc 1 198 5 discriminator 15
+ 859 0464 FB68     		ldr	r3, [r7, #12]
+ 860 0466 1B68     		ldr	r3, [r3]
+ 861 0468 4D4A     		ldr	r2, .L529+32
+ 862 046a 9342     		cmp	r3, r2
+ 863 046c 22D0     		beq	.L124
+ 864              		.loc 1 198 5 discriminator 17
+ 865 046e FB68     		ldr	r3, [r7, #12]
+ 866 0470 1B68     		ldr	r3, [r3]
+ 867 0472 4C4A     		ldr	r2, .L529+36
+ 868 0474 9342     		cmp	r3, r2
+ 869 0476 1AD0     		beq	.L125
+ 870              		.loc 1 198 5 discriminator 19
+ 871 0478 FB68     		ldr	r3, [r7, #12]
+ 872 047a 1B68     		ldr	r3, [r3]
+ 873 047c 4A4A     		ldr	r2, .L529+40
+ 874 047e 9342     		cmp	r3, r2
+ 875 0480 12D0     		beq	.L126
+ 876              		.loc 1 198 5 discriminator 21
+ 877 0482 FB68     		ldr	r3, [r7, #12]
+ 878 0484 1B68     		ldr	r3, [r3]
+ 879 0486 494A     		ldr	r2, .L529+44
+ 880 0488 9342     		cmp	r3, r2
+ 881 048a 0AD0     		beq	.L127
+ 882              		.loc 1 198 5 discriminator 23
+ 883 048c FB68     		ldr	r3, [r7, #12]
+ 884 048e 1B68     		ldr	r3, [r3]
+ 885 0490 474A     		ldr	r2, .L529+48
+ 886 0492 9342     		cmp	r3, r2
+ 887 0494 02D1     		bne	.L128
+ 888              		.loc 1 198 5 discriminator 25
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 20
+
+
+ 889 0496 4FF48013 		mov	r3, #1048576
+ 890 049a 1EE0     		b	.L140
+ 891              	.L128:
+ 892              		.loc 1 198 5 discriminator 26
+ 893 049c 4FF08063 		mov	r3, #67108864
+ 894 04a0 1BE0     		b	.L140
+ 895              	.L127:
+ 896              		.loc 1 198 5 discriminator 24
+ 897 04a2 4FF48013 		mov	r3, #1048576
+ 898 04a6 18E0     		b	.L140
+ 899              	.L126:
+ 900              		.loc 1 198 5 discriminator 22
+ 901 04a8 4FF48013 		mov	r3, #1048576
+ 902 04ac 15E0     		b	.L140
+ 903              	.L125:
+ 904              		.loc 1 198 5 discriminator 20
+ 905 04ae 4FF48013 		mov	r3, #1048576
+ 906 04b2 12E0     		b	.L140
+ 907              	.L124:
+ 908              		.loc 1 198 5 discriminator 18
+ 909 04b4 4FF48063 		mov	r3, #1024
+ 910 04b8 0FE0     		b	.L140
+ 911              	.L123:
+ 912              		.loc 1 198 5 discriminator 16
+ 913 04ba 4FF48063 		mov	r3, #1024
+ 914 04be 0CE0     		b	.L140
+ 915              	.L122:
+ 916              		.loc 1 198 5 discriminator 14
+ 917 04c0 4FF48063 		mov	r3, #1024
+ 918 04c4 09E0     		b	.L140
+ 919              	.L121:
+ 920              		.loc 1 198 5 discriminator 12
+ 921 04c6 4FF48063 		mov	r3, #1024
+ 922 04ca 06E0     		b	.L140
+ 923              	.L120:
+ 924              		.loc 1 198 5 discriminator 10
+ 925 04cc 1023     		movs	r3, #16
+ 926 04ce 04E0     		b	.L140
+ 927              	.L119:
+ 928              		.loc 1 198 5 discriminator 8
+ 929 04d0 1023     		movs	r3, #16
+ 930 04d2 02E0     		b	.L140
+ 931              	.L118:
+ 932              		.loc 1 198 5 discriminator 6
+ 933 04d4 1023     		movs	r3, #16
+ 934 04d6 00E0     		b	.L140
+ 935              	.L117:
+ 936              		.loc 1 198 5 discriminator 4
+ 937 04d8 1023     		movs	r3, #16
+ 938              	.L140:
+ 939              		.loc 1 198 5 discriminator 50
+ 940 04da 374A     		ldr	r2, .L529+56
+ 941 04dc D360     		str	r3, [r2, #12]
+ 942 04de 4FE1     		b	.L141
+ 943              	.L116:
+ 944              		.loc 1 198 5 discriminator 2
+ 945 04e0 FB68     		ldr	r3, [r7, #12]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 21
+
+
+ 946 04e2 1B68     		ldr	r3, [r3]
+ 947 04e4 1A46     		mov	r2, r3
+ 948 04e6 354B     		ldr	r3, .L529+60
+ 949 04e8 9A42     		cmp	r2, r3
+ 950 04ea 40F28280 		bls	.L142
+ 951              		.loc 1 198 5 discriminator 51
+ 952 04ee FB68     		ldr	r3, [r7, #12]
+ 953 04f0 1B68     		ldr	r3, [r3]
+ 954 04f2 244A     		ldr	r2, .L529+4
+ 955 04f4 9342     		cmp	r3, r2
+ 956 04f6 78D0     		beq	.L143
+ 957              		.loc 1 198 5 discriminator 53
+ 958 04f8 FB68     		ldr	r3, [r7, #12]
+ 959 04fa 1B68     		ldr	r3, [r3]
+ 960 04fc 224A     		ldr	r2, .L529+8
+ 961 04fe 9342     		cmp	r3, r2
+ 962 0500 71D0     		beq	.L144
+ 963              		.loc 1 198 5 discriminator 55
+ 964 0502 FB68     		ldr	r3, [r7, #12]
+ 965 0504 1B68     		ldr	r3, [r3]
+ 966 0506 214A     		ldr	r2, .L529+12
+ 967 0508 9342     		cmp	r3, r2
+ 968 050a 6AD0     		beq	.L145
+ 969              		.loc 1 198 5 discriminator 57
+ 970 050c FB68     		ldr	r3, [r7, #12]
+ 971 050e 1B68     		ldr	r3, [r3]
+ 972 0510 1F4A     		ldr	r2, .L529+16
+ 973 0512 9342     		cmp	r3, r2
+ 974 0514 63D0     		beq	.L146
+ 975              		.loc 1 198 5 discriminator 59
+ 976 0516 FB68     		ldr	r3, [r7, #12]
+ 977 0518 1B68     		ldr	r3, [r3]
+ 978 051a 1E4A     		ldr	r2, .L529+20
+ 979 051c 9342     		cmp	r3, r2
+ 980 051e 5BD0     		beq	.L147
+ 981              		.loc 1 198 5 discriminator 61
+ 982 0520 FB68     		ldr	r3, [r7, #12]
+ 983 0522 1B68     		ldr	r3, [r3]
+ 984 0524 1C4A     		ldr	r2, .L529+24
+ 985 0526 9342     		cmp	r3, r2
+ 986 0528 53D0     		beq	.L148
+ 987              		.loc 1 198 5 discriminator 63
+ 988 052a FB68     		ldr	r3, [r7, #12]
+ 989 052c 1B68     		ldr	r3, [r3]
+ 990 052e 1B4A     		ldr	r2, .L529+28
+ 991 0530 9342     		cmp	r3, r2
+ 992 0532 4BD0     		beq	.L149
+ 993              		.loc 1 198 5 discriminator 65
+ 994 0534 FB68     		ldr	r3, [r7, #12]
+ 995 0536 1B68     		ldr	r3, [r3]
+ 996 0538 194A     		ldr	r2, .L529+32
+ 997 053a 9342     		cmp	r3, r2
+ 998 053c 43D0     		beq	.L150
+ 999              		.loc 1 198 5 discriminator 67
+ 1000 053e FB68     		ldr	r3, [r7, #12]
+ 1001 0540 1B68     		ldr	r3, [r3]
+ 1002 0542 184A     		ldr	r2, .L529+36
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 22
+
+
+ 1003 0544 9342     		cmp	r3, r2
+ 1004 0546 3BD0     		beq	.L151
+ 1005              		.loc 1 198 5 discriminator 69
+ 1006 0548 FB68     		ldr	r3, [r7, #12]
+ 1007 054a 1B68     		ldr	r3, [r3]
+ 1008 054c 164A     		ldr	r2, .L529+40
+ 1009 054e 9342     		cmp	r3, r2
+ 1010 0550 12D0     		beq	.L152
+ 1011              		.loc 1 198 5 discriminator 71
+ 1012 0552 FB68     		ldr	r3, [r7, #12]
+ 1013 0554 1B68     		ldr	r3, [r3]
+ 1014 0556 154A     		ldr	r2, .L529+44
+ 1015 0558 9342     		cmp	r3, r2
+ 1016 055a 0AD0     		beq	.L153
+ 1017              		.loc 1 198 5 discriminator 73
+ 1018 055c FB68     		ldr	r3, [r7, #12]
+ 1019 055e 1B68     		ldr	r3, [r3]
+ 1020 0560 134A     		ldr	r2, .L529+48
+ 1021 0562 9342     		cmp	r3, r2
+ 1022 0564 02D1     		bne	.L154
+ 1023              		.loc 1 198 5 discriminator 75
+ 1024 0566 4FF48013 		mov	r3, #1048576
+ 1025 056a 3FE0     		b	.L166
+ 1026              	.L154:
+ 1027              		.loc 1 198 5 discriminator 76
+ 1028 056c 4FF08063 		mov	r3, #67108864
+ 1029 0570 3CE0     		b	.L166
+ 1030              	.L153:
+ 1031              		.loc 1 198 5 discriminator 74
+ 1032 0572 4FF48013 		mov	r3, #1048576
+ 1033 0576 39E0     		b	.L166
+ 1034              	.L152:
+ 1035              		.loc 1 198 5 discriminator 72
+ 1036 0578 4FF48013 		mov	r3, #1048576
+ 1037 057c 36E0     		b	.L166
+ 1038              	.L530:
+ 1039 057e 00BF     		.align	2
+ 1040              	.L529:
+ 1041 0580 00600240 		.word	1073897472
+ 1042 0584 10600240 		.word	1073897488
+ 1043 0588 10640240 		.word	1073898512
+ 1044 058c 70600240 		.word	1073897584
+ 1045 0590 70640240 		.word	1073898608
+ 1046 0594 28600240 		.word	1073897512
+ 1047 0598 28640240 		.word	1073898536
+ 1048 059c 88600240 		.word	1073897608
+ 1049 05a0 88640240 		.word	1073898632
+ 1050 05a4 40600240 		.word	1073897536
+ 1051 05a8 40640240 		.word	1073898560
+ 1052 05ac A0600240 		.word	1073897632
+ 1053 05b0 A0640240 		.word	1073898656
+ 1054 05b4 58640240 		.word	1073898584
+ 1055 05b8 00640240 		.word	1073898496
+ 1056 05bc B8600240 		.word	1073897656
+ 1057              	.L151:
+ 1058              		.loc 1 198 5 discriminator 70
+ 1059 05c0 4FF48013 		mov	r3, #1048576
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 23
+
+
+ 1060 05c4 12E0     		b	.L166
+ 1061              	.L150:
+ 1062              		.loc 1 198 5 discriminator 68
+ 1063 05c6 4FF48063 		mov	r3, #1024
+ 1064 05ca 0FE0     		b	.L166
+ 1065              	.L149:
+ 1066              		.loc 1 198 5 discriminator 66
+ 1067 05cc 4FF48063 		mov	r3, #1024
+ 1068 05d0 0CE0     		b	.L166
+ 1069              	.L148:
+ 1070              		.loc 1 198 5 discriminator 64
+ 1071 05d2 4FF48063 		mov	r3, #1024
+ 1072 05d6 09E0     		b	.L166
+ 1073              	.L147:
+ 1074              		.loc 1 198 5 discriminator 62
+ 1075 05d8 4FF48063 		mov	r3, #1024
+ 1076 05dc 06E0     		b	.L166
+ 1077              	.L146:
+ 1078              		.loc 1 198 5 discriminator 60
+ 1079 05de 1023     		movs	r3, #16
+ 1080 05e0 04E0     		b	.L166
+ 1081              	.L145:
+ 1082              		.loc 1 198 5 discriminator 58
+ 1083 05e2 1023     		movs	r3, #16
+ 1084 05e4 02E0     		b	.L166
+ 1085              	.L144:
+ 1086              		.loc 1 198 5 discriminator 56
+ 1087 05e6 1023     		movs	r3, #16
+ 1088 05e8 00E0     		b	.L166
+ 1089              	.L143:
+ 1090              		.loc 1 198 5 discriminator 54
+ 1091 05ea 1023     		movs	r3, #16
+ 1092              	.L166:
+ 1093              		.loc 1 198 5 discriminator 100
+ 1094 05ec 8C4A     		ldr	r2, .L531
+ 1095 05ee 9360     		str	r3, [r2, #8]
+ 1096 05f0 C6E0     		b	.L141
+ 1097              	.L142:
+ 1098              		.loc 1 198 5 discriminator 52
+ 1099 05f2 FB68     		ldr	r3, [r7, #12]
+ 1100 05f4 1B68     		ldr	r3, [r3]
+ 1101 05f6 1A46     		mov	r2, r3
+ 1102 05f8 8A4B     		ldr	r3, .L531+4
+ 1103 05fa 9A42     		cmp	r2, r3
+ 1104 05fc 60D9     		bls	.L168
+ 1105              		.loc 1 198 5 discriminator 102
+ 1106 05fe FB68     		ldr	r3, [r7, #12]
+ 1107 0600 1B68     		ldr	r3, [r3]
+ 1108 0602 894A     		ldr	r2, .L531+8
+ 1109 0604 9342     		cmp	r3, r2
+ 1110 0606 57D0     		beq	.L169
+ 1111              		.loc 1 198 5 discriminator 104
+ 1112 0608 FB68     		ldr	r3, [r7, #12]
+ 1113 060a 1B68     		ldr	r3, [r3]
+ 1114 060c 874A     		ldr	r2, .L531+12
+ 1115 060e 9342     		cmp	r3, r2
+ 1116 0610 50D0     		beq	.L170
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 24
+
+
+ 1117              		.loc 1 198 5 discriminator 106
+ 1118 0612 FB68     		ldr	r3, [r7, #12]
+ 1119 0614 1B68     		ldr	r3, [r3]
+ 1120 0616 864A     		ldr	r2, .L531+16
+ 1121 0618 9342     		cmp	r3, r2
+ 1122 061a 49D0     		beq	.L171
+ 1123              		.loc 1 198 5 discriminator 108
+ 1124 061c FB68     		ldr	r3, [r7, #12]
+ 1125 061e 1B68     		ldr	r3, [r3]
+ 1126 0620 844A     		ldr	r2, .L531+20
+ 1127 0622 9342     		cmp	r3, r2
+ 1128 0624 42D0     		beq	.L172
+ 1129              		.loc 1 198 5 discriminator 110
+ 1130 0626 FB68     		ldr	r3, [r7, #12]
+ 1131 0628 1B68     		ldr	r3, [r3]
+ 1132 062a 834A     		ldr	r2, .L531+24
+ 1133 062c 9342     		cmp	r3, r2
+ 1134 062e 3AD0     		beq	.L173
+ 1135              		.loc 1 198 5 discriminator 112
+ 1136 0630 FB68     		ldr	r3, [r7, #12]
+ 1137 0632 1B68     		ldr	r3, [r3]
+ 1138 0634 814A     		ldr	r2, .L531+28
+ 1139 0636 9342     		cmp	r3, r2
+ 1140 0638 32D0     		beq	.L174
+ 1141              		.loc 1 198 5 discriminator 114
+ 1142 063a FB68     		ldr	r3, [r7, #12]
+ 1143 063c 1B68     		ldr	r3, [r3]
+ 1144 063e 804A     		ldr	r2, .L531+32
+ 1145 0640 9342     		cmp	r3, r2
+ 1146 0642 2AD0     		beq	.L175
+ 1147              		.loc 1 198 5 discriminator 116
+ 1148 0644 FB68     		ldr	r3, [r7, #12]
+ 1149 0646 1B68     		ldr	r3, [r3]
+ 1150 0648 7E4A     		ldr	r2, .L531+36
+ 1151 064a 9342     		cmp	r3, r2
+ 1152 064c 22D0     		beq	.L176
+ 1153              		.loc 1 198 5 discriminator 118
+ 1154 064e FB68     		ldr	r3, [r7, #12]
+ 1155 0650 1B68     		ldr	r3, [r3]
+ 1156 0652 7D4A     		ldr	r2, .L531+40
+ 1157 0654 9342     		cmp	r3, r2
+ 1158 0656 1AD0     		beq	.L177
+ 1159              		.loc 1 198 5 discriminator 120
+ 1160 0658 FB68     		ldr	r3, [r7, #12]
+ 1161 065a 1B68     		ldr	r3, [r3]
+ 1162 065c 7B4A     		ldr	r2, .L531+44
+ 1163 065e 9342     		cmp	r3, r2
+ 1164 0660 12D0     		beq	.L178
+ 1165              		.loc 1 198 5 discriminator 122
+ 1166 0662 FB68     		ldr	r3, [r7, #12]
+ 1167 0664 1B68     		ldr	r3, [r3]
+ 1168 0666 7A4A     		ldr	r2, .L531+48
+ 1169 0668 9342     		cmp	r3, r2
+ 1170 066a 0AD0     		beq	.L179
+ 1171              		.loc 1 198 5 discriminator 124
+ 1172 066c FB68     		ldr	r3, [r7, #12]
+ 1173 066e 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 25
+
+
+ 1174 0670 784A     		ldr	r2, .L531+52
+ 1175 0672 9342     		cmp	r3, r2
+ 1176 0674 02D1     		bne	.L180
+ 1177              		.loc 1 198 5 discriminator 126
+ 1178 0676 4FF48013 		mov	r3, #1048576
+ 1179 067a 1EE0     		b	.L192
+ 1180              	.L180:
+ 1181              		.loc 1 198 5 discriminator 127
+ 1182 067c 4FF08063 		mov	r3, #67108864
+ 1183 0680 1BE0     		b	.L192
+ 1184              	.L179:
+ 1185              		.loc 1 198 5 discriminator 125
+ 1186 0682 4FF48013 		mov	r3, #1048576
+ 1187 0686 18E0     		b	.L192
+ 1188              	.L178:
+ 1189              		.loc 1 198 5 discriminator 123
+ 1190 0688 4FF48013 		mov	r3, #1048576
+ 1191 068c 15E0     		b	.L192
+ 1192              	.L177:
+ 1193              		.loc 1 198 5 discriminator 121
+ 1194 068e 4FF48013 		mov	r3, #1048576
+ 1195 0692 12E0     		b	.L192
+ 1196              	.L176:
+ 1197              		.loc 1 198 5 discriminator 119
+ 1198 0694 4FF48063 		mov	r3, #1024
+ 1199 0698 0FE0     		b	.L192
+ 1200              	.L175:
+ 1201              		.loc 1 198 5 discriminator 117
+ 1202 069a 4FF48063 		mov	r3, #1024
+ 1203 069e 0CE0     		b	.L192
+ 1204              	.L174:
+ 1205              		.loc 1 198 5 discriminator 115
+ 1206 06a0 4FF48063 		mov	r3, #1024
+ 1207 06a4 09E0     		b	.L192
+ 1208              	.L173:
+ 1209              		.loc 1 198 5 discriminator 113
+ 1210 06a6 4FF48063 		mov	r3, #1024
+ 1211 06aa 06E0     		b	.L192
+ 1212              	.L172:
+ 1213              		.loc 1 198 5 discriminator 111
+ 1214 06ac 1023     		movs	r3, #16
+ 1215 06ae 04E0     		b	.L192
+ 1216              	.L171:
+ 1217              		.loc 1 198 5 discriminator 109
+ 1218 06b0 1023     		movs	r3, #16
+ 1219 06b2 02E0     		b	.L192
+ 1220              	.L170:
+ 1221              		.loc 1 198 5 discriminator 107
+ 1222 06b4 1023     		movs	r3, #16
+ 1223 06b6 00E0     		b	.L192
+ 1224              	.L169:
+ 1225              		.loc 1 198 5 discriminator 105
+ 1226 06b8 1023     		movs	r3, #16
+ 1227              	.L192:
+ 1228              		.loc 1 198 5 discriminator 151
+ 1229 06ba 674A     		ldr	r2, .L531+56
+ 1230 06bc D360     		str	r3, [r2, #12]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 26
+
+
+ 1231 06be 5FE0     		b	.L141
+ 1232              	.L168:
+ 1233              		.loc 1 198 5 discriminator 103
+ 1234 06c0 FB68     		ldr	r3, [r7, #12]
+ 1235 06c2 1B68     		ldr	r3, [r3]
+ 1236 06c4 584A     		ldr	r2, .L531+8
+ 1237 06c6 9342     		cmp	r3, r2
+ 1238 06c8 57D0     		beq	.L194
+ 1239              		.loc 1 198 5 discriminator 153
+ 1240 06ca FB68     		ldr	r3, [r7, #12]
+ 1241 06cc 1B68     		ldr	r3, [r3]
+ 1242 06ce 574A     		ldr	r2, .L531+12
+ 1243 06d0 9342     		cmp	r3, r2
+ 1244 06d2 50D0     		beq	.L195
+ 1245              		.loc 1 198 5 discriminator 155
+ 1246 06d4 FB68     		ldr	r3, [r7, #12]
+ 1247 06d6 1B68     		ldr	r3, [r3]
+ 1248 06d8 554A     		ldr	r2, .L531+16
+ 1249 06da 9342     		cmp	r3, r2
+ 1250 06dc 49D0     		beq	.L196
+ 1251              		.loc 1 198 5 discriminator 157
+ 1252 06de FB68     		ldr	r3, [r7, #12]
+ 1253 06e0 1B68     		ldr	r3, [r3]
+ 1254 06e2 544A     		ldr	r2, .L531+20
+ 1255 06e4 9342     		cmp	r3, r2
+ 1256 06e6 42D0     		beq	.L197
+ 1257              		.loc 1 198 5 discriminator 159
+ 1258 06e8 FB68     		ldr	r3, [r7, #12]
+ 1259 06ea 1B68     		ldr	r3, [r3]
+ 1260 06ec 524A     		ldr	r2, .L531+24
+ 1261 06ee 9342     		cmp	r3, r2
+ 1262 06f0 3AD0     		beq	.L198
+ 1263              		.loc 1 198 5 discriminator 161
+ 1264 06f2 FB68     		ldr	r3, [r7, #12]
+ 1265 06f4 1B68     		ldr	r3, [r3]
+ 1266 06f6 514A     		ldr	r2, .L531+28
+ 1267 06f8 9342     		cmp	r3, r2
+ 1268 06fa 32D0     		beq	.L199
+ 1269              		.loc 1 198 5 discriminator 163
+ 1270 06fc FB68     		ldr	r3, [r7, #12]
+ 1271 06fe 1B68     		ldr	r3, [r3]
+ 1272 0700 4F4A     		ldr	r2, .L531+32
+ 1273 0702 9342     		cmp	r3, r2
+ 1274 0704 2AD0     		beq	.L200
+ 1275              		.loc 1 198 5 discriminator 165
+ 1276 0706 FB68     		ldr	r3, [r7, #12]
+ 1277 0708 1B68     		ldr	r3, [r3]
+ 1278 070a 4E4A     		ldr	r2, .L531+36
+ 1279 070c 9342     		cmp	r3, r2
+ 1280 070e 22D0     		beq	.L201
+ 1281              		.loc 1 198 5 discriminator 167
+ 1282 0710 FB68     		ldr	r3, [r7, #12]
+ 1283 0712 1B68     		ldr	r3, [r3]
+ 1284 0714 4C4A     		ldr	r2, .L531+40
+ 1285 0716 9342     		cmp	r3, r2
+ 1286 0718 1AD0     		beq	.L202
+ 1287              		.loc 1 198 5 discriminator 169
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 27
+
+
+ 1288 071a FB68     		ldr	r3, [r7, #12]
+ 1289 071c 1B68     		ldr	r3, [r3]
+ 1290 071e 4B4A     		ldr	r2, .L531+44
+ 1291 0720 9342     		cmp	r3, r2
+ 1292 0722 12D0     		beq	.L203
+ 1293              		.loc 1 198 5 discriminator 171
+ 1294 0724 FB68     		ldr	r3, [r7, #12]
+ 1295 0726 1B68     		ldr	r3, [r3]
+ 1296 0728 494A     		ldr	r2, .L531+48
+ 1297 072a 9342     		cmp	r3, r2
+ 1298 072c 0AD0     		beq	.L204
+ 1299              		.loc 1 198 5 discriminator 173
+ 1300 072e FB68     		ldr	r3, [r7, #12]
+ 1301 0730 1B68     		ldr	r3, [r3]
+ 1302 0732 484A     		ldr	r2, .L531+52
+ 1303 0734 9342     		cmp	r3, r2
+ 1304 0736 02D1     		bne	.L205
+ 1305              		.loc 1 198 5 discriminator 175
+ 1306 0738 4FF48013 		mov	r3, #1048576
+ 1307 073c 1EE0     		b	.L217
+ 1308              	.L205:
+ 1309              		.loc 1 198 5 discriminator 176
+ 1310 073e 4FF08063 		mov	r3, #67108864
+ 1311 0742 1BE0     		b	.L217
+ 1312              	.L204:
+ 1313              		.loc 1 198 5 discriminator 174
+ 1314 0744 4FF48013 		mov	r3, #1048576
+ 1315 0748 18E0     		b	.L217
+ 1316              	.L203:
+ 1317              		.loc 1 198 5 discriminator 172
+ 1318 074a 4FF48013 		mov	r3, #1048576
+ 1319 074e 15E0     		b	.L217
+ 1320              	.L202:
+ 1321              		.loc 1 198 5 discriminator 170
+ 1322 0750 4FF48013 		mov	r3, #1048576
+ 1323 0754 12E0     		b	.L217
+ 1324              	.L201:
+ 1325              		.loc 1 198 5 discriminator 168
+ 1326 0756 4FF48063 		mov	r3, #1024
+ 1327 075a 0FE0     		b	.L217
+ 1328              	.L200:
+ 1329              		.loc 1 198 5 discriminator 166
+ 1330 075c 4FF48063 		mov	r3, #1024
+ 1331 0760 0CE0     		b	.L217
+ 1332              	.L199:
+ 1333              		.loc 1 198 5 discriminator 164
+ 1334 0762 4FF48063 		mov	r3, #1024
+ 1335 0766 09E0     		b	.L217
+ 1336              	.L198:
+ 1337              		.loc 1 198 5 discriminator 162
+ 1338 0768 4FF48063 		mov	r3, #1024
+ 1339 076c 06E0     		b	.L217
+ 1340              	.L197:
+ 1341              		.loc 1 198 5 discriminator 160
+ 1342 076e 1023     		movs	r3, #16
+ 1343 0770 04E0     		b	.L217
+ 1344              	.L196:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 28
+
+
+ 1345              		.loc 1 198 5 discriminator 158
+ 1346 0772 1023     		movs	r3, #16
+ 1347 0774 02E0     		b	.L217
+ 1348              	.L195:
+ 1349              		.loc 1 198 5 discriminator 156
+ 1350 0776 1023     		movs	r3, #16
+ 1351 0778 00E0     		b	.L217
+ 1352              	.L194:
+ 1353              		.loc 1 198 5 discriminator 154
+ 1354 077a 1023     		movs	r3, #16
+ 1355              	.L217:
+ 1356              		.loc 1 198 5 discriminator 200
+ 1357 077c 364A     		ldr	r2, .L531+56
+ 1358 077e 9360     		str	r3, [r2, #8]
+ 1359              	.L141:
+ 199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
+ 1360              		.loc 1 199 5 is_stmt 1
+ 1361 0780 FB68     		ldr	r3, [r7, #12]
+ 1362 0782 1B68     		ldr	r3, [r3]
+ 1363 0784 1A46     		mov	r2, r3
+ 1364 0786 354B     		ldr	r3, .L531+60
+ 1365 0788 9A42     		cmp	r2, r3
+ 1366 078a 40F28280 		bls	.L218
+ 1367              		.loc 1 199 5 is_stmt 0 discriminator 1
+ 1368 078e FB68     		ldr	r3, [r7, #12]
+ 1369 0790 1B68     		ldr	r3, [r3]
+ 1370 0792 254A     		ldr	r2, .L531+8
+ 1371 0794 9342     		cmp	r3, r2
+ 1372 0796 78D0     		beq	.L219
+ 1373              		.loc 1 199 5 discriminator 3
+ 1374 0798 FB68     		ldr	r3, [r7, #12]
+ 1375 079a 1B68     		ldr	r3, [r3]
+ 1376 079c 234A     		ldr	r2, .L531+12
+ 1377 079e 9342     		cmp	r3, r2
+ 1378 07a0 71D0     		beq	.L220
+ 1379              		.loc 1 199 5 discriminator 5
+ 1380 07a2 FB68     		ldr	r3, [r7, #12]
+ 1381 07a4 1B68     		ldr	r3, [r3]
+ 1382 07a6 224A     		ldr	r2, .L531+16
+ 1383 07a8 9342     		cmp	r3, r2
+ 1384 07aa 6AD0     		beq	.L221
+ 1385              		.loc 1 199 5 discriminator 7
+ 1386 07ac FB68     		ldr	r3, [r7, #12]
+ 1387 07ae 1B68     		ldr	r3, [r3]
+ 1388 07b0 204A     		ldr	r2, .L531+20
+ 1389 07b2 9342     		cmp	r3, r2
+ 1390 07b4 63D0     		beq	.L222
+ 1391              		.loc 1 199 5 discriminator 9
+ 1392 07b6 FB68     		ldr	r3, [r7, #12]
+ 1393 07b8 1B68     		ldr	r3, [r3]
+ 1394 07ba 1F4A     		ldr	r2, .L531+24
+ 1395 07bc 9342     		cmp	r3, r2
+ 1396 07be 5BD0     		beq	.L223
+ 1397              		.loc 1 199 5 discriminator 11
+ 1398 07c0 FB68     		ldr	r3, [r7, #12]
+ 1399 07c2 1B68     		ldr	r3, [r3]
+ 1400 07c4 1D4A     		ldr	r2, .L531+28
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 29
+
+
+ 1401 07c6 9342     		cmp	r3, r2
+ 1402 07c8 53D0     		beq	.L224
+ 1403              		.loc 1 199 5 discriminator 13
+ 1404 07ca FB68     		ldr	r3, [r7, #12]
+ 1405 07cc 1B68     		ldr	r3, [r3]
+ 1406 07ce 1C4A     		ldr	r2, .L531+32
+ 1407 07d0 9342     		cmp	r3, r2
+ 1408 07d2 4BD0     		beq	.L225
+ 1409              		.loc 1 199 5 discriminator 15
+ 1410 07d4 FB68     		ldr	r3, [r7, #12]
+ 1411 07d6 1B68     		ldr	r3, [r3]
+ 1412 07d8 1A4A     		ldr	r2, .L531+36
+ 1413 07da 9342     		cmp	r3, r2
+ 1414 07dc 43D0     		beq	.L226
+ 1415              		.loc 1 199 5 discriminator 17
+ 1416 07de FB68     		ldr	r3, [r7, #12]
+ 1417 07e0 1B68     		ldr	r3, [r3]
+ 1418 07e2 194A     		ldr	r2, .L531+40
+ 1419 07e4 9342     		cmp	r3, r2
+ 1420 07e6 3BD0     		beq	.L227
+ 1421              		.loc 1 199 5 discriminator 19
+ 1422 07e8 FB68     		ldr	r3, [r7, #12]
+ 1423 07ea 1B68     		ldr	r3, [r3]
+ 1424 07ec 174A     		ldr	r2, .L531+44
+ 1425 07ee 9342     		cmp	r3, r2
+ 1426 07f0 12D0     		beq	.L228
+ 1427              		.loc 1 199 5 discriminator 21
+ 1428 07f2 FB68     		ldr	r3, [r7, #12]
+ 1429 07f4 1B68     		ldr	r3, [r3]
+ 1430 07f6 164A     		ldr	r2, .L531+48
+ 1431 07f8 9342     		cmp	r3, r2
+ 1432 07fa 0AD0     		beq	.L229
+ 1433              		.loc 1 199 5 discriminator 23
+ 1434 07fc FB68     		ldr	r3, [r7, #12]
+ 1435 07fe 1B68     		ldr	r3, [r3]
+ 1436 0800 144A     		ldr	r2, .L531+52
+ 1437 0802 9342     		cmp	r3, r2
+ 1438 0804 02D1     		bne	.L230
+ 1439              		.loc 1 199 5 discriminator 25
+ 1440 0806 4FF40023 		mov	r3, #524288
+ 1441 080a 3FE0     		b	.L242
+ 1442              	.L230:
+ 1443              		.loc 1 199 5 discriminator 26
+ 1444 080c 4FF00073 		mov	r3, #33554432
+ 1445 0810 3CE0     		b	.L242
+ 1446              	.L229:
+ 1447              		.loc 1 199 5 discriminator 24
+ 1448 0812 4FF40023 		mov	r3, #524288
+ 1449 0816 39E0     		b	.L242
+ 1450              	.L228:
+ 1451              		.loc 1 199 5 discriminator 22
+ 1452 0818 4FF40023 		mov	r3, #524288
+ 1453 081c 36E0     		b	.L242
+ 1454              	.L532:
+ 1455 081e 00BF     		.align	2
+ 1456              	.L531:
+ 1457 0820 00640240 		.word	1073898496
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 30
+
+
+ 1458 0824 58600240 		.word	1073897560
+ 1459 0828 10600240 		.word	1073897488
+ 1460 082c 10640240 		.word	1073898512
+ 1461 0830 70600240 		.word	1073897584
+ 1462 0834 70640240 		.word	1073898608
+ 1463 0838 28600240 		.word	1073897512
+ 1464 083c 28640240 		.word	1073898536
+ 1465 0840 88600240 		.word	1073897608
+ 1466 0844 88640240 		.word	1073898632
+ 1467 0848 40600240 		.word	1073897536
+ 1468 084c 40640240 		.word	1073898560
+ 1469 0850 A0600240 		.word	1073897632
+ 1470 0854 A0640240 		.word	1073898656
+ 1471 0858 00600240 		.word	1073897472
+ 1472 085c 58640240 		.word	1073898584
+ 1473              	.L227:
+ 1474              		.loc 1 199 5 discriminator 20
+ 1475 0860 4FF40023 		mov	r3, #524288
+ 1476 0864 12E0     		b	.L242
+ 1477              	.L226:
+ 1478              		.loc 1 199 5 discriminator 18
+ 1479 0866 4FF40073 		mov	r3, #512
+ 1480 086a 0FE0     		b	.L242
+ 1481              	.L225:
+ 1482              		.loc 1 199 5 discriminator 16
+ 1483 086c 4FF40073 		mov	r3, #512
+ 1484 0870 0CE0     		b	.L242
+ 1485              	.L224:
+ 1486              		.loc 1 199 5 discriminator 14
+ 1487 0872 4FF40073 		mov	r3, #512
+ 1488 0876 09E0     		b	.L242
+ 1489              	.L223:
+ 1490              		.loc 1 199 5 discriminator 12
+ 1491 0878 4FF40073 		mov	r3, #512
+ 1492 087c 06E0     		b	.L242
+ 1493              	.L222:
+ 1494              		.loc 1 199 5 discriminator 10
+ 1495 087e 0823     		movs	r3, #8
+ 1496 0880 04E0     		b	.L242
+ 1497              	.L221:
+ 1498              		.loc 1 199 5 discriminator 8
+ 1499 0882 0823     		movs	r3, #8
+ 1500 0884 02E0     		b	.L242
+ 1501              	.L220:
+ 1502              		.loc 1 199 5 discriminator 6
+ 1503 0886 0823     		movs	r3, #8
+ 1504 0888 00E0     		b	.L242
+ 1505              	.L219:
+ 1506              		.loc 1 199 5 discriminator 4
+ 1507 088a 0823     		movs	r3, #8
+ 1508              	.L242:
+ 1509              		.loc 1 199 5 discriminator 50
+ 1510 088c 8C4A     		ldr	r2, .L533
+ 1511 088e D360     		str	r3, [r2, #12]
+ 1512 0890 4EE1     		b	.L243
+ 1513              	.L218:
+ 1514              		.loc 1 199 5 discriminator 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 31
+
+
+ 1515 0892 FB68     		ldr	r3, [r7, #12]
+ 1516 0894 1B68     		ldr	r3, [r3]
+ 1517 0896 1A46     		mov	r2, r3
+ 1518 0898 8A4B     		ldr	r3, .L533+4
+ 1519 089a 9A42     		cmp	r2, r3
+ 1520 089c 60D9     		bls	.L244
+ 1521              		.loc 1 199 5 discriminator 51
+ 1522 089e FB68     		ldr	r3, [r7, #12]
+ 1523 08a0 1B68     		ldr	r3, [r3]
+ 1524 08a2 894A     		ldr	r2, .L533+8
+ 1525 08a4 9342     		cmp	r3, r2
+ 1526 08a6 57D0     		beq	.L245
+ 1527              		.loc 1 199 5 discriminator 53
+ 1528 08a8 FB68     		ldr	r3, [r7, #12]
+ 1529 08aa 1B68     		ldr	r3, [r3]
+ 1530 08ac 874A     		ldr	r2, .L533+12
+ 1531 08ae 9342     		cmp	r3, r2
+ 1532 08b0 50D0     		beq	.L246
+ 1533              		.loc 1 199 5 discriminator 55
+ 1534 08b2 FB68     		ldr	r3, [r7, #12]
+ 1535 08b4 1B68     		ldr	r3, [r3]
+ 1536 08b6 864A     		ldr	r2, .L533+16
+ 1537 08b8 9342     		cmp	r3, r2
+ 1538 08ba 49D0     		beq	.L247
+ 1539              		.loc 1 199 5 discriminator 57
+ 1540 08bc FB68     		ldr	r3, [r7, #12]
+ 1541 08be 1B68     		ldr	r3, [r3]
+ 1542 08c0 844A     		ldr	r2, .L533+20
+ 1543 08c2 9342     		cmp	r3, r2
+ 1544 08c4 42D0     		beq	.L248
+ 1545              		.loc 1 199 5 discriminator 59
+ 1546 08c6 FB68     		ldr	r3, [r7, #12]
+ 1547 08c8 1B68     		ldr	r3, [r3]
+ 1548 08ca 834A     		ldr	r2, .L533+24
+ 1549 08cc 9342     		cmp	r3, r2
+ 1550 08ce 3AD0     		beq	.L249
+ 1551              		.loc 1 199 5 discriminator 61
+ 1552 08d0 FB68     		ldr	r3, [r7, #12]
+ 1553 08d2 1B68     		ldr	r3, [r3]
+ 1554 08d4 814A     		ldr	r2, .L533+28
+ 1555 08d6 9342     		cmp	r3, r2
+ 1556 08d8 32D0     		beq	.L250
+ 1557              		.loc 1 199 5 discriminator 63
+ 1558 08da FB68     		ldr	r3, [r7, #12]
+ 1559 08dc 1B68     		ldr	r3, [r3]
+ 1560 08de 804A     		ldr	r2, .L533+32
+ 1561 08e0 9342     		cmp	r3, r2
+ 1562 08e2 2AD0     		beq	.L251
+ 1563              		.loc 1 199 5 discriminator 65
+ 1564 08e4 FB68     		ldr	r3, [r7, #12]
+ 1565 08e6 1B68     		ldr	r3, [r3]
+ 1566 08e8 7E4A     		ldr	r2, .L533+36
+ 1567 08ea 9342     		cmp	r3, r2
+ 1568 08ec 22D0     		beq	.L252
+ 1569              		.loc 1 199 5 discriminator 67
+ 1570 08ee FB68     		ldr	r3, [r7, #12]
+ 1571 08f0 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 32
+
+
+ 1572 08f2 7D4A     		ldr	r2, .L533+40
+ 1573 08f4 9342     		cmp	r3, r2
+ 1574 08f6 1AD0     		beq	.L253
+ 1575              		.loc 1 199 5 discriminator 69
+ 1576 08f8 FB68     		ldr	r3, [r7, #12]
+ 1577 08fa 1B68     		ldr	r3, [r3]
+ 1578 08fc 7B4A     		ldr	r2, .L533+44
+ 1579 08fe 9342     		cmp	r3, r2
+ 1580 0900 12D0     		beq	.L254
+ 1581              		.loc 1 199 5 discriminator 71
+ 1582 0902 FB68     		ldr	r3, [r7, #12]
+ 1583 0904 1B68     		ldr	r3, [r3]
+ 1584 0906 7A4A     		ldr	r2, .L533+48
+ 1585 0908 9342     		cmp	r3, r2
+ 1586 090a 0AD0     		beq	.L255
+ 1587              		.loc 1 199 5 discriminator 73
+ 1588 090c FB68     		ldr	r3, [r7, #12]
+ 1589 090e 1B68     		ldr	r3, [r3]
+ 1590 0910 784A     		ldr	r2, .L533+52
+ 1591 0912 9342     		cmp	r3, r2
+ 1592 0914 02D1     		bne	.L256
+ 1593              		.loc 1 199 5 discriminator 75
+ 1594 0916 4FF40023 		mov	r3, #524288
+ 1595 091a 1EE0     		b	.L268
+ 1596              	.L256:
+ 1597              		.loc 1 199 5 discriminator 76
+ 1598 091c 4FF00073 		mov	r3, #33554432
+ 1599 0920 1BE0     		b	.L268
+ 1600              	.L255:
+ 1601              		.loc 1 199 5 discriminator 74
+ 1602 0922 4FF40023 		mov	r3, #524288
+ 1603 0926 18E0     		b	.L268
+ 1604              	.L254:
+ 1605              		.loc 1 199 5 discriminator 72
+ 1606 0928 4FF40023 		mov	r3, #524288
+ 1607 092c 15E0     		b	.L268
+ 1608              	.L253:
+ 1609              		.loc 1 199 5 discriminator 70
+ 1610 092e 4FF40023 		mov	r3, #524288
+ 1611 0932 12E0     		b	.L268
+ 1612              	.L252:
+ 1613              		.loc 1 199 5 discriminator 68
+ 1614 0934 4FF40073 		mov	r3, #512
+ 1615 0938 0FE0     		b	.L268
+ 1616              	.L251:
+ 1617              		.loc 1 199 5 discriminator 66
+ 1618 093a 4FF40073 		mov	r3, #512
+ 1619 093e 0CE0     		b	.L268
+ 1620              	.L250:
+ 1621              		.loc 1 199 5 discriminator 64
+ 1622 0940 4FF40073 		mov	r3, #512
+ 1623 0944 09E0     		b	.L268
+ 1624              	.L249:
+ 1625              		.loc 1 199 5 discriminator 62
+ 1626 0946 4FF40073 		mov	r3, #512
+ 1627 094a 06E0     		b	.L268
+ 1628              	.L248:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 33
+
+
+ 1629              		.loc 1 199 5 discriminator 60
+ 1630 094c 0823     		movs	r3, #8
+ 1631 094e 04E0     		b	.L268
+ 1632              	.L247:
+ 1633              		.loc 1 199 5 discriminator 58
+ 1634 0950 0823     		movs	r3, #8
+ 1635 0952 02E0     		b	.L268
+ 1636              	.L246:
+ 1637              		.loc 1 199 5 discriminator 56
+ 1638 0954 0823     		movs	r3, #8
+ 1639 0956 00E0     		b	.L268
+ 1640              	.L245:
+ 1641              		.loc 1 199 5 discriminator 54
+ 1642 0958 0823     		movs	r3, #8
+ 1643              	.L268:
+ 1644              		.loc 1 199 5 discriminator 100
+ 1645 095a 594A     		ldr	r2, .L533
+ 1646 095c 9360     		str	r3, [r2, #8]
+ 1647 095e E7E0     		b	.L243
+ 1648              	.L244:
+ 1649              		.loc 1 199 5 discriminator 52
+ 1650 0960 FB68     		ldr	r3, [r7, #12]
+ 1651 0962 1B68     		ldr	r3, [r3]
+ 1652 0964 1A46     		mov	r2, r3
+ 1653 0966 644B     		ldr	r3, .L533+56
+ 1654 0968 9A42     		cmp	r2, r3
+ 1655 096a 60D9     		bls	.L270
+ 1656              		.loc 1 199 5 discriminator 102
+ 1657 096c FB68     		ldr	r3, [r7, #12]
+ 1658 096e 1B68     		ldr	r3, [r3]
+ 1659 0970 554A     		ldr	r2, .L533+8
+ 1660 0972 9342     		cmp	r3, r2
+ 1661 0974 57D0     		beq	.L271
+ 1662              		.loc 1 199 5 discriminator 104
+ 1663 0976 FB68     		ldr	r3, [r7, #12]
+ 1664 0978 1B68     		ldr	r3, [r3]
+ 1665 097a 544A     		ldr	r2, .L533+12
+ 1666 097c 9342     		cmp	r3, r2
+ 1667 097e 50D0     		beq	.L272
+ 1668              		.loc 1 199 5 discriminator 106
+ 1669 0980 FB68     		ldr	r3, [r7, #12]
+ 1670 0982 1B68     		ldr	r3, [r3]
+ 1671 0984 524A     		ldr	r2, .L533+16
+ 1672 0986 9342     		cmp	r3, r2
+ 1673 0988 49D0     		beq	.L273
+ 1674              		.loc 1 199 5 discriminator 108
+ 1675 098a FB68     		ldr	r3, [r7, #12]
+ 1676 098c 1B68     		ldr	r3, [r3]
+ 1677 098e 514A     		ldr	r2, .L533+20
+ 1678 0990 9342     		cmp	r3, r2
+ 1679 0992 42D0     		beq	.L274
+ 1680              		.loc 1 199 5 discriminator 110
+ 1681 0994 FB68     		ldr	r3, [r7, #12]
+ 1682 0996 1B68     		ldr	r3, [r3]
+ 1683 0998 4F4A     		ldr	r2, .L533+24
+ 1684 099a 9342     		cmp	r3, r2
+ 1685 099c 3AD0     		beq	.L275
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 34
+
+
+ 1686              		.loc 1 199 5 discriminator 112
+ 1687 099e FB68     		ldr	r3, [r7, #12]
+ 1688 09a0 1B68     		ldr	r3, [r3]
+ 1689 09a2 4E4A     		ldr	r2, .L533+28
+ 1690 09a4 9342     		cmp	r3, r2
+ 1691 09a6 32D0     		beq	.L276
+ 1692              		.loc 1 199 5 discriminator 114
+ 1693 09a8 FB68     		ldr	r3, [r7, #12]
+ 1694 09aa 1B68     		ldr	r3, [r3]
+ 1695 09ac 4C4A     		ldr	r2, .L533+32
+ 1696 09ae 9342     		cmp	r3, r2
+ 1697 09b0 2AD0     		beq	.L277
+ 1698              		.loc 1 199 5 discriminator 116
+ 1699 09b2 FB68     		ldr	r3, [r7, #12]
+ 1700 09b4 1B68     		ldr	r3, [r3]
+ 1701 09b6 4B4A     		ldr	r2, .L533+36
+ 1702 09b8 9342     		cmp	r3, r2
+ 1703 09ba 22D0     		beq	.L278
+ 1704              		.loc 1 199 5 discriminator 118
+ 1705 09bc FB68     		ldr	r3, [r7, #12]
+ 1706 09be 1B68     		ldr	r3, [r3]
+ 1707 09c0 494A     		ldr	r2, .L533+40
+ 1708 09c2 9342     		cmp	r3, r2
+ 1709 09c4 1AD0     		beq	.L279
+ 1710              		.loc 1 199 5 discriminator 120
+ 1711 09c6 FB68     		ldr	r3, [r7, #12]
+ 1712 09c8 1B68     		ldr	r3, [r3]
+ 1713 09ca 484A     		ldr	r2, .L533+44
+ 1714 09cc 9342     		cmp	r3, r2
+ 1715 09ce 12D0     		beq	.L280
+ 1716              		.loc 1 199 5 discriminator 122
+ 1717 09d0 FB68     		ldr	r3, [r7, #12]
+ 1718 09d2 1B68     		ldr	r3, [r3]
+ 1719 09d4 464A     		ldr	r2, .L533+48
+ 1720 09d6 9342     		cmp	r3, r2
+ 1721 09d8 0AD0     		beq	.L281
+ 1722              		.loc 1 199 5 discriminator 124
+ 1723 09da FB68     		ldr	r3, [r7, #12]
+ 1724 09dc 1B68     		ldr	r3, [r3]
+ 1725 09de 454A     		ldr	r2, .L533+52
+ 1726 09e0 9342     		cmp	r3, r2
+ 1727 09e2 02D1     		bne	.L282
+ 1728              		.loc 1 199 5 discriminator 126
+ 1729 09e4 4FF40023 		mov	r3, #524288
+ 1730 09e8 1EE0     		b	.L294
+ 1731              	.L282:
+ 1732              		.loc 1 199 5 discriminator 127
+ 1733 09ea 4FF00073 		mov	r3, #33554432
+ 1734 09ee 1BE0     		b	.L294
+ 1735              	.L281:
+ 1736              		.loc 1 199 5 discriminator 125
+ 1737 09f0 4FF40023 		mov	r3, #524288
+ 1738 09f4 18E0     		b	.L294
+ 1739              	.L280:
+ 1740              		.loc 1 199 5 discriminator 123
+ 1741 09f6 4FF40023 		mov	r3, #524288
+ 1742 09fa 15E0     		b	.L294
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 35
+
+
+ 1743              	.L279:
+ 1744              		.loc 1 199 5 discriminator 121
+ 1745 09fc 4FF40023 		mov	r3, #524288
+ 1746 0a00 12E0     		b	.L294
+ 1747              	.L278:
+ 1748              		.loc 1 199 5 discriminator 119
+ 1749 0a02 4FF40073 		mov	r3, #512
+ 1750 0a06 0FE0     		b	.L294
+ 1751              	.L277:
+ 1752              		.loc 1 199 5 discriminator 117
+ 1753 0a08 4FF40073 		mov	r3, #512
+ 1754 0a0c 0CE0     		b	.L294
+ 1755              	.L276:
+ 1756              		.loc 1 199 5 discriminator 115
+ 1757 0a0e 4FF40073 		mov	r3, #512
+ 1758 0a12 09E0     		b	.L294
+ 1759              	.L275:
+ 1760              		.loc 1 199 5 discriminator 113
+ 1761 0a14 4FF40073 		mov	r3, #512
+ 1762 0a18 06E0     		b	.L294
+ 1763              	.L274:
+ 1764              		.loc 1 199 5 discriminator 111
+ 1765 0a1a 0823     		movs	r3, #8
+ 1766 0a1c 04E0     		b	.L294
+ 1767              	.L273:
+ 1768              		.loc 1 199 5 discriminator 109
+ 1769 0a1e 0823     		movs	r3, #8
+ 1770 0a20 02E0     		b	.L294
+ 1771              	.L272:
+ 1772              		.loc 1 199 5 discriminator 107
+ 1773 0a22 0823     		movs	r3, #8
+ 1774 0a24 00E0     		b	.L294
+ 1775              	.L271:
+ 1776              		.loc 1 199 5 discriminator 105
+ 1777 0a26 0823     		movs	r3, #8
+ 1778              	.L294:
+ 1779              		.loc 1 199 5 discriminator 151
+ 1780 0a28 344A     		ldr	r2, .L533+60
+ 1781 0a2a D360     		str	r3, [r2, #12]
+ 1782 0a2c 80E0     		b	.L243
+ 1783              	.L270:
+ 1784              		.loc 1 199 5 discriminator 103
+ 1785 0a2e FB68     		ldr	r3, [r7, #12]
+ 1786 0a30 1B68     		ldr	r3, [r3]
+ 1787 0a32 254A     		ldr	r2, .L533+8
+ 1788 0a34 9342     		cmp	r3, r2
+ 1789 0a36 78D0     		beq	.L296
+ 1790              		.loc 1 199 5 discriminator 153
+ 1791 0a38 FB68     		ldr	r3, [r7, #12]
+ 1792 0a3a 1B68     		ldr	r3, [r3]
+ 1793 0a3c 234A     		ldr	r2, .L533+12
+ 1794 0a3e 9342     		cmp	r3, r2
+ 1795 0a40 71D0     		beq	.L297
+ 1796              		.loc 1 199 5 discriminator 155
+ 1797 0a42 FB68     		ldr	r3, [r7, #12]
+ 1798 0a44 1B68     		ldr	r3, [r3]
+ 1799 0a46 224A     		ldr	r2, .L533+16
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 36
+
+
+ 1800 0a48 9342     		cmp	r3, r2
+ 1801 0a4a 6AD0     		beq	.L298
+ 1802              		.loc 1 199 5 discriminator 157
+ 1803 0a4c FB68     		ldr	r3, [r7, #12]
+ 1804 0a4e 1B68     		ldr	r3, [r3]
+ 1805 0a50 204A     		ldr	r2, .L533+20
+ 1806 0a52 9342     		cmp	r3, r2
+ 1807 0a54 63D0     		beq	.L299
+ 1808              		.loc 1 199 5 discriminator 159
+ 1809 0a56 FB68     		ldr	r3, [r7, #12]
+ 1810 0a58 1B68     		ldr	r3, [r3]
+ 1811 0a5a 1F4A     		ldr	r2, .L533+24
+ 1812 0a5c 9342     		cmp	r3, r2
+ 1813 0a5e 5BD0     		beq	.L300
+ 1814              		.loc 1 199 5 discriminator 161
+ 1815 0a60 FB68     		ldr	r3, [r7, #12]
+ 1816 0a62 1B68     		ldr	r3, [r3]
+ 1817 0a64 1D4A     		ldr	r2, .L533+28
+ 1818 0a66 9342     		cmp	r3, r2
+ 1819 0a68 53D0     		beq	.L301
+ 1820              		.loc 1 199 5 discriminator 163
+ 1821 0a6a FB68     		ldr	r3, [r7, #12]
+ 1822 0a6c 1B68     		ldr	r3, [r3]
+ 1823 0a6e 1C4A     		ldr	r2, .L533+32
+ 1824 0a70 9342     		cmp	r3, r2
+ 1825 0a72 4BD0     		beq	.L302
+ 1826              		.loc 1 199 5 discriminator 165
+ 1827 0a74 FB68     		ldr	r3, [r7, #12]
+ 1828 0a76 1B68     		ldr	r3, [r3]
+ 1829 0a78 1A4A     		ldr	r2, .L533+36
+ 1830 0a7a 9342     		cmp	r3, r2
+ 1831 0a7c 43D0     		beq	.L303
+ 1832              		.loc 1 199 5 discriminator 167
+ 1833 0a7e FB68     		ldr	r3, [r7, #12]
+ 1834 0a80 1B68     		ldr	r3, [r3]
+ 1835 0a82 194A     		ldr	r2, .L533+40
+ 1836 0a84 9342     		cmp	r3, r2
+ 1837 0a86 3BD0     		beq	.L304
+ 1838              		.loc 1 199 5 discriminator 169
+ 1839 0a88 FB68     		ldr	r3, [r7, #12]
+ 1840 0a8a 1B68     		ldr	r3, [r3]
+ 1841 0a8c 174A     		ldr	r2, .L533+44
+ 1842 0a8e 9342     		cmp	r3, r2
+ 1843 0a90 12D0     		beq	.L305
+ 1844              		.loc 1 199 5 discriminator 171
+ 1845 0a92 FB68     		ldr	r3, [r7, #12]
+ 1846 0a94 1B68     		ldr	r3, [r3]
+ 1847 0a96 164A     		ldr	r2, .L533+48
+ 1848 0a98 9342     		cmp	r3, r2
+ 1849 0a9a 0AD0     		beq	.L306
+ 1850              		.loc 1 199 5 discriminator 173
+ 1851 0a9c FB68     		ldr	r3, [r7, #12]
+ 1852 0a9e 1B68     		ldr	r3, [r3]
+ 1853 0aa0 144A     		ldr	r2, .L533+52
+ 1854 0aa2 9342     		cmp	r3, r2
+ 1855 0aa4 02D1     		bne	.L307
+ 1856              		.loc 1 199 5 discriminator 175
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 37
+
+
+ 1857 0aa6 4FF40023 		mov	r3, #524288
+ 1858 0aaa 3FE0     		b	.L319
+ 1859              	.L307:
+ 1860              		.loc 1 199 5 discriminator 176
+ 1861 0aac 4FF00073 		mov	r3, #33554432
+ 1862 0ab0 3CE0     		b	.L319
+ 1863              	.L306:
+ 1864              		.loc 1 199 5 discriminator 174
+ 1865 0ab2 4FF40023 		mov	r3, #524288
+ 1866 0ab6 39E0     		b	.L319
+ 1867              	.L305:
+ 1868              		.loc 1 199 5 discriminator 172
+ 1869 0ab8 4FF40023 		mov	r3, #524288
+ 1870 0abc 36E0     		b	.L319
+ 1871              	.L534:
+ 1872 0abe 00BF     		.align	2
+ 1873              	.L533:
+ 1874 0ac0 00640240 		.word	1073898496
+ 1875 0ac4 B8600240 		.word	1073897656
+ 1876 0ac8 10600240 		.word	1073897488
+ 1877 0acc 10640240 		.word	1073898512
+ 1878 0ad0 70600240 		.word	1073897584
+ 1879 0ad4 70640240 		.word	1073898608
+ 1880 0ad8 28600240 		.word	1073897512
+ 1881 0adc 28640240 		.word	1073898536
+ 1882 0ae0 88600240 		.word	1073897608
+ 1883 0ae4 88640240 		.word	1073898632
+ 1884 0ae8 40600240 		.word	1073897536
+ 1885 0aec 40640240 		.word	1073898560
+ 1886 0af0 A0600240 		.word	1073897632
+ 1887 0af4 A0640240 		.word	1073898656
+ 1888 0af8 58600240 		.word	1073897560
+ 1889 0afc 00600240 		.word	1073897472
+ 1890              	.L304:
+ 1891              		.loc 1 199 5 discriminator 170
+ 1892 0b00 4FF40023 		mov	r3, #524288
+ 1893 0b04 12E0     		b	.L319
+ 1894              	.L303:
+ 1895              		.loc 1 199 5 discriminator 168
+ 1896 0b06 4FF40073 		mov	r3, #512
+ 1897 0b0a 0FE0     		b	.L319
+ 1898              	.L302:
+ 1899              		.loc 1 199 5 discriminator 166
+ 1900 0b0c 4FF40073 		mov	r3, #512
+ 1901 0b10 0CE0     		b	.L319
+ 1902              	.L301:
+ 1903              		.loc 1 199 5 discriminator 164
+ 1904 0b12 4FF40073 		mov	r3, #512
+ 1905 0b16 09E0     		b	.L319
+ 1906              	.L300:
+ 1907              		.loc 1 199 5 discriminator 162
+ 1908 0b18 4FF40073 		mov	r3, #512
+ 1909 0b1c 06E0     		b	.L319
+ 1910              	.L299:
+ 1911              		.loc 1 199 5 discriminator 160
+ 1912 0b1e 0823     		movs	r3, #8
+ 1913 0b20 04E0     		b	.L319
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 38
+
+
+ 1914              	.L298:
+ 1915              		.loc 1 199 5 discriminator 158
+ 1916 0b22 0823     		movs	r3, #8
+ 1917 0b24 02E0     		b	.L319
+ 1918              	.L297:
+ 1919              		.loc 1 199 5 discriminator 156
+ 1920 0b26 0823     		movs	r3, #8
+ 1921 0b28 00E0     		b	.L319
+ 1922              	.L296:
+ 1923              		.loc 1 199 5 discriminator 154
+ 1924 0b2a 0823     		movs	r3, #8
+ 1925              	.L319:
+ 1926              		.loc 1 199 5 discriminator 200
+ 1927 0b2c 8A4A     		ldr	r2, .L535
+ 1928 0b2e 9360     		str	r3, [r2, #8]
+ 1929              	.L243:
+ 200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
+ 1930              		.loc 1 200 5 is_stmt 1
+ 1931 0b30 FB68     		ldr	r3, [r7, #12]
+ 1932 0b32 1B68     		ldr	r3, [r3]
+ 1933 0b34 1A46     		mov	r2, r3
+ 1934 0b36 894B     		ldr	r3, .L535+4
+ 1935 0b38 9A42     		cmp	r2, r3
+ 1936 0b3a 60D9     		bls	.L320
+ 1937              		.loc 1 200 5 is_stmt 0 discriminator 1
+ 1938 0b3c FB68     		ldr	r3, [r7, #12]
+ 1939 0b3e 1B68     		ldr	r3, [r3]
+ 1940 0b40 874A     		ldr	r2, .L535+8
+ 1941 0b42 9342     		cmp	r3, r2
+ 1942 0b44 57D0     		beq	.L321
+ 1943              		.loc 1 200 5 discriminator 3
+ 1944 0b46 FB68     		ldr	r3, [r7, #12]
+ 1945 0b48 1B68     		ldr	r3, [r3]
+ 1946 0b4a 864A     		ldr	r2, .L535+12
+ 1947 0b4c 9342     		cmp	r3, r2
+ 1948 0b4e 50D0     		beq	.L322
+ 1949              		.loc 1 200 5 discriminator 5
+ 1950 0b50 FB68     		ldr	r3, [r7, #12]
+ 1951 0b52 1B68     		ldr	r3, [r3]
+ 1952 0b54 844A     		ldr	r2, .L535+16
+ 1953 0b56 9342     		cmp	r3, r2
+ 1954 0b58 49D0     		beq	.L323
+ 1955              		.loc 1 200 5 discriminator 7
+ 1956 0b5a FB68     		ldr	r3, [r7, #12]
+ 1957 0b5c 1B68     		ldr	r3, [r3]
+ 1958 0b5e 834A     		ldr	r2, .L535+20
+ 1959 0b60 9342     		cmp	r3, r2
+ 1960 0b62 42D0     		beq	.L324
+ 1961              		.loc 1 200 5 discriminator 9
+ 1962 0b64 FB68     		ldr	r3, [r7, #12]
+ 1963 0b66 1B68     		ldr	r3, [r3]
+ 1964 0b68 814A     		ldr	r2, .L535+24
+ 1965 0b6a 9342     		cmp	r3, r2
+ 1966 0b6c 3AD0     		beq	.L325
+ 1967              		.loc 1 200 5 discriminator 11
+ 1968 0b6e FB68     		ldr	r3, [r7, #12]
+ 1969 0b70 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 39
+
+
+ 1970 0b72 804A     		ldr	r2, .L535+28
+ 1971 0b74 9342     		cmp	r3, r2
+ 1972 0b76 32D0     		beq	.L326
+ 1973              		.loc 1 200 5 discriminator 13
+ 1974 0b78 FB68     		ldr	r3, [r7, #12]
+ 1975 0b7a 1B68     		ldr	r3, [r3]
+ 1976 0b7c 7E4A     		ldr	r2, .L535+32
+ 1977 0b7e 9342     		cmp	r3, r2
+ 1978 0b80 2AD0     		beq	.L327
+ 1979              		.loc 1 200 5 discriminator 15
+ 1980 0b82 FB68     		ldr	r3, [r7, #12]
+ 1981 0b84 1B68     		ldr	r3, [r3]
+ 1982 0b86 7D4A     		ldr	r2, .L535+36
+ 1983 0b88 9342     		cmp	r3, r2
+ 1984 0b8a 22D0     		beq	.L328
+ 1985              		.loc 1 200 5 discriminator 17
+ 1986 0b8c FB68     		ldr	r3, [r7, #12]
+ 1987 0b8e 1B68     		ldr	r3, [r3]
+ 1988 0b90 7B4A     		ldr	r2, .L535+40
+ 1989 0b92 9342     		cmp	r3, r2
+ 1990 0b94 1AD0     		beq	.L329
+ 1991              		.loc 1 200 5 discriminator 19
+ 1992 0b96 FB68     		ldr	r3, [r7, #12]
+ 1993 0b98 1B68     		ldr	r3, [r3]
+ 1994 0b9a 7A4A     		ldr	r2, .L535+44
+ 1995 0b9c 9342     		cmp	r3, r2
+ 1996 0b9e 12D0     		beq	.L330
+ 1997              		.loc 1 200 5 discriminator 21
+ 1998 0ba0 FB68     		ldr	r3, [r7, #12]
+ 1999 0ba2 1B68     		ldr	r3, [r3]
+ 2000 0ba4 784A     		ldr	r2, .L535+48
+ 2001 0ba6 9342     		cmp	r3, r2
+ 2002 0ba8 0AD0     		beq	.L331
+ 2003              		.loc 1 200 5 discriminator 23
+ 2004 0baa FB68     		ldr	r3, [r7, #12]
+ 2005 0bac 1B68     		ldr	r3, [r3]
+ 2006 0bae 774A     		ldr	r2, .L535+52
+ 2007 0bb0 9342     		cmp	r3, r2
+ 2008 0bb2 02D1     		bne	.L332
+ 2009              		.loc 1 200 5 discriminator 25
+ 2010 0bb4 4FF48023 		mov	r3, #262144
+ 2011 0bb8 1EE0     		b	.L344
+ 2012              	.L332:
+ 2013              		.loc 1 200 5 discriminator 26
+ 2014 0bba 4FF08073 		mov	r3, #16777216
+ 2015 0bbe 1BE0     		b	.L344
+ 2016              	.L331:
+ 2017              		.loc 1 200 5 discriminator 24
+ 2018 0bc0 4FF48023 		mov	r3, #262144
+ 2019 0bc4 18E0     		b	.L344
+ 2020              	.L330:
+ 2021              		.loc 1 200 5 discriminator 22
+ 2022 0bc6 4FF48023 		mov	r3, #262144
+ 2023 0bca 15E0     		b	.L344
+ 2024              	.L329:
+ 2025              		.loc 1 200 5 discriminator 20
+ 2026 0bcc 4FF48023 		mov	r3, #262144
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 40
+
+
+ 2027 0bd0 12E0     		b	.L344
+ 2028              	.L328:
+ 2029              		.loc 1 200 5 discriminator 18
+ 2030 0bd2 4FF48073 		mov	r3, #256
+ 2031 0bd6 0FE0     		b	.L344
+ 2032              	.L327:
+ 2033              		.loc 1 200 5 discriminator 16
+ 2034 0bd8 4FF48073 		mov	r3, #256
+ 2035 0bdc 0CE0     		b	.L344
+ 2036              	.L326:
+ 2037              		.loc 1 200 5 discriminator 14
+ 2038 0bde 4FF48073 		mov	r3, #256
+ 2039 0be2 09E0     		b	.L344
+ 2040              	.L325:
+ 2041              		.loc 1 200 5 discriminator 12
+ 2042 0be4 4FF48073 		mov	r3, #256
+ 2043 0be8 06E0     		b	.L344
+ 2044              	.L324:
+ 2045              		.loc 1 200 5 discriminator 10
+ 2046 0bea 0423     		movs	r3, #4
+ 2047 0bec 04E0     		b	.L344
+ 2048              	.L323:
+ 2049              		.loc 1 200 5 discriminator 8
+ 2050 0bee 0423     		movs	r3, #4
+ 2051 0bf0 02E0     		b	.L344
+ 2052              	.L322:
+ 2053              		.loc 1 200 5 discriminator 6
+ 2054 0bf2 0423     		movs	r3, #4
+ 2055 0bf4 00E0     		b	.L344
+ 2056              	.L321:
+ 2057              		.loc 1 200 5 discriminator 4
+ 2058 0bf6 0423     		movs	r3, #4
+ 2059              	.L344:
+ 2060              		.loc 1 200 5 discriminator 50
+ 2061 0bf8 654A     		ldr	r2, .L535+56
+ 2062 0bfa D360     		str	r3, [r2, #12]
+ 2063 0bfc 50E1     		b	.L345
+ 2064              	.L320:
+ 2065              		.loc 1 200 5 discriminator 2
+ 2066 0bfe FB68     		ldr	r3, [r7, #12]
+ 2067 0c00 1B68     		ldr	r3, [r3]
+ 2068 0c02 1A46     		mov	r2, r3
+ 2069 0c04 634B     		ldr	r3, .L535+60
+ 2070 0c06 9A42     		cmp	r2, r3
+ 2071 0c08 60D9     		bls	.L346
+ 2072              		.loc 1 200 5 discriminator 51
+ 2073 0c0a FB68     		ldr	r3, [r7, #12]
+ 2074 0c0c 1B68     		ldr	r3, [r3]
+ 2075 0c0e 544A     		ldr	r2, .L535+8
+ 2076 0c10 9342     		cmp	r3, r2
+ 2077 0c12 57D0     		beq	.L347
+ 2078              		.loc 1 200 5 discriminator 53
+ 2079 0c14 FB68     		ldr	r3, [r7, #12]
+ 2080 0c16 1B68     		ldr	r3, [r3]
+ 2081 0c18 524A     		ldr	r2, .L535+12
+ 2082 0c1a 9342     		cmp	r3, r2
+ 2083 0c1c 50D0     		beq	.L348
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 41
+
+
+ 2084              		.loc 1 200 5 discriminator 55
+ 2085 0c1e FB68     		ldr	r3, [r7, #12]
+ 2086 0c20 1B68     		ldr	r3, [r3]
+ 2087 0c22 514A     		ldr	r2, .L535+16
+ 2088 0c24 9342     		cmp	r3, r2
+ 2089 0c26 49D0     		beq	.L349
+ 2090              		.loc 1 200 5 discriminator 57
+ 2091 0c28 FB68     		ldr	r3, [r7, #12]
+ 2092 0c2a 1B68     		ldr	r3, [r3]
+ 2093 0c2c 4F4A     		ldr	r2, .L535+20
+ 2094 0c2e 9342     		cmp	r3, r2
+ 2095 0c30 42D0     		beq	.L350
+ 2096              		.loc 1 200 5 discriminator 59
+ 2097 0c32 FB68     		ldr	r3, [r7, #12]
+ 2098 0c34 1B68     		ldr	r3, [r3]
+ 2099 0c36 4E4A     		ldr	r2, .L535+24
+ 2100 0c38 9342     		cmp	r3, r2
+ 2101 0c3a 3AD0     		beq	.L351
+ 2102              		.loc 1 200 5 discriminator 61
+ 2103 0c3c FB68     		ldr	r3, [r7, #12]
+ 2104 0c3e 1B68     		ldr	r3, [r3]
+ 2105 0c40 4C4A     		ldr	r2, .L535+28
+ 2106 0c42 9342     		cmp	r3, r2
+ 2107 0c44 32D0     		beq	.L352
+ 2108              		.loc 1 200 5 discriminator 63
+ 2109 0c46 FB68     		ldr	r3, [r7, #12]
+ 2110 0c48 1B68     		ldr	r3, [r3]
+ 2111 0c4a 4B4A     		ldr	r2, .L535+32
+ 2112 0c4c 9342     		cmp	r3, r2
+ 2113 0c4e 2AD0     		beq	.L353
+ 2114              		.loc 1 200 5 discriminator 65
+ 2115 0c50 FB68     		ldr	r3, [r7, #12]
+ 2116 0c52 1B68     		ldr	r3, [r3]
+ 2117 0c54 494A     		ldr	r2, .L535+36
+ 2118 0c56 9342     		cmp	r3, r2
+ 2119 0c58 22D0     		beq	.L354
+ 2120              		.loc 1 200 5 discriminator 67
+ 2121 0c5a FB68     		ldr	r3, [r7, #12]
+ 2122 0c5c 1B68     		ldr	r3, [r3]
+ 2123 0c5e 484A     		ldr	r2, .L535+40
+ 2124 0c60 9342     		cmp	r3, r2
+ 2125 0c62 1AD0     		beq	.L355
+ 2126              		.loc 1 200 5 discriminator 69
+ 2127 0c64 FB68     		ldr	r3, [r7, #12]
+ 2128 0c66 1B68     		ldr	r3, [r3]
+ 2129 0c68 464A     		ldr	r2, .L535+44
+ 2130 0c6a 9342     		cmp	r3, r2
+ 2131 0c6c 12D0     		beq	.L356
+ 2132              		.loc 1 200 5 discriminator 71
+ 2133 0c6e FB68     		ldr	r3, [r7, #12]
+ 2134 0c70 1B68     		ldr	r3, [r3]
+ 2135 0c72 454A     		ldr	r2, .L535+48
+ 2136 0c74 9342     		cmp	r3, r2
+ 2137 0c76 0AD0     		beq	.L357
+ 2138              		.loc 1 200 5 discriminator 73
+ 2139 0c78 FB68     		ldr	r3, [r7, #12]
+ 2140 0c7a 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 42
+
+
+ 2141 0c7c 434A     		ldr	r2, .L535+52
+ 2142 0c7e 9342     		cmp	r3, r2
+ 2143 0c80 02D1     		bne	.L358
+ 2144              		.loc 1 200 5 discriminator 75
+ 2145 0c82 4FF48023 		mov	r3, #262144
+ 2146 0c86 1EE0     		b	.L370
+ 2147              	.L358:
+ 2148              		.loc 1 200 5 discriminator 76
+ 2149 0c88 4FF08073 		mov	r3, #16777216
+ 2150 0c8c 1BE0     		b	.L370
+ 2151              	.L357:
+ 2152              		.loc 1 200 5 discriminator 74
+ 2153 0c8e 4FF48023 		mov	r3, #262144
+ 2154 0c92 18E0     		b	.L370
+ 2155              	.L356:
+ 2156              		.loc 1 200 5 discriminator 72
+ 2157 0c94 4FF48023 		mov	r3, #262144
+ 2158 0c98 15E0     		b	.L370
+ 2159              	.L355:
+ 2160              		.loc 1 200 5 discriminator 70
+ 2161 0c9a 4FF48023 		mov	r3, #262144
+ 2162 0c9e 12E0     		b	.L370
+ 2163              	.L354:
+ 2164              		.loc 1 200 5 discriminator 68
+ 2165 0ca0 4FF48073 		mov	r3, #256
+ 2166 0ca4 0FE0     		b	.L370
+ 2167              	.L353:
+ 2168              		.loc 1 200 5 discriminator 66
+ 2169 0ca6 4FF48073 		mov	r3, #256
+ 2170 0caa 0CE0     		b	.L370
+ 2171              	.L352:
+ 2172              		.loc 1 200 5 discriminator 64
+ 2173 0cac 4FF48073 		mov	r3, #256
+ 2174 0cb0 09E0     		b	.L370
+ 2175              	.L351:
+ 2176              		.loc 1 200 5 discriminator 62
+ 2177 0cb2 4FF48073 		mov	r3, #256
+ 2178 0cb6 06E0     		b	.L370
+ 2179              	.L350:
+ 2180              		.loc 1 200 5 discriminator 60
+ 2181 0cb8 0423     		movs	r3, #4
+ 2182 0cba 04E0     		b	.L370
+ 2183              	.L349:
+ 2184              		.loc 1 200 5 discriminator 58
+ 2185 0cbc 0423     		movs	r3, #4
+ 2186 0cbe 02E0     		b	.L370
+ 2187              	.L348:
+ 2188              		.loc 1 200 5 discriminator 56
+ 2189 0cc0 0423     		movs	r3, #4
+ 2190 0cc2 00E0     		b	.L370
+ 2191              	.L347:
+ 2192              		.loc 1 200 5 discriminator 54
+ 2193 0cc4 0423     		movs	r3, #4
+ 2194              	.L370:
+ 2195              		.loc 1 200 5 discriminator 100
+ 2196 0cc6 324A     		ldr	r2, .L535+56
+ 2197 0cc8 9360     		str	r3, [r2, #8]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 43
+
+
+ 2198 0cca E9E0     		b	.L345
+ 2199              	.L346:
+ 2200              		.loc 1 200 5 discriminator 52
+ 2201 0ccc FB68     		ldr	r3, [r7, #12]
+ 2202 0cce 1B68     		ldr	r3, [r3]
+ 2203 0cd0 1A46     		mov	r2, r3
+ 2204 0cd2 314B     		ldr	r3, .L535+64
+ 2205 0cd4 9A42     		cmp	r2, r3
+ 2206 0cd6 40F28380 		bls	.L372
+ 2207              		.loc 1 200 5 discriminator 102
+ 2208 0cda FB68     		ldr	r3, [r7, #12]
+ 2209 0cdc 1B68     		ldr	r3, [r3]
+ 2210 0cde 204A     		ldr	r2, .L535+8
+ 2211 0ce0 9342     		cmp	r3, r2
+ 2212 0ce2 79D0     		beq	.L373
+ 2213              		.loc 1 200 5 discriminator 104
+ 2214 0ce4 FB68     		ldr	r3, [r7, #12]
+ 2215 0ce6 1B68     		ldr	r3, [r3]
+ 2216 0ce8 1E4A     		ldr	r2, .L535+12
+ 2217 0cea 9342     		cmp	r3, r2
+ 2218 0cec 72D0     		beq	.L374
+ 2219              		.loc 1 200 5 discriminator 106
+ 2220 0cee FB68     		ldr	r3, [r7, #12]
+ 2221 0cf0 1B68     		ldr	r3, [r3]
+ 2222 0cf2 1D4A     		ldr	r2, .L535+16
+ 2223 0cf4 9342     		cmp	r3, r2
+ 2224 0cf6 6BD0     		beq	.L375
+ 2225              		.loc 1 200 5 discriminator 108
+ 2226 0cf8 FB68     		ldr	r3, [r7, #12]
+ 2227 0cfa 1B68     		ldr	r3, [r3]
+ 2228 0cfc 1B4A     		ldr	r2, .L535+20
+ 2229 0cfe 9342     		cmp	r3, r2
+ 2230 0d00 64D0     		beq	.L376
+ 2231              		.loc 1 200 5 discriminator 110
+ 2232 0d02 FB68     		ldr	r3, [r7, #12]
+ 2233 0d04 1B68     		ldr	r3, [r3]
+ 2234 0d06 1A4A     		ldr	r2, .L535+24
+ 2235 0d08 9342     		cmp	r3, r2
+ 2236 0d0a 5CD0     		beq	.L377
+ 2237              		.loc 1 200 5 discriminator 112
+ 2238 0d0c FB68     		ldr	r3, [r7, #12]
+ 2239 0d0e 1B68     		ldr	r3, [r3]
+ 2240 0d10 184A     		ldr	r2, .L535+28
+ 2241 0d12 9342     		cmp	r3, r2
+ 2242 0d14 54D0     		beq	.L378
+ 2243              		.loc 1 200 5 discriminator 114
+ 2244 0d16 FB68     		ldr	r3, [r7, #12]
+ 2245 0d18 1B68     		ldr	r3, [r3]
+ 2246 0d1a 174A     		ldr	r2, .L535+32
+ 2247 0d1c 9342     		cmp	r3, r2
+ 2248 0d1e 4CD0     		beq	.L379
+ 2249              		.loc 1 200 5 discriminator 116
+ 2250 0d20 FB68     		ldr	r3, [r7, #12]
+ 2251 0d22 1B68     		ldr	r3, [r3]
+ 2252 0d24 154A     		ldr	r2, .L535+36
+ 2253 0d26 9342     		cmp	r3, r2
+ 2254 0d28 44D0     		beq	.L380
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 44
+
+
+ 2255              		.loc 1 200 5 discriminator 118
+ 2256 0d2a FB68     		ldr	r3, [r7, #12]
+ 2257 0d2c 1B68     		ldr	r3, [r3]
+ 2258 0d2e 144A     		ldr	r2, .L535+40
+ 2259 0d30 9342     		cmp	r3, r2
+ 2260 0d32 3CD0     		beq	.L381
+ 2261              		.loc 1 200 5 discriminator 120
+ 2262 0d34 FB68     		ldr	r3, [r7, #12]
+ 2263 0d36 1B68     		ldr	r3, [r3]
+ 2264 0d38 124A     		ldr	r2, .L535+44
+ 2265 0d3a 9342     		cmp	r3, r2
+ 2266 0d3c 34D0     		beq	.L382
+ 2267              		.loc 1 200 5 discriminator 122
+ 2268 0d3e FB68     		ldr	r3, [r7, #12]
+ 2269 0d40 1B68     		ldr	r3, [r3]
+ 2270 0d42 114A     		ldr	r2, .L535+48
+ 2271 0d44 9342     		cmp	r3, r2
+ 2272 0d46 2CD0     		beq	.L383
+ 2273              		.loc 1 200 5 discriminator 124
+ 2274 0d48 FB68     		ldr	r3, [r7, #12]
+ 2275 0d4a 1B68     		ldr	r3, [r3]
+ 2276 0d4c 0F4A     		ldr	r2, .L535+52
+ 2277 0d4e 9342     		cmp	r3, r2
+ 2278 0d50 24D1     		bne	.L384
+ 2279              		.loc 1 200 5 discriminator 126
+ 2280 0d52 4FF48023 		mov	r3, #262144
+ 2281 0d56 40E0     		b	.L396
+ 2282              	.L536:
+ 2283              		.align	2
+ 2284              	.L535:
+ 2285 0d58 00600240 		.word	1073897472
+ 2286 0d5c 58640240 		.word	1073898584
+ 2287 0d60 10600240 		.word	1073897488
+ 2288 0d64 10640240 		.word	1073898512
+ 2289 0d68 70600240 		.word	1073897584
+ 2290 0d6c 70640240 		.word	1073898608
+ 2291 0d70 28600240 		.word	1073897512
+ 2292 0d74 28640240 		.word	1073898536
+ 2293 0d78 88600240 		.word	1073897608
+ 2294 0d7c 88640240 		.word	1073898632
+ 2295 0d80 40600240 		.word	1073897536
+ 2296 0d84 40640240 		.word	1073898560
+ 2297 0d88 A0600240 		.word	1073897632
+ 2298 0d8c A0640240 		.word	1073898656
+ 2299 0d90 00640240 		.word	1073898496
+ 2300 0d94 B8600240 		.word	1073897656
+ 2301 0d98 58600240 		.word	1073897560
+ 2302              	.L384:
+ 2303              		.loc 1 200 5 discriminator 127
+ 2304 0d9c 4FF08073 		mov	r3, #16777216
+ 2305 0da0 1BE0     		b	.L396
+ 2306              	.L383:
+ 2307              		.loc 1 200 5 discriminator 125
+ 2308 0da2 4FF48023 		mov	r3, #262144
+ 2309 0da6 18E0     		b	.L396
+ 2310              	.L382:
+ 2311              		.loc 1 200 5 discriminator 123
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 45
+
+
+ 2312 0da8 4FF48023 		mov	r3, #262144
+ 2313 0dac 15E0     		b	.L396
+ 2314              	.L381:
+ 2315              		.loc 1 200 5 discriminator 121
+ 2316 0dae 4FF48023 		mov	r3, #262144
+ 2317 0db2 12E0     		b	.L396
+ 2318              	.L380:
+ 2319              		.loc 1 200 5 discriminator 119
+ 2320 0db4 4FF48073 		mov	r3, #256
+ 2321 0db8 0FE0     		b	.L396
+ 2322              	.L379:
+ 2323              		.loc 1 200 5 discriminator 117
+ 2324 0dba 4FF48073 		mov	r3, #256
+ 2325 0dbe 0CE0     		b	.L396
+ 2326              	.L378:
+ 2327              		.loc 1 200 5 discriminator 115
+ 2328 0dc0 4FF48073 		mov	r3, #256
+ 2329 0dc4 09E0     		b	.L396
+ 2330              	.L377:
+ 2331              		.loc 1 200 5 discriminator 113
+ 2332 0dc6 4FF48073 		mov	r3, #256
+ 2333 0dca 06E0     		b	.L396
+ 2334              	.L376:
+ 2335              		.loc 1 200 5 discriminator 111
+ 2336 0dcc 0423     		movs	r3, #4
+ 2337 0dce 04E0     		b	.L396
+ 2338              	.L375:
+ 2339              		.loc 1 200 5 discriminator 109
+ 2340 0dd0 0423     		movs	r3, #4
+ 2341 0dd2 02E0     		b	.L396
+ 2342              	.L374:
+ 2343              		.loc 1 200 5 discriminator 107
+ 2344 0dd4 0423     		movs	r3, #4
+ 2345 0dd6 00E0     		b	.L396
+ 2346              	.L373:
+ 2347              		.loc 1 200 5 discriminator 105
+ 2348 0dd8 0423     		movs	r3, #4
+ 2349              	.L396:
+ 2350              		.loc 1 200 5 discriminator 151
+ 2351 0dda 8B4A     		ldr	r2, .L537
+ 2352 0ddc D360     		str	r3, [r2, #12]
+ 2353 0dde 5FE0     		b	.L345
+ 2354              	.L372:
+ 2355              		.loc 1 200 5 discriminator 103
+ 2356 0de0 FB68     		ldr	r3, [r7, #12]
+ 2357 0de2 1B68     		ldr	r3, [r3]
+ 2358 0de4 894A     		ldr	r2, .L537+4
+ 2359 0de6 9342     		cmp	r3, r2
+ 2360 0de8 57D0     		beq	.L398
+ 2361              		.loc 1 200 5 discriminator 153
+ 2362 0dea FB68     		ldr	r3, [r7, #12]
+ 2363 0dec 1B68     		ldr	r3, [r3]
+ 2364 0dee 884A     		ldr	r2, .L537+8
+ 2365 0df0 9342     		cmp	r3, r2
+ 2366 0df2 50D0     		beq	.L399
+ 2367              		.loc 1 200 5 discriminator 155
+ 2368 0df4 FB68     		ldr	r3, [r7, #12]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 46
+
+
+ 2369 0df6 1B68     		ldr	r3, [r3]
+ 2370 0df8 864A     		ldr	r2, .L537+12
+ 2371 0dfa 9342     		cmp	r3, r2
+ 2372 0dfc 49D0     		beq	.L400
+ 2373              		.loc 1 200 5 discriminator 157
+ 2374 0dfe FB68     		ldr	r3, [r7, #12]
+ 2375 0e00 1B68     		ldr	r3, [r3]
+ 2376 0e02 854A     		ldr	r2, .L537+16
+ 2377 0e04 9342     		cmp	r3, r2
+ 2378 0e06 42D0     		beq	.L401
+ 2379              		.loc 1 200 5 discriminator 159
+ 2380 0e08 FB68     		ldr	r3, [r7, #12]
+ 2381 0e0a 1B68     		ldr	r3, [r3]
+ 2382 0e0c 834A     		ldr	r2, .L537+20
+ 2383 0e0e 9342     		cmp	r3, r2
+ 2384 0e10 3AD0     		beq	.L402
+ 2385              		.loc 1 200 5 discriminator 161
+ 2386 0e12 FB68     		ldr	r3, [r7, #12]
+ 2387 0e14 1B68     		ldr	r3, [r3]
+ 2388 0e16 824A     		ldr	r2, .L537+24
+ 2389 0e18 9342     		cmp	r3, r2
+ 2390 0e1a 32D0     		beq	.L403
+ 2391              		.loc 1 200 5 discriminator 163
+ 2392 0e1c FB68     		ldr	r3, [r7, #12]
+ 2393 0e1e 1B68     		ldr	r3, [r3]
+ 2394 0e20 804A     		ldr	r2, .L537+28
+ 2395 0e22 9342     		cmp	r3, r2
+ 2396 0e24 2AD0     		beq	.L404
+ 2397              		.loc 1 200 5 discriminator 165
+ 2398 0e26 FB68     		ldr	r3, [r7, #12]
+ 2399 0e28 1B68     		ldr	r3, [r3]
+ 2400 0e2a 7F4A     		ldr	r2, .L537+32
+ 2401 0e2c 9342     		cmp	r3, r2
+ 2402 0e2e 22D0     		beq	.L405
+ 2403              		.loc 1 200 5 discriminator 167
+ 2404 0e30 FB68     		ldr	r3, [r7, #12]
+ 2405 0e32 1B68     		ldr	r3, [r3]
+ 2406 0e34 7D4A     		ldr	r2, .L537+36
+ 2407 0e36 9342     		cmp	r3, r2
+ 2408 0e38 1AD0     		beq	.L406
+ 2409              		.loc 1 200 5 discriminator 169
+ 2410 0e3a FB68     		ldr	r3, [r7, #12]
+ 2411 0e3c 1B68     		ldr	r3, [r3]
+ 2412 0e3e 7C4A     		ldr	r2, .L537+40
+ 2413 0e40 9342     		cmp	r3, r2
+ 2414 0e42 12D0     		beq	.L407
+ 2415              		.loc 1 200 5 discriminator 171
+ 2416 0e44 FB68     		ldr	r3, [r7, #12]
+ 2417 0e46 1B68     		ldr	r3, [r3]
+ 2418 0e48 7A4A     		ldr	r2, .L537+44
+ 2419 0e4a 9342     		cmp	r3, r2
+ 2420 0e4c 0AD0     		beq	.L408
+ 2421              		.loc 1 200 5 discriminator 173
+ 2422 0e4e FB68     		ldr	r3, [r7, #12]
+ 2423 0e50 1B68     		ldr	r3, [r3]
+ 2424 0e52 794A     		ldr	r2, .L537+48
+ 2425 0e54 9342     		cmp	r3, r2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 47
+
+
+ 2426 0e56 02D1     		bne	.L409
+ 2427              		.loc 1 200 5 discriminator 175
+ 2428 0e58 4FF48023 		mov	r3, #262144
+ 2429 0e5c 1EE0     		b	.L421
+ 2430              	.L409:
+ 2431              		.loc 1 200 5 discriminator 176
+ 2432 0e5e 4FF08073 		mov	r3, #16777216
+ 2433 0e62 1BE0     		b	.L421
+ 2434              	.L408:
+ 2435              		.loc 1 200 5 discriminator 174
+ 2436 0e64 4FF48023 		mov	r3, #262144
+ 2437 0e68 18E0     		b	.L421
+ 2438              	.L407:
+ 2439              		.loc 1 200 5 discriminator 172
+ 2440 0e6a 4FF48023 		mov	r3, #262144
+ 2441 0e6e 15E0     		b	.L421
+ 2442              	.L406:
+ 2443              		.loc 1 200 5 discriminator 170
+ 2444 0e70 4FF48023 		mov	r3, #262144
+ 2445 0e74 12E0     		b	.L421
+ 2446              	.L405:
+ 2447              		.loc 1 200 5 discriminator 168
+ 2448 0e76 4FF48073 		mov	r3, #256
+ 2449 0e7a 0FE0     		b	.L421
+ 2450              	.L404:
+ 2451              		.loc 1 200 5 discriminator 166
+ 2452 0e7c 4FF48073 		mov	r3, #256
+ 2453 0e80 0CE0     		b	.L421
+ 2454              	.L403:
+ 2455              		.loc 1 200 5 discriminator 164
+ 2456 0e82 4FF48073 		mov	r3, #256
+ 2457 0e86 09E0     		b	.L421
+ 2458              	.L402:
+ 2459              		.loc 1 200 5 discriminator 162
+ 2460 0e88 4FF48073 		mov	r3, #256
+ 2461 0e8c 06E0     		b	.L421
+ 2462              	.L401:
+ 2463              		.loc 1 200 5 discriminator 160
+ 2464 0e8e 0423     		movs	r3, #4
+ 2465 0e90 04E0     		b	.L421
+ 2466              	.L400:
+ 2467              		.loc 1 200 5 discriminator 158
+ 2468 0e92 0423     		movs	r3, #4
+ 2469 0e94 02E0     		b	.L421
+ 2470              	.L399:
+ 2471              		.loc 1 200 5 discriminator 156
+ 2472 0e96 0423     		movs	r3, #4
+ 2473 0e98 00E0     		b	.L421
+ 2474              	.L398:
+ 2475              		.loc 1 200 5 discriminator 154
+ 2476 0e9a 0423     		movs	r3, #4
+ 2477              	.L421:
+ 2478              		.loc 1 200 5 discriminator 200
+ 2479 0e9c 5A4A     		ldr	r2, .L537
+ 2480 0e9e 9360     		str	r3, [r2, #8]
+ 2481              	.L345:
+ 201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 48
+
+
+ 2482              		.loc 1 201 5 is_stmt 1
+ 2483 0ea0 FB68     		ldr	r3, [r7, #12]
+ 2484 0ea2 1B68     		ldr	r3, [r3]
+ 2485 0ea4 1A46     		mov	r2, r3
+ 2486 0ea6 654B     		ldr	r3, .L537+52
+ 2487 0ea8 9A42     		cmp	r2, r3
+ 2488 0eaa 5CD9     		bls	.L422
+ 2489              		.loc 1 201 5 is_stmt 0 discriminator 1
+ 2490 0eac FB68     		ldr	r3, [r7, #12]
+ 2491 0eae 1B68     		ldr	r3, [r3]
+ 2492 0eb0 564A     		ldr	r2, .L537+4
+ 2493 0eb2 9342     		cmp	r3, r2
+ 2494 0eb4 53D0     		beq	.L423
+ 2495              		.loc 1 201 5 discriminator 3
+ 2496 0eb6 FB68     		ldr	r3, [r7, #12]
+ 2497 0eb8 1B68     		ldr	r3, [r3]
+ 2498 0eba 554A     		ldr	r2, .L537+8
+ 2499 0ebc 9342     		cmp	r3, r2
+ 2500 0ebe 4CD0     		beq	.L424
+ 2501              		.loc 1 201 5 discriminator 5
+ 2502 0ec0 FB68     		ldr	r3, [r7, #12]
+ 2503 0ec2 1B68     		ldr	r3, [r3]
+ 2504 0ec4 534A     		ldr	r2, .L537+12
+ 2505 0ec6 9342     		cmp	r3, r2
+ 2506 0ec8 45D0     		beq	.L425
+ 2507              		.loc 1 201 5 discriminator 7
+ 2508 0eca FB68     		ldr	r3, [r7, #12]
+ 2509 0ecc 1B68     		ldr	r3, [r3]
+ 2510 0ece 524A     		ldr	r2, .L537+16
+ 2511 0ed0 9342     		cmp	r3, r2
+ 2512 0ed2 3ED0     		beq	.L426
+ 2513              		.loc 1 201 5 discriminator 9
+ 2514 0ed4 FB68     		ldr	r3, [r7, #12]
+ 2515 0ed6 1B68     		ldr	r3, [r3]
+ 2516 0ed8 504A     		ldr	r2, .L537+20
+ 2517 0eda 9342     		cmp	r3, r2
+ 2518 0edc 37D0     		beq	.L427
+ 2519              		.loc 1 201 5 discriminator 11
+ 2520 0ede FB68     		ldr	r3, [r7, #12]
+ 2521 0ee0 1B68     		ldr	r3, [r3]
+ 2522 0ee2 4F4A     		ldr	r2, .L537+24
+ 2523 0ee4 9342     		cmp	r3, r2
+ 2524 0ee6 30D0     		beq	.L428
+ 2525              		.loc 1 201 5 discriminator 13
+ 2526 0ee8 FB68     		ldr	r3, [r7, #12]
+ 2527 0eea 1B68     		ldr	r3, [r3]
+ 2528 0eec 4D4A     		ldr	r2, .L537+28
+ 2529 0eee 9342     		cmp	r3, r2
+ 2530 0ef0 29D0     		beq	.L429
+ 2531              		.loc 1 201 5 discriminator 15
+ 2532 0ef2 FB68     		ldr	r3, [r7, #12]
+ 2533 0ef4 1B68     		ldr	r3, [r3]
+ 2534 0ef6 4C4A     		ldr	r2, .L537+32
+ 2535 0ef8 9342     		cmp	r3, r2
+ 2536 0efa 22D0     		beq	.L430
+ 2537              		.loc 1 201 5 discriminator 17
+ 2538 0efc FB68     		ldr	r3, [r7, #12]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 49
+
+
+ 2539 0efe 1B68     		ldr	r3, [r3]
+ 2540 0f00 4A4A     		ldr	r2, .L537+36
+ 2541 0f02 9342     		cmp	r3, r2
+ 2542 0f04 1AD0     		beq	.L431
+ 2543              		.loc 1 201 5 discriminator 19
+ 2544 0f06 FB68     		ldr	r3, [r7, #12]
+ 2545 0f08 1B68     		ldr	r3, [r3]
+ 2546 0f0a 494A     		ldr	r2, .L537+40
+ 2547 0f0c 9342     		cmp	r3, r2
+ 2548 0f0e 12D0     		beq	.L432
+ 2549              		.loc 1 201 5 discriminator 21
+ 2550 0f10 FB68     		ldr	r3, [r7, #12]
+ 2551 0f12 1B68     		ldr	r3, [r3]
+ 2552 0f14 474A     		ldr	r2, .L537+44
+ 2553 0f16 9342     		cmp	r3, r2
+ 2554 0f18 0AD0     		beq	.L433
+ 2555              		.loc 1 201 5 discriminator 23
+ 2556 0f1a FB68     		ldr	r3, [r7, #12]
+ 2557 0f1c 1B68     		ldr	r3, [r3]
+ 2558 0f1e 464A     		ldr	r2, .L537+48
+ 2559 0f20 9342     		cmp	r3, r2
+ 2560 0f22 02D1     		bne	.L434
+ 2561              		.loc 1 201 5 discriminator 25
+ 2562 0f24 4FF48033 		mov	r3, #65536
+ 2563 0f28 1AE0     		b	.L446
+ 2564              	.L434:
+ 2565              		.loc 1 201 5 discriminator 26
+ 2566 0f2a 4FF48003 		mov	r3, #4194304
+ 2567 0f2e 17E0     		b	.L446
+ 2568              	.L433:
+ 2569              		.loc 1 201 5 discriminator 24
+ 2570 0f30 4FF48033 		mov	r3, #65536
+ 2571 0f34 14E0     		b	.L446
+ 2572              	.L432:
+ 2573              		.loc 1 201 5 discriminator 22
+ 2574 0f36 4FF48033 		mov	r3, #65536
+ 2575 0f3a 11E0     		b	.L446
+ 2576              	.L431:
+ 2577              		.loc 1 201 5 discriminator 20
+ 2578 0f3c 4FF48033 		mov	r3, #65536
+ 2579 0f40 0EE0     		b	.L446
+ 2580              	.L430:
+ 2581              		.loc 1 201 5 discriminator 18
+ 2582 0f42 4023     		movs	r3, #64
+ 2583 0f44 0CE0     		b	.L446
+ 2584              	.L429:
+ 2585              		.loc 1 201 5 discriminator 16
+ 2586 0f46 4023     		movs	r3, #64
+ 2587 0f48 0AE0     		b	.L446
+ 2588              	.L428:
+ 2589              		.loc 1 201 5 discriminator 14
+ 2590 0f4a 4023     		movs	r3, #64
+ 2591 0f4c 08E0     		b	.L446
+ 2592              	.L427:
+ 2593              		.loc 1 201 5 discriminator 12
+ 2594 0f4e 4023     		movs	r3, #64
+ 2595 0f50 06E0     		b	.L446
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 50
+
+
+ 2596              	.L426:
+ 2597              		.loc 1 201 5 discriminator 10
+ 2598 0f52 0123     		movs	r3, #1
+ 2599 0f54 04E0     		b	.L446
+ 2600              	.L425:
+ 2601              		.loc 1 201 5 discriminator 8
+ 2602 0f56 0123     		movs	r3, #1
+ 2603 0f58 02E0     		b	.L446
+ 2604              	.L424:
+ 2605              		.loc 1 201 5 discriminator 6
+ 2606 0f5a 0123     		movs	r3, #1
+ 2607 0f5c 00E0     		b	.L446
+ 2608              	.L423:
+ 2609              		.loc 1 201 5 discriminator 4
+ 2610 0f5e 0123     		movs	r3, #1
+ 2611              	.L446:
+ 2612              		.loc 1 201 5 discriminator 50
+ 2613 0f60 374A     		ldr	r2, .L537+56
+ 2614 0f62 D360     		str	r3, [r2, #12]
+ 2615 0f64 41E1     		b	.L447
+ 2616              	.L422:
+ 2617              		.loc 1 201 5 discriminator 2
+ 2618 0f66 FB68     		ldr	r3, [r7, #12]
+ 2619 0f68 1B68     		ldr	r3, [r3]
+ 2620 0f6a 1A46     		mov	r2, r3
+ 2621 0f6c 354B     		ldr	r3, .L537+60
+ 2622 0f6e 9A42     		cmp	r2, r3
+ 2623 0f70 7CD9     		bls	.L448
+ 2624              		.loc 1 201 5 discriminator 51
+ 2625 0f72 FB68     		ldr	r3, [r7, #12]
+ 2626 0f74 1B68     		ldr	r3, [r3]
+ 2627 0f76 254A     		ldr	r2, .L537+4
+ 2628 0f78 9342     		cmp	r3, r2
+ 2629 0f7a 73D0     		beq	.L449
+ 2630              		.loc 1 201 5 discriminator 53
+ 2631 0f7c FB68     		ldr	r3, [r7, #12]
+ 2632 0f7e 1B68     		ldr	r3, [r3]
+ 2633 0f80 234A     		ldr	r2, .L537+8
+ 2634 0f82 9342     		cmp	r3, r2
+ 2635 0f84 6CD0     		beq	.L450
+ 2636              		.loc 1 201 5 discriminator 55
+ 2637 0f86 FB68     		ldr	r3, [r7, #12]
+ 2638 0f88 1B68     		ldr	r3, [r3]
+ 2639 0f8a 224A     		ldr	r2, .L537+12
+ 2640 0f8c 9342     		cmp	r3, r2
+ 2641 0f8e 65D0     		beq	.L451
+ 2642              		.loc 1 201 5 discriminator 57
+ 2643 0f90 FB68     		ldr	r3, [r7, #12]
+ 2644 0f92 1B68     		ldr	r3, [r3]
+ 2645 0f94 204A     		ldr	r2, .L537+16
+ 2646 0f96 9342     		cmp	r3, r2
+ 2647 0f98 5ED0     		beq	.L452
+ 2648              		.loc 1 201 5 discriminator 59
+ 2649 0f9a FB68     		ldr	r3, [r7, #12]
+ 2650 0f9c 1B68     		ldr	r3, [r3]
+ 2651 0f9e 1F4A     		ldr	r2, .L537+20
+ 2652 0fa0 9342     		cmp	r3, r2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 51
+
+
+ 2653 0fa2 57D0     		beq	.L453
+ 2654              		.loc 1 201 5 discriminator 61
+ 2655 0fa4 FB68     		ldr	r3, [r7, #12]
+ 2656 0fa6 1B68     		ldr	r3, [r3]
+ 2657 0fa8 1D4A     		ldr	r2, .L537+24
+ 2658 0faa 9342     		cmp	r3, r2
+ 2659 0fac 50D0     		beq	.L454
+ 2660              		.loc 1 201 5 discriminator 63
+ 2661 0fae FB68     		ldr	r3, [r7, #12]
+ 2662 0fb0 1B68     		ldr	r3, [r3]
+ 2663 0fb2 1C4A     		ldr	r2, .L537+28
+ 2664 0fb4 9342     		cmp	r3, r2
+ 2665 0fb6 49D0     		beq	.L455
+ 2666              		.loc 1 201 5 discriminator 65
+ 2667 0fb8 FB68     		ldr	r3, [r7, #12]
+ 2668 0fba 1B68     		ldr	r3, [r3]
+ 2669 0fbc 1A4A     		ldr	r2, .L537+32
+ 2670 0fbe 9342     		cmp	r3, r2
+ 2671 0fc0 42D0     		beq	.L456
+ 2672              		.loc 1 201 5 discriminator 67
+ 2673 0fc2 FB68     		ldr	r3, [r7, #12]
+ 2674 0fc4 1B68     		ldr	r3, [r3]
+ 2675 0fc6 194A     		ldr	r2, .L537+36
+ 2676 0fc8 9342     		cmp	r3, r2
+ 2677 0fca 1AD0     		beq	.L457
+ 2678              		.loc 1 201 5 discriminator 69
+ 2679 0fcc FB68     		ldr	r3, [r7, #12]
+ 2680 0fce 1B68     		ldr	r3, [r3]
+ 2681 0fd0 174A     		ldr	r2, .L537+40
+ 2682 0fd2 9342     		cmp	r3, r2
+ 2683 0fd4 12D0     		beq	.L458
+ 2684              		.loc 1 201 5 discriminator 71
+ 2685 0fd6 FB68     		ldr	r3, [r7, #12]
+ 2686 0fd8 1B68     		ldr	r3, [r3]
+ 2687 0fda 164A     		ldr	r2, .L537+44
+ 2688 0fdc 9342     		cmp	r3, r2
+ 2689 0fde 0AD0     		beq	.L459
+ 2690              		.loc 1 201 5 discriminator 73
+ 2691 0fe0 FB68     		ldr	r3, [r7, #12]
+ 2692 0fe2 1B68     		ldr	r3, [r3]
+ 2693 0fe4 144A     		ldr	r2, .L537+48
+ 2694 0fe6 9342     		cmp	r3, r2
+ 2695 0fe8 02D1     		bne	.L460
+ 2696              		.loc 1 201 5 discriminator 75
+ 2697 0fea 4FF48033 		mov	r3, #65536
+ 2698 0fee 3AE0     		b	.L472
+ 2699              	.L460:
+ 2700              		.loc 1 201 5 discriminator 76
+ 2701 0ff0 4FF48003 		mov	r3, #4194304
+ 2702 0ff4 37E0     		b	.L472
+ 2703              	.L459:
+ 2704              		.loc 1 201 5 discriminator 74
+ 2705 0ff6 4FF48033 		mov	r3, #65536
+ 2706 0ffa 34E0     		b	.L472
+ 2707              	.L458:
+ 2708              		.loc 1 201 5 discriminator 72
+ 2709 0ffc 4FF48033 		mov	r3, #65536
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 52
+
+
+ 2710 1000 31E0     		b	.L472
+ 2711              	.L457:
+ 2712              		.loc 1 201 5 discriminator 70
+ 2713 1002 4FF48033 		mov	r3, #65536
+ 2714 1006 2EE0     		b	.L472
+ 2715              	.L538:
+ 2716              		.align	2
+ 2717              	.L537:
+ 2718 1008 00600240 		.word	1073897472
+ 2719 100c 10600240 		.word	1073897488
+ 2720 1010 10640240 		.word	1073898512
+ 2721 1014 70600240 		.word	1073897584
+ 2722 1018 70640240 		.word	1073898608
+ 2723 101c 28600240 		.word	1073897512
+ 2724 1020 28640240 		.word	1073898536
+ 2725 1024 88600240 		.word	1073897608
+ 2726 1028 88640240 		.word	1073898632
+ 2727 102c 40600240 		.word	1073897536
+ 2728 1030 40640240 		.word	1073898560
+ 2729 1034 A0600240 		.word	1073897632
+ 2730 1038 A0640240 		.word	1073898656
+ 2731 103c 58640240 		.word	1073898584
+ 2732 1040 00640240 		.word	1073898496
+ 2733 1044 B8600240 		.word	1073897656
+ 2734              	.L456:
+ 2735              		.loc 1 201 5 discriminator 68
+ 2736 1048 4023     		movs	r3, #64
+ 2737 104a 0CE0     		b	.L472
+ 2738              	.L455:
+ 2739              		.loc 1 201 5 discriminator 66
+ 2740 104c 4023     		movs	r3, #64
+ 2741 104e 0AE0     		b	.L472
+ 2742              	.L454:
+ 2743              		.loc 1 201 5 discriminator 64
+ 2744 1050 4023     		movs	r3, #64
+ 2745 1052 08E0     		b	.L472
+ 2746              	.L453:
+ 2747              		.loc 1 201 5 discriminator 62
+ 2748 1054 4023     		movs	r3, #64
+ 2749 1056 06E0     		b	.L472
+ 2750              	.L452:
+ 2751              		.loc 1 201 5 discriminator 60
+ 2752 1058 0123     		movs	r3, #1
+ 2753 105a 04E0     		b	.L472
+ 2754              	.L451:
+ 2755              		.loc 1 201 5 discriminator 58
+ 2756 105c 0123     		movs	r3, #1
+ 2757 105e 02E0     		b	.L472
+ 2758              	.L450:
+ 2759              		.loc 1 201 5 discriminator 56
+ 2760 1060 0123     		movs	r3, #1
+ 2761 1062 00E0     		b	.L472
+ 2762              	.L449:
+ 2763              		.loc 1 201 5 discriminator 54
+ 2764 1064 0123     		movs	r3, #1
+ 2765              	.L472:
+ 2766              		.loc 1 201 5 discriminator 100
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 53
+
+
+ 2767 1066 7B4A     		ldr	r2, .L539
+ 2768 1068 9360     		str	r3, [r2, #8]
+ 2769 106a BEE0     		b	.L447
+ 2770              	.L448:
+ 2771              		.loc 1 201 5 discriminator 52
+ 2772 106c FB68     		ldr	r3, [r7, #12]
+ 2773 106e 1B68     		ldr	r3, [r3]
+ 2774 1070 1A46     		mov	r2, r3
+ 2775 1072 794B     		ldr	r3, .L539+4
+ 2776 1074 9A42     		cmp	r2, r3
+ 2777 1076 5CD9     		bls	.L474
+ 2778              		.loc 1 201 5 discriminator 102
+ 2779 1078 FB68     		ldr	r3, [r7, #12]
+ 2780 107a 1B68     		ldr	r3, [r3]
+ 2781 107c 774A     		ldr	r2, .L539+8
+ 2782 107e 9342     		cmp	r3, r2
+ 2783 1080 53D0     		beq	.L475
+ 2784              		.loc 1 201 5 discriminator 104
+ 2785 1082 FB68     		ldr	r3, [r7, #12]
+ 2786 1084 1B68     		ldr	r3, [r3]
+ 2787 1086 764A     		ldr	r2, .L539+12
+ 2788 1088 9342     		cmp	r3, r2
+ 2789 108a 4CD0     		beq	.L476
+ 2790              		.loc 1 201 5 discriminator 106
+ 2791 108c FB68     		ldr	r3, [r7, #12]
+ 2792 108e 1B68     		ldr	r3, [r3]
+ 2793 1090 744A     		ldr	r2, .L539+16
+ 2794 1092 9342     		cmp	r3, r2
+ 2795 1094 45D0     		beq	.L477
+ 2796              		.loc 1 201 5 discriminator 108
+ 2797 1096 FB68     		ldr	r3, [r7, #12]
+ 2798 1098 1B68     		ldr	r3, [r3]
+ 2799 109a 734A     		ldr	r2, .L539+20
+ 2800 109c 9342     		cmp	r3, r2
+ 2801 109e 3ED0     		beq	.L478
+ 2802              		.loc 1 201 5 discriminator 110
+ 2803 10a0 FB68     		ldr	r3, [r7, #12]
+ 2804 10a2 1B68     		ldr	r3, [r3]
+ 2805 10a4 714A     		ldr	r2, .L539+24
+ 2806 10a6 9342     		cmp	r3, r2
+ 2807 10a8 37D0     		beq	.L479
+ 2808              		.loc 1 201 5 discriminator 112
+ 2809 10aa FB68     		ldr	r3, [r7, #12]
+ 2810 10ac 1B68     		ldr	r3, [r3]
+ 2811 10ae 704A     		ldr	r2, .L539+28
+ 2812 10b0 9342     		cmp	r3, r2
+ 2813 10b2 30D0     		beq	.L480
+ 2814              		.loc 1 201 5 discriminator 114
+ 2815 10b4 FB68     		ldr	r3, [r7, #12]
+ 2816 10b6 1B68     		ldr	r3, [r3]
+ 2817 10b8 6E4A     		ldr	r2, .L539+32
+ 2818 10ba 9342     		cmp	r3, r2
+ 2819 10bc 29D0     		beq	.L481
+ 2820              		.loc 1 201 5 discriminator 116
+ 2821 10be FB68     		ldr	r3, [r7, #12]
+ 2822 10c0 1B68     		ldr	r3, [r3]
+ 2823 10c2 6D4A     		ldr	r2, .L539+36
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 54
+
+
+ 2824 10c4 9342     		cmp	r3, r2
+ 2825 10c6 22D0     		beq	.L482
+ 2826              		.loc 1 201 5 discriminator 118
+ 2827 10c8 FB68     		ldr	r3, [r7, #12]
+ 2828 10ca 1B68     		ldr	r3, [r3]
+ 2829 10cc 6B4A     		ldr	r2, .L539+40
+ 2830 10ce 9342     		cmp	r3, r2
+ 2831 10d0 1AD0     		beq	.L483
+ 2832              		.loc 1 201 5 discriminator 120
+ 2833 10d2 FB68     		ldr	r3, [r7, #12]
+ 2834 10d4 1B68     		ldr	r3, [r3]
+ 2835 10d6 6A4A     		ldr	r2, .L539+44
+ 2836 10d8 9342     		cmp	r3, r2
+ 2837 10da 12D0     		beq	.L484
+ 2838              		.loc 1 201 5 discriminator 122
+ 2839 10dc FB68     		ldr	r3, [r7, #12]
+ 2840 10de 1B68     		ldr	r3, [r3]
+ 2841 10e0 684A     		ldr	r2, .L539+48
+ 2842 10e2 9342     		cmp	r3, r2
+ 2843 10e4 0AD0     		beq	.L485
+ 2844              		.loc 1 201 5 discriminator 124
+ 2845 10e6 FB68     		ldr	r3, [r7, #12]
+ 2846 10e8 1B68     		ldr	r3, [r3]
+ 2847 10ea 674A     		ldr	r2, .L539+52
+ 2848 10ec 9342     		cmp	r3, r2
+ 2849 10ee 02D1     		bne	.L486
+ 2850              		.loc 1 201 5 discriminator 126
+ 2851 10f0 4FF48033 		mov	r3, #65536
+ 2852 10f4 1AE0     		b	.L498
+ 2853              	.L486:
+ 2854              		.loc 1 201 5 discriminator 127
+ 2855 10f6 4FF48003 		mov	r3, #4194304
+ 2856 10fa 17E0     		b	.L498
+ 2857              	.L485:
+ 2858              		.loc 1 201 5 discriminator 125
+ 2859 10fc 4FF48033 		mov	r3, #65536
+ 2860 1100 14E0     		b	.L498
+ 2861              	.L484:
+ 2862              		.loc 1 201 5 discriminator 123
+ 2863 1102 4FF48033 		mov	r3, #65536
+ 2864 1106 11E0     		b	.L498
+ 2865              	.L483:
+ 2866              		.loc 1 201 5 discriminator 121
+ 2867 1108 4FF48033 		mov	r3, #65536
+ 2868 110c 0EE0     		b	.L498
+ 2869              	.L482:
+ 2870              		.loc 1 201 5 discriminator 119
+ 2871 110e 4023     		movs	r3, #64
+ 2872 1110 0CE0     		b	.L498
+ 2873              	.L481:
+ 2874              		.loc 1 201 5 discriminator 117
+ 2875 1112 4023     		movs	r3, #64
+ 2876 1114 0AE0     		b	.L498
+ 2877              	.L480:
+ 2878              		.loc 1 201 5 discriminator 115
+ 2879 1116 4023     		movs	r3, #64
+ 2880 1118 08E0     		b	.L498
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 55
+
+
+ 2881              	.L479:
+ 2882              		.loc 1 201 5 discriminator 113
+ 2883 111a 4023     		movs	r3, #64
+ 2884 111c 06E0     		b	.L498
+ 2885              	.L478:
+ 2886              		.loc 1 201 5 discriminator 111
+ 2887 111e 0123     		movs	r3, #1
+ 2888 1120 04E0     		b	.L498
+ 2889              	.L477:
+ 2890              		.loc 1 201 5 discriminator 109
+ 2891 1122 0123     		movs	r3, #1
+ 2892 1124 02E0     		b	.L498
+ 2893              	.L476:
+ 2894              		.loc 1 201 5 discriminator 107
+ 2895 1126 0123     		movs	r3, #1
+ 2896 1128 00E0     		b	.L498
+ 2897              	.L475:
+ 2898              		.loc 1 201 5 discriminator 105
+ 2899 112a 0123     		movs	r3, #1
+ 2900              	.L498:
+ 2901              		.loc 1 201 5 discriminator 151
+ 2902 112c 574A     		ldr	r2, .L539+56
+ 2903 112e D360     		str	r3, [r2, #12]
+ 2904 1130 5BE0     		b	.L447
+ 2905              	.L474:
+ 2906              		.loc 1 201 5 discriminator 103
+ 2907 1132 FB68     		ldr	r3, [r7, #12]
+ 2908 1134 1B68     		ldr	r3, [r3]
+ 2909 1136 494A     		ldr	r2, .L539+8
+ 2910 1138 9342     		cmp	r3, r2
+ 2911 113a 53D0     		beq	.L500
+ 2912              		.loc 1 201 5 discriminator 153
+ 2913 113c FB68     		ldr	r3, [r7, #12]
+ 2914 113e 1B68     		ldr	r3, [r3]
+ 2915 1140 474A     		ldr	r2, .L539+12
+ 2916 1142 9342     		cmp	r3, r2
+ 2917 1144 4CD0     		beq	.L501
+ 2918              		.loc 1 201 5 discriminator 155
+ 2919 1146 FB68     		ldr	r3, [r7, #12]
+ 2920 1148 1B68     		ldr	r3, [r3]
+ 2921 114a 464A     		ldr	r2, .L539+16
+ 2922 114c 9342     		cmp	r3, r2
+ 2923 114e 45D0     		beq	.L502
+ 2924              		.loc 1 201 5 discriminator 157
+ 2925 1150 FB68     		ldr	r3, [r7, #12]
+ 2926 1152 1B68     		ldr	r3, [r3]
+ 2927 1154 444A     		ldr	r2, .L539+20
+ 2928 1156 9342     		cmp	r3, r2
+ 2929 1158 3ED0     		beq	.L503
+ 2930              		.loc 1 201 5 discriminator 159
+ 2931 115a FB68     		ldr	r3, [r7, #12]
+ 2932 115c 1B68     		ldr	r3, [r3]
+ 2933 115e 434A     		ldr	r2, .L539+24
+ 2934 1160 9342     		cmp	r3, r2
+ 2935 1162 37D0     		beq	.L504
+ 2936              		.loc 1 201 5 discriminator 161
+ 2937 1164 FB68     		ldr	r3, [r7, #12]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 56
+
+
+ 2938 1166 1B68     		ldr	r3, [r3]
+ 2939 1168 414A     		ldr	r2, .L539+28
+ 2940 116a 9342     		cmp	r3, r2
+ 2941 116c 30D0     		beq	.L505
+ 2942              		.loc 1 201 5 discriminator 163
+ 2943 116e FB68     		ldr	r3, [r7, #12]
+ 2944 1170 1B68     		ldr	r3, [r3]
+ 2945 1172 404A     		ldr	r2, .L539+32
+ 2946 1174 9342     		cmp	r3, r2
+ 2947 1176 29D0     		beq	.L506
+ 2948              		.loc 1 201 5 discriminator 165
+ 2949 1178 FB68     		ldr	r3, [r7, #12]
+ 2950 117a 1B68     		ldr	r3, [r3]
+ 2951 117c 3E4A     		ldr	r2, .L539+36
+ 2952 117e 9342     		cmp	r3, r2
+ 2953 1180 22D0     		beq	.L507
+ 2954              		.loc 1 201 5 discriminator 167
+ 2955 1182 FB68     		ldr	r3, [r7, #12]
+ 2956 1184 1B68     		ldr	r3, [r3]
+ 2957 1186 3D4A     		ldr	r2, .L539+40
+ 2958 1188 9342     		cmp	r3, r2
+ 2959 118a 1AD0     		beq	.L508
+ 2960              		.loc 1 201 5 discriminator 169
+ 2961 118c FB68     		ldr	r3, [r7, #12]
+ 2962 118e 1B68     		ldr	r3, [r3]
+ 2963 1190 3B4A     		ldr	r2, .L539+44
+ 2964 1192 9342     		cmp	r3, r2
+ 2965 1194 12D0     		beq	.L509
+ 2966              		.loc 1 201 5 discriminator 171
+ 2967 1196 FB68     		ldr	r3, [r7, #12]
+ 2968 1198 1B68     		ldr	r3, [r3]
+ 2969 119a 3A4A     		ldr	r2, .L539+48
+ 2970 119c 9342     		cmp	r3, r2
+ 2971 119e 0AD0     		beq	.L510
+ 2972              		.loc 1 201 5 discriminator 173
+ 2973 11a0 FB68     		ldr	r3, [r7, #12]
+ 2974 11a2 1B68     		ldr	r3, [r3]
+ 2975 11a4 384A     		ldr	r2, .L539+52
+ 2976 11a6 9342     		cmp	r3, r2
+ 2977 11a8 02D1     		bne	.L511
+ 2978              		.loc 1 201 5 discriminator 175
+ 2979 11aa 4FF48033 		mov	r3, #65536
+ 2980 11ae 1AE0     		b	.L523
+ 2981              	.L511:
+ 2982              		.loc 1 201 5 discriminator 176
+ 2983 11b0 4FF48003 		mov	r3, #4194304
+ 2984 11b4 17E0     		b	.L523
+ 2985              	.L510:
+ 2986              		.loc 1 201 5 discriminator 174
+ 2987 11b6 4FF48033 		mov	r3, #65536
+ 2988 11ba 14E0     		b	.L523
+ 2989              	.L509:
+ 2990              		.loc 1 201 5 discriminator 172
+ 2991 11bc 4FF48033 		mov	r3, #65536
+ 2992 11c0 11E0     		b	.L523
+ 2993              	.L508:
+ 2994              		.loc 1 201 5 discriminator 170
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 57
+
+
+ 2995 11c2 4FF48033 		mov	r3, #65536
+ 2996 11c6 0EE0     		b	.L523
+ 2997              	.L507:
+ 2998              		.loc 1 201 5 discriminator 168
+ 2999 11c8 4023     		movs	r3, #64
+ 3000 11ca 0CE0     		b	.L523
+ 3001              	.L506:
+ 3002              		.loc 1 201 5 discriminator 166
+ 3003 11cc 4023     		movs	r3, #64
+ 3004 11ce 0AE0     		b	.L523
+ 3005              	.L505:
+ 3006              		.loc 1 201 5 discriminator 164
+ 3007 11d0 4023     		movs	r3, #64
+ 3008 11d2 08E0     		b	.L523
+ 3009              	.L504:
+ 3010              		.loc 1 201 5 discriminator 162
+ 3011 11d4 4023     		movs	r3, #64
+ 3012 11d6 06E0     		b	.L523
+ 3013              	.L503:
+ 3014              		.loc 1 201 5 discriminator 160
+ 3015 11d8 0123     		movs	r3, #1
+ 3016 11da 04E0     		b	.L523
+ 3017              	.L502:
+ 3018              		.loc 1 201 5 discriminator 158
+ 3019 11dc 0123     		movs	r3, #1
+ 3020 11de 02E0     		b	.L523
+ 3021              	.L501:
+ 3022              		.loc 1 201 5 discriminator 156
+ 3023 11e0 0123     		movs	r3, #1
+ 3024 11e2 00E0     		b	.L523
+ 3025              	.L500:
+ 3026              		.loc 1 201 5 discriminator 154
+ 3027 11e4 0123     		movs	r3, #1
+ 3028              	.L523:
+ 3029              		.loc 1 201 5 discriminator 200
+ 3030 11e6 294A     		ldr	r2, .L539+56
+ 3031 11e8 9360     		str	r3, [r2, #8]
+ 3032              	.L447:
+ 202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+ 203:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Enable Common interrupts*/
+ 204:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->CR  |= DMA_IT_TC | DMA_IT_TE | DMA_IT_DME;
+ 3033              		.loc 1 204 9 is_stmt 1
+ 3034 11ea FB68     		ldr	r3, [r7, #12]
+ 3035 11ec 1B68     		ldr	r3, [r3]
+ 3036              		.loc 1 204 25
+ 3037 11ee 1A68     		ldr	r2, [r3]
+ 3038              		.loc 1 204 9
+ 3039 11f0 FB68     		ldr	r3, [r7, #12]
+ 3040 11f2 1B68     		ldr	r3, [r3]
+ 3041              		.loc 1 204 25
+ 3042 11f4 42F01602 		orr	r2, r2, #22
+ 3043 11f8 1A60     		str	r2, [r3]
+ 205:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->FCR |= DMA_IT_FE;
+ 3044              		.loc 1 205 9
+ 3045 11fa FB68     		ldr	r3, [r7, #12]
+ 3046 11fc 1B68     		ldr	r3, [r3]
+ 3047              		.loc 1 205 25
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 58
+
+
+ 3048 11fe 5A69     		ldr	r2, [r3, #20]
+ 3049              		.loc 1 205 9
+ 3050 1200 FB68     		ldr	r3, [r7, #12]
+ 3051 1202 1B68     		ldr	r3, [r3]
+ 3052              		.loc 1 205 25
+ 3053 1204 42F08002 		orr	r2, r2, #128
+ 3054 1208 5A61     		str	r2, [r3, #20]
+ 206:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 207:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     if((hdma->XferHalfCpltCallback != NULL) || (hdma->XferM1HalfCpltCallback != NULL))
+ 3055              		.loc 1 207 13
+ 3056 120a FB68     		ldr	r3, [r7, #12]
+ 3057 120c 1B6C     		ldr	r3, [r3, #64]
+ 3058              		.loc 1 207 7
+ 3059 120e 002B     		cmp	r3, #0
+ 3060 1210 03D1     		bne	.L524
+ 3061              		.loc 1 207 53 discriminator 1
+ 3062 1212 FB68     		ldr	r3, [r7, #12]
+ 3063 1214 9B6C     		ldr	r3, [r3, #72]
+ 3064              		.loc 1 207 45 discriminator 1
+ 3065 1216 002B     		cmp	r3, #0
+ 3066 1218 07D0     		beq	.L525
+ 3067              	.L524:
+ 208:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     {
+ 209:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       hdma->Instance->CR  |= DMA_IT_HT;
+ 3068              		.loc 1 209 11
+ 3069 121a FB68     		ldr	r3, [r7, #12]
+ 3070 121c 1B68     		ldr	r3, [r3]
+ 3071              		.loc 1 209 27
+ 3072 121e 1A68     		ldr	r2, [r3]
+ 3073              		.loc 1 209 11
+ 3074 1220 FB68     		ldr	r3, [r7, #12]
+ 3075 1222 1B68     		ldr	r3, [r3]
+ 3076              		.loc 1 209 27
+ 3077 1224 42F00802 		orr	r2, r2, #8
+ 3078 1228 1A60     		str	r2, [r3]
+ 3079              	.L525:
+ 210:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     }
+ 211:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Enable the peripheral */
+ 213:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_ENABLE(hdma); 
+ 3080              		.loc 1 213 5
+ 3081 122a FB68     		ldr	r3, [r7, #12]
+ 3082 122c 1B68     		ldr	r3, [r3]
+ 3083 122e 1A68     		ldr	r2, [r3]
+ 3084 1230 FB68     		ldr	r3, [r7, #12]
+ 3085 1232 1B68     		ldr	r3, [r3]
+ 3086 1234 42F00102 		orr	r2, r2, #1
+ 3087 1238 1A60     		str	r2, [r3]
+ 3088 123a 05E0     		b	.L526
+ 3089              	.L13:
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 215:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   else
+ 216:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {     
+ 217:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Process unlocked */
+ 218:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_UNLOCK(hdma);	  
+ 3090              		.loc 1 218 5
+ 3091 123c FB68     		ldr	r3, [r7, #12]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 59
+
+
+ 3092 123e 0022     		movs	r2, #0
+ 3093 1240 83F83420 		strb	r2, [r3, #52]
+ 219:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 220:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Return error status */
+ 221:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     status = HAL_BUSY;
+ 3094              		.loc 1 221 12
+ 3095 1244 0223     		movs	r3, #2
+ 3096 1246 FB75     		strb	r3, [r7, #23]
+ 3097              	.L526:
+ 222:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }  
+ 223:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   return status; 
+ 3098              		.loc 1 223 10
+ 3099 1248 FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+ 3100              	.L9:
+ 224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** }
+ 3101              		.loc 1 224 1
+ 3102 124a 1846     		mov	r0, r3
+ 3103 124c 1837     		adds	r7, r7, #24
+ 3104              		.cfi_def_cfa_offset 8
+ 3105 124e BD46     		mov	sp, r7
+ 3106              		.cfi_def_cfa_register 13
+ 3107              		@ sp needed
+ 3108 1250 80BD     		pop	{r7, pc}
+ 3109              	.L540:
+ 3110 1252 00BF     		.align	2
+ 3111              	.L539:
+ 3112 1254 00640240 		.word	1073898496
+ 3113 1258 58600240 		.word	1073897560
+ 3114 125c 10600240 		.word	1073897488
+ 3115 1260 10640240 		.word	1073898512
+ 3116 1264 70600240 		.word	1073897584
+ 3117 1268 70640240 		.word	1073898608
+ 3118 126c 28600240 		.word	1073897512
+ 3119 1270 28640240 		.word	1073898536
+ 3120 1274 88600240 		.word	1073897608
+ 3121 1278 88640240 		.word	1073898632
+ 3122 127c 40600240 		.word	1073897536
+ 3123 1280 40640240 		.word	1073898560
+ 3124 1284 A0600240 		.word	1073897632
+ 3125 1288 A0640240 		.word	1073898656
+ 3126 128c 00600240 		.word	1073897472
+ 3127              		.cfi_endproc
+ 3128              	.LFE131:
+ 3130              		.section	.text.HAL_DMAEx_ChangeMemory,"ax",%progbits
+ 3131              		.align	1
+ 3132              		.global	HAL_DMAEx_ChangeMemory
+ 3133              		.syntax unified
+ 3134              		.thumb
+ 3135              		.thumb_func
+ 3137              	HAL_DMAEx_ChangeMemory:
+ 3138              	.LFB132:
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+ 226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /**
+ 227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @brief  Change the memory0 or memory1 address on the fly.
+ 228:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  hdma       pointer to a DMA_HandleTypeDef structure that contains
+ 229:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                     the configuration information for the specified DMA Stream.  
+ 230:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  Address    The new address
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 60
+
+
+ 231:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  memory     the memory to be changed, This parameter can be one of 
+ 232:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                     the following values:
+ 233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                      MEMORY0 /
+ 234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                      MEMORY1
+ 235:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @note   The MEMORY0 address can be changed only when the current transfer use
+ 236:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *         MEMORY1 and the MEMORY1 address can be changed only when the current 
+ 237:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *         transfer use MEMORY0.
+ 238:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @retval HAL status
+ 239:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+ 240:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** HAL_StatusTypeDef HAL_DMAEx_ChangeMemory(DMA_HandleTypeDef *hdma, uint32_t Address, HAL_DMA_MemoryT
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** {
+ 3139              		.loc 1 241 1
+ 3140              		.cfi_startproc
+ 3141              		@ args = 0, pretend = 0, frame = 16
+ 3142              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3143              		@ link register save eliminated.
+ 3144 0000 80B4     		push	{r7}
+ 3145              		.cfi_def_cfa_offset 4
+ 3146              		.cfi_offset 7, -4
+ 3147 0002 85B0     		sub	sp, sp, #20
+ 3148              		.cfi_def_cfa_offset 24
+ 3149 0004 00AF     		add	r7, sp, #0
+ 3150              		.cfi_def_cfa_register 7
+ 3151 0006 F860     		str	r0, [r7, #12]
+ 3152 0008 B960     		str	r1, [r7, #8]
+ 3153 000a 1346     		mov	r3, r2
+ 3154 000c FB71     		strb	r3, [r7, #7]
+ 242:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   if(memory == MEMORY0)
+ 3155              		.loc 1 242 5
+ 3156 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3157 0010 002B     		cmp	r3, #0
+ 3158 0012 04D1     		bne	.L542
+ 243:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
+ 244:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* change the memory0 address */
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->M0AR = Address;
+ 3159              		.loc 1 245 9
+ 3160 0014 FB68     		ldr	r3, [r7, #12]
+ 3161 0016 1B68     		ldr	r3, [r3]
+ 3162              		.loc 1 245 26
+ 3163 0018 BA68     		ldr	r2, [r7, #8]
+ 3164 001a DA60     		str	r2, [r3, #12]
+ 3165 001c 03E0     		b	.L543
+ 3166              	.L542:
+ 246:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 247:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   else
+ 248:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
+ 249:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* change the memory1 address */
+ 250:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->M1AR = Address;
+ 3167              		.loc 1 250 9
+ 3168 001e FB68     		ldr	r3, [r7, #12]
+ 3169 0020 1B68     		ldr	r3, [r3]
+ 3170              		.loc 1 250 26
+ 3171 0022 BA68     		ldr	r2, [r7, #8]
+ 3172 0024 1A61     		str	r2, [r3, #16]
+ 3173              	.L543:
+ 251:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 252:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 61
+
+
+ 253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   return HAL_OK;
+ 3174              		.loc 1 253 10
+ 3175 0026 0023     		movs	r3, #0
+ 254:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** }
+ 3176              		.loc 1 254 1
+ 3177 0028 1846     		mov	r0, r3
+ 3178 002a 1437     		adds	r7, r7, #20
+ 3179              		.cfi_def_cfa_offset 4
+ 3180 002c BD46     		mov	sp, r7
+ 3181              		.cfi_def_cfa_register 13
+ 3182              		@ sp needed
+ 3183 002e 5DF8047B 		ldr	r7, [sp], #4
+ 3184              		.cfi_restore 7
+ 3185              		.cfi_def_cfa_offset 0
+ 3186 0032 7047     		bx	lr
+ 3187              		.cfi_endproc
+ 3188              	.LFE132:
+ 3190              		.section	.text.DMA_MultiBufferSetConfig,"ax",%progbits
+ 3191              		.align	1
+ 3192              		.syntax unified
+ 3193              		.thumb
+ 3194              		.thumb_func
+ 3196              	DMA_MultiBufferSetConfig:
+ 3197              	.LFB133:
+ 255:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+ 256:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /**
+ 257:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @}
+ 258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+ 259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+ 260:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /**
+ 261:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @}
+ 262:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+ 263:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+ 264:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /** @addtogroup DMAEx_Private_Functions
+ 265:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @{
+ 266:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+ 267:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
+ 268:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** /**
+ 269:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @brief  Set the DMA Transfer parameter.
+ 270:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  hdma       pointer to a DMA_HandleTypeDef structure that contains
+ 271:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                     the configuration information for the specified DMA Stream.  
+ 272:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  SrcAddress The source memory Buffer address
+ 273:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  DstAddress The destination memory Buffer address
+ 274:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @param  DataLength The length of data to be transferred from source to destination
+ 275:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @retval HAL status
+ 276:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   */
+ 277:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** static void DMA_MultiBufferSetConfig(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddr
+ 278:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** {  
+ 3198              		.loc 1 278 1
+ 3199              		.cfi_startproc
+ 3200              		@ args = 0, pretend = 0, frame = 16
+ 3201              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3202              		@ link register save eliminated.
+ 3203 0000 80B4     		push	{r7}
+ 3204              		.cfi_def_cfa_offset 4
+ 3205              		.cfi_offset 7, -4
+ 3206 0002 85B0     		sub	sp, sp, #20
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 62
+
+
+ 3207              		.cfi_def_cfa_offset 24
+ 3208 0004 00AF     		add	r7, sp, #0
+ 3209              		.cfi_def_cfa_register 7
+ 3210 0006 F860     		str	r0, [r7, #12]
+ 3211 0008 B960     		str	r1, [r7, #8]
+ 3212 000a 7A60     		str	r2, [r7, #4]
+ 3213 000c 3B60     		str	r3, [r7]
+ 279:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Configure DMA Stream data length */
+ 280:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   hdma->Instance->NDTR = DataLength;
+ 3214              		.loc 1 280 7
+ 3215 000e FB68     		ldr	r3, [r7, #12]
+ 3216 0010 1B68     		ldr	r3, [r3]
+ 3217              		.loc 1 280 24
+ 3218 0012 3A68     		ldr	r2, [r7]
+ 3219 0014 5A60     		str	r2, [r3, #4]
+ 281:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
+ 282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Peripheral to Memory */
+ 283:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   if((hdma->Init.Direction) == DMA_MEMORY_TO_PERIPH)
+ 3220              		.loc 1 283 17
+ 3221 0016 FB68     		ldr	r3, [r7, #12]
+ 3222 0018 9B68     		ldr	r3, [r3, #8]
+ 3223              		.loc 1 283 5
+ 3224 001a 402B     		cmp	r3, #64
+ 3225 001c 08D1     		bne	.L546
+ 284:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {   
+ 285:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Configure DMA Stream destination address */
+ 286:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->PAR = DstAddress;
+ 3226              		.loc 1 286 9
+ 3227 001e FB68     		ldr	r3, [r7, #12]
+ 3228 0020 1B68     		ldr	r3, [r3]
+ 3229              		.loc 1 286 25
+ 3230 0022 7A68     		ldr	r2, [r7, #4]
+ 3231 0024 9A60     		str	r2, [r3, #8]
+ 287:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 288:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Configure DMA Stream source address */
+ 289:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->M0AR = SrcAddress;
+ 3232              		.loc 1 289 9
+ 3233 0026 FB68     		ldr	r3, [r7, #12]
+ 3234 0028 1B68     		ldr	r3, [r3]
+ 3235              		.loc 1 289 26
+ 3236 002a BA68     		ldr	r2, [r7, #8]
+ 3237 002c DA60     		str	r2, [r3, #12]
+ 290:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 291:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Memory to Peripheral */
+ 292:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   else
+ 293:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
+ 294:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Configure DMA Stream source address */
+ 295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->PAR = SrcAddress;
+ 296:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 297:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     /* Configure DMA Stream destination address */
+ 298:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     hdma->Instance->M0AR = DstAddress;
+ 299:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 300:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** }
+ 3238              		.loc 1 300 1
+ 3239 002e 07E0     		b	.L548
+ 3240              	.L546:
+ 295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 63
+
+
+ 3241              		.loc 1 295 9
+ 3242 0030 FB68     		ldr	r3, [r7, #12]
+ 3243 0032 1B68     		ldr	r3, [r3]
+ 295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
+ 3244              		.loc 1 295 25
+ 3245 0034 BA68     		ldr	r2, [r7, #8]
+ 3246 0036 9A60     		str	r2, [r3, #8]
+ 298:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 3247              		.loc 1 298 9
+ 3248 0038 FB68     		ldr	r3, [r7, #12]
+ 3249 003a 1B68     		ldr	r3, [r3]
+ 298:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
+ 3250              		.loc 1 298 26
+ 3251 003c 7A68     		ldr	r2, [r7, #4]
+ 3252 003e DA60     		str	r2, [r3, #12]
+ 3253              	.L548:
+ 3254              		.loc 1 300 1
+ 3255 0040 00BF     		nop
+ 3256 0042 1437     		adds	r7, r7, #20
+ 3257              		.cfi_def_cfa_offset 4
+ 3258 0044 BD46     		mov	sp, r7
+ 3259              		.cfi_def_cfa_register 13
+ 3260              		@ sp needed
+ 3261 0046 5DF8047B 		ldr	r7, [sp], #4
+ 3262              		.cfi_restore 7
+ 3263              		.cfi_def_cfa_offset 0
+ 3264 004a 7047     		bx	lr
+ 3265              		.cfi_endproc
+ 3266              	.LFE133:
+ 3268              		.text
+ 3269              	.Letext0:
+ 3270              		.file 2 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_default_
+ 3271              		.file 3 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 3272              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 3273              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 3274              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 3275              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h"
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 64
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f4xx_hal_dma_ex.c
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:20     .text.HAL_DMAEx_MultiBufferStart:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:26     .text.HAL_DMAEx_MultiBufferStart:00000000 HAL_DMAEx_MultiBufferStart
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:3196   .text.DMA_MultiBufferSetConfig:00000000 DMA_MultiBufferSetConfig
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:139    .text.HAL_DMAEx_MultiBufferStart_IT:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:145    .text.HAL_DMAEx_MultiBufferStart_IT:00000000 HAL_DMAEx_MultiBufferStart_IT
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:625    .text.HAL_DMAEx_MultiBufferStart_IT:000002e0 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:643    .text.HAL_DMAEx_MultiBufferStart_IT:00000320 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:1041   .text.HAL_DMAEx_MultiBufferStart_IT:00000580 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:1059   .text.HAL_DMAEx_MultiBufferStart_IT:000005c0 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:1457   .text.HAL_DMAEx_MultiBufferStart_IT:00000820 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:1475   .text.HAL_DMAEx_MultiBufferStart_IT:00000860 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:1874   .text.HAL_DMAEx_MultiBufferStart_IT:00000ac0 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:1892   .text.HAL_DMAEx_MultiBufferStart_IT:00000b00 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:2285   .text.HAL_DMAEx_MultiBufferStart_IT:00000d58 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:2304   .text.HAL_DMAEx_MultiBufferStart_IT:00000d9c $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:2718   .text.HAL_DMAEx_MultiBufferStart_IT:00001008 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:2736   .text.HAL_DMAEx_MultiBufferStart_IT:00001048 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:3112   .text.HAL_DMAEx_MultiBufferStart_IT:00001254 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:3131   .text.HAL_DMAEx_ChangeMemory:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:3137   .text.HAL_DMAEx_ChangeMemory:00000000 HAL_DMAEx_ChangeMemory
+C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s:3191   .text.DMA_MultiBufferSetConfig:00000000 $t
+                           .group:00000000 wm4.0.3f0a1ce06f5181ce1e459e863b34cfe2
+                           .group:00000000 wm4.stm32f4xx_hal_conf.h.24.cf658e84b370a79d74d698f3596005c8
+                           .group:00000000 wm4.stm32f4xx.h.39.163e65267b4f964a08764289722b975f
+                           .group:00000000 wm4.stm32f411xe.h.35.cd95d7dd18e2bcbd243b87f30f907448
+                           .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.cmsis_version.h.32.4d5822004c01a829a975260e854b5f8e
+                           .group:00000000 wm4.core_cm4.h.66.e4ff136c4a17abc46741866f64f8e729
+                           .group:00000000 wm4.cmsis_gcc.h.26.6774fe91202d65f4d5ffcff60e00da34
+                           .group:00000000 wm4.core_cm4.h.174.059a5e001a9e729091d1407208e93224
+                           .group:00000000 wm4.mpu_armv7.h.32.27b4593cb2f8d3152ca5d97a9d72b321
+                           .group:00000000 wm4.stm32f411xe.h.637.23266af44350a3b17e44f737eb041fcc
+                           .group:00000000 wm4.stm32f4xx.h.196.0b21137cf6c6923d8fd1f4d94a3bfdd4
+                           .group:00000000 wm4.stm32_hal_legacy.h.23.e2601123cf1b2a3b6d11d949644ddf87
+                           .group:00000000 wm4.stddef.h.39.144cf5ddcd53cbfdac30259dc1a6c87f
+                           .group:00000000 wm4.stm32f4xx_hal_def.h.58.f614308b482cecea9bcc0016240ac0fc
+                           .group:00000000 wm4.stm32f4xx_hal_rcc_ex.h.22.279815e0741daf6badf72c0892228ec2
+                           .group:00000000 wm4.stm32f4xx_hal_rcc.h.108.b82c8c670b41d96b2920e2f63661be15
+                           .group:00000000 wm4.stm32f4xx_hal_gpio.h.22.e47df9f0f5be4ddc2ed2d14042c5e680
+                           .group:00000000 wm4.stm32f4xx_hal_gpio_ex.h.22.07bba510ffde2028a7018ee98a87799d
+                           .group:00000000 wm4.stm32f4xx_hal_gpio.h.255.5b948d47ad1357d6d2213e5e5ca4755c
+                           .group:00000000 wm4.stm32f4xx_hal_exti.h.22.1f47767199c5bf749c04088e5c61c9c8
+                           .group:00000000 wm4.stm32f4xx_hal_dma.h.22.fffce20ac9119c50557659c75e75ab1c
+                           .group:00000000 wm4.stm32f4xx_hal_dma.h.721.a1e57ffbc615f926e6509c5acc65e492
+                           .group:00000000 wm4.stm32f4xx_hal_cortex.h.22.e6aa3b847b5388be63c32d1f9e696ef7
+                           .group:00000000 wm4.stm32f4xx_hal_flash.h.22.31b301be2655c3eb8583e51c8231544a
+                           .group:00000000 wm4.stm32f4xx_hal_flash_ex.h.22.bdc1f651ef1384763525e869ecf4379e
+                           .group:00000000 wm4.stm32f4xx_hal_flash.h.363.51efdf0f6c88f683efb89d7cc95cc1be
+                           .group:00000000 wm4.stm32f4xx_hal_pwr.h.22.2c27d93ae187efe3a73816f03a329970
+                           .group:00000000 wm4.stm32f4xx_hal_pwr_ex.h.22.04eb3957e13ca6e5ed8952d2d168bdc0
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc8UPr3j.s 			page 65
+
+
+                           .group:00000000 wm4.stm32f4xx_hal_pwr.h.337.60b43975c84527a23cb6994b23165a5e
+                           .group:00000000 wm4.stm32f4xx_hal_uart.h.22.591b491756a19342b0bf79eea5b33e1b
+                           .group:00000000 wm4.stm32f4xx_hal.h.72.a5a58188aa461a0614f1e58e159c7840
+
+NO UNDEFINED SYMBOLS

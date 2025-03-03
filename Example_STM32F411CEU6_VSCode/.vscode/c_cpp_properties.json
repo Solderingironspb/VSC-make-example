@@ -1,0 +1,14 @@
+﻿{
+    "configurations": [
+        {
+            "name": "Example_STM32F411CEU6_VSCode", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "includePath": ["${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy//**", "${workspaceFolder}/Core/Inc//**", "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include//**", "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc//**", "${workspaceFolder}/Drivers/CMSIS/Include//**"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "defines": ["DEBUG", "USE_HAL_DRIVER", "STM32F411xE"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "intelliSenseMode": "gcc-arm", //Стандартно "gcc-arm"
+            "compilerPath": "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "compilerArgs": ["-mcpu=cortex-m4", "-mfpu=fpv4-sp-d16", "-mfloat-abi=hard", "-specs=nano.specs", "-g3", "-O0", "-std=gnu11", "-DDEBUG", "-DUSE_HAL_DRIVER", "-DSTM32F411xE", "-IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy/", "-ICore/Inc/", "-IDrivers/CMSIS/Device/ST/STM32F4xx/Include/", "-IDrivers/STM32F4xx_HAL_Driver/Inc/", "-IDrivers/CMSIS/Include/", "-Wall", "-fdata-sections", "-ffunction-sections", "-fstack-usage", "-MMD", "-MP", "-MF"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "cStandard": "c11" //Стандартно C11
+        }
+    ],
+    "version": 4
+}
