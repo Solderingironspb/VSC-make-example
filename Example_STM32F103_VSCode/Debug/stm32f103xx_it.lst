@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,29 +17,29 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.global	Timeout_blink
-  18              		.section	.data.Timeout_blink,"aw"
-  19              		.align	1
-  22              	Timeout_blink:
-  23 0000 6300     		.short	99
-  24              		.global	Timer_blink
-  25              		.section	.bss.Timer_blink,"aw",%nobits
-  26              		.align	1
-  29              	Timer_blink:
-  30 0000 0000     		.space	2
-  31              		.global	flag_blink
-  32              		.section	.bss.flag_blink,"aw",%nobits
-  35              	flag_blink:
-  36 0000 00       		.space	1
-  37              		.section	.text.SysTick_Handler,"ax",%progbits
-  38              		.align	1
-  39              		.global	SysTick_Handler
-  40              		.syntax unified
-  41              		.thumb
-  42              		.thumb_func
-  44              	SysTick_Handler:
-  45              	.LFB68:
-  46              		.file 1 "Core/Src/stm32f103xx_it.c"
+  17              		.file 1 "Core/Src/stm32f103xx_it.c"
+  18              		.global	Timeout_blink
+  19              		.section	.data.Timeout_blink,"aw"
+  20              		.align	1
+  23              	Timeout_blink:
+  24 0000 6300     		.short	99
+  25              		.global	Timer_blink
+  26              		.section	.bss.Timer_blink,"aw",%nobits
+  27              		.align	1
+  30              	Timer_blink:
+  31 0000 0000     		.space	2
+  32              		.global	flag_blink
+  33              		.section	.bss.flag_blink,"aw",%nobits
+  36              	flag_blink:
+  37 0000 00       		.space	1
+  38              		.section	.text.SysTick_Handler,"ax",%progbits
+  39              		.align	1
+  40              		.global	SysTick_Handler
+  41              		.syntax unified
+  42              		.thumb
+  43              		.thumb_func
+  45              	SysTick_Handler:
+  46              	.LFB68:
    1:Core/Src/stm32f103xx_it.c **** #include "stm32f103xx_it.h"
    2:Core/Src/stm32f103xx_it.c **** 
    3:Core/Src/stm32f103xx_it.c **** extern volatile uint32_t SysTimer_ms;         // Переменная, аналогичная HAL_G
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 1
   50              		@ frame_needed = 1, uses_anonymous_args = 0
   51              		@ link register save eliminated.
   52 0000 80B4     		push	{r7}
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s 			page 2
 
 
   53              		.cfi_def_cfa_offset 4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 1
   95              		.loc 1 24 20
   96 003a 184B     		ldr	r3, .L9+12
   97 003c 1B88     		ldrh	r3, [r3]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s 			page 3
 
 
   98 003e 013B     		subs	r3, r3, #1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 1
  131 0074 1A61     		str	r2, [r3, #16]
  132 0076 03E0     		b	.L7
  133              	.L6:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s 			page 4
 
 
   30:Core/Src/stm32f103xx_it.c ****             GPIOC->BSRR = GPIO_BSRR_BR13;
@@ -219,28 +219,28 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 1
  166              	.LFE68:
  168              		.text
  169              	.Letext0:
- 170              		.file 2 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_default_
- 171              		.file 3 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 170              		.file 2 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
+ 171              		.file 3 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
  172              		.file 4 "Drivers/CMSIS/stm32f103xb.h"
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 5
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f103xx_it.c
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:22     .data.Timeout_blink:00000000 Timeout_blink
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:19     .data.Timeout_blink:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:29     .bss.Timer_blink:00000000 Timer_blink
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:26     .bss.Timer_blink:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:35     .bss.flag_blink:00000000 flag_blink
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:36     .bss.flag_blink:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:38     .text.SysTick_Handler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:44     .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:158    .text.SysTick_Handler:00000090 $d
-                           .group:00000000 wm4.0.57948b105342b2a9a91afe6dac72b4ef
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:23     .data.Timeout_blink:00000000 Timeout_blink
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:20     .data.Timeout_blink:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:30     .bss.Timer_blink:00000000 Timer_blink
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:27     .bss.Timer_blink:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:36     .bss.flag_blink:00000000 flag_blink
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:37     .bss.flag_blink:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:39     .text.SysTick_Handler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:45     .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccyver8z.s:158    .text.SysTick_Handler:00000090 $d
+                           .group:00000000 wm4.0.19985633071831f0b299129da8e30081
                            .group:00000000 wm4.stm32f1xx.h.39.208bb8a61c892b7c37d899c49a031330
                            .group:00000000 wm4.stm32f103xb.h.38.ec967d5ad9d3269cb0788eebda048e38
-                           .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
-                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._newlib_version.h.4.6d111ab2e95434b664b53815e5c8ccba
+                           .group:00000000 wm4.features.h.33.3e67abe6fb64142d4f6fa9496796153c
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
                            .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
                            .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
@@ -251,40 +251,30 @@ C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s:158    .text.SysTick_Handler:000
                            .group:00000000 wm4.core_cm3.h.127.f4474120f1a7524deb56f9d74ff175da
                            .group:00000000 wm4.stm32f103xb.h.573.10249aa7473ca93be896fed94046a725
                            .group:00000000 wm4.stm32f1xx.h.162.96b09079a093c34dbd7f0b85cbd0ddee
-                           .group:00000000 wm4.stdbool.h.29.07dce69c3b78884144b7f7bd19483461
-                           .group:00000000 wm4.newlib.h.8.4679f89e52c9f69cd44f3a27cd28c759
-                           .group:00000000 wm4.ieeefp.h.77.25247dc27dbe3b23bfe98c2dc18f6ac5
-                           .group:00000000 wm4.config.h.224.79362c3cdb280fe0b8d95bd0bc4d5c54
+                           .group:00000000 wm4.stdbool.h.29.4a1c88fe569adb8d03217dd16982ca34
+                           .group:00000000 wm4.newlib.h.7.74420a2563819a23b01928a4134a16df
+                           .group:00000000 wm4.ieeefp.h.77.0ee3146e9d892bb10bc0066c30189af1
+                           .group:00000000 wm4.config.h.224.88344135d9de3e7ea139102cd6493448
                            .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
                            .group:00000000 wm4.stdio.h.31.7c0e28c411445f3f9c5b11accf882760
-                           .group:00000000 wm4.stddef.h.181.c3f52a3b0f4c288bddb5dda1562858e2
-                           .group:00000000 wm4.cdefs.h.49.39045112216f6a021dbdffe3bf5accce
-                           .group:00000000 wm4.stddef.h.39.b727a6c3269d9d6ef9fc646b721a8287
+                           .group:00000000 wm4.stddef.h.185.cbb642e1ccd385e8aa504b15cb7fb086
+                           .group:00000000 wm4.cdefs.h.49.f93868eb904b9ca05b5c0257d31128ca
+                           .group:00000000 wm4.stddef.h.39.0e5f0dabba1c666ccadf0408e0d47322
                            .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
                            .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
-                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
-                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.stddef.h.158.5f30652bb2ea05b142c1bbee9108c999
+                           .group:00000000 wm4._types.h.127.3bdfe3ff8ea2d0985b03d9cbe93480e3
                            .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
                            .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
-                           .group:00000000 wm4.reent.h.77.32fd7d280fc2a40b0797abce5beaf6e3
+                           .group:00000000 wm4.reent.h.77.d3ad9b68cecd3d0750f846779418c40d
                            .group:00000000 wm4.assert.h.11.db24e541f16414db224bf986d21017e2
-                           .group:00000000 wm4.reent.h.504.40d20ade344680fbcb6a0178bf7ae09e
-                           .group:00000000 wm4.types.h.40.8b6acba56cefbb11746718204edc8f5e
-                           .group:00000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
-                           .group:00000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
-                           .group:00000000 wm4._timeval.h.32.bec3221fa7a9bb0bdde696c9c57e47d2
-                           .group:00000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
-                           .group:00000000 wm4.select.h.19.40cd3f2bfc456b193b790c2754690ebf
-                           .group:00000000 wm4.types.h.51.5571ec98f267d17d3c670b7a3ba33afa
-                           .group:00000000 wm4.sched.h.22.c60982713a5c428609783c78f9c78d95
-                           .group:00000000 wm4._pthreadtypes.h.36.fcee9961c35163dde6267ef772ad1972
+                           .group:00000000 wm4.reent.h.459.ffeecb0c1128ac004a9c6d672f068107
+                           .group:00000000 wm4.stdio.h.67.0cf8a9c281ab0b348aef5c02e7e48825
                            .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
-                           .group:00000000 wm4.stdio.h.81.60a2ded7dae310b81f9d6907fe5e3dbf
+                           .group:00000000 wm4.stdio.h.87.408e5d973372126daeef099c555b2753
                            .group:00000000 wm4.string.h.8.c4b8571ce60dff2817f43fec8b86aecd
-                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccN4ehZQ.s 			page 6
-
-
+                           .group:00000000 wm4.stddef.h.158.bfed30416c9480cd13bc4a25427d538f
+                           .group:00000000 wm4.string.h.177.59a005921fa78485abc80a0267de5752
 
 UNDEFINED SYMBOLS
 SysTimer_ms

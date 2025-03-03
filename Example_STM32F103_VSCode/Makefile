@@ -11,7 +11,7 @@
 # Пути для проекта
 ######################################################################################
 # GNU Arm Embedded Toolchain:
-GNU_TOOLCHAIN = C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin
+GNU_TOOLCHAIN = C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin
 GNU_TOOLCHAIN_GCC_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-gcc.exe
 GNU_TOOLCHAIN_GDB_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-gdb.exe
 GNU_TOOLCHAIN_SIZE_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-size.exe
@@ -186,6 +186,8 @@ clean:
 flash: all
 	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
 
+erase: 
+	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "init; reset halt; stm32f1x mass_erase 0; reset run; exit"
 ##########################################################################
 # dependencies
 ##########################################################################

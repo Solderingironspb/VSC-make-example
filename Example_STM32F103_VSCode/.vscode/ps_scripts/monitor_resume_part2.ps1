@@ -11,10 +11,13 @@
 # В этой части мы, используя arm-none-eabi-gdb, подключимся к микроконтроллеру по порту 3333 и отправим команды:
 # "monitor resume", "detach", "quit"
 
-$GNU_TOOLCHAIN_GDB_PATH = "C:/ST/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb.exe"
+$GNU_TOOLCHAIN_GDB_PATH = "C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/arm-none-eabi-gdb.exe"
 
 & "$GNU_TOOLCHAIN_GDB_PATH" --batch -ex "target extended-remote :3333"  -ex "monitor resume" -ex "detach" -ex "quit"
    
+
+
+
 
 
 

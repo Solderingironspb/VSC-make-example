@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,54 +17,54 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.global	Counter
-  18              		.section	.bss.Counter,"aw",%nobits
-  19              		.align	2
-  22              	Counter:
-  23 0000 00000000 		.space	4
-  24              		.global	Text
-  25              		.section	.bss.Text,"aw",%nobits
-  26              		.align	2
-  29              	Text:
-  30 0000 00000000 		.space	256
-  30      00000000 
-  30      00000000 
-  30      00000000 
-  30      00000000 
-  31              		.section	.rodata
-  32              		.align	2
-  33              	.LC0:
-  34 0000 D09FD180 		.ascii	"\320\237\321\200\320\270\320\262\320\265\321\202 \320"
-  34      D0B8D0B2 
-  34      D0B5D182 
-  34      20D0
-  35 000e BCD0B8D1 		.ascii	"\274\320\270\321\200!\015\012\320\241\321\207\320\265"
-  35      80210D0A 
-  35      D0A1D187 
-  35      D0B5
-  36 001c D182D187 		.ascii	"\321\202\321\207\320\270\320\272 \320\264\320\276\321"
-  36      D0B8D0BA 
-  36      20D0B4D0 
-  36      BED1
-  37 002a 81D187D0 		.ascii	"\201\321\207\320\270\321\202\320\260\320\273 \320\264"
-  37      B8D182D0 
-  37      B0D0BB20 
-  37      D0B4
-  38 0038 D0BE2025 		.ascii	"\320\276 %ld\015\012\000"
-  38      6C640D0A 
-  38      00
-  39              		.section	.text.main,"ax",%progbits
-  40              		.align	1
-  41              		.global	main
-  42              		.syntax unified
-  43              		.thumb
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 2
+  17              		.file 1 "Core/Src/main.c"
+  18              		.global	Counter
+  19              		.section	.bss.Counter,"aw",%nobits
+  20              		.align	2
+  23              	Counter:
+  24 0000 00000000 		.space	4
+  25              		.global	Text
+  26              		.section	.bss.Text,"aw",%nobits
+  27              		.align	2
+  30              	Text:
+  31 0000 00000000 		.space	256
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  32              		.section	.rodata
+  33              		.align	2
+  34              	.LC0:
+  35 0000 D09FD180 		.ascii	"\320\237\321\200\320\270\320\262\320\265\321\202 \320"
+  35      D0B8D0B2 
+  35      D0B5D182 
+  35      20D0
+  36 000e BCD0B8D1 		.ascii	"\274\320\270\321\200!\015\012\320\241\321\207\320\265"
+  36      80210D0A 
+  36      D0A1D187 
+  36      D0B5
+  37 001c D182D187 		.ascii	"\321\202\321\207\320\270\320\272 \320\264\320\276\321"
+  37      D0B8D0BA 
+  37      20D0B4D0 
+  37      BED1
+  38 002a 81D187D0 		.ascii	"\201\321\207\320\270\321\202\320\260\320\273 \320\264"
+  38      B8D182D0 
+  38      B0D0BB20 
+  38      D0B4
+  39 0038 D0BE2025 		.ascii	"\320\276 %ld\015\012\000"
+  39      6C640D0A 
+  39      00
+  40              		.section	.text.main,"ax",%progbits
+  41              		.align	1
+  42              		.global	main
+  43              		.syntax unified
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s 			page 2
 
 
-  44              		.thumb_func
-  46              	main:
-  47              	.LFB68:
-  48              		.file 1 "Core/Src/main.c"
+  44              		.thumb
+  45              		.thumb_func
+  47              	main:
+  48              	.LFB68:
    1:Core/Src/main.c **** #include "main.h"
    2:Core/Src/main.c **** 
    3:Core/Src/main.c **** uint32_t Counter = 0;
@@ -102,7 +102,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 1
   72 001a 0023     		movs	r3, #0
   73 001c 0022     		movs	r2, #0
   74 001e 0D21     		movs	r1, #13
-  75 0020 0C48     		ldr	r0, .L3
+  75 0020 0D48     		ldr	r0, .L3
   76 0022 FFF7FEFF 		bl	CMSIS_GPIO_init
   77              	.L2:
   12:Core/Src/main.c ****     
@@ -110,70 +110,74 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 1
   14:Core/Src/main.c ****     while (1) {
   15:Core/Src/main.c ****         Counter++;
   78              		.loc 1 15 16 discriminator 1
-  79 0026 0C4B     		ldr	r3, .L3+4
+  79 0026 0D4B     		ldr	r3, .L3+4
   80 0028 1B68     		ldr	r3, [r3]
   81 002a 0133     		adds	r3, r3, #1
-  82 002c 0A4A     		ldr	r2, .L3+4
+  82 002c 0B4A     		ldr	r2, .L3+4
   83 002e 1360     		str	r3, [r2]
   16:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
   84              		.loc 1 16 9 discriminator 1
-  85 0030 094B     		ldr	r3, .L3+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 3
+  85 0030 0A4B     		ldr	r3, .L3+4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s 			page 3
 
 
   86 0032 1B68     		ldr	r3, [r3]
   87 0034 1A46     		mov	r2, r3
-  88 0036 0949     		ldr	r1, .L3+8
-  89 0038 0948     		ldr	r0, .L3+12
+  88 0036 0A49     		ldr	r1, .L3+8
+  89 0038 0A48     		ldr	r0, .L3+12
   90 003a FFF7FEFF 		bl	sprintf
   17:Core/Src/main.c ****         CMSIS_USART_Transmit(USART1, (unsigned char*)&Text, strlen((const char*)Text), 100);
   91              		.loc 1 17 61 discriminator 1
-  92 003e 0848     		ldr	r0, .L3+12
+  92 003e 0948     		ldr	r0, .L3+12
   93 0040 FFF7FEFF 		bl	strlen
   94 0044 0346     		mov	r3, r0
   95              		.loc 1 17 9 discriminator 1
   96 0046 9AB2     		uxth	r2, r3
   97 0048 6423     		movs	r3, #100
-  98 004a 0549     		ldr	r1, .L3+12
-  99 004c 0548     		ldr	r0, .L3+16
+  98 004a 0649     		ldr	r1, .L3+12
+  99 004c 0648     		ldr	r0, .L3+16
  100 004e FFF7FEFF 		bl	CMSIS_USART_Transmit
   15:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
  101              		.loc 1 15 16 discriminator 1
- 102 0052 E8E7     		b	.L2
- 103              	.L4:
- 104              		.align	2
- 105              	.L3:
- 106 0054 00100140 		.word	1073811456
- 107 0058 00000000 		.word	Counter
- 108 005c 00000000 		.word	.LC0
- 109 0060 00000000 		.word	Text
- 110 0064 00380140 		.word	1073821696
- 111              		.cfi_endproc
- 112              	.LFE68:
- 114              		.text
- 115              	.Letext0:
- 116              		.file 2 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_default_
- 117              		.file 3 "c:\\st\\tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h"
- 118              		.file 4 "Drivers/CMSIS/stm32f103xb.h"
- 119              		.file 5 "Core/Inc/stm32f103xx_CMSIS.h"
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 4
+ 102 0052 00BF     		nop
+ 103 0054 E7E7     		b	.L2
+ 104              	.L4:
+ 105 0056 00BF     		.align	2
+ 106              	.L3:
+ 107 0058 00100140 		.word	1073811456
+ 108 005c 00000000 		.word	Counter
+ 109 0060 00000000 		.word	.LC0
+ 110 0064 00000000 		.word	Text
+ 111 0068 00380140 		.word	1073821696
+ 112              		.cfi_endproc
+ 113              	.LFE68:
+ 115              		.text
+ 116              	.Letext0:
+ 117              		.file 2 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
+ 118              		.file 3 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
+ 119              		.file 4 "Drivers/CMSIS/stm32f103xb.h"
+ 120              		.file 5 "Core/Inc/stm32f103xx_CMSIS.h"
+ 121              		.file 6 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/incl
+ 122              		.file 7 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
+ 123              		.file 8 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:22     .bss.Counter:00000000 Counter
-C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:19     .bss.Counter:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:29     .bss.Text:00000000 Text
-C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:26     .bss.Text:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:32     .rodata:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:40     .text.main:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:46     .text.main:00000000 main
-C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:106    .text.main:00000054 $d
-                           .group:00000000 wm4.0.57948b105342b2a9a91afe6dac72b4ef
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s:23     .bss.Counter:00000000 Counter
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s:20     .bss.Counter:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s:30     .bss.Text:00000000 Text
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s:27     .bss.Text:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s:33     .rodata:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s:41     .text.main:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s:47     .text.main:00000000 main
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s:107    .text.main:00000058 $d
+                           .group:00000000 wm4.0.19985633071831f0b299129da8e30081
                            .group:00000000 wm4.stm32f1xx.h.39.208bb8a61c892b7c37d899c49a031330
                            .group:00000000 wm4.stm32f103xb.h.38.ec967d5ad9d3269cb0788eebda048e38
-                           .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
-                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._newlib_version.h.4.6d111ab2e95434b664b53815e5c8ccba
+                           .group:00000000 wm4.features.h.33.3e67abe6fb64142d4f6fa9496796153c
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
                            .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
                            .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
@@ -184,40 +188,30 @@ C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s:106    .text.main:00000054 $d
                            .group:00000000 wm4.core_cm3.h.127.f4474120f1a7524deb56f9d74ff175da
                            .group:00000000 wm4.stm32f103xb.h.573.10249aa7473ca93be896fed94046a725
                            .group:00000000 wm4.stm32f1xx.h.162.96b09079a093c34dbd7f0b85cbd0ddee
-                           .group:00000000 wm4.stdbool.h.29.07dce69c3b78884144b7f7bd19483461
-                           .group:00000000 wm4.newlib.h.8.4679f89e52c9f69cd44f3a27cd28c759
-                           .group:00000000 wm4.ieeefp.h.77.25247dc27dbe3b23bfe98c2dc18f6ac5
-                           .group:00000000 wm4.config.h.224.79362c3cdb280fe0b8d95bd0bc4d5c54
+                           .group:00000000 wm4.stdbool.h.29.4a1c88fe569adb8d03217dd16982ca34
+                           .group:00000000 wm4.newlib.h.7.74420a2563819a23b01928a4134a16df
+                           .group:00000000 wm4.ieeefp.h.77.0ee3146e9d892bb10bc0066c30189af1
+                           .group:00000000 wm4.config.h.224.88344135d9de3e7ea139102cd6493448
                            .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
                            .group:00000000 wm4.stdio.h.31.7c0e28c411445f3f9c5b11accf882760
-                           .group:00000000 wm4.stddef.h.181.c3f52a3b0f4c288bddb5dda1562858e2
-                           .group:00000000 wm4.cdefs.h.49.39045112216f6a021dbdffe3bf5accce
-                           .group:00000000 wm4.stddef.h.39.b727a6c3269d9d6ef9fc646b721a8287
+                           .group:00000000 wm4.stddef.h.185.cbb642e1ccd385e8aa504b15cb7fb086
+                           .group:00000000 wm4.cdefs.h.49.f93868eb904b9ca05b5c0257d31128ca
+                           .group:00000000 wm4.stddef.h.39.0e5f0dabba1c666ccadf0408e0d47322
                            .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
                            .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
-                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
-                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.stddef.h.158.5f30652bb2ea05b142c1bbee9108c999
+                           .group:00000000 wm4._types.h.127.3bdfe3ff8ea2d0985b03d9cbe93480e3
                            .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
                            .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
-                           .group:00000000 wm4.reent.h.77.32fd7d280fc2a40b0797abce5beaf6e3
+                           .group:00000000 wm4.reent.h.77.d3ad9b68cecd3d0750f846779418c40d
                            .group:00000000 wm4.assert.h.11.db24e541f16414db224bf986d21017e2
-                           .group:00000000 wm4.reent.h.504.40d20ade344680fbcb6a0178bf7ae09e
-                           .group:00000000 wm4.types.h.40.8b6acba56cefbb11746718204edc8f5e
-                           .group:00000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
-                           .group:00000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
-                           .group:00000000 wm4._timeval.h.32.bec3221fa7a9bb0bdde696c9c57e47d2
-                           .group:00000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
-                           .group:00000000 wm4.select.h.19.40cd3f2bfc456b193b790c2754690ebf
-                           .group:00000000 wm4.types.h.51.5571ec98f267d17d3c670b7a3ba33afa
-                           .group:00000000 wm4.sched.h.22.c60982713a5c428609783c78f9c78d95
-                           .group:00000000 wm4._pthreadtypes.h.36.fcee9961c35163dde6267ef772ad1972
+                           .group:00000000 wm4.reent.h.459.ffeecb0c1128ac004a9c6d672f068107
+                           .group:00000000 wm4.stdio.h.67.0cf8a9c281ab0b348aef5c02e7e48825
                            .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
-                           .group:00000000 wm4.stdio.h.81.60a2ded7dae310b81f9d6907fe5e3dbf
+                           .group:00000000 wm4.stdio.h.87.408e5d973372126daeef099c555b2753
                            .group:00000000 wm4.string.h.8.c4b8571ce60dff2817f43fec8b86aecd
-                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
-
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc5pMDlO.s 			page 5
-
+                           .group:00000000 wm4.stddef.h.158.bfed30416c9480cd13bc4a25427d538f
+                           .group:00000000 wm4.string.h.177.59a005921fa78485abc80a0267de5752
 
 UNDEFINED SYMBOLS
 CMSIS_Debug_init
@@ -226,5 +220,8 @@ CMSIS_SysTick_Timer_init
 CMSIS_USART1_Init
 CMSIS_GPIO_init
 sprintf
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKN1vdC.s 			page 5
+
+
 strlen
 CMSIS_USART_Transmit
