@@ -159,6 +159,8 @@ if { [info exists CPUTAPID] } {
 Признаюсь - создание первого Makefile под STM32F103C8T6 у меня заняло неделю красноглазиния.
 Он не такой, каким выдает его **CubeMX**. все делалось для того, чтоб создать универсальную портянку, дабы имелась возможность быстро создавать проекты под разные мк, а также автоматизировать подхватку этих значений из Makefile с последующей подстановкой их в настройки **.vscode**, используя скрипты на **powershell**. Иначе проект можно несколько часов собирать, что уже перехочется так работать вообще....
 
+**Тестовый проект:** https://github.com/Solderingironspb/VSC-make-example/tree/main/Example_STM32F103_VSCode
+
 Итак, вот пример Makefile под STM32F103C8T6:
 
 ```
@@ -410,5 +412,99 @@ erase:
 
 
 Поздравляю. Вы теперь можете забилдить проект прямо в **powershell**.
+
+Наполненность папки Debug: 
+
+![Image](https://github.com/user-attachments/assets/fc49427d-ac8c-418e-b67d-437046617afd)
+
+В окне powershell, когда происходит успешный билд - есть строки:
+
+```
+   text    data     bss     dec     hex filename
+   5668      92    1492    7252    1c54 Debug/Clean_project.elf
+```
+
+Это размер нашей прошивки. Как привести это все к удобоваримому виду, как в CubeIDE?
+
+![Image](https://github.com/user-attachments/assets/59dc1f77-fc3f-433e-b467-db627a5ac59a)
+
+Зайдем в папку с скомпилированным проектом, т.е. в папку Debug:
+
+Откроем powershell и выполним команду: `C:\ST\tools\gnu-tools-for-stm32.12.3\tools\bin\arm-none-eabi-size -A Clean_project.elf`
+
+![Image](https://github.com/user-attachments/assets/63c0b8e7-8f25-419c-a05d-5deb75d2e036)
+
+Вот это более детальная информация о занимаемой памяти. Теперь как понять, что и куда? У нас есть *.ld файл в проекте. Нужно смотреть в него (STM32F103C8TX_FLASH.ld):
+
+Вот размер RAM и FLASH. Здесь же размер heap и stack:
+
+```
+_Min_Heap_Size = 0x100; /* required amount of heap */
+_Min_Stack_Size = 0x200; /* required amount of stack */
+
+/* Memories definition */
+MEMORY
+{
+  RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 20K
+  FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 64K
+}
+```
+
+далее идет портянка по типу:
+```
+/* Sections */
+SECTIONS
+{
+  /* The startup code into "FLASH" Rom type memory */
+  .isr_vector :
+  {
+    . = ALIGN(4);
+    KEEP(*(.isr_vector)) /* Startup code */
+    . = ALIGN(4);
+  } >FLASH
+
+  /* The program code and other data into "FLASH" Rom type memory */
+  .text :
+  {
+    . = ALIGN(4);
+    *(.text)           /* .text sections (code) */
+    *(.text*)          /* .text* sections (code) */
+    *(.glue_7)         /* glue arm to thumb code */
+    *(.glue_7t)        /* glue thumb to arm code */
+    *(.eh_frame)
+
+    KEEP (*(.init))
+    KEEP (*(.fini))
+
+    . = ALIGN(4);
+    _etext = .;        /* define a global symbols at end of code */
+  } >FLASH
+```
+
+Все что >FLASH идет во FLASH, все что в >RAM - соответственно в RAM. Можно себя также по CubeIDE проверить:
+
+![Image](https://github.com/user-attachments/assets/5be497c0-6b0d-40ab-aaf7-b9e707127d42)
+
+Соответственно, после несложных математических операций мы сможем посчитать общий объем занимаемой памяти во FLASH и RAM. 
+
+Start address и End address можно глянуть в *.map файле в той же папке Debug:
+
+ ![Image](https://github.com/user-attachments/assets/25fc8602-d1bf-40a5-a653-4cdecdac3b1e)
+
+Start address - Это Origin
+
+End address - Это Origin + Length
+
+Теперь мы знаем, как рассчитать занимаемую память после компиляции. 
+
+Я написал под это скрипт: **Build_Analyzer.ps1**
+
+![Image](https://github.com/user-attachments/assets/0ecae9ef-1294-4202-b909-2104f8d284b4)
+
+Его так не совсем удобно использовать. В VSCode он будет запускаться автоматом:
+
+![Image](https://github.com/user-attachments/assets/b15a0125-5abe-48cf-9a09-e78106a57b5c)
+
+Единственное что - придется под разные микроконтроллеры этот скрипт править, т.к. *.ld файлы у всех разные, да и бывает кроме RAM и FLASH еще куча всего.
 
 **Материал находится в доработке*
