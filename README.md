@@ -394,7 +394,7 @@ erase:
 
 Итог компиляции, если все верно:
 
-![alt text](image.png)
+![Image](https://github.com/user-attachments/assets/e1e464e3-a355-4950-887f-3a5d805e7554)
 
 Как мы видим - **make** от **MinGW** справился с задачей на отлично. 
 
@@ -402,7 +402,7 @@ erase:
 
 Очистку проекта я решаю координально - просто удаляю папку Debug.
 
-![alt text](image-1.png)
+![Image](https://github.com/user-attachments/assets/6f27b6b7-f949-4136-8593-0c08b8c73262)
 
 **make** от **CubeIDE 1.17.0** с использование прямого пути:
 
