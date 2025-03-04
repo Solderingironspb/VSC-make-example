@@ -19,7 +19,9 @@
 
 ![Image](https://github.com/user-attachments/assets/a92c1635-25d5-4ffd-a2f1-1b399c33f9c4)
 
-## Как начать работу? 
+## Как начать работу?
+
+### Разберемся с базой и powershell. Попробуем поработать без IDE.
 
 Нам нужны:
 1) Утилита **make**
@@ -381,7 +383,7 @@ erase:
 
 ![Image](https://github.com/user-attachments/assets/c764cc3a-a87a-4dca-8596-551797d9cef2)
 
-Кстати, обратите внимание, что у нас должен в Makefile быть подключен только один *.ld файл. Они обычно делают их несколько, чтоб можно было записывать что-то во FLASH или RAM, допустим, чтоб быстрее отлаживать проетк.
+Кстати, обратите внимание, что у нас должен в Makefile быть подключен только один *.ld файл. ST обычно делают их несколько на мк с большой памятью, чтоб можно было записывать прошивку во FLASH или RAM, допустим, чтоб быстрее отлаживать проект.
 
 Далее смотрим наш Makefile: MCU_Settings, MCU_GCC_Compiler (CFLAGS) (ASFLAGS), LDFLAGS можем подсмотреть в CubeIDE.
 Для этого открываем проект в CubeIDE->Project->Properties->C/C++ Build->Settings и смотрим настройки проекта. Думаю разберетесь, если начнете сравнивать с тем, что у меня написано.
@@ -506,5 +508,62 @@ End address - Это Origin + Length
 ![Image](https://github.com/user-attachments/assets/b15a0125-5abe-48cf-9a09-e78106a57b5c)
 
 Единственное что - придется под разные микроконтроллеры этот скрипт править, т.к. *.ld файлы у всех разные, да и бывает кроме RAM и FLASH еще куча всего.
+
+## Попробуем залить скомпилированную прошивку на мк
+
+Перед этим очистим память микроконтроллера.
+
+Открываем powershell и подключаемся к STM32F103C8T6 через консоль при помощи OpenOCD:
+
+`C:\ST\tools\OpenOCD-20240916-0.12.0\bin\openocd.exe -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\interface\stlink.cfg -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\target\stm32f1x.cfg`
+
+![Image](https://github.com/user-attachments/assets/276eb94d-9c97-4ef6-baae-01c9a9e3660f)
+
+Подключение произошло успешно. Попробуем теперь подключиться к микроконтроллеру через telnet. Это окно не закрываем. Нам понадобится еще один терминал. 
+
+Если у Вас Telnet не работает - воспользуйтесь инструкцией по установке Telnet на powershell: https://remontka.pro/enable-telnet-windows/
+
+Подключимся к мк по telnet:
+`telnet localhost 4444`
+
+![Image](https://github.com/user-attachments/assets/59b875c2-19a3-45ac-a540-a5be7054ae0d)
+
+По итогу имеем 2 окна:
+
+![Image](https://github.com/user-attachments/assets/187247fb-2d26-44e6-9b6f-fd5930d959d3)
+
+В правом окне вводим `halt`, чтоб остановить работу МК.
+
+Очистим память командой `stm32f1x mass_erase 0`
+
+Перезагрузим и запускать не будем `reset halt`
+
+Завершим сеанс `exit`
+
+![Image](https://github.com/user-attachments/assets/d75c5945-1bb4-4150-b6f6-e943c40eab29)
+
+Теперь зальем прошивку, т.е. *.bin файл, который после билда находится в папке Debug.
+
+Снова подключаемся к МК через OpenOCD:
+
+`C:\ST\tools\OpenOCD-20240916-0.12.0\bin\openocd.exe -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\interface\stlink.cfg -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\target\stm32f1x.cfg`
+
+Снова подключаемся через Telnet: `telnet localhost 4444`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Материал находится в доработке*
