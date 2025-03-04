@@ -38,8 +38,7 @@ TARGET = Clean_project
 BUILD_DIR = Debug
 
 #####################################################################################
-# Source location (Папки вводим через пробел).GCC_SIZE_PATHC_INCLUDES
-# Пример: SRC_DIRS = Core/Src Drivers/CMSIS ModbusRTU
+# Source location (Вводим через пробел, либо с новой строки, но с знаком '\' в конце)
 #####################################################################################
 # GNU C 
 C_SOURCES = \
@@ -49,16 +48,20 @@ Core/Src/stm32f103xx_it.c \
 Core/Src/syscalls.c \
 Core/Src/sysmem.c \
 Core/Src/system_stm32f1xx.c
-# Assembly
+# Assembly (Обратите внимание, почему-то STM32 выпускает ASM файлы, 
+# то с расширением *.S, то c расширением *.s). Это важно. 
+# Для унификации переименуйте в *.s (с маленькой буквой)
 ASM_SOURCES = \
 Core/Startup/startup_stm32f103c8tx.s
 
 #####################################################################################
-# Include location (Папки вводим через пробел).
+# Include location (Вводим через пробел, либо с новой строки, но с знаком '\' в конце)
 # Пример: C_INCLUDES = Core/Inc Drivers/CMSIS 
 #####################################################################################
 # C includes
-C_INCLUDES = Core/Inc Drivers/CMSIS 
+C_INCLUDES = \
+Core/Inc/ \
+Drivers/CMSIS/
 # Assembly includes
 AS_INCLUDES = 
 
@@ -96,7 +99,7 @@ DEBUG = -g3
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(DEBUG) $(OPT) $(addprefix -, $(AS_DEFS)) $(AS_INCLUDES) 
-CFLAGS = $(MCU) $(DEBUG) $(OPT) $(LANG_STD) $(addprefix -D, $(C_DEFS)) $(addprefix -I, $(C_INCLUDES))  -Wall -fdata-sections -ffunction-sections
+CFLAGS = $(MCU) $(DEBUG) $(OPT) $(LANG_STD) $(addprefix -D, $(C_DEFS)) $(addprefix -I, $(C_INCLUDES))  -Wall -fdata-sections -ffunction-sections -fstack-usage
 
 # Generate dependency information
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
@@ -129,16 +132,16 @@ LDSCRIPT = \
 STM32F103C8TX_FLASH.ld
 
 # libraries
-LIBS = -lc -lm -lnosys 
+LIBS = -Wl,--start-group -lc -lm -Wl,--end-group
 LIBDIR = 
-LDFLAGS = $(MCU) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
+LDFLAGS = $(MCU) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map -Wl,--gc-sections
 
 # default action: build all
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
 
 
 #####################################################################################
-# build the application
+# build the application (Можно не трогать этот участок)
 #####################################################################################
 # list of objects
 OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o)))
@@ -180,8 +183,8 @@ update-json:
 clean:
 	rmdir /S /Q $(BUILD_DIR)
 
-##########################################################################
-# OpenOCD
+#########################################################################
+# OpenOCD (Записать прошивку на мк и очистить память мк)
 ##########################################################################
 flash: all
 	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"

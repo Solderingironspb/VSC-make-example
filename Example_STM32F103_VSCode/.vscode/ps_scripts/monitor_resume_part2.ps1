@@ -24,3 +24,4 @@ $GNU_TOOLCHAIN_GDB_PATH = "C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/arm-no
 
 
 
+

@@ -13,17 +13,27 @@
 
 ![Image](https://github.com/user-attachments/assets/1c34a3eb-05c7-4095-a49c-7103f3a8f204)
 
-*Если Restricted, то можно заменить ее на **Remotesigned** или **Bypass**:*
+*Если **Restricted**, то можно заменить ее на **Remotesigned** или **Bypass**:*
 
 *Команда:* `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass`
 
 ![Image](https://github.com/user-attachments/assets/a92c1635-25d5-4ffd-a2f1-1b399c33f9c4)
 
-## Как начать работу? Больше касается разработки ПО под Windows на Си, но отсюда мы сможем достать свежий make.
-Для начала нам понадобится утилита **make**. 
+## Как начать работу? 
+
+Нам нужны:
+1) Утилита **make**
+2) Toolchain для ARM **arm-none-eabi**
+3) Инструмент для отладки **OpenOCD**
+4) Скрипты **OpenOCD** для **interface** и **target** (Допустим конфиги для ST-Link v2 и STM32F103C8T6)
+5) *.svd файл под микроконтроллер, который даст возможность просматривать периферию мк во время отладки
+
+Для начала нам понадобится утилита **make** 
+
 **make** — это утилита, автоматизирующая процесс преобразования файлов из одной формы в другую. Чаще всего это компиляция исходного кода в объектные файлы и последующая компоновка в исполняемые файлы или библиотеки.
 
 Последнее, что я смог найти на сегодняшний день - это **GNU Make 4.3 от 2020 года**.
+
 Находится он сразу с набором инструментов **MinGW**.
 Скачать можно здесь *(gcc-12.3.0-
 64.exe):* https://www.equation.com/servlet/equation.cmd?fa=fortran
@@ -31,10 +41,11 @@
 Далее установим в раздел C:\MinGW
 
 Должно получиться следующее:
+
 ![Image](https://github.com/user-attachments/assets/cbf99b8e-f49c-4fc8-b46c-855e1feb5f9f)
 
-Далее уже по своему вкусу и уму смотрите, нужно ли Вам добавлять папку bin в переменные среды PATH или же нет. Почему возникает этот вопрос - все просто. Бывает на одной системе приходится компилировать несколько проектов под разное железо, где требуется разный make, gcc, gdb, size, objcopy и т.п.
-Я папку bin добавлю в PATH, чтоб использовать MinGW для компиляции проектов на си под Windows, но последующие установки gcc-arm-none-eabi и OpenOCD буду использовать по прямому пути, без добавления в PATH, т.к. данные утилиты под разные фирмы мк обычно модернизируются производителями и лучше использовать фирмовые ~~но это не точно~~.
+Далее уже по своему вкусу и уму смотрите, нужно ли Вам добавлять папку **bin** в переменные среды **PATH**, чтоб пользоваться  командой **make** из **powershell** без ввода пути или же нет. Почему возникает этот вопрос - все просто. Бывает на одной системе приходится компилировать несколько проектов под разное железо, где требуется разный make, gcc, gdb, size, objcopy и т.п.
+Я папку **bin** от **MinGW**  добавлю в **PATH**, чтоб использовать **MinGW** для компиляции проектов на си под Windows, а также использовать **make** под сборку проектов для микроконтроллеров. Последующие установки **gcc-arm-none-eabi** и **OpenOCD** буду использовать по прямому пути, без добавления в **PATH**, т.к. данные утилиты под разные фирмы мк обычно модернизируются производителями и лучше использовать фирмовые, ~~но это не точно~~.
 
 Сделаем вот так *(Нужное выделено желтым):*
 
@@ -57,7 +68,7 @@
 
 
 К сожалению, здесь есть проблема - в **CubeIDE 1.7.0** GDB имеет версию 8.3.1
-Современный плагин **Cortex-Debug** для Visual Studio Code будет ругаться на версию, т.к. ему нужно > 9.
+Современный плагин **Cortex-Debug** для **Visual Studio Code** будет ругаться на версию, т.к. ему нужно > 9.
 ```
 ERROR: GDB major version should be >= 9, yours is 8
 -gdb-exit
@@ -74,6 +85,12 @@ GDB could not start as expected. Bad installation or version mismatch. See if yo
 
 ![Image](https://github.com/user-attachments/assets/72d8ac6a-c4c7-4cf9-8cee-7d65758d3a19)
 
+Кроме, как из **CubeIDE**, можно порпобовать скачать **arm-none-eabi** с сайта: 
+
+https://developer.arm.com/downloads/-/gnu-rm
+
+Он там постарее будет. И как я говорил, в кубе он модифицирован под STM32. Я буду использовать от **CubeIDE 1.17.0**
+
 **openocd** есть по адресу:
 `C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.openocd.win32_2.4.0.202409170845`
 
@@ -88,11 +105,12 @@ GDB could not start as expected. Bad installation or version mismatch. See if yo
 ![image](https://github.com/user-attachments/assets/ae003f6a-c5c7-444b-b08f-3693bf3cdb7a)
 
 ## Interface и target.
-Итак, make, arm-none-eabi и OpenOCD (скачанный с https://gnutoolchains.com/arm-eabi/openocd/) у нас есть. 
+Итак, **make**, **arm-none-eabi** и **OpenOCD** (скачанный с https://gnutoolchains.com/arm-eabi/openocd/) у нас есть. 
 
-Теперь для того, чтоб подключиться к тому же stm32 - нужен конфиг интерфейса ST-link и таргет микроконтроллера stm32.
+Теперь для того, чтоб подключиться к тому же stm32 - нужен конфиг **interface** ST-Link и **target** микроконтроллера stm32.
 
 У меня это все теперь находится здесь:
+
 `C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts`
 
 ![Image](https://github.com/user-attachments/assets/fc8c0ec5-d877-4132-8342-3484ad121d79)
@@ -107,7 +125,8 @@ GDB could not start as expected. Bad installation or version mismatch. See if yo
 **target:**
 `C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\target\stm32f1x.cfg`
 
-Напомню, что у нас есть копии Stm32F103C8T6 и там ChipID другой. Меняется в target файле:
+Напомню, что у нас есть копии Stm32F103C8T6 и там CPUTAPID другой. Меняется в target файле:
+
 ```
 #jtag scan chain
 if { [info exists CPUTAPID] } {
@@ -125,7 +144,7 @@ if { [info exists CPUTAPID] } {
 
 По итогу **CubeIDE 1.17.0** наполовину нас всем снабдил. Это и будем использовать. Я думаю для других мк, тех же CH32V также можно все выдрать из **MounriverStudio**
 
-Нам еще для дебага, чтоб использовать регистры периферии, понадобится svd файл под наш микроконтроллер. 
+Нам еще понадобится *.svd файл под наш микроконтроллер, чтоб имелась возможность использовать регистры периферии во время дебага.
 
 Взять можно здесь: https://github.com/Solderingironspb/cmsis-svd-stm32
 
@@ -137,7 +156,10 @@ if { [info exists CPUTAPID] } {
 
 Я постарался сделать максимально доступно для понимания. Комментарии и все такое. 
 
-Признаюсь - создание первого Makefile под STM32F103C8T6 у меня заняло неделю красноглазиния. 
+Признаюсь - создание первого Makefile под STM32F103C8T6 у меня заняло неделю красноглазиния.
+Он не такой, каким выдает его **CubeMX**. все делалось для того, чтоб создать универсальную портянку, дабы имелась возможность быстро создавать проекты под разные мк, а также автоматизировать подхватку этих значений из Makefile с последующей подстановкой их в настройки **.vscode**, используя скрипты на **powershell**. Иначе проект можно несколько часов собирать, что уже перехочется так работать вообще....
+
+Итак, вот пример Makefile под STM32F103C8T6:
 
 ```
 #   Makefile for STM32F103C8T6
@@ -180,8 +202,7 @@ TARGET = Clean_project
 BUILD_DIR = Debug
 
 #####################################################################################
-# Source location (Папки вводим через пробел).GCC_SIZE_PATHC_INCLUDES
-# Пример: SRC_DIRS = Core/Src Drivers/CMSIS ModbusRTU
+# Source location (Вводим через пробел, либо с новой строки, но с знаком '\' в конце)
 #####################################################################################
 # GNU C 
 C_SOURCES = \
@@ -191,16 +212,20 @@ Core/Src/stm32f103xx_it.c \
 Core/Src/syscalls.c \
 Core/Src/sysmem.c \
 Core/Src/system_stm32f1xx.c
-# Assembly
+# Assembly (Обратите внимание, почему-то STM32 выпускает ASM файлы, 
+# то с расширением *.S, то c расширением *.s). Это важно. 
+# Для унификации переименуйте в *.s (с маленькой буквой)
 ASM_SOURCES = \
 Core/Startup/startup_stm32f103c8tx.s
 
 #####################################################################################
-# Include location (Папки вводим через пробел).
+# Include location (Вводим через пробел, либо с новой строки, но с знаком '\' в конце)
 # Пример: C_INCLUDES = Core/Inc Drivers/CMSIS 
 #####################################################################################
 # C includes
-C_INCLUDES = Core/Inc Drivers/CMSIS 
+C_INCLUDES = \
+Core/Inc/ \
+Drivers/CMSIS/
 # Assembly includes
 AS_INCLUDES = 
 
@@ -238,7 +263,7 @@ DEBUG = -g3
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(DEBUG) $(OPT) $(addprefix -, $(AS_DEFS)) $(AS_INCLUDES) 
-CFLAGS = $(MCU) $(DEBUG) $(OPT) $(LANG_STD) $(addprefix -D, $(C_DEFS)) $(addprefix -I, $(C_INCLUDES))  -Wall -fdata-sections -ffunction-sections
+CFLAGS = $(MCU) $(DEBUG) $(OPT) $(LANG_STD) $(addprefix -D, $(C_DEFS)) $(addprefix -I, $(C_INCLUDES))  -Wall -fdata-sections -ffunction-sections -fstack-usage
 
 # Generate dependency information
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
@@ -271,16 +296,16 @@ LDSCRIPT = \
 STM32F103C8TX_FLASH.ld
 
 # libraries
-LIBS = -lc -lm -lnosys 
+LIBS = -Wl,--start-group -lc -lm -Wl,--end-group
 LIBDIR = 
-LDFLAGS = $(MCU) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
+LDFLAGS = $(MCU) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map -Wl,--gc-sections
 
 # default action: build all
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
 
 
 #####################################################################################
-# build the application
+# build the application (Можно не трогать этот участок)
 #####################################################################################
 # list of objects
 OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o)))
@@ -322,8 +347,8 @@ update-json:
 clean:
 	rmdir /S /Q $(BUILD_DIR)
 
-##########################################################################
-# OpenOCD
+#########################################################################
+# OpenOCD (Записать прошивку на мк и очистить память мк)
 ##########################################################################
 flash: all
 	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
@@ -341,5 +366,49 @@ erase:
 
 Эта портянка будет основой для работы с другими микроконтроллерами. В нее я зашил пути, скрипты на выполнение, но об этом чуточку ниже.
 
+С путями все понятно, у нас все в одной папке. Указываем пути и готово. Только обратите внимание, что путь в windows идет с обратным слешем `\`, а здесь с прямым `/`.
+Далее нужно заполнить пути для каждого *.c файла, *.s файла, указать все пути для папок include. Представляете сколько гемороя это вводить руками? И тут на помощь приходит мой скрипт
+
+ **Find files for Makefile v1.0.ps1** - скрипт для поиска файлов.
+
+ Просто закидываем в папку с проектом и запускаем. Получим вот такую красоту:
+
+ ![Image](https://github.com/user-attachments/assets/0a84ba19-c7d4-4a16-88d3-76bf658ce1c1)
+
+Вот пример вывода с проектом под HAL для STM32F411. Рукамми вводить это кошмар...
+
+![Image](https://github.com/user-attachments/assets/c764cc3a-a87a-4dca-8596-551797d9cef2)
+
+Кстати, обратите внимание, что у нас должен в Makefile быть подключен только один *.ld файл. Они обычно делают их несколько, чтоб можно было записывать что-то во FLASH или RAM, допустим, чтоб быстрее отлаживать проетк.
+
+Далее смотрим наш Makefile: MCU_Settings, MCU_GCC_Compiler (CFLAGS) (ASFLAGS), LDFLAGS можем подсмотреть в CubeIDE.
+Для этого открываем проект в CubeIDE->Project->Properties->C/C++ Build->Settings и смотрим настройки проекта. Думаю разберетесь, если начнете сравнивать с тем, что у меня написано.
+
+![Image](https://github.com/user-attachments/assets/e35fb4e2-cbba-43d2-b23c-e1fdb4912739)
+
+Сохраняем и пробуем забилдить. Хоть прямо в powershell: `make -j4 all`
+
+![Image](https://github.com/user-attachments/assets/f06fded1-f206-4de8-8e6d-b40449924c61)
+
+`-j4` в данном случае - это количество потоков на машине, которой я собираю проект. Нужно это для более быстрой компиляции в параллельном режиме. На Ryzen 5 3600 допустим 12 потоков, я тогда буду использовать `-j12`
+
+Итог компиляции, если все верно:
+
+![alt text](image.png)
+
+Как мы видим - **make** от **MinGW** справился с задачей на отлично. 
+
+Попробуем очистить проект и используем **make** тот, что свиснули у **CubeIDE 1.17.0**, но перед этим очистим забилденное.
+
+Очистку проекта я решаю координально - просто удаляю папку Debug.
+
+![alt text](image-1.png)
+
+**make** от **CubeIDE 1.17.0** с использование прямого пути:
+
+![Image](https://github.com/user-attachments/assets/e1e464e3-a355-4950-887f-3a5d805e7554) 
+
+
+Поздравляю. Вы теперь можете забилдить проект прямо в **powershell**.
 
 **Материал находится в доработке*
