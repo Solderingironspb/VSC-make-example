@@ -394,7 +394,7 @@ erase:
 
 Итог компиляции, если все верно:
 
-![Image](https://github.com/user-attachments/assets/e1e464e3-a355-4950-887f-3a5d805e7554)
+![Image](https://github.com/user-attachments/assets/2794426a-6a0e-48f9-8f1d-e5a9367573a8)
 
 Как мы видим - **make** от **MinGW** справился с задачей на отлично. 
 
