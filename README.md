@@ -511,7 +511,7 @@ End address - Это Origin + Length
 
 ## Попробуем залить скомпилированную прошивку на мк
 
-Перед этим очистим память микроконтроллера.
+### Как очистить память микроконтроллера?
 
 Открываем powershell и подключаемся к STM32F103C8T6 через консоль при помощи OpenOCD:
 
@@ -542,18 +542,25 @@ End address - Это Origin + Length
 
 ![Image](https://github.com/user-attachments/assets/d75c5945-1bb4-4150-b6f6-e943c40eab29)
 
-Теперь зальем прошивку, т.е. *.bin файл, который после билда находится в папке Debug.
+### Как залить скомпилированную прошивку на микроконтроллер?
 
-Снова подключаемся к МК через OpenOCD:
+Скомпилированный файл прошивки *.bin файл, который появился после билда - находится в папке Debug.
+
+Подключаемся к МК через OpenOCD:
 
 `C:\ST\tools\OpenOCD-20240916-0.12.0\bin\openocd.exe -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\interface\stlink.cfg -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\target\stm32f1x.cfg`
 
-Снова подключаемся через Telnet: `telnet localhost 4444`
+Подключаемся через Telnet(Во втором окне powershell): `telnet localhost 4444`
 
+Там же вводим `reset halt`, чтоб остановить работу МК.
 
+Далее запишем прошивку(В данном случае нужны прямые слэши `/`): `flash write_image erase "C:/Users/Solderingiron/Documents/GitHub/VSC-make-example/Example_STM32F103_VSCode/Debug/Clean_project.bin" 0x08000000`
 
+Перезагрузим мк и запустим прошику командой `reset run`
 
+Завершим сеанс `exit`
 
+![Image](https://github.com/user-attachments/assets/8e070d0a-d6e5-4808-94f7-910d308b0db8)
 
 
 
