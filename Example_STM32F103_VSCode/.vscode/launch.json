@@ -1,4 +1,4 @@
-﻿{
+{
     "version": "0.2.0",
     "configurations": [
         {
@@ -21,7 +21,7 @@
             },
             "preLaunchTask": "Run All Tasks", //Соберем проект перед отладкой
             "runToEntryPoint": "main", //Поставим точку останова в main
-            "postDebugTask": "Monitor resume" //Запустим задачу Monitor resume, чтоб после завершения дебага микроконтроллер снялся с паузы и продолжил работать дальше
+            //"postDebugTask": "Monitor resume" //Запустим задачу Monitor resume, чтоб после завершения дебага микроконтроллер снялся с паузы и продолжил работать дальше
         }
     ]
 }

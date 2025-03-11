@@ -1,7 +1,6 @@
 {
     "window.openFilesInNewWindow": "off",
     "editor.unicodeHighlight.nonBasicASCII": false,
-    "editor.minimap.enabled": false,
     "security.workspace.trust.banner": "never",
     "makefile.configureOnOpen": true,
     "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, ColumnLimit: 0, BinPackParameters: true, BinPackArguments: true, AllowShortBlocksOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, IncludeBlocks: Merge, BraceWrapping: { AfterFunction: false, AfterClass: false, AfterControlStatement: false, AfterEnum: false, AfterNamespace: false, AfterStruct: false, AfterUnion: false, BeforeCatch: false, BeforeElse: false, IndentBraces: false }, BreakBeforeBraces: Attach, IndentWidth: 4}",
@@ -9,9 +8,9 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.startupEditor": "none",
     "chat.commandCenter.enabled": false,
-    "workbench.colorTheme": "Default Dark+",
     "editor.fontFamily": "Consolas",
     "editor.fontSize": 13,
+    "editor.lineHeight": 1.25,
     "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
     "editor.quickSuggestionsDelay": 0,
@@ -19,7 +18,11 @@
     "editor.stickyScroll.enabled": false,
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.codeActionsOnSave": {},
+    "editor.codeActionsOnSave": {
+        
+    
+    },
+    "editor.bracketPairColorization.enabled": false, //Отключить разукрашивание скобок
     "explorer.compactFolders": false,
     "debug.console.fontSize": 13,
     "security.workspace.trust.enabled": false,
@@ -50,5 +53,7 @@
             "workbench.view.explorer", // Переключиться на Explorer
             "outline.focus" // Перевести фокус на Outline
         ]
-    }
+    },
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Solderingiron theme light",
 }

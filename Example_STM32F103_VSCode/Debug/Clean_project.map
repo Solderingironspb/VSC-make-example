@@ -1328,18 +1328,18 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
  .debug_line    0x000021e7      0x385 Debug/system_stm32f1xx.o
  .debug_line    0x0000256c       0x79 Debug/startup_stm32f103c8tx.o
 
-.debug_str      0x00000000    0x58fca
- .debug_str     0x00000000    0x58067 Debug/main.o
-                              0x5832e (size before relaxing)
- .debug_str     0x00058067      0x94f Debug/stm32f103xx_CMSIS.o
-                              0x58d20 (size before relaxing)
- .debug_str     0x000589b6       0x53 Debug/stm32f103xx_it.o
-                              0x581db (size before relaxing)
- .debug_str     0x00058a09      0x4d9 Debug/sysmem.o
+.debug_str      0x00000000    0x58fd8
+ .debug_str     0x00000000    0x58075 Debug/main.o
+                              0x5833c (size before relaxing)
+ .debug_str     0x00058075      0x94f Debug/stm32f103xx_CMSIS.o
+                              0x58d2e (size before relaxing)
+ .debug_str     0x000589c4       0x53 Debug/stm32f103xx_it.o
+                              0x581e9 (size before relaxing)
+ .debug_str     0x00058a17      0x4d9 Debug/sysmem.o
                                0x605f (size before relaxing)
- .debug_str     0x00058ee2       0xa7 Debug/system_stm32f1xx.o
-                              0x546d1 (size before relaxing)
- .debug_str     0x00058f89       0x41 Debug/startup_stm32f103c8tx.o
+ .debug_str     0x00058ef0       0xa7 Debug/system_stm32f1xx.o
+                              0x546df (size before relaxing)
+ .debug_str     0x00058f97       0x41 Debug/startup_stm32f103c8tx.o
                                  0x93 (size before relaxing)
 
 .comment        0x00000000       0x43
