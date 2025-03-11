@@ -1,5 +1,5 @@
 {
-    "cortex-debug.variableUseNaturalFormat": true,
+    "cortex-debug.variableUseNaturalFormat": false,
     "files.associations": {
         "stm32f103xx_it.h": "c",
         "main.h": "c",

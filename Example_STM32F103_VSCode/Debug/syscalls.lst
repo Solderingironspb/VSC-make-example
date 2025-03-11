@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,34 +58,30 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
   20:Core/Src/syscalls.c ****  *
   21:Core/Src/syscalls.c ****  ******************************************************************************
   22:Core/Src/syscalls.c ****  */
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 2
 
 
   23:Core/Src/syscalls.c **** 
   24:Core/Src/syscalls.c **** /* Includes */
-  25:Core/Src/syscalls.c **** #include <sys/stat.h>
-  26:Core/Src/syscalls.c **** #include <stdlib.h>
-  27:Core/Src/syscalls.c **** #include <errno.h>
-  28:Core/Src/syscalls.c **** #include <stdio.h>
-  29:Core/Src/syscalls.c **** #include <signal.h>
-  30:Core/Src/syscalls.c **** #include <time.h>
-  31:Core/Src/syscalls.c **** #include <sys/time.h>
-  32:Core/Src/syscalls.c **** #include <sys/times.h>
+  25:Core/Src/syscalls.c **** #include <errno.h>
+  26:Core/Src/syscalls.c **** #include <signal.h>
+  27:Core/Src/syscalls.c **** #include <stdio.h>
+  28:Core/Src/syscalls.c **** #include <stdlib.h>
+  29:Core/Src/syscalls.c **** #include <sys/stat.h>
+  30:Core/Src/syscalls.c **** #include <sys/time.h>
+  31:Core/Src/syscalls.c **** #include <sys/times.h>
+  32:Core/Src/syscalls.c **** #include <time.h>
   33:Core/Src/syscalls.c **** 
-  34:Core/Src/syscalls.c **** 
-  35:Core/Src/syscalls.c **** /* Variables */
-  36:Core/Src/syscalls.c **** extern int __io_putchar(int ch) __attribute__((weak));
-  37:Core/Src/syscalls.c **** extern int __io_getchar(void) __attribute__((weak));
-  38:Core/Src/syscalls.c **** 
-  39:Core/Src/syscalls.c **** 
-  40:Core/Src/syscalls.c **** char *__env[1] = { 0 };
-  41:Core/Src/syscalls.c **** char **environ = __env;
-  42:Core/Src/syscalls.c **** 
-  43:Core/Src/syscalls.c **** 
-  44:Core/Src/syscalls.c **** /* Functions */
-  45:Core/Src/syscalls.c **** void initialise_monitor_handles()
-  46:Core/Src/syscalls.c **** {
-  41              		.loc 1 46 1
+  34:Core/Src/syscalls.c **** /* Variables */
+  35:Core/Src/syscalls.c **** extern int __io_putchar(int ch) __attribute__((weak));
+  36:Core/Src/syscalls.c **** extern int __io_getchar(void) __attribute__((weak));
+  37:Core/Src/syscalls.c **** 
+  38:Core/Src/syscalls.c **** char *__env[1] = {0};
+  39:Core/Src/syscalls.c **** char **environ = __env;
+  40:Core/Src/syscalls.c **** 
+  41:Core/Src/syscalls.c **** /* Functions */
+  42:Core/Src/syscalls.c **** void initialise_monitor_handles() {
+  41              		.loc 1 42 35
   42              		.cfi_startproc
   43              		@ args = 0, pretend = 0, frame = 0
   44              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -95,8 +91,8 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
   48              		.cfi_offset 7, -4
   49 0002 00AF     		add	r7, sp, #0
   50              		.cfi_def_cfa_register 7
-  47:Core/Src/syscalls.c **** }
-  51              		.loc 1 47 1
+  43:Core/Src/syscalls.c **** }
+  51              		.loc 1 43 1
   52 0004 00BF     		nop
   53 0006 BD46     		mov	sp, r7
   54              		.cfi_def_cfa_register 13
@@ -115,27 +111,26 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
   68              		.thumb_func
   70              	_getpid:
   71              	.LFB26:
-  48:Core/Src/syscalls.c **** 
-  49:Core/Src/syscalls.c **** int _getpid(void)
-  50:Core/Src/syscalls.c **** {
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 3
-
-
-  72              		.loc 1 50 1
+  44:Core/Src/syscalls.c **** 
+  45:Core/Src/syscalls.c **** int _getpid(void) {
+  72              		.loc 1 45 19
   73              		.cfi_startproc
   74              		@ args = 0, pretend = 0, frame = 0
   75              		@ frame_needed = 1, uses_anonymous_args = 0
   76              		@ link register save eliminated.
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 3
+
+
   77 0000 80B4     		push	{r7}
   78              		.cfi_def_cfa_offset 4
   79              		.cfi_offset 7, -4
   80 0002 00AF     		add	r7, sp, #0
   81              		.cfi_def_cfa_register 7
-  51:Core/Src/syscalls.c **** 	return 1;
-  82              		.loc 1 51 9
+  46:Core/Src/syscalls.c ****     return 1;
+  82              		.loc 1 46 12
   83 0004 0123     		movs	r3, #1
-  52:Core/Src/syscalls.c **** }
-  84              		.loc 1 52 1
+  47:Core/Src/syscalls.c **** }
+  84              		.loc 1 47 1
   85 0006 1846     		mov	r0, r3
   86 0008 BD46     		mov	sp, r7
   87              		.cfi_def_cfa_register 13
@@ -154,10 +149,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  101              		.thumb_func
  103              	_kill:
  104              	.LFB27:
-  53:Core/Src/syscalls.c **** 
-  54:Core/Src/syscalls.c **** int _kill(int pid, int sig)
-  55:Core/Src/syscalls.c **** {
- 105              		.loc 1 55 1
+  48:Core/Src/syscalls.c **** 
+  49:Core/Src/syscalls.c **** int _kill(int pid, int sig) {
+ 105              		.loc 1 49 29
  106              		.cfi_startproc
  107              		@ args = 0, pretend = 0, frame = 8
  108              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -171,22 +165,22 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  116              		.cfi_def_cfa_register 7
  117 0006 7860     		str	r0, [r7, #4]
  118 0008 3960     		str	r1, [r7]
-  56:Core/Src/syscalls.c **** 	errno = EINVAL;
- 119              		.loc 1 56 2
+  50:Core/Src/syscalls.c ****     errno = EINVAL;
+ 119              		.loc 1 50 5
  120 000a FFF7FEFF 		bl	__errno
  121 000e 0346     		mov	r3, r0
- 122              		.loc 1 56 8
+ 122              		.loc 1 50 11
  123 0010 1622     		movs	r2, #22
  124 0012 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 4
-
-
-  57:Core/Src/syscalls.c **** 	return -1;
- 125              		.loc 1 57 9
+  51:Core/Src/syscalls.c ****     return -1;
+ 125              		.loc 1 51 12
  126 0014 4FF0FF33 		mov	r3, #-1
-  58:Core/Src/syscalls.c **** }
- 127              		.loc 1 58 1
+  52:Core/Src/syscalls.c **** }
+ 127              		.loc 1 52 1
  128 0018 1846     		mov	r0, r3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 4
+
+
  129 001a 0837     		adds	r7, r7, #8
  130              		.cfi_def_cfa_offset 8
  131 001c BD46     		mov	sp, r7
@@ -203,10 +197,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  143              		.thumb_func
  145              	_exit:
  146              	.LFB28:
-  59:Core/Src/syscalls.c **** 
-  60:Core/Src/syscalls.c **** void _exit (int status)
-  61:Core/Src/syscalls.c **** {
- 147              		.loc 1 61 1
+  53:Core/Src/syscalls.c **** 
+  54:Core/Src/syscalls.c **** void _exit(int status) {
+ 147              		.loc 1 54 24
  148              		.cfi_startproc
  149              		@ args = 0, pretend = 0, frame = 8
  150              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -219,14 +212,14 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  157 0004 00AF     		add	r7, sp, #0
  158              		.cfi_def_cfa_register 7
  159 0006 7860     		str	r0, [r7, #4]
-  62:Core/Src/syscalls.c **** 	_kill(status, -1);
- 160              		.loc 1 62 2
+  55:Core/Src/syscalls.c ****     _kill(status, -1);
+ 160              		.loc 1 55 5
  161 0008 4FF0FF31 		mov	r1, #-1
  162 000c 7868     		ldr	r0, [r7, #4]
  163 000e FFF7FEFF 		bl	_kill
  164              	.L7:
-  63:Core/Src/syscalls.c **** 	while (1) {}		/* Make sure we hang here */
- 165              		.loc 1 63 8 discriminator 1
+  56:Core/Src/syscalls.c ****     while (1) {} /* Make sure we hang here */
+ 165              		.loc 1 56 11 discriminator 1
  166 0012 00BF     		nop
  167 0014 FDE7     		b	.L7
  168              		.cfi_endproc
@@ -238,17 +231,16 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  175              		.thumb
  176              		.thumb_func
  178              	_read:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 5
-
-
  179              	.LFB29:
-  64:Core/Src/syscalls.c **** }
-  65:Core/Src/syscalls.c **** 
-  66:Core/Src/syscalls.c **** __attribute__((weak)) int _read(int file, char *ptr, int len)
-  67:Core/Src/syscalls.c **** {
- 180              		.loc 1 67 1
+  57:Core/Src/syscalls.c **** }
+  58:Core/Src/syscalls.c **** 
+  59:Core/Src/syscalls.c **** __attribute__((weak)) int _read(int file, char *ptr, int len) {
+ 180              		.loc 1 59 63
  181              		.cfi_startproc
  182              		@ args = 0, pretend = 0, frame = 24
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 5
+
+
  183              		@ frame_needed = 1, uses_anonymous_args = 0
  184 0000 80B5     		push	{r7, lr}
  185              		.cfi_def_cfa_offset 8
@@ -261,55 +253,54 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  192 0006 F860     		str	r0, [r7, #12]
  193 0008 B960     		str	r1, [r7, #8]
  194 000a 7A60     		str	r2, [r7, #4]
-  68:Core/Src/syscalls.c **** 	int DataIdx;
-  69:Core/Src/syscalls.c **** 
-  70:Core/Src/syscalls.c **** 	for (DataIdx = 0; DataIdx < len; DataIdx++)
- 195              		.loc 1 70 15
+  60:Core/Src/syscalls.c ****     int DataIdx;
+  61:Core/Src/syscalls.c **** 
+  62:Core/Src/syscalls.c ****     for (DataIdx = 0; DataIdx < len; DataIdx++) {
+ 195              		.loc 1 62 18
  196 000c 0023     		movs	r3, #0
  197 000e 7B61     		str	r3, [r7, #20]
- 198              		.loc 1 70 2
+ 198              		.loc 1 62 5
  199 0010 0AE0     		b	.L9
  200              	.L10:
-  71:Core/Src/syscalls.c **** 	{
-  72:Core/Src/syscalls.c **** 		*ptr++ = __io_getchar();
- 201              		.loc 1 72 12 discriminator 3
+  63:Core/Src/syscalls.c ****         *ptr++ = __io_getchar();
+ 201              		.loc 1 63 18 discriminator 3
  202 0012 FFF7FEFF 		bl	__io_getchar
  203 0016 0146     		mov	r1, r0
- 204              		.loc 1 72 7 discriminator 3
+ 204              		.loc 1 63 13 discriminator 3
  205 0018 BB68     		ldr	r3, [r7, #8]
  206 001a 5A1C     		adds	r2, r3, #1
  207 001c BA60     		str	r2, [r7, #8]
- 208              		.loc 1 72 10 discriminator 3
+ 208              		.loc 1 63 16 discriminator 3
  209 001e CAB2     		uxtb	r2, r1
  210 0020 1A70     		strb	r2, [r3]
-  70:Core/Src/syscalls.c **** 	{
- 211              		.loc 1 70 42 discriminator 3
+  62:Core/Src/syscalls.c ****         *ptr++ = __io_getchar();
+ 211              		.loc 1 62 45 discriminator 3
  212 0022 7B69     		ldr	r3, [r7, #20]
  213 0024 0133     		adds	r3, r3, #1
  214 0026 7B61     		str	r3, [r7, #20]
  215              	.L9:
-  70:Core/Src/syscalls.c **** 	{
- 216              		.loc 1 70 28 discriminator 1
+  62:Core/Src/syscalls.c ****         *ptr++ = __io_getchar();
+ 216              		.loc 1 62 31 discriminator 1
  217 0028 7A69     		ldr	r2, [r7, #20]
  218 002a 7B68     		ldr	r3, [r7, #4]
  219 002c 9A42     		cmp	r2, r3
  220 002e F0DB     		blt	.L10
-  73:Core/Src/syscalls.c **** 	}
-  74:Core/Src/syscalls.c **** 
-  75:Core/Src/syscalls.c **** return len;
- 221              		.loc 1 75 8
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 6
-
-
+  64:Core/Src/syscalls.c ****     }
+  65:Core/Src/syscalls.c **** 
+  66:Core/Src/syscalls.c ****     return len;
+ 221              		.loc 1 66 12
  222 0030 7B68     		ldr	r3, [r7, #4]
-  76:Core/Src/syscalls.c **** }
- 223              		.loc 1 76 1
+  67:Core/Src/syscalls.c **** }
+ 223              		.loc 1 67 1
  224 0032 1846     		mov	r0, r3
  225 0034 1837     		adds	r7, r7, #24
  226              		.cfi_def_cfa_offset 8
  227 0036 BD46     		mov	sp, r7
  228              		.cfi_def_cfa_register 13
  229              		@ sp needed
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 6
+
+
  230 0038 80BD     		pop	{r7, pc}
  231              		.cfi_endproc
  232              	.LFE29:
@@ -321,10 +312,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  239              		.thumb_func
  241              	_write:
  242              	.LFB30:
-  77:Core/Src/syscalls.c **** 
-  78:Core/Src/syscalls.c **** __attribute__((weak)) int _write(int file, char *ptr, int len)
-  79:Core/Src/syscalls.c **** {
- 243              		.loc 1 79 1
+  68:Core/Src/syscalls.c **** 
+  69:Core/Src/syscalls.c **** __attribute__((weak)) int _write(int file, char *ptr, int len) {
+ 243              		.loc 1 69 64
  244              		.cfi_startproc
  245              		@ args = 0, pretend = 0, frame = 24
  246              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -339,47 +329,46 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  255 0006 F860     		str	r0, [r7, #12]
  256 0008 B960     		str	r1, [r7, #8]
  257 000a 7A60     		str	r2, [r7, #4]
-  80:Core/Src/syscalls.c **** 	int DataIdx;
-  81:Core/Src/syscalls.c **** 
-  82:Core/Src/syscalls.c **** 	for (DataIdx = 0; DataIdx < len; DataIdx++)
- 258              		.loc 1 82 15
+  70:Core/Src/syscalls.c ****     int DataIdx;
+  71:Core/Src/syscalls.c **** 
+  72:Core/Src/syscalls.c ****     for (DataIdx = 0; DataIdx < len; DataIdx++) {
+ 258              		.loc 1 72 18
  259 000c 0023     		movs	r3, #0
  260 000e 7B61     		str	r3, [r7, #20]
- 261              		.loc 1 82 2
+ 261              		.loc 1 72 5
  262 0010 09E0     		b	.L13
  263              	.L14:
-  83:Core/Src/syscalls.c **** 	{
-  84:Core/Src/syscalls.c **** 		__io_putchar(*ptr++);
- 264              		.loc 1 84 20 discriminator 3
+  73:Core/Src/syscalls.c ****         __io_putchar(*ptr++);
+ 264              		.loc 1 73 26 discriminator 3
  265 0012 BB68     		ldr	r3, [r7, #8]
  266 0014 5A1C     		adds	r2, r3, #1
  267 0016 BA60     		str	r2, [r7, #8]
- 268              		.loc 1 84 16 discriminator 3
+ 268              		.loc 1 73 22 discriminator 3
  269 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 270              		.loc 1 84 3 discriminator 3
+ 270              		.loc 1 73 9 discriminator 3
  271 001a 1846     		mov	r0, r3
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 7
-
-
  272 001c FFF7FEFF 		bl	__io_putchar
-  82:Core/Src/syscalls.c **** 	{
- 273              		.loc 1 82 42 discriminator 3
+  72:Core/Src/syscalls.c ****         __io_putchar(*ptr++);
+ 273              		.loc 1 72 45 discriminator 3
  274 0020 7B69     		ldr	r3, [r7, #20]
  275 0022 0133     		adds	r3, r3, #1
  276 0024 7B61     		str	r3, [r7, #20]
  277              	.L13:
-  82:Core/Src/syscalls.c **** 	{
- 278              		.loc 1 82 28 discriminator 1
+  72:Core/Src/syscalls.c ****         __io_putchar(*ptr++);
+ 278              		.loc 1 72 31 discriminator 1
  279 0026 7A69     		ldr	r2, [r7, #20]
  280 0028 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 7
+
+
  281 002a 9A42     		cmp	r2, r3
  282 002c F1DB     		blt	.L14
-  85:Core/Src/syscalls.c **** 	}
-  86:Core/Src/syscalls.c **** 	return len;
- 283              		.loc 1 86 9
+  74:Core/Src/syscalls.c ****     }
+  75:Core/Src/syscalls.c ****     return len;
+ 283              		.loc 1 75 12
  284 002e 7B68     		ldr	r3, [r7, #4]
-  87:Core/Src/syscalls.c **** }
- 285              		.loc 1 87 1
+  76:Core/Src/syscalls.c **** }
+ 285              		.loc 1 76 1
  286 0030 1846     		mov	r0, r3
  287 0032 1837     		adds	r7, r7, #24
  288              		.cfi_def_cfa_offset 8
@@ -397,10 +386,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  301              		.thumb_func
  303              	_close:
  304              	.LFB31:
-  88:Core/Src/syscalls.c **** 
-  89:Core/Src/syscalls.c **** int _close(int file)
-  90:Core/Src/syscalls.c **** {
- 305              		.loc 1 90 1
+  77:Core/Src/syscalls.c **** 
+  78:Core/Src/syscalls.c **** int _close(int file) {
+ 305              		.loc 1 78 22
  306              		.cfi_startproc
  307              		@ args = 0, pretend = 0, frame = 8
  308              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -413,14 +401,11 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  315 0004 00AF     		add	r7, sp, #0
  316              		.cfi_def_cfa_register 7
  317 0006 7860     		str	r0, [r7, #4]
-  91:Core/Src/syscalls.c **** 	return -1;
- 318              		.loc 1 91 9
+  79:Core/Src/syscalls.c ****     return -1;
+ 318              		.loc 1 79 12
  319 0008 4FF0FF33 		mov	r3, #-1
-  92:Core/Src/syscalls.c **** }
- 320              		.loc 1 92 1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 8
-
-
+  80:Core/Src/syscalls.c **** }
+ 320              		.loc 1 80 1
  321 000c 1846     		mov	r0, r3
  322 000e 0C37     		adds	r7, r7, #12
  323              		.cfi_def_cfa_offset 4
@@ -433,6 +418,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  330 0014 7047     		bx	lr
  331              		.cfi_endproc
  332              	.LFE31:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 8
+
+
  334              		.section	.text._fstat,"ax",%progbits
  335              		.align	1
  336              		.global	_fstat
@@ -441,11 +429,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  339              		.thumb_func
  341              	_fstat:
  342              	.LFB32:
-  93:Core/Src/syscalls.c **** 
-  94:Core/Src/syscalls.c **** 
-  95:Core/Src/syscalls.c **** int _fstat(int file, struct stat *st)
-  96:Core/Src/syscalls.c **** {
- 343              		.loc 1 96 1
+  81:Core/Src/syscalls.c **** 
+  82:Core/Src/syscalls.c **** int _fstat(int file, struct stat *st) {
+ 343              		.loc 1 82 39
  344              		.cfi_startproc
  345              		@ args = 0, pretend = 0, frame = 8
  346              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -459,16 +445,16 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  354              		.cfi_def_cfa_register 7
  355 0006 7860     		str	r0, [r7, #4]
  356 0008 3960     		str	r1, [r7]
-  97:Core/Src/syscalls.c **** 	st->st_mode = S_IFCHR;
- 357              		.loc 1 97 14
+  83:Core/Src/syscalls.c ****     st->st_mode = S_IFCHR;
+ 357              		.loc 1 83 17
  358 000a 3B68     		ldr	r3, [r7]
  359 000c 4FF40052 		mov	r2, #8192
  360 0010 5A60     		str	r2, [r3, #4]
-  98:Core/Src/syscalls.c **** 	return 0;
- 361              		.loc 1 98 9
+  84:Core/Src/syscalls.c ****     return 0;
+ 361              		.loc 1 84 12
  362 0012 0023     		movs	r3, #0
-  99:Core/Src/syscalls.c **** }
- 363              		.loc 1 99 1
+  85:Core/Src/syscalls.c **** }
+ 363              		.loc 1 85 1
  364 0014 1846     		mov	r0, r3
  365 0016 0C37     		adds	r7, r7, #12
  366              		.cfi_def_cfa_offset 4
@@ -478,9 +464,6 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  370 001a 80BC     		pop	{r7}
  371              		.cfi_restore 7
  372              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 9
-
-
  373 001c 7047     		bx	lr
  374              		.cfi_endproc
  375              	.LFE32:
@@ -492,10 +475,12 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  382              		.thumb_func
  384              	_isatty:
  385              	.LFB33:
- 100:Core/Src/syscalls.c **** 
- 101:Core/Src/syscalls.c **** int _isatty(int file)
- 102:Core/Src/syscalls.c **** {
- 386              		.loc 1 102 1
+  86:Core/Src/syscalls.c **** 
+  87:Core/Src/syscalls.c **** int _isatty(int file) {
+ 386              		.loc 1 87 23
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 9
+
+
  387              		.cfi_startproc
  388              		@ args = 0, pretend = 0, frame = 8
  389              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -508,11 +493,11 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  396 0004 00AF     		add	r7, sp, #0
  397              		.cfi_def_cfa_register 7
  398 0006 7860     		str	r0, [r7, #4]
- 103:Core/Src/syscalls.c **** 	return 1;
- 399              		.loc 1 103 9
+  88:Core/Src/syscalls.c ****     return 1;
+ 399              		.loc 1 88 12
  400 0008 0123     		movs	r3, #1
- 104:Core/Src/syscalls.c **** }
- 401              		.loc 1 104 1
+  89:Core/Src/syscalls.c **** }
+ 401              		.loc 1 89 1
  402 000a 1846     		mov	r0, r3
  403 000c 0C37     		adds	r7, r7, #12
  404              		.cfi_def_cfa_offset 4
@@ -533,14 +518,10 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  420              		.thumb_func
  422              	_lseek:
  423              	.LFB34:
- 105:Core/Src/syscalls.c **** 
- 106:Core/Src/syscalls.c **** int _lseek(int file, int ptr, int dir)
- 107:Core/Src/syscalls.c **** {
- 424              		.loc 1 107 1
+  90:Core/Src/syscalls.c **** 
+  91:Core/Src/syscalls.c **** int _lseek(int file, int ptr, int dir) {
+ 424              		.loc 1 91 40
  425              		.cfi_startproc
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 10
-
-
  426              		@ args = 0, pretend = 0, frame = 16
  427              		@ frame_needed = 1, uses_anonymous_args = 0
  428              		@ link register save eliminated.
@@ -554,11 +535,14 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  436 0006 F860     		str	r0, [r7, #12]
  437 0008 B960     		str	r1, [r7, #8]
  438 000a 7A60     		str	r2, [r7, #4]
- 108:Core/Src/syscalls.c **** 	return 0;
- 439              		.loc 1 108 9
+  92:Core/Src/syscalls.c ****     return 0;
+ 439              		.loc 1 92 12
  440 000c 0023     		movs	r3, #0
- 109:Core/Src/syscalls.c **** }
- 441              		.loc 1 109 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 10
+
+
+  93:Core/Src/syscalls.c **** }
+ 441              		.loc 1 93 1
  442 000e 1846     		mov	r0, r3
  443 0010 1437     		adds	r7, r7, #20
  444              		.cfi_def_cfa_offset 4
@@ -579,10 +563,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  460              		.thumb_func
  462              	_open:
  463              	.LFB35:
- 110:Core/Src/syscalls.c **** 
- 111:Core/Src/syscalls.c **** int _open(char *path, int flags, ...)
- 112:Core/Src/syscalls.c **** {
- 464              		.loc 1 112 1
+  94:Core/Src/syscalls.c **** 
+  95:Core/Src/syscalls.c **** int _open(char *path, int flags, ...) {
+ 464              		.loc 1 95 39
  465              		.cfi_startproc
  466              		@ args = 4, pretend = 12, frame = 8
  467              		@ frame_needed = 1, uses_anonymous_args = 1
@@ -598,17 +581,14 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  477 0004 82B0     		sub	sp, sp, #8
  478              		.cfi_def_cfa_offset 24
  479 0006 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 11
-
-
  480              		.cfi_def_cfa_register 7
  481 0008 7860     		str	r0, [r7, #4]
- 113:Core/Src/syscalls.c **** 	/* Pretend like we always fail */
- 114:Core/Src/syscalls.c **** 	return -1;
- 482              		.loc 1 114 9
+  96:Core/Src/syscalls.c ****     /* Pretend like we always fail */
+  97:Core/Src/syscalls.c ****     return -1;
+ 482              		.loc 1 97 12
  483 000a 4FF0FF33 		mov	r3, #-1
- 115:Core/Src/syscalls.c **** }
- 484              		.loc 1 115 1
+  98:Core/Src/syscalls.c **** }
+ 484              		.loc 1 98 1
  485 000e 1846     		mov	r0, r3
  486 0010 0837     		adds	r7, r7, #8
  487              		.cfi_def_cfa_offset 16
@@ -618,6 +598,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  491 0014 80BC     		pop	{r7}
  492              		.cfi_restore 7
  493              		.cfi_def_cfa_offset 12
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 11
+
+
  494 0016 03B0     		add	sp, sp, #12
  495              		.cfi_restore 3
  496              		.cfi_restore 2
@@ -634,10 +617,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  508              		.thumb_func
  510              	_wait:
  511              	.LFB36:
- 116:Core/Src/syscalls.c **** 
- 117:Core/Src/syscalls.c **** int _wait(int *status)
- 118:Core/Src/syscalls.c **** {
- 512              		.loc 1 118 1
+  99:Core/Src/syscalls.c **** 
+ 100:Core/Src/syscalls.c **** int _wait(int *status) {
+ 512              		.loc 1 100 24
  513              		.cfi_startproc
  514              		@ args = 0, pretend = 0, frame = 8
  515              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -650,21 +632,18 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  522 0004 00AF     		add	r7, sp, #0
  523              		.cfi_def_cfa_register 7
  524 0006 7860     		str	r0, [r7, #4]
- 119:Core/Src/syscalls.c **** 	errno = ECHILD;
- 525              		.loc 1 119 2
+ 101:Core/Src/syscalls.c ****     errno = ECHILD;
+ 525              		.loc 1 101 5
  526 0008 FFF7FEFF 		bl	__errno
  527 000c 0346     		mov	r3, r0
- 528              		.loc 1 119 8
+ 528              		.loc 1 101 11
  529 000e 0A22     		movs	r2, #10
  530 0010 1A60     		str	r2, [r3]
- 120:Core/Src/syscalls.c **** 	return -1;
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 12
-
-
- 531              		.loc 1 120 9
+ 102:Core/Src/syscalls.c ****     return -1;
+ 531              		.loc 1 102 12
  532 0012 4FF0FF33 		mov	r3, #-1
- 121:Core/Src/syscalls.c **** }
- 533              		.loc 1 121 1
+ 103:Core/Src/syscalls.c **** }
+ 533              		.loc 1 103 1
  534 0016 1846     		mov	r0, r3
  535 0018 0837     		adds	r7, r7, #8
  536              		.cfi_def_cfa_offset 8
@@ -679,13 +658,15 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  546              		.global	_unlink
  547              		.syntax unified
  548              		.thumb
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 12
+
+
  549              		.thumb_func
  551              	_unlink:
  552              	.LFB37:
- 122:Core/Src/syscalls.c **** 
- 123:Core/Src/syscalls.c **** int _unlink(char *name)
- 124:Core/Src/syscalls.c **** {
- 553              		.loc 1 124 1
+ 104:Core/Src/syscalls.c **** 
+ 105:Core/Src/syscalls.c **** int _unlink(char *name) {
+ 553              		.loc 1 105 25
  554              		.cfi_startproc
  555              		@ args = 0, pretend = 0, frame = 8
  556              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -698,18 +679,18 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  563 0004 00AF     		add	r7, sp, #0
  564              		.cfi_def_cfa_register 7
  565 0006 7860     		str	r0, [r7, #4]
- 125:Core/Src/syscalls.c **** 	errno = ENOENT;
- 566              		.loc 1 125 2
+ 106:Core/Src/syscalls.c ****     errno = ENOENT;
+ 566              		.loc 1 106 5
  567 0008 FFF7FEFF 		bl	__errno
  568 000c 0346     		mov	r3, r0
- 569              		.loc 1 125 8
+ 569              		.loc 1 106 11
  570 000e 0222     		movs	r2, #2
  571 0010 1A60     		str	r2, [r3]
- 126:Core/Src/syscalls.c **** 	return -1;
- 572              		.loc 1 126 9
+ 107:Core/Src/syscalls.c ****     return -1;
+ 572              		.loc 1 107 12
  573 0012 4FF0FF33 		mov	r3, #-1
- 127:Core/Src/syscalls.c **** }
- 574              		.loc 1 127 1
+ 108:Core/Src/syscalls.c **** }
+ 574              		.loc 1 108 1
  575 0016 1846     		mov	r0, r3
  576 0018 0837     		adds	r7, r7, #8
  577              		.cfi_def_cfa_offset 8
@@ -718,9 +699,6 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  580              		@ sp needed
  581 001c 80BD     		pop	{r7, pc}
  582              		.cfi_endproc
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 13
-
-
  583              	.LFE37:
  585              		.section	.text._times,"ax",%progbits
  586              		.align	1
@@ -730,10 +708,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  590              		.thumb_func
  592              	_times:
  593              	.LFB38:
- 128:Core/Src/syscalls.c **** 
- 129:Core/Src/syscalls.c **** int _times(struct tms *buf)
- 130:Core/Src/syscalls.c **** {
- 594              		.loc 1 130 1
+ 109:Core/Src/syscalls.c **** 
+ 110:Core/Src/syscalls.c **** int _times(struct tms *buf) {
+ 594              		.loc 1 110 29
  595              		.cfi_startproc
  596              		@ args = 0, pretend = 0, frame = 8
  597              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -741,16 +718,19 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  599 0000 80B4     		push	{r7}
  600              		.cfi_def_cfa_offset 4
  601              		.cfi_offset 7, -4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 13
+
+
  602 0002 83B0     		sub	sp, sp, #12
  603              		.cfi_def_cfa_offset 16
  604 0004 00AF     		add	r7, sp, #0
  605              		.cfi_def_cfa_register 7
  606 0006 7860     		str	r0, [r7, #4]
- 131:Core/Src/syscalls.c **** 	return -1;
- 607              		.loc 1 131 9
+ 111:Core/Src/syscalls.c ****     return -1;
+ 607              		.loc 1 111 12
  608 0008 4FF0FF33 		mov	r3, #-1
- 132:Core/Src/syscalls.c **** }
- 609              		.loc 1 132 1
+ 112:Core/Src/syscalls.c **** }
+ 609              		.loc 1 112 1
  610 000c 1846     		mov	r0, r3
  611 000e 0C37     		adds	r7, r7, #12
  612              		.cfi_def_cfa_offset 4
@@ -771,16 +751,12 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  628              		.thumb_func
  630              	_stat:
  631              	.LFB39:
- 133:Core/Src/syscalls.c **** 
- 134:Core/Src/syscalls.c **** int _stat(char *file, struct stat *st)
- 135:Core/Src/syscalls.c **** {
- 632              		.loc 1 135 1
+ 113:Core/Src/syscalls.c **** 
+ 114:Core/Src/syscalls.c **** int _stat(char *file, struct stat *st) {
+ 632              		.loc 1 114 40
  633              		.cfi_startproc
  634              		@ args = 0, pretend = 0, frame = 8
  635              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 14
-
-
  636              		@ link register save eliminated.
  637 0000 80B4     		push	{r7}
  638              		.cfi_def_cfa_offset 4
@@ -791,17 +767,20 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  643              		.cfi_def_cfa_register 7
  644 0006 7860     		str	r0, [r7, #4]
  645 0008 3960     		str	r1, [r7]
- 136:Core/Src/syscalls.c **** 	st->st_mode = S_IFCHR;
- 646              		.loc 1 136 14
+ 115:Core/Src/syscalls.c ****     st->st_mode = S_IFCHR;
+ 646              		.loc 1 115 17
  647 000a 3B68     		ldr	r3, [r7]
  648 000c 4FF40052 		mov	r2, #8192
  649 0010 5A60     		str	r2, [r3, #4]
- 137:Core/Src/syscalls.c **** 	return 0;
- 650              		.loc 1 137 9
+ 116:Core/Src/syscalls.c ****     return 0;
+ 650              		.loc 1 116 12
  651 0012 0023     		movs	r3, #0
- 138:Core/Src/syscalls.c **** }
- 652              		.loc 1 138 1
+ 117:Core/Src/syscalls.c **** }
+ 652              		.loc 1 117 1
  653 0014 1846     		mov	r0, r3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 14
+
+
  654 0016 0C37     		adds	r7, r7, #12
  655              		.cfi_def_cfa_offset 4
  656 0018 BD46     		mov	sp, r7
@@ -821,10 +800,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  671              		.thumb_func
  673              	_link:
  674              	.LFB40:
- 139:Core/Src/syscalls.c **** 
- 140:Core/Src/syscalls.c **** int _link(char *old, char *new)
- 141:Core/Src/syscalls.c **** {
- 675              		.loc 1 141 1
+ 118:Core/Src/syscalls.c **** 
+ 119:Core/Src/syscalls.c **** int _link(char *old, char *new) {
+ 675              		.loc 1 119 33
  676              		.cfi_startproc
  677              		@ args = 0, pretend = 0, frame = 8
  678              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -838,21 +816,18 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  686              		.cfi_def_cfa_register 7
  687 0006 7860     		str	r0, [r7, #4]
  688 0008 3960     		str	r1, [r7]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 15
-
-
- 142:Core/Src/syscalls.c **** 	errno = EMLINK;
- 689              		.loc 1 142 2
+ 120:Core/Src/syscalls.c ****     errno = EMLINK;
+ 689              		.loc 1 120 5
  690 000a FFF7FEFF 		bl	__errno
  691 000e 0346     		mov	r3, r0
- 692              		.loc 1 142 8
+ 692              		.loc 1 120 11
  693 0010 1F22     		movs	r2, #31
  694 0012 1A60     		str	r2, [r3]
- 143:Core/Src/syscalls.c **** 	return -1;
- 695              		.loc 1 143 9
+ 121:Core/Src/syscalls.c ****     return -1;
+ 695              		.loc 1 121 12
  696 0014 4FF0FF33 		mov	r3, #-1
- 144:Core/Src/syscalls.c **** }
- 697              		.loc 1 144 1
+ 122:Core/Src/syscalls.c **** }
+ 697              		.loc 1 122 1
  698 0018 1846     		mov	r0, r3
  699 001a 0837     		adds	r7, r7, #8
  700              		.cfi_def_cfa_offset 8
@@ -863,6 +838,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  705              		.cfi_endproc
  706              	.LFE40:
  708              		.section	.text._fork,"ax",%progbits
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 15
+
+
  709              		.align	1
  710              		.global	_fork
  711              		.syntax unified
@@ -870,10 +848,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  713              		.thumb_func
  715              	_fork:
  716              	.LFB41:
- 145:Core/Src/syscalls.c **** 
- 146:Core/Src/syscalls.c **** int _fork(void)
- 147:Core/Src/syscalls.c **** {
- 717              		.loc 1 147 1
+ 123:Core/Src/syscalls.c **** 
+ 124:Core/Src/syscalls.c **** int _fork(void) {
+ 717              		.loc 1 124 17
  718              		.cfi_startproc
  719              		@ args = 0, pretend = 0, frame = 0
  720              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -883,24 +860,21 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  724              		.cfi_offset 14, -4
  725 0002 00AF     		add	r7, sp, #0
  726              		.cfi_def_cfa_register 7
- 148:Core/Src/syscalls.c **** 	errno = EAGAIN;
- 727              		.loc 1 148 2
+ 125:Core/Src/syscalls.c ****     errno = EAGAIN;
+ 727              		.loc 1 125 5
  728 0004 FFF7FEFF 		bl	__errno
  729 0008 0346     		mov	r3, r0
- 730              		.loc 1 148 8
+ 730              		.loc 1 125 11
  731 000a 0B22     		movs	r2, #11
  732 000c 1A60     		str	r2, [r3]
- 149:Core/Src/syscalls.c **** 	return -1;
- 733              		.loc 1 149 9
+ 126:Core/Src/syscalls.c ****     return -1;
+ 733              		.loc 1 126 12
  734 000e 4FF0FF33 		mov	r3, #-1
- 150:Core/Src/syscalls.c **** }
- 735              		.loc 1 150 1
+ 127:Core/Src/syscalls.c **** }
+ 735              		.loc 1 127 1
  736 0012 1846     		mov	r0, r3
  737 0014 80BD     		pop	{r7, pc}
  738              		.cfi_endproc
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 16
-
-
  739              	.LFE41:
  741              		.section	.text._execve,"ax",%progbits
  742              		.align	1
@@ -910,10 +884,9 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  746              		.thumb_func
  748              	_execve:
  749              	.LFB42:
- 151:Core/Src/syscalls.c **** 
- 152:Core/Src/syscalls.c **** int _execve(char *name, char **argv, char **env)
- 153:Core/Src/syscalls.c **** {
- 750              		.loc 1 153 1
+ 128:Core/Src/syscalls.c **** 
+ 129:Core/Src/syscalls.c **** int _execve(char *name, char **argv, char **env) {
+ 750              		.loc 1 129 50
  751              		.cfi_startproc
  752              		@ args = 0, pretend = 0, frame = 16
  753              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -925,21 +898,24 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  759              		.cfi_def_cfa_offset 24
  760 0004 00AF     		add	r7, sp, #0
  761              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 16
+
+
  762 0006 F860     		str	r0, [r7, #12]
  763 0008 B960     		str	r1, [r7, #8]
  764 000a 7A60     		str	r2, [r7, #4]
- 154:Core/Src/syscalls.c **** 	errno = ENOMEM;
- 765              		.loc 1 154 2
+ 130:Core/Src/syscalls.c ****     errno = ENOMEM;
+ 765              		.loc 1 130 5
  766 000c FFF7FEFF 		bl	__errno
  767 0010 0346     		mov	r3, r0
- 768              		.loc 1 154 8
+ 768              		.loc 1 130 11
  769 0012 0C22     		movs	r2, #12
  770 0014 1A60     		str	r2, [r3]
- 155:Core/Src/syscalls.c **** 	return -1;
- 771              		.loc 1 155 9
+ 131:Core/Src/syscalls.c ****     return -1;
+ 771              		.loc 1 131 12
  772 0016 4FF0FF33 		mov	r3, #-1
- 156:Core/Src/syscalls.c **** }
- 773              		.loc 1 156 1
+ 132:Core/Src/syscalls.c **** }
+ 773              		.loc 1 132 1
  774 001a 1846     		mov	r0, r3
  775 001c 1037     		adds	r7, r7, #16
  776              		.cfi_def_cfa_offset 8
@@ -958,82 +934,77 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 1
  790              		.file 4 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
  791              		.file 5 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
  792              		.file 6 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 17
-
-
  793              		.file 7 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
  794              		.file 8 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
  795              		.file 9 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 18
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 syscalls.c
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:23     .bss.__env:00000000 __env
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:20     .bss.__env:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:30     .data.environ:00000000 environ
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:27     .data.environ:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:33     .text.initialise_monitor_handles:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:39     .text.initialise_monitor_handles:00000000 initialise_monitor_handles
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:64     .text._getpid:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:70     .text._getpid:00000000 _getpid
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:97     .text._kill:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:103    .text._kill:00000000 _kill
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:139    .text._exit:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:145    .text._exit:00000000 _exit
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:172    .text._read:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:178    .text._read:00000000 _read
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:235    .text._write:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:241    .text._write:00000000 _write
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:297    .text._close:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:303    .text._close:00000000 _close
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:335    .text._fstat:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:341    .text._fstat:00000000 _fstat
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:378    .text._isatty:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:384    .text._isatty:00000000 _isatty
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:416    .text._lseek:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:422    .text._lseek:00000000 _lseek
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:456    .text._open:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:462    .text._open:00000000 _open
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:504    .text._wait:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:510    .text._wait:00000000 _wait
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:545    .text._unlink:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:551    .text._unlink:00000000 _unlink
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:586    .text._times:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:592    .text._times:00000000 _times
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:624    .text._stat:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:630    .text._stat:00000000 _stat
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:667    .text._link:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:673    .text._link:00000000 _link
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:709    .text._fork:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:715    .text._fork:00000000 _fork
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:742    .text._execve:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:748    .text._execve:00000000 _execve
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:23     .bss.__env:00000000 __env
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:20     .bss.__env:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:30     .data.environ:00000000 environ
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:27     .data.environ:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:33     .text.initialise_monitor_handles:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:39     .text.initialise_monitor_handles:00000000 initialise_monitor_handles
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:64     .text._getpid:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:70     .text._getpid:00000000 _getpid
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:97     .text._kill:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:103    .text._kill:00000000 _kill
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:139    .text._exit:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:145    .text._exit:00000000 _exit
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:172    .text._read:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:178    .text._read:00000000 _read
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:235    .text._write:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:241    .text._write:00000000 _write
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:297    .text._close:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:303    .text._close:00000000 _close
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:335    .text._fstat:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:341    .text._fstat:00000000 _fstat
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:378    .text._isatty:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:384    .text._isatty:00000000 _isatty
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:416    .text._lseek:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:422    .text._lseek:00000000 _lseek
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:456    .text._open:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:462    .text._open:00000000 _open
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:504    .text._wait:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:510    .text._wait:00000000 _wait
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:545    .text._unlink:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:551    .text._unlink:00000000 _unlink
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:586    .text._times:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:592    .text._times:00000000 _times
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:624    .text._stat:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:630    .text._stat:00000000 _stat
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:667    .text._link:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:673    .text._link:00000000 _link
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:709    .text._fork:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:715    .text._fork:00000000 _fork
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:742    .text._execve:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s:748    .text._execve:00000000 _execve
                            .group:00000000 wm4.0.19985633071831f0b299129da8e30081
+                           .group:00000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
                            .group:00000000 wm4._newlib_version.h.4.6d111ab2e95434b664b53815e5c8ccba
                            .group:00000000 wm4.newlib.h.27.1876b21bc5137b157ce358abcff3c525
                            .group:00000000 wm4.ieeefp.h.77.0ee3146e9d892bb10bc0066c30189af1
                            .group:00000000 wm4.features.h.22.7877b139107948f7dadcf3660cc79cfd
                            .group:00000000 wm4.config.h.224.88344135d9de3e7ea139102cd6493448
                            .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
-                           .group:00000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
                            .group:00000000 wm4.stddef.h.39.3e0425629195acf083c9561151306b4d
-                           .group:00000000 wm4.cdefs.h.49.f93868eb904b9ca05b5c0257d31128ca
                            .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
                            .group:00000000 wm4.stddef.h.158.5f30652bb2ea05b142c1bbee9108c999
+                           .group:00000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
                            .group:00000000 wm4._types.h.127.3bdfe3ff8ea2d0985b03d9cbe93480e3
                            .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
                            .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s 			page 19
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccKed8BV.s 			page 18
 
 
                            .group:00000000 wm4.reent.h.77.d3ad9b68cecd3d0750f846779418c40d
                            .group:00000000 wm4.assert.h.11.db24e541f16414db224bf986d21017e2
                            .group:00000000 wm4.reent.h.459.ffeecb0c1128ac004a9c6d672f068107
-                           .group:00000000 wm4.time.h.14.849270cc7997ccc4e05edd146e568a9f
-                           .group:00000000 wm4.stddef.h.158.bfed30416c9480cd13bc4a25427d538f
-                           .group:00000000 wm4.time.h.2.4581ce0ffb6627cfc02162c94bf846c9
-                           .group:00000000 wm4.time.h.25.0e6a0fdbc9955f5707ed54246ed2e089
+                           .group:00000000 wm4.errno.h.18.87873c1c5b242e8a4fdc43daa9aad824
+                           .group:00000000 wm4.cdefs.h.49.f93868eb904b9ca05b5c0257d31128ca
                            .group:00000000 wm4.types.h.40.8b6acba56cefbb11746718204edc8f5e
                            .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
                            .group:00000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
@@ -1044,22 +1015,24 @@ C:\Users\SOLDER~1\AppData\Local\Temp\ccmDlu9D.s:748    .text._execve:00000000 _e
                            .group:00000000 wm4.types.h.51.e2a6e4379b4797ffcc4841f8498fd61b
                            .group:00000000 wm4.sched.h.22.c60982713a5c428609783c78f9c78d95
                            .group:00000000 wm4._pthreadtypes.h.36.fcee9961c35163dde6267ef772ad1972
-                           .group:00000000 wm4.time.h.142.403dcded079b6de6a2d2f21a34c2ae96
-                           .group:00000000 wm4.stat.h.54.5a9b823658423102e7a8de4ed089eedc
-                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
-                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
-                           .group:00000000 wm4.stdlib.h.56.f4862cfbf4363a1db01842d5bdf72c18
-                           .group:00000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
-                           .group:00000000 wm4.errno.h.9.ae5ea2b0ff9ea6e39e585807e35200d3
-                           .group:00000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
-                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
-                           .group:00000000 wm4.stdio.h.47.1f5845210bb9053bbca9ed76fc4018da
-                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
-                           .group:00000000 wm4.stdio.h.87.408e5d973372126daeef099c555b2753
                            .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
                            .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
                            .group:00000000 wm4.signal.h.31.1e41f887ed1384065c2378e275de5bce
                            .group:00000000 wm4.signal.h.18.14c8d0c03fc1e06775633fad7399cfc7
+                           .group:00000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:00000000 wm4.stddef.h.158.bfed30416c9480cd13bc4a25427d538f
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4.stdio.h.47.1f5845210bb9053bbca9ed76fc4018da
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.87.408e5d973372126daeef099c555b2753
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.f4862cfbf4363a1db01842d5bdf72c18
+                           .group:00000000 wm4.time.h.8.db4619001f026d0b4874c029fef0e91f
+                           .group:00000000 wm4.time.h.2.4581ce0ffb6627cfc02162c94bf846c9
+                           .group:00000000 wm4.time.h.25.0e6a0fdbc9955f5707ed54246ed2e089
+                           .group:00000000 wm4.time.h.142.403dcded079b6de6a2d2f21a34c2ae96
+                           .group:00000000 wm4.stat.h.54.5a9b823658423102e7a8de4ed089eedc
                            .group:00000000 wm4.time.h.40.07bdef2e51e429b46276cd6f2246b78b
 
 UNDEFINED SYMBOLS

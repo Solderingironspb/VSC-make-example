@@ -223,6 +223,17 @@ $updatedContent = $content -replace '(\$GNU_TOOLCHAIN_GDB_PATH\s*=\s*).*', "`$GN
 Set-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" $updatedContent -Encoding utf8
 Write-Host "Success" -ForegroundColor Green
 
+$content = Get-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" -Raw -Encoding utf8
+$updatedContent = $content -replace '(\$BUILD_DIR\s*=\s*).*', "`$BUILD_DIR = `"$BUILD_DIR`""
+Set-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" $updatedContent -Encoding utf8
+Write-Host "Success" -ForegroundColor Gree
+
+$content = Get-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" -Raw -Encoding utf8
+$updatedContent = $content -replace '(\$TARGET\s*=\s*).*', "`$TARGET = `"$TARGET`""
+Set-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" $updatedContent -Encoding utf8
+Write-Host "Success" -ForegroundColor Green
+
+
 ############################ Читаем и правим файл .vscode/ps_scripts/Build_Analyzer.ps1
 Write-Host "file .vscode/ps_scripts/Build_Analyzer.ps1" -ForegroundColor DarkBlue
 $newPath = $GNU_TOOLCHAIN_SIZE_PATH.Replace("/", "\")
