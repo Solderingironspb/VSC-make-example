@@ -1,4 +1,4 @@
-﻿{
+{
     "configurations": [
         {
             "name": "Clean_project", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)

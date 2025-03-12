@@ -1,4 +1,4 @@
-#   Monitor resume part 2
+﻿#   Monitor resume part 2
 #   Автор: Волков Олег
 #   Дата создания скрипта: 28.02.2025
 #   GitHub: https://github.com/Solderingironspb
@@ -29,6 +29,9 @@ if ($openocdProcess) {
     # Если процесс не найден
     Write-Host "OpenOCD is not running." -ForegroundColor Green
 }
+
+
+
 
 
 

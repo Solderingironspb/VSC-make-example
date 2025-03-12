@@ -58,3 +58,6 @@ Start-Process -FilePath $OPEN_OCD_BIN_PATH -ArgumentList "-f", "$OPEN_OCD_INTERF
 
 
 
+
+
+

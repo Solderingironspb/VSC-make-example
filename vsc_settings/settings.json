@@ -56,4 +56,8 @@
     },
     "editor.minimap.enabled": false,
     "workbench.colorTheme": "Solderingiron theme light",
+    "terminal.integrated.env.windows": {
+        "LANG": "ru_RU.UTF-8"
+    },
+    "terminal.integrated.detectLocale": "on",
 }
