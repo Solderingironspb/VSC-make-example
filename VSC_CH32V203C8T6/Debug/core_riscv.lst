@@ -1,0 +1,2013 @@
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 1
+
+
+   1              		.file	"core_riscv.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0_xw"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.file 0 "C:\\Users\\Solderingiron\\Documents\\GitHub\\VSC-make-example\\VSC_CH32V203C8T6" "Drivers
+  10              		.section	.text.__get_MSTATUS,"ax",@progbits
+  11              		.align	1
+  12              		.globl	__get_MSTATUS
+  14              	__get_MSTATUS:
+  15              	.LFB0:
+  16              		.file 1 "Drivers/src/core_riscv.c"
+   1:Drivers/src/core_riscv.c **** /********************************** (C) COPYRIGHT  *******************************
+   2:Drivers/src/core_riscv.c ****  * File Name          : core_riscv.c
+   3:Drivers/src/core_riscv.c ****  * Author             : WCH
+   4:Drivers/src/core_riscv.c ****  * Version            : V1.0.0
+   5:Drivers/src/core_riscv.c ****  * Date               : 2021/06/06
+   6:Drivers/src/core_riscv.c ****  * Description        : RISC-V Core Peripheral Access Layer Source File
+   7:Drivers/src/core_riscv.c ****  * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
+   8:Drivers/src/core_riscv.c ****  * SPDX-License-Identifier: Apache-2.0
+   9:Drivers/src/core_riscv.c ****  *******************************************************************************/
+  10:Drivers/src/core_riscv.c **** #include <stdint.h>
+  11:Drivers/src/core_riscv.c **** 
+  12:Drivers/src/core_riscv.c **** /* define compiler specific symbols */
+  13:Drivers/src/core_riscv.c **** #if defined ( __CC_ARM   )
+  14:Drivers/src/core_riscv.c ****   #define __ASM            __asm                                      /*!< asm keyword for ARM Comp
+  15:Drivers/src/core_riscv.c ****   #define __INLINE         __inline                                   /*!< inline keyword for ARM C
+  16:Drivers/src/core_riscv.c **** 
+  17:Drivers/src/core_riscv.c **** #elif defined ( __ICCARM__ )
+  18:Drivers/src/core_riscv.c ****   #define __ASM           __asm                                       /*!< asm keyword for IAR Comp
+  19:Drivers/src/core_riscv.c ****   #define __INLINE        inline                                      /*!< inline keyword for IAR C
+  20:Drivers/src/core_riscv.c **** 
+  21:Drivers/src/core_riscv.c **** #elif defined   (  __GNUC__  )
+  22:Drivers/src/core_riscv.c ****   #define __ASM            __asm                                      /*!< asm keyword for GNU Comp
+  23:Drivers/src/core_riscv.c ****   #define __INLINE         inline                                     /*!< inline keyword for GNU C
+  24:Drivers/src/core_riscv.c **** 
+  25:Drivers/src/core_riscv.c **** #elif defined   (  __TASKING__  )
+  26:Drivers/src/core_riscv.c ****   #define __ASM            __asm                                      /*!< asm keyword for TASKING 
+  27:Drivers/src/core_riscv.c ****   #define __INLINE         inline                                     /*!< inline keyword for TASKI
+  28:Drivers/src/core_riscv.c **** 
+  29:Drivers/src/core_riscv.c **** #endif
+  30:Drivers/src/core_riscv.c **** 
+  31:Drivers/src/core_riscv.c **** 
+  32:Drivers/src/core_riscv.c **** 
+  33:Drivers/src/core_riscv.c **** /*********************************************************************
+  34:Drivers/src/core_riscv.c ****  * @fn      __get_MSTATUS
+  35:Drivers/src/core_riscv.c ****  *
+  36:Drivers/src/core_riscv.c ****  * @brief   Return the Machine Status Register
+  37:Drivers/src/core_riscv.c ****  *
+  38:Drivers/src/core_riscv.c ****  * @return  mstatus value
+  39:Drivers/src/core_riscv.c ****  */
+  40:Drivers/src/core_riscv.c **** uint32_t __get_MSTATUS(void)
+  41:Drivers/src/core_riscv.c **** {
+  17              		.loc 1 41 1
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 2
+
+
+  18              		.cfi_startproc
+  19 0000 0111     		addi	sp,sp,-32
+  20              		.cfi_def_cfa_offset 32
+  21 0002 22CE     		sw	s0,28(sp)
+  22              		.cfi_offset 8, -4
+  23 0004 0010     		addi	s0,sp,32
+  24              		.cfi_def_cfa 8, 0
+  42:Drivers/src/core_riscv.c ****   uint32_t result;
+  43:Drivers/src/core_riscv.c **** 
+  44:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mstatus" : "=r" (result) );
+  25              		.loc 1 44 3
+  26              	 #APP
+  27              	# 44 "Drivers/src/core_riscv.c" 1
+  45              	  return (result);
+  28              		csrr a5,mstatus
+  29              	# 0 "" 2
+  30              	 #NO_APP
+  31 000a 2326F4FE 		sw	a5,-20(s0)
+  32              		.loc 1 45 10
+  33 000e 8327C4FE 		lw	a5,-20(s0)
+  46:Drivers/src/core_riscv.c **** }
+  34              		.loc 1 46 1
+  35 0012 3E85     		mv	a0,a5
+  36 0014 7244     		lw	s0,28(sp)
+  37              		.cfi_restore 8
+  38              		.cfi_def_cfa 2, 32
+  39 0016 0561     		addi	sp,sp,32
+  40              		.cfi_def_cfa_offset 0
+  41 0018 8280     		jr	ra
+  42              		.cfi_endproc
+  43              	.LFE0:
+  45              		.section	.text.__set_MSTATUS,"ax",@progbits
+  46              		.align	1
+  47              		.globl	__set_MSTATUS
+  49              	__set_MSTATUS:
+  50              	.LFB1:
+  47:Drivers/src/core_riscv.c **** 
+  48:Drivers/src/core_riscv.c **** /*********************************************************************
+  49:Drivers/src/core_riscv.c ****  * @fn      __set_MSTATUS
+  50:Drivers/src/core_riscv.c ****  *
+  51:Drivers/src/core_riscv.c ****  * @brief   Set the Machine Status Register
+  52:Drivers/src/core_riscv.c ****  *
+  53:Drivers/src/core_riscv.c ****  * @param   value  - set mstatus value
+  54:Drivers/src/core_riscv.c ****  *
+  55:Drivers/src/core_riscv.c ****  * @return  none
+  56:Drivers/src/core_riscv.c ****  */
+  57:Drivers/src/core_riscv.c **** void __set_MSTATUS(uint32_t value)
+  58:Drivers/src/core_riscv.c **** {
+  51              		.loc 1 58 1
+  52              		.cfi_startproc
+  53 0000 0111     		addi	sp,sp,-32
+  54              		.cfi_def_cfa_offset 32
+  55 0002 22CE     		sw	s0,28(sp)
+  56              		.cfi_offset 8, -4
+  57 0004 0010     		addi	s0,sp,32
+  58              		.cfi_def_cfa 8, 0
+  59 0006 2326A4FE 		sw	a0,-20(s0)
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 3
+
+
+  59:Drivers/src/core_riscv.c ****   __ASM volatile ("csrw mstatus, %0" : : "r" (value) );
+  60              		.loc 1 59 3
+  61 000a 8327C4FE 		lw	a5,-20(s0)
+  62              	 #APP
+  63              	# 59 "Drivers/src/core_riscv.c" 1
+  60              	}
+  64              		csrw mstatus, a5
+  65              	# 0 "" 2
+  66              		.loc 1 60 1
+  67              	 #NO_APP
+  68 0012 0100     		nop
+  69 0014 7244     		lw	s0,28(sp)
+  70              		.cfi_restore 8
+  71              		.cfi_def_cfa 2, 32
+  72 0016 0561     		addi	sp,sp,32
+  73              		.cfi_def_cfa_offset 0
+  74 0018 8280     		jr	ra
+  75              		.cfi_endproc
+  76              	.LFE1:
+  78              		.section	.text.__get_MISA,"ax",@progbits
+  79              		.align	1
+  80              		.globl	__get_MISA
+  82              	__get_MISA:
+  83              	.LFB2:
+  61:Drivers/src/core_riscv.c **** 
+  62:Drivers/src/core_riscv.c **** /*********************************************************************
+  63:Drivers/src/core_riscv.c ****  * @fn      __get_MISA
+  64:Drivers/src/core_riscv.c ****  *
+  65:Drivers/src/core_riscv.c ****  * @brief   Return the Machine ISA Register
+  66:Drivers/src/core_riscv.c ****  *
+  67:Drivers/src/core_riscv.c ****  * @return  misa value
+  68:Drivers/src/core_riscv.c ****  */
+  69:Drivers/src/core_riscv.c **** uint32_t __get_MISA(void)
+  70:Drivers/src/core_riscv.c **** {
+  84              		.loc 1 70 1
+  85              		.cfi_startproc
+  86 0000 0111     		addi	sp,sp,-32
+  87              		.cfi_def_cfa_offset 32
+  88 0002 22CE     		sw	s0,28(sp)
+  89              		.cfi_offset 8, -4
+  90 0004 0010     		addi	s0,sp,32
+  91              		.cfi_def_cfa 8, 0
+  71:Drivers/src/core_riscv.c ****   uint32_t result;
+  72:Drivers/src/core_riscv.c **** 
+  73:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "misa" : "=r" (result) );
+  92              		.loc 1 73 3
+  93              	 #APP
+  94              	# 73 "Drivers/src/core_riscv.c" 1
+  74              	  return (result);
+  95              		csrr a5,misa
+  96              	# 0 "" 2
+  97              	 #NO_APP
+  98 000a 2326F4FE 		sw	a5,-20(s0)
+  99              		.loc 1 74 10
+ 100 000e 8327C4FE 		lw	a5,-20(s0)
+  75:Drivers/src/core_riscv.c **** }
+ 101              		.loc 1 75 1
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 4
+
+
+ 102 0012 3E85     		mv	a0,a5
+ 103 0014 7244     		lw	s0,28(sp)
+ 104              		.cfi_restore 8
+ 105              		.cfi_def_cfa 2, 32
+ 106 0016 0561     		addi	sp,sp,32
+ 107              		.cfi_def_cfa_offset 0
+ 108 0018 8280     		jr	ra
+ 109              		.cfi_endproc
+ 110              	.LFE2:
+ 112              		.section	.text.__set_MISA,"ax",@progbits
+ 113              		.align	1
+ 114              		.globl	__set_MISA
+ 116              	__set_MISA:
+ 117              	.LFB3:
+  76:Drivers/src/core_riscv.c **** 
+  77:Drivers/src/core_riscv.c **** /*********************************************************************
+  78:Drivers/src/core_riscv.c ****  * @fn      __set_MISA
+  79:Drivers/src/core_riscv.c ****  *
+  80:Drivers/src/core_riscv.c ****  * @brief   Set the Machine ISA Register
+  81:Drivers/src/core_riscv.c ****  *
+  82:Drivers/src/core_riscv.c ****  * @param   value  - set misa value
+  83:Drivers/src/core_riscv.c ****  *
+  84:Drivers/src/core_riscv.c ****  * @return  none
+  85:Drivers/src/core_riscv.c ****  */
+  86:Drivers/src/core_riscv.c **** void __set_MISA(uint32_t value)
+  87:Drivers/src/core_riscv.c **** {
+ 118              		.loc 1 87 1
+ 119              		.cfi_startproc
+ 120 0000 0111     		addi	sp,sp,-32
+ 121              		.cfi_def_cfa_offset 32
+ 122 0002 22CE     		sw	s0,28(sp)
+ 123              		.cfi_offset 8, -4
+ 124 0004 0010     		addi	s0,sp,32
+ 125              		.cfi_def_cfa 8, 0
+ 126 0006 2326A4FE 		sw	a0,-20(s0)
+  88:Drivers/src/core_riscv.c ****   __ASM volatile ("csrw misa, %0" : : "r" (value) );
+ 127              		.loc 1 88 3
+ 128 000a 8327C4FE 		lw	a5,-20(s0)
+ 129              	 #APP
+ 130              	# 88 "Drivers/src/core_riscv.c" 1
+  89              	}
+ 131              		csrw misa, a5
+ 132              	# 0 "" 2
+ 133              		.loc 1 89 1
+ 134              	 #NO_APP
+ 135 0012 0100     		nop
+ 136 0014 7244     		lw	s0,28(sp)
+ 137              		.cfi_restore 8
+ 138              		.cfi_def_cfa 2, 32
+ 139 0016 0561     		addi	sp,sp,32
+ 140              		.cfi_def_cfa_offset 0
+ 141 0018 8280     		jr	ra
+ 142              		.cfi_endproc
+ 143              	.LFE3:
+ 145              		.section	.text.__get_MIE,"ax",@progbits
+ 146              		.align	1
+ 147              		.globl	__get_MIE
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 5
+
+
+ 149              	__get_MIE:
+ 150              	.LFB4:
+  90:Drivers/src/core_riscv.c **** 
+  91:Drivers/src/core_riscv.c **** /*********************************************************************
+  92:Drivers/src/core_riscv.c ****  * @fn      __get_MIE
+  93:Drivers/src/core_riscv.c ****  *
+  94:Drivers/src/core_riscv.c ****  * @brief   Return the Machine Interrupt Enable Register
+  95:Drivers/src/core_riscv.c ****  *
+  96:Drivers/src/core_riscv.c ****  * @return  mie value
+  97:Drivers/src/core_riscv.c ****  */
+  98:Drivers/src/core_riscv.c **** uint32_t __get_MIE(void)
+  99:Drivers/src/core_riscv.c **** {
+ 151              		.loc 1 99 1
+ 152              		.cfi_startproc
+ 153 0000 0111     		addi	sp,sp,-32
+ 154              		.cfi_def_cfa_offset 32
+ 155 0002 22CE     		sw	s0,28(sp)
+ 156              		.cfi_offset 8, -4
+ 157 0004 0010     		addi	s0,sp,32
+ 158              		.cfi_def_cfa 8, 0
+ 100:Drivers/src/core_riscv.c ****   uint32_t result;
+ 101:Drivers/src/core_riscv.c **** 
+ 102:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mie" : "=r" (result) );
+ 159              		.loc 1 102 3
+ 160              	 #APP
+ 161              	# 102 "Drivers/src/core_riscv.c" 1
+ 103              	  return (result);
+ 162              		csrr a5,mie
+ 163              	# 0 "" 2
+ 164              	 #NO_APP
+ 165 000a 2326F4FE 		sw	a5,-20(s0)
+ 166              		.loc 1 103 10
+ 167 000e 8327C4FE 		lw	a5,-20(s0)
+ 104:Drivers/src/core_riscv.c **** }
+ 168              		.loc 1 104 1
+ 169 0012 3E85     		mv	a0,a5
+ 170 0014 7244     		lw	s0,28(sp)
+ 171              		.cfi_restore 8
+ 172              		.cfi_def_cfa 2, 32
+ 173 0016 0561     		addi	sp,sp,32
+ 174              		.cfi_def_cfa_offset 0
+ 175 0018 8280     		jr	ra
+ 176              		.cfi_endproc
+ 177              	.LFE4:
+ 179              		.section	.text.__set_MIE,"ax",@progbits
+ 180              		.align	1
+ 181              		.globl	__set_MIE
+ 183              	__set_MIE:
+ 184              	.LFB5:
+ 105:Drivers/src/core_riscv.c **** 
+ 106:Drivers/src/core_riscv.c **** /*********************************************************************
+ 107:Drivers/src/core_riscv.c ****  * @fn      __set_MISA
+ 108:Drivers/src/core_riscv.c ****  *
+ 109:Drivers/src/core_riscv.c ****  * @brief   Set the Machine ISA Register
+ 110:Drivers/src/core_riscv.c ****  *
+ 111:Drivers/src/core_riscv.c ****  * @param   value  - set mie value
+ 112:Drivers/src/core_riscv.c ****  *
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 6
+
+
+ 113:Drivers/src/core_riscv.c ****  * @return  none
+ 114:Drivers/src/core_riscv.c ****  */
+ 115:Drivers/src/core_riscv.c **** void __set_MIE(uint32_t value)
+ 116:Drivers/src/core_riscv.c **** {
+ 185              		.loc 1 116 1
+ 186              		.cfi_startproc
+ 187 0000 0111     		addi	sp,sp,-32
+ 188              		.cfi_def_cfa_offset 32
+ 189 0002 22CE     		sw	s0,28(sp)
+ 190              		.cfi_offset 8, -4
+ 191 0004 0010     		addi	s0,sp,32
+ 192              		.cfi_def_cfa 8, 0
+ 193 0006 2326A4FE 		sw	a0,-20(s0)
+ 117:Drivers/src/core_riscv.c ****   __ASM volatile ("csrw mie, %0" : : "r" (value) );
+ 194              		.loc 1 117 3
+ 195 000a 8327C4FE 		lw	a5,-20(s0)
+ 196              	 #APP
+ 197              	# 117 "Drivers/src/core_riscv.c" 1
+ 118              	}
+ 198              		csrw mie, a5
+ 199              	# 0 "" 2
+ 200              		.loc 1 118 1
+ 201              	 #NO_APP
+ 202 0012 0100     		nop
+ 203 0014 7244     		lw	s0,28(sp)
+ 204              		.cfi_restore 8
+ 205              		.cfi_def_cfa 2, 32
+ 206 0016 0561     		addi	sp,sp,32
+ 207              		.cfi_def_cfa_offset 0
+ 208 0018 8280     		jr	ra
+ 209              		.cfi_endproc
+ 210              	.LFE5:
+ 212              		.section	.text.__get_MTVEC,"ax",@progbits
+ 213              		.align	1
+ 214              		.globl	__get_MTVEC
+ 216              	__get_MTVEC:
+ 217              	.LFB6:
+ 119:Drivers/src/core_riscv.c **** 
+ 120:Drivers/src/core_riscv.c **** /*********************************************************************
+ 121:Drivers/src/core_riscv.c ****  * @fn      __get_MTVEC
+ 122:Drivers/src/core_riscv.c ****  *
+ 123:Drivers/src/core_riscv.c ****  * @brief   Return the Machine Trap-Vector Base-Address Register
+ 124:Drivers/src/core_riscv.c ****  *
+ 125:Drivers/src/core_riscv.c ****  * @return  mtvec value
+ 126:Drivers/src/core_riscv.c ****  */
+ 127:Drivers/src/core_riscv.c **** uint32_t __get_MTVEC(void)
+ 128:Drivers/src/core_riscv.c **** {
+ 218              		.loc 1 128 1
+ 219              		.cfi_startproc
+ 220 0000 0111     		addi	sp,sp,-32
+ 221              		.cfi_def_cfa_offset 32
+ 222 0002 22CE     		sw	s0,28(sp)
+ 223              		.cfi_offset 8, -4
+ 224 0004 0010     		addi	s0,sp,32
+ 225              		.cfi_def_cfa 8, 0
+ 129:Drivers/src/core_riscv.c ****   uint32_t result;
+ 130:Drivers/src/core_riscv.c **** 
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 7
+
+
+ 131:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mtvec" : "=r" (result) );
+ 226              		.loc 1 131 3
+ 227              	 #APP
+ 228              	# 131 "Drivers/src/core_riscv.c" 1
+ 132              	  return (result);
+ 229              		csrr a5,mtvec
+ 230              	# 0 "" 2
+ 231              	 #NO_APP
+ 232 000a 2326F4FE 		sw	a5,-20(s0)
+ 233              		.loc 1 132 10
+ 234 000e 8327C4FE 		lw	a5,-20(s0)
+ 133:Drivers/src/core_riscv.c **** }
+ 235              		.loc 1 133 1
+ 236 0012 3E85     		mv	a0,a5
+ 237 0014 7244     		lw	s0,28(sp)
+ 238              		.cfi_restore 8
+ 239              		.cfi_def_cfa 2, 32
+ 240 0016 0561     		addi	sp,sp,32
+ 241              		.cfi_def_cfa_offset 0
+ 242 0018 8280     		jr	ra
+ 243              		.cfi_endproc
+ 244              	.LFE6:
+ 246              		.section	.text.__set_MTVEC,"ax",@progbits
+ 247              		.align	1
+ 248              		.globl	__set_MTVEC
+ 250              	__set_MTVEC:
+ 251              	.LFB7:
+ 134:Drivers/src/core_riscv.c **** 
+ 135:Drivers/src/core_riscv.c **** /*********************************************************************
+ 136:Drivers/src/core_riscv.c ****  * @fn      __set_MTVEC
+ 137:Drivers/src/core_riscv.c ****  *
+ 138:Drivers/src/core_riscv.c ****  * @brief   Set the Machine Trap-Vector Base-Address Register
+ 139:Drivers/src/core_riscv.c ****  *
+ 140:Drivers/src/core_riscv.c ****  * @param   value  - set mtvec value
+ 141:Drivers/src/core_riscv.c ****  *
+ 142:Drivers/src/core_riscv.c ****  * @return  none
+ 143:Drivers/src/core_riscv.c ****  */
+ 144:Drivers/src/core_riscv.c **** void __set_MTVEC(uint32_t value)
+ 145:Drivers/src/core_riscv.c **** {
+ 252              		.loc 1 145 1
+ 253              		.cfi_startproc
+ 254 0000 0111     		addi	sp,sp,-32
+ 255              		.cfi_def_cfa_offset 32
+ 256 0002 22CE     		sw	s0,28(sp)
+ 257              		.cfi_offset 8, -4
+ 258 0004 0010     		addi	s0,sp,32
+ 259              		.cfi_def_cfa 8, 0
+ 260 0006 2326A4FE 		sw	a0,-20(s0)
+ 146:Drivers/src/core_riscv.c ****   __ASM volatile ("csrw mtvec, %0" : : "r" (value) );
+ 261              		.loc 1 146 3
+ 262 000a 8327C4FE 		lw	a5,-20(s0)
+ 263              	 #APP
+ 264              	# 146 "Drivers/src/core_riscv.c" 1
+ 147              	}
+ 265              		csrw mtvec, a5
+ 266              	# 0 "" 2
+ 267              		.loc 1 147 1
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 8
+
+
+ 268              	 #NO_APP
+ 269 0012 0100     		nop
+ 270 0014 7244     		lw	s0,28(sp)
+ 271              		.cfi_restore 8
+ 272              		.cfi_def_cfa 2, 32
+ 273 0016 0561     		addi	sp,sp,32
+ 274              		.cfi_def_cfa_offset 0
+ 275 0018 8280     		jr	ra
+ 276              		.cfi_endproc
+ 277              	.LFE7:
+ 279              		.section	.text.__get_MSCRATCH,"ax",@progbits
+ 280              		.align	1
+ 281              		.globl	__get_MSCRATCH
+ 283              	__get_MSCRATCH:
+ 284              	.LFB8:
+ 148:Drivers/src/core_riscv.c **** 
+ 149:Drivers/src/core_riscv.c **** /*********************************************************************
+ 150:Drivers/src/core_riscv.c ****  * @fn      __get_MSCRATCH
+ 151:Drivers/src/core_riscv.c ****  *
+ 152:Drivers/src/core_riscv.c ****  * @brief   Return the Machine Seratch Register
+ 153:Drivers/src/core_riscv.c ****  *
+ 154:Drivers/src/core_riscv.c ****  * @return  mscratch value
+ 155:Drivers/src/core_riscv.c ****  */
+ 156:Drivers/src/core_riscv.c **** uint32_t __get_MSCRATCH(void)
+ 157:Drivers/src/core_riscv.c **** {
+ 285              		.loc 1 157 1
+ 286              		.cfi_startproc
+ 287 0000 0111     		addi	sp,sp,-32
+ 288              		.cfi_def_cfa_offset 32
+ 289 0002 22CE     		sw	s0,28(sp)
+ 290              		.cfi_offset 8, -4
+ 291 0004 0010     		addi	s0,sp,32
+ 292              		.cfi_def_cfa 8, 0
+ 158:Drivers/src/core_riscv.c ****   uint32_t result;
+ 159:Drivers/src/core_riscv.c **** 
+ 160:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mscratch" : "=r" (result) );
+ 293              		.loc 1 160 3
+ 294              	 #APP
+ 295              	# 160 "Drivers/src/core_riscv.c" 1
+ 161              	  return (result);
+ 296              		csrr a5,mscratch
+ 297              	# 0 "" 2
+ 298              	 #NO_APP
+ 299 000a 2326F4FE 		sw	a5,-20(s0)
+ 300              		.loc 1 161 10
+ 301 000e 8327C4FE 		lw	a5,-20(s0)
+ 162:Drivers/src/core_riscv.c **** }
+ 302              		.loc 1 162 1
+ 303 0012 3E85     		mv	a0,a5
+ 304 0014 7244     		lw	s0,28(sp)
+ 305              		.cfi_restore 8
+ 306              		.cfi_def_cfa 2, 32
+ 307 0016 0561     		addi	sp,sp,32
+ 308              		.cfi_def_cfa_offset 0
+ 309 0018 8280     		jr	ra
+ 310              		.cfi_endproc
+ 311              	.LFE8:
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 9
+
+
+ 313              		.section	.text.__set_MSCRATCH,"ax",@progbits
+ 314              		.align	1
+ 315              		.globl	__set_MSCRATCH
+ 317              	__set_MSCRATCH:
+ 318              	.LFB9:
+ 163:Drivers/src/core_riscv.c **** 
+ 164:Drivers/src/core_riscv.c **** /*********************************************************************
+ 165:Drivers/src/core_riscv.c ****  * @fn      __set_MSCRATCH
+ 166:Drivers/src/core_riscv.c ****  *
+ 167:Drivers/src/core_riscv.c ****  * @brief   Set the Machine Seratch Register
+ 168:Drivers/src/core_riscv.c ****  *
+ 169:Drivers/src/core_riscv.c ****  * @param   value  - set mscratch value
+ 170:Drivers/src/core_riscv.c ****  *
+ 171:Drivers/src/core_riscv.c ****  * @return  none
+ 172:Drivers/src/core_riscv.c ****  */
+ 173:Drivers/src/core_riscv.c **** void __set_MSCRATCH(uint32_t value)
+ 174:Drivers/src/core_riscv.c **** {
+ 319              		.loc 1 174 1
+ 320              		.cfi_startproc
+ 321 0000 0111     		addi	sp,sp,-32
+ 322              		.cfi_def_cfa_offset 32
+ 323 0002 22CE     		sw	s0,28(sp)
+ 324              		.cfi_offset 8, -4
+ 325 0004 0010     		addi	s0,sp,32
+ 326              		.cfi_def_cfa 8, 0
+ 327 0006 2326A4FE 		sw	a0,-20(s0)
+ 175:Drivers/src/core_riscv.c ****   __ASM volatile ("csrw mscratch, %0" : : "r" (value) );
+ 328              		.loc 1 175 3
+ 329 000a 8327C4FE 		lw	a5,-20(s0)
+ 330              	 #APP
+ 331              	# 175 "Drivers/src/core_riscv.c" 1
+ 176              	}
+ 332              		csrw mscratch, a5
+ 333              	# 0 "" 2
+ 334              		.loc 1 176 1
+ 335              	 #NO_APP
+ 336 0012 0100     		nop
+ 337 0014 7244     		lw	s0,28(sp)
+ 338              		.cfi_restore 8
+ 339              		.cfi_def_cfa 2, 32
+ 340 0016 0561     		addi	sp,sp,32
+ 341              		.cfi_def_cfa_offset 0
+ 342 0018 8280     		jr	ra
+ 343              		.cfi_endproc
+ 344              	.LFE9:
+ 346              		.section	.text.__get_MEPC,"ax",@progbits
+ 347              		.align	1
+ 348              		.globl	__get_MEPC
+ 350              	__get_MEPC:
+ 351              	.LFB10:
+ 177:Drivers/src/core_riscv.c **** 
+ 178:Drivers/src/core_riscv.c **** /*********************************************************************
+ 179:Drivers/src/core_riscv.c ****  * @fn      __get_MEPC
+ 180:Drivers/src/core_riscv.c ****  *
+ 181:Drivers/src/core_riscv.c ****  * @brief   Return the Machine Exception Program Register
+ 182:Drivers/src/core_riscv.c ****  *
+ 183:Drivers/src/core_riscv.c ****  * @return  mepc value
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 10
+
+
+ 184:Drivers/src/core_riscv.c ****  */
+ 185:Drivers/src/core_riscv.c **** uint32_t __get_MEPC(void)
+ 186:Drivers/src/core_riscv.c **** {
+ 352              		.loc 1 186 1
+ 353              		.cfi_startproc
+ 354 0000 0111     		addi	sp,sp,-32
+ 355              		.cfi_def_cfa_offset 32
+ 356 0002 22CE     		sw	s0,28(sp)
+ 357              		.cfi_offset 8, -4
+ 358 0004 0010     		addi	s0,sp,32
+ 359              		.cfi_def_cfa 8, 0
+ 187:Drivers/src/core_riscv.c ****   uint32_t result;
+ 188:Drivers/src/core_riscv.c **** 
+ 189:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mepc" : "=r" (result) );
+ 360              		.loc 1 189 3
+ 361              	 #APP
+ 362              	# 189 "Drivers/src/core_riscv.c" 1
+ 190              	  return (result);
+ 363              		csrr a5,mepc
+ 364              	# 0 "" 2
+ 365              	 #NO_APP
+ 366 000a 2326F4FE 		sw	a5,-20(s0)
+ 367              		.loc 1 190 10
+ 368 000e 8327C4FE 		lw	a5,-20(s0)
+ 191:Drivers/src/core_riscv.c **** }
+ 369              		.loc 1 191 1
+ 370 0012 3E85     		mv	a0,a5
+ 371 0014 7244     		lw	s0,28(sp)
+ 372              		.cfi_restore 8
+ 373              		.cfi_def_cfa 2, 32
+ 374 0016 0561     		addi	sp,sp,32
+ 375              		.cfi_def_cfa_offset 0
+ 376 0018 8280     		jr	ra
+ 377              		.cfi_endproc
+ 378              	.LFE10:
+ 380              		.section	.text.__set_MEPC,"ax",@progbits
+ 381              		.align	1
+ 382              		.globl	__set_MEPC
+ 384              	__set_MEPC:
+ 385              	.LFB11:
+ 192:Drivers/src/core_riscv.c **** 
+ 193:Drivers/src/core_riscv.c **** /*********************************************************************
+ 194:Drivers/src/core_riscv.c ****  * @fn      __set_MEPC
+ 195:Drivers/src/core_riscv.c ****  *
+ 196:Drivers/src/core_riscv.c ****  * @brief   Set the Machine Exception Program Register
+ 197:Drivers/src/core_riscv.c ****  *
+ 198:Drivers/src/core_riscv.c ****  * @return  mepc value
+ 199:Drivers/src/core_riscv.c ****  */
+ 200:Drivers/src/core_riscv.c **** void __set_MEPC(uint32_t value)
+ 201:Drivers/src/core_riscv.c **** {
+ 386              		.loc 1 201 1
+ 387              		.cfi_startproc
+ 388 0000 0111     		addi	sp,sp,-32
+ 389              		.cfi_def_cfa_offset 32
+ 390 0002 22CE     		sw	s0,28(sp)
+ 391              		.cfi_offset 8, -4
+ 392 0004 0010     		addi	s0,sp,32
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 11
+
+
+ 393              		.cfi_def_cfa 8, 0
+ 394 0006 2326A4FE 		sw	a0,-20(s0)
+ 202:Drivers/src/core_riscv.c ****   __ASM volatile ("csrw mepc, %0" : : "r" (value) );
+ 395              		.loc 1 202 3
+ 396 000a 8327C4FE 		lw	a5,-20(s0)
+ 397              	 #APP
+ 398              	# 202 "Drivers/src/core_riscv.c" 1
+ 203              	}
+ 399              		csrw mepc, a5
+ 400              	# 0 "" 2
+ 401              		.loc 1 203 1
+ 402              	 #NO_APP
+ 403 0012 0100     		nop
+ 404 0014 7244     		lw	s0,28(sp)
+ 405              		.cfi_restore 8
+ 406              		.cfi_def_cfa 2, 32
+ 407 0016 0561     		addi	sp,sp,32
+ 408              		.cfi_def_cfa_offset 0
+ 409 0018 8280     		jr	ra
+ 410              		.cfi_endproc
+ 411              	.LFE11:
+ 413              		.section	.text.__get_MCAUSE,"ax",@progbits
+ 414              		.align	1
+ 415              		.globl	__get_MCAUSE
+ 417              	__get_MCAUSE:
+ 418              	.LFB12:
+ 204:Drivers/src/core_riscv.c **** 
+ 205:Drivers/src/core_riscv.c **** /*********************************************************************
+ 206:Drivers/src/core_riscv.c ****  * @fn      __get_MCAUSE
+ 207:Drivers/src/core_riscv.c ****  *
+ 208:Drivers/src/core_riscv.c ****  * @brief   Return the Machine Cause Register
+ 209:Drivers/src/core_riscv.c ****  *
+ 210:Drivers/src/core_riscv.c ****  * @return  mcause value
+ 211:Drivers/src/core_riscv.c ****  */
+ 212:Drivers/src/core_riscv.c **** uint32_t __get_MCAUSE(void)
+ 213:Drivers/src/core_riscv.c **** {
+ 419              		.loc 1 213 1
+ 420              		.cfi_startproc
+ 421 0000 0111     		addi	sp,sp,-32
+ 422              		.cfi_def_cfa_offset 32
+ 423 0002 22CE     		sw	s0,28(sp)
+ 424              		.cfi_offset 8, -4
+ 425 0004 0010     		addi	s0,sp,32
+ 426              		.cfi_def_cfa 8, 0
+ 214:Drivers/src/core_riscv.c ****   uint32_t result;
+ 215:Drivers/src/core_riscv.c **** 
+ 216:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mcause" : "=r" (result) );
+ 427              		.loc 1 216 3
+ 428              	 #APP
+ 429              	# 216 "Drivers/src/core_riscv.c" 1
+ 217              	  return (result);
+ 430              		csrr a5,mcause
+ 431              	# 0 "" 2
+ 432              	 #NO_APP
+ 433 000a 2326F4FE 		sw	a5,-20(s0)
+ 434              		.loc 1 217 10
+ 435 000e 8327C4FE 		lw	a5,-20(s0)
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 12
+
+
+ 218:Drivers/src/core_riscv.c **** }
+ 436              		.loc 1 218 1
+ 437 0012 3E85     		mv	a0,a5
+ 438 0014 7244     		lw	s0,28(sp)
+ 439              		.cfi_restore 8
+ 440              		.cfi_def_cfa 2, 32
+ 441 0016 0561     		addi	sp,sp,32
+ 442              		.cfi_def_cfa_offset 0
+ 443 0018 8280     		jr	ra
+ 444              		.cfi_endproc
+ 445              	.LFE12:
+ 447              		.section	.text.__set_MCAUSE,"ax",@progbits
+ 448              		.align	1
+ 449              		.globl	__set_MCAUSE
+ 451              	__set_MCAUSE:
+ 452              	.LFB13:
+ 219:Drivers/src/core_riscv.c **** 
+ 220:Drivers/src/core_riscv.c **** /*********************************************************************
+ 221:Drivers/src/core_riscv.c ****  * @fn      __set_MEPC
+ 222:Drivers/src/core_riscv.c ****  *
+ 223:Drivers/src/core_riscv.c ****  * @brief   Set the Machine Cause Register
+ 224:Drivers/src/core_riscv.c ****  *
+ 225:Drivers/src/core_riscv.c ****  * @return  mcause value
+ 226:Drivers/src/core_riscv.c ****  */
+ 227:Drivers/src/core_riscv.c **** void __set_MCAUSE(uint32_t value)
+ 228:Drivers/src/core_riscv.c **** {
+ 453              		.loc 1 228 1
+ 454              		.cfi_startproc
+ 455 0000 0111     		addi	sp,sp,-32
+ 456              		.cfi_def_cfa_offset 32
+ 457 0002 22CE     		sw	s0,28(sp)
+ 458              		.cfi_offset 8, -4
+ 459 0004 0010     		addi	s0,sp,32
+ 460              		.cfi_def_cfa 8, 0
+ 461 0006 2326A4FE 		sw	a0,-20(s0)
+ 229:Drivers/src/core_riscv.c ****   __ASM volatile ("csrw mcause, %0" : : "r" (value) );
+ 462              		.loc 1 229 3
+ 463 000a 8327C4FE 		lw	a5,-20(s0)
+ 464              	 #APP
+ 465              	# 229 "Drivers/src/core_riscv.c" 1
+ 230              	}
+ 466              		csrw mcause, a5
+ 467              	# 0 "" 2
+ 468              		.loc 1 230 1
+ 469              	 #NO_APP
+ 470 0012 0100     		nop
+ 471 0014 7244     		lw	s0,28(sp)
+ 472              		.cfi_restore 8
+ 473              		.cfi_def_cfa 2, 32
+ 474 0016 0561     		addi	sp,sp,32
+ 475              		.cfi_def_cfa_offset 0
+ 476 0018 8280     		jr	ra
+ 477              		.cfi_endproc
+ 478              	.LFE13:
+ 480              		.section	.text.__get_MTVAL,"ax",@progbits
+ 481              		.align	1
+ 482              		.globl	__get_MTVAL
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 13
+
+
+ 484              	__get_MTVAL:
+ 485              	.LFB14:
+ 231:Drivers/src/core_riscv.c **** 
+ 232:Drivers/src/core_riscv.c **** /*********************************************************************
+ 233:Drivers/src/core_riscv.c ****  * @fn      __get_MTVAL
+ 234:Drivers/src/core_riscv.c ****  *
+ 235:Drivers/src/core_riscv.c ****  * @brief   Return the Machine Trap Value Register
+ 236:Drivers/src/core_riscv.c ****  *
+ 237:Drivers/src/core_riscv.c ****  * @return  mtval value
+ 238:Drivers/src/core_riscv.c ****  */
+ 239:Drivers/src/core_riscv.c **** uint32_t __get_MTVAL(void)
+ 240:Drivers/src/core_riscv.c **** {
+ 486              		.loc 1 240 1
+ 487              		.cfi_startproc
+ 488 0000 0111     		addi	sp,sp,-32
+ 489              		.cfi_def_cfa_offset 32
+ 490 0002 22CE     		sw	s0,28(sp)
+ 491              		.cfi_offset 8, -4
+ 492 0004 0010     		addi	s0,sp,32
+ 493              		.cfi_def_cfa 8, 0
+ 241:Drivers/src/core_riscv.c ****   uint32_t result;
+ 242:Drivers/src/core_riscv.c **** 
+ 243:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mtval" : "=r" (result) );
+ 494              		.loc 1 243 3
+ 495              	 #APP
+ 496              	# 243 "Drivers/src/core_riscv.c" 1
+ 244              	  return (result);
+ 497              		csrr a5,mtval
+ 498              	# 0 "" 2
+ 499              	 #NO_APP
+ 500 000a 2326F4FE 		sw	a5,-20(s0)
+ 501              		.loc 1 244 10
+ 502 000e 8327C4FE 		lw	a5,-20(s0)
+ 245:Drivers/src/core_riscv.c **** }
+ 503              		.loc 1 245 1
+ 504 0012 3E85     		mv	a0,a5
+ 505 0014 7244     		lw	s0,28(sp)
+ 506              		.cfi_restore 8
+ 507              		.cfi_def_cfa 2, 32
+ 508 0016 0561     		addi	sp,sp,32
+ 509              		.cfi_def_cfa_offset 0
+ 510 0018 8280     		jr	ra
+ 511              		.cfi_endproc
+ 512              	.LFE14:
+ 514              		.section	.text.__set_MTVAL,"ax",@progbits
+ 515              		.align	1
+ 516              		.globl	__set_MTVAL
+ 518              	__set_MTVAL:
+ 519              	.LFB15:
+ 246:Drivers/src/core_riscv.c **** 
+ 247:Drivers/src/core_riscv.c **** /*********************************************************************
+ 248:Drivers/src/core_riscv.c ****  * @fn      __set_MTVAL
+ 249:Drivers/src/core_riscv.c ****  *
+ 250:Drivers/src/core_riscv.c ****  * @brief   Set the Machine Trap Value Register
+ 251:Drivers/src/core_riscv.c ****  *
+ 252:Drivers/src/core_riscv.c ****  * @return  mtval value
+ 253:Drivers/src/core_riscv.c ****  */
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 14
+
+
+ 254:Drivers/src/core_riscv.c **** void __set_MTVAL(uint32_t value)
+ 255:Drivers/src/core_riscv.c **** {
+ 520              		.loc 1 255 1
+ 521              		.cfi_startproc
+ 522 0000 0111     		addi	sp,sp,-32
+ 523              		.cfi_def_cfa_offset 32
+ 524 0002 22CE     		sw	s0,28(sp)
+ 525              		.cfi_offset 8, -4
+ 526 0004 0010     		addi	s0,sp,32
+ 527              		.cfi_def_cfa 8, 0
+ 528 0006 2326A4FE 		sw	a0,-20(s0)
+ 256:Drivers/src/core_riscv.c ****   __ASM volatile ("csrw mtval, %0" : : "r" (value) );
+ 529              		.loc 1 256 3
+ 530 000a 8327C4FE 		lw	a5,-20(s0)
+ 531              	 #APP
+ 532              	# 256 "Drivers/src/core_riscv.c" 1
+ 257              	}
+ 533              		csrw mtval, a5
+ 534              	# 0 "" 2
+ 535              		.loc 1 257 1
+ 536              	 #NO_APP
+ 537 0012 0100     		nop
+ 538 0014 7244     		lw	s0,28(sp)
+ 539              		.cfi_restore 8
+ 540              		.cfi_def_cfa 2, 32
+ 541 0016 0561     		addi	sp,sp,32
+ 542              		.cfi_def_cfa_offset 0
+ 543 0018 8280     		jr	ra
+ 544              		.cfi_endproc
+ 545              	.LFE15:
+ 547              		.section	.text.__get_MVENDORID,"ax",@progbits
+ 548              		.align	1
+ 549              		.globl	__get_MVENDORID
+ 551              	__get_MVENDORID:
+ 552              	.LFB16:
+ 258:Drivers/src/core_riscv.c **** 
+ 259:Drivers/src/core_riscv.c **** /*********************************************************************
+ 260:Drivers/src/core_riscv.c ****  * @fn      __get_MVENDORID
+ 261:Drivers/src/core_riscv.c ****  *
+ 262:Drivers/src/core_riscv.c ****  * @brief   Return Vendor ID Register
+ 263:Drivers/src/core_riscv.c ****  *
+ 264:Drivers/src/core_riscv.c ****  * @return  mvendorid value
+ 265:Drivers/src/core_riscv.c ****  */
+ 266:Drivers/src/core_riscv.c **** uint32_t __get_MVENDORID(void)
+ 267:Drivers/src/core_riscv.c **** {
+ 553              		.loc 1 267 1
+ 554              		.cfi_startproc
+ 555 0000 0111     		addi	sp,sp,-32
+ 556              		.cfi_def_cfa_offset 32
+ 557 0002 22CE     		sw	s0,28(sp)
+ 558              		.cfi_offset 8, -4
+ 559 0004 0010     		addi	s0,sp,32
+ 560              		.cfi_def_cfa 8, 0
+ 268:Drivers/src/core_riscv.c ****   uint32_t result;
+ 269:Drivers/src/core_riscv.c **** 
+ 270:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mvendorid" : "=r" (result) );
+ 561              		.loc 1 270 3
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 15
+
+
+ 562              	 #APP
+ 563              	# 270 "Drivers/src/core_riscv.c" 1
+ 271              	  return (result);
+ 564              		csrr a5,mvendorid
+ 565              	# 0 "" 2
+ 566              	 #NO_APP
+ 567 000a 2326F4FE 		sw	a5,-20(s0)
+ 568              		.loc 1 271 10
+ 569 000e 8327C4FE 		lw	a5,-20(s0)
+ 272:Drivers/src/core_riscv.c **** }
+ 570              		.loc 1 272 1
+ 571 0012 3E85     		mv	a0,a5
+ 572 0014 7244     		lw	s0,28(sp)
+ 573              		.cfi_restore 8
+ 574              		.cfi_def_cfa 2, 32
+ 575 0016 0561     		addi	sp,sp,32
+ 576              		.cfi_def_cfa_offset 0
+ 577 0018 8280     		jr	ra
+ 578              		.cfi_endproc
+ 579              	.LFE16:
+ 581              		.section	.text.__get_MARCHID,"ax",@progbits
+ 582              		.align	1
+ 583              		.globl	__get_MARCHID
+ 585              	__get_MARCHID:
+ 586              	.LFB17:
+ 273:Drivers/src/core_riscv.c **** 
+ 274:Drivers/src/core_riscv.c **** /*********************************************************************
+ 275:Drivers/src/core_riscv.c ****  * @fn      __get_MARCHID
+ 276:Drivers/src/core_riscv.c ****  *
+ 277:Drivers/src/core_riscv.c ****  * @brief   Return Machine Architecture ID Register
+ 278:Drivers/src/core_riscv.c ****  *
+ 279:Drivers/src/core_riscv.c ****  * @return  marchid value
+ 280:Drivers/src/core_riscv.c ****  */
+ 281:Drivers/src/core_riscv.c **** uint32_t __get_MARCHID(void)
+ 282:Drivers/src/core_riscv.c **** {
+ 587              		.loc 1 282 1
+ 588              		.cfi_startproc
+ 589 0000 0111     		addi	sp,sp,-32
+ 590              		.cfi_def_cfa_offset 32
+ 591 0002 22CE     		sw	s0,28(sp)
+ 592              		.cfi_offset 8, -4
+ 593 0004 0010     		addi	s0,sp,32
+ 594              		.cfi_def_cfa 8, 0
+ 283:Drivers/src/core_riscv.c ****   uint32_t result;
+ 284:Drivers/src/core_riscv.c **** 
+ 285:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "marchid" : "=r" (result) );
+ 595              		.loc 1 285 3
+ 596              	 #APP
+ 597              	# 285 "Drivers/src/core_riscv.c" 1
+ 286              	  return (result);
+ 598              		csrr a5,marchid
+ 599              	# 0 "" 2
+ 600              	 #NO_APP
+ 601 000a 2326F4FE 		sw	a5,-20(s0)
+ 602              		.loc 1 286 10
+ 603 000e 8327C4FE 		lw	a5,-20(s0)
+ 287:Drivers/src/core_riscv.c **** }
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 16
+
+
+ 604              		.loc 1 287 1
+ 605 0012 3E85     		mv	a0,a5
+ 606 0014 7244     		lw	s0,28(sp)
+ 607              		.cfi_restore 8
+ 608              		.cfi_def_cfa 2, 32
+ 609 0016 0561     		addi	sp,sp,32
+ 610              		.cfi_def_cfa_offset 0
+ 611 0018 8280     		jr	ra
+ 612              		.cfi_endproc
+ 613              	.LFE17:
+ 615              		.section	.text.__get_MIMPID,"ax",@progbits
+ 616              		.align	1
+ 617              		.globl	__get_MIMPID
+ 619              	__get_MIMPID:
+ 620              	.LFB18:
+ 288:Drivers/src/core_riscv.c **** 
+ 289:Drivers/src/core_riscv.c **** /*********************************************************************
+ 290:Drivers/src/core_riscv.c ****  * @fn      __get_MIMPID
+ 291:Drivers/src/core_riscv.c ****  *
+ 292:Drivers/src/core_riscv.c ****  * @brief   Return Machine Implementation ID Register
+ 293:Drivers/src/core_riscv.c ****  *
+ 294:Drivers/src/core_riscv.c ****  * @return  mimpid value
+ 295:Drivers/src/core_riscv.c ****  */
+ 296:Drivers/src/core_riscv.c **** uint32_t __get_MIMPID(void)
+ 297:Drivers/src/core_riscv.c **** {
+ 621              		.loc 1 297 1
+ 622              		.cfi_startproc
+ 623 0000 0111     		addi	sp,sp,-32
+ 624              		.cfi_def_cfa_offset 32
+ 625 0002 22CE     		sw	s0,28(sp)
+ 626              		.cfi_offset 8, -4
+ 627 0004 0010     		addi	s0,sp,32
+ 628              		.cfi_def_cfa 8, 0
+ 298:Drivers/src/core_riscv.c ****   uint32_t result;
+ 299:Drivers/src/core_riscv.c **** 
+ 300:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mimpid" : "=r" (result) );
+ 629              		.loc 1 300 3
+ 630              	 #APP
+ 631              	# 300 "Drivers/src/core_riscv.c" 1
+ 301              	  return (result);
+ 632              		csrr a5,mimpid
+ 633              	# 0 "" 2
+ 634              	 #NO_APP
+ 635 000a 2326F4FE 		sw	a5,-20(s0)
+ 636              		.loc 1 301 10
+ 637 000e 8327C4FE 		lw	a5,-20(s0)
+ 302:Drivers/src/core_riscv.c **** }
+ 638              		.loc 1 302 1
+ 639 0012 3E85     		mv	a0,a5
+ 640 0014 7244     		lw	s0,28(sp)
+ 641              		.cfi_restore 8
+ 642              		.cfi_def_cfa 2, 32
+ 643 0016 0561     		addi	sp,sp,32
+ 644              		.cfi_def_cfa_offset 0
+ 645 0018 8280     		jr	ra
+ 646              		.cfi_endproc
+ 647              	.LFE18:
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 17
+
+
+ 649              		.section	.text.__get_MHARTID,"ax",@progbits
+ 650              		.align	1
+ 651              		.globl	__get_MHARTID
+ 653              	__get_MHARTID:
+ 654              	.LFB19:
+ 303:Drivers/src/core_riscv.c **** 
+ 304:Drivers/src/core_riscv.c **** /*********************************************************************
+ 305:Drivers/src/core_riscv.c ****  * @fn      __get_MHARTID
+ 306:Drivers/src/core_riscv.c ****  *
+ 307:Drivers/src/core_riscv.c ****  * @brief   Return Hart ID Register
+ 308:Drivers/src/core_riscv.c ****  *
+ 309:Drivers/src/core_riscv.c ****  * @return  mhartid value
+ 310:Drivers/src/core_riscv.c ****  */
+ 311:Drivers/src/core_riscv.c **** uint32_t __get_MHARTID(void)
+ 312:Drivers/src/core_riscv.c **** {
+ 655              		.loc 1 312 1
+ 656              		.cfi_startproc
+ 657 0000 0111     		addi	sp,sp,-32
+ 658              		.cfi_def_cfa_offset 32
+ 659 0002 22CE     		sw	s0,28(sp)
+ 660              		.cfi_offset 8, -4
+ 661 0004 0010     		addi	s0,sp,32
+ 662              		.cfi_def_cfa 8, 0
+ 313:Drivers/src/core_riscv.c ****   uint32_t result;
+ 314:Drivers/src/core_riscv.c **** 
+ 315:Drivers/src/core_riscv.c ****   __ASM volatile ( "csrr %0," "mhartid" : "=r" (result) );
+ 663              		.loc 1 315 3
+ 664              	 #APP
+ 665              	# 315 "Drivers/src/core_riscv.c" 1
+ 316              	  return (result);
+ 666              		csrr a5,mhartid
+ 667              	# 0 "" 2
+ 668              	 #NO_APP
+ 669 000a 2326F4FE 		sw	a5,-20(s0)
+ 670              		.loc 1 316 10
+ 671 000e 8327C4FE 		lw	a5,-20(s0)
+ 317:Drivers/src/core_riscv.c **** }
+ 672              		.loc 1 317 1
+ 673 0012 3E85     		mv	a0,a5
+ 674 0014 7244     		lw	s0,28(sp)
+ 675              		.cfi_restore 8
+ 676              		.cfi_def_cfa 2, 32
+ 677 0016 0561     		addi	sp,sp,32
+ 678              		.cfi_def_cfa_offset 0
+ 679 0018 8280     		jr	ra
+ 680              		.cfi_endproc
+ 681              	.LFE19:
+ 683              		.section	.text.__get_SP,"ax",@progbits
+ 684              		.align	1
+ 685              		.globl	__get_SP
+ 687              	__get_SP:
+ 688              	.LFB20:
+ 318:Drivers/src/core_riscv.c **** 
+ 319:Drivers/src/core_riscv.c **** /*********************************************************************
+ 320:Drivers/src/core_riscv.c ****  * @fn      __get_SP
+ 321:Drivers/src/core_riscv.c ****  *
+ 322:Drivers/src/core_riscv.c ****  * @brief   Return SP Register
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 18
+
+
+ 323:Drivers/src/core_riscv.c ****  *
+ 324:Drivers/src/core_riscv.c ****  * @return  SP value
+ 325:Drivers/src/core_riscv.c ****  */
+ 326:Drivers/src/core_riscv.c **** uint32_t __get_SP(void)
+ 327:Drivers/src/core_riscv.c **** {
+ 689              		.loc 1 327 1
+ 690              		.cfi_startproc
+ 691 0000 0111     		addi	sp,sp,-32
+ 692              		.cfi_def_cfa_offset 32
+ 693 0002 22CE     		sw	s0,28(sp)
+ 694              		.cfi_offset 8, -4
+ 695 0004 0010     		addi	s0,sp,32
+ 696              		.cfi_def_cfa 8, 0
+ 328:Drivers/src/core_riscv.c ****   uint32_t result;
+ 329:Drivers/src/core_riscv.c **** 
+ 330:Drivers/src/core_riscv.c ****   __ASM volatile ( "mv %0," "sp" : "=r"(result) : );
+ 697              		.loc 1 330 3
+ 698              	 #APP
+ 699              	# 330 "Drivers/src/core_riscv.c" 1
+ 331              	  return (result);
+ 700              		mv a5,sp
+ 701              	# 0 "" 2
+ 702              	 #NO_APP
+ 703 0008 2326F4FE 		sw	a5,-20(s0)
+ 704              		.loc 1 331 10
+ 705 000c 8327C4FE 		lw	a5,-20(s0)
+ 332:Drivers/src/core_riscv.c **** }
+ 706              		.loc 1 332 1
+ 707 0010 3E85     		mv	a0,a5
+ 708 0012 7244     		lw	s0,28(sp)
+ 709              		.cfi_restore 8
+ 710              		.cfi_def_cfa 2, 32
+ 711 0014 0561     		addi	sp,sp,32
+ 712              		.cfi_def_cfa_offset 0
+ 713 0016 8280     		jr	ra
+ 714              		.cfi_endproc
+ 715              	.LFE20:
+ 717              		.text
+ 718              	.Letext0:
+ 719              		.file 2 "c:\\dev_tools\\ch32_tools\\risc-v_embedded_gcc12\\riscv-none-elf\\include\\machine\\_defa
+ 720              		.file 3 "c:\\dev_tools\\ch32_tools\\risc-v_embedded_gcc12\\riscv-none-elf\\include\\sys\\_stdint.h
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 19
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 core_riscv.c
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:14     .text.__get_MSTATUS:0000000000000000 __get_MSTATUS
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:18     .text.__get_MSTATUS:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:19     .text.__get_MSTATUS:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:19     .text.__get_MSTATUS:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:20     .text.__get_MSTATUS:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:22     .text.__get_MSTATUS:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:24     .text.__get_MSTATUS:0000000000000006 .L0 
+Drivers/src/core_riscv.c:44     .text.__get_MSTATUS:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:33     .text.__get_MSTATUS:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:35     .text.__get_MSTATUS:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:37     .text.__get_MSTATUS:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:38     .text.__get_MSTATUS:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:40     .text.__get_MSTATUS:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:42     .text.__get_MSTATUS:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:49     .text.__set_MSTATUS:0000000000000000 __set_MSTATUS
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:52     .text.__set_MSTATUS:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:53     .text.__set_MSTATUS:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:53     .text.__set_MSTATUS:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:54     .text.__set_MSTATUS:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:56     .text.__set_MSTATUS:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:58     .text.__set_MSTATUS:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:61     .text.__set_MSTATUS:000000000000000a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:68     .text.__set_MSTATUS:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:70     .text.__set_MSTATUS:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:71     .text.__set_MSTATUS:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:73     .text.__set_MSTATUS:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:75     .text.__set_MSTATUS:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:82     .text.__get_MISA:0000000000000000 __get_MISA
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:85     .text.__get_MISA:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:86     .text.__get_MISA:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:86     .text.__get_MISA:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:87     .text.__get_MISA:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:89     .text.__get_MISA:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:91     .text.__get_MISA:0000000000000006 .L0 
+Drivers/src/core_riscv.c:73     .text.__get_MISA:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:100    .text.__get_MISA:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:102    .text.__get_MISA:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:104    .text.__get_MISA:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:105    .text.__get_MISA:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:107    .text.__get_MISA:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:109    .text.__get_MISA:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:116    .text.__set_MISA:0000000000000000 __set_MISA
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:119    .text.__set_MISA:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:120    .text.__set_MISA:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:120    .text.__set_MISA:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:121    .text.__set_MISA:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:123    .text.__set_MISA:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:125    .text.__set_MISA:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:128    .text.__set_MISA:000000000000000a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:135    .text.__set_MISA:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:137    .text.__set_MISA:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:138    .text.__set_MISA:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:140    .text.__set_MISA:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:142    .text.__set_MISA:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:149    .text.__get_MIE:0000000000000000 __get_MIE
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 20
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:152    .text.__get_MIE:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:153    .text.__get_MIE:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:153    .text.__get_MIE:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:154    .text.__get_MIE:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:156    .text.__get_MIE:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:158    .text.__get_MIE:0000000000000006 .L0 
+Drivers/src/core_riscv.c:102    .text.__get_MIE:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:167    .text.__get_MIE:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:169    .text.__get_MIE:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:171    .text.__get_MIE:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:172    .text.__get_MIE:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:174    .text.__get_MIE:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:176    .text.__get_MIE:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:183    .text.__set_MIE:0000000000000000 __set_MIE
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:186    .text.__set_MIE:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:187    .text.__set_MIE:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:187    .text.__set_MIE:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:188    .text.__set_MIE:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:190    .text.__set_MIE:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:192    .text.__set_MIE:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:195    .text.__set_MIE:000000000000000a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:202    .text.__set_MIE:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:204    .text.__set_MIE:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:205    .text.__set_MIE:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:207    .text.__set_MIE:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:209    .text.__set_MIE:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:216    .text.__get_MTVEC:0000000000000000 __get_MTVEC
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:219    .text.__get_MTVEC:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:220    .text.__get_MTVEC:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:220    .text.__get_MTVEC:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:221    .text.__get_MTVEC:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:223    .text.__get_MTVEC:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:225    .text.__get_MTVEC:0000000000000006 .L0 
+Drivers/src/core_riscv.c:131    .text.__get_MTVEC:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:234    .text.__get_MTVEC:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:236    .text.__get_MTVEC:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:238    .text.__get_MTVEC:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:239    .text.__get_MTVEC:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:241    .text.__get_MTVEC:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:243    .text.__get_MTVEC:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:250    .text.__set_MTVEC:0000000000000000 __set_MTVEC
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:253    .text.__set_MTVEC:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:254    .text.__set_MTVEC:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:254    .text.__set_MTVEC:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:255    .text.__set_MTVEC:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:257    .text.__set_MTVEC:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:259    .text.__set_MTVEC:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:262    .text.__set_MTVEC:000000000000000a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:269    .text.__set_MTVEC:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:271    .text.__set_MTVEC:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:272    .text.__set_MTVEC:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:274    .text.__set_MTVEC:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:276    .text.__set_MTVEC:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:283    .text.__get_MSCRATCH:0000000000000000 __get_MSCRATCH
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:286    .text.__get_MSCRATCH:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:287    .text.__get_MSCRATCH:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:287    .text.__get_MSCRATCH:0000000000000000 .L0 
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 21
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:288    .text.__get_MSCRATCH:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:290    .text.__get_MSCRATCH:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:292    .text.__get_MSCRATCH:0000000000000006 .L0 
+Drivers/src/core_riscv.c:160    .text.__get_MSCRATCH:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:301    .text.__get_MSCRATCH:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:303    .text.__get_MSCRATCH:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:305    .text.__get_MSCRATCH:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:306    .text.__get_MSCRATCH:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:308    .text.__get_MSCRATCH:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:310    .text.__get_MSCRATCH:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:317    .text.__set_MSCRATCH:0000000000000000 __set_MSCRATCH
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:320    .text.__set_MSCRATCH:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:321    .text.__set_MSCRATCH:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:321    .text.__set_MSCRATCH:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:322    .text.__set_MSCRATCH:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:324    .text.__set_MSCRATCH:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:326    .text.__set_MSCRATCH:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:329    .text.__set_MSCRATCH:000000000000000a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:336    .text.__set_MSCRATCH:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:338    .text.__set_MSCRATCH:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:339    .text.__set_MSCRATCH:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:341    .text.__set_MSCRATCH:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:343    .text.__set_MSCRATCH:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:350    .text.__get_MEPC:0000000000000000 __get_MEPC
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:353    .text.__get_MEPC:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:354    .text.__get_MEPC:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:354    .text.__get_MEPC:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:355    .text.__get_MEPC:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:357    .text.__get_MEPC:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:359    .text.__get_MEPC:0000000000000006 .L0 
+Drivers/src/core_riscv.c:189    .text.__get_MEPC:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:368    .text.__get_MEPC:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:370    .text.__get_MEPC:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:372    .text.__get_MEPC:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:373    .text.__get_MEPC:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:375    .text.__get_MEPC:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:377    .text.__get_MEPC:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:384    .text.__set_MEPC:0000000000000000 __set_MEPC
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:387    .text.__set_MEPC:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:388    .text.__set_MEPC:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:388    .text.__set_MEPC:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:389    .text.__set_MEPC:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:391    .text.__set_MEPC:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:393    .text.__set_MEPC:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:396    .text.__set_MEPC:000000000000000a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:403    .text.__set_MEPC:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:405    .text.__set_MEPC:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:406    .text.__set_MEPC:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:408    .text.__set_MEPC:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:410    .text.__set_MEPC:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:417    .text.__get_MCAUSE:0000000000000000 __get_MCAUSE
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:420    .text.__get_MCAUSE:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:421    .text.__get_MCAUSE:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:421    .text.__get_MCAUSE:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:422    .text.__get_MCAUSE:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:424    .text.__get_MCAUSE:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:426    .text.__get_MCAUSE:0000000000000006 .L0 
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 22
+
+
+Drivers/src/core_riscv.c:216    .text.__get_MCAUSE:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:435    .text.__get_MCAUSE:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:437    .text.__get_MCAUSE:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:439    .text.__get_MCAUSE:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:440    .text.__get_MCAUSE:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:442    .text.__get_MCAUSE:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:444    .text.__get_MCAUSE:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:451    .text.__set_MCAUSE:0000000000000000 __set_MCAUSE
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:454    .text.__set_MCAUSE:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:455    .text.__set_MCAUSE:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:455    .text.__set_MCAUSE:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:456    .text.__set_MCAUSE:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:458    .text.__set_MCAUSE:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:460    .text.__set_MCAUSE:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:463    .text.__set_MCAUSE:000000000000000a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:470    .text.__set_MCAUSE:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:472    .text.__set_MCAUSE:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:473    .text.__set_MCAUSE:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:475    .text.__set_MCAUSE:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:477    .text.__set_MCAUSE:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:484    .text.__get_MTVAL:0000000000000000 __get_MTVAL
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:487    .text.__get_MTVAL:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:488    .text.__get_MTVAL:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:488    .text.__get_MTVAL:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:489    .text.__get_MTVAL:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:491    .text.__get_MTVAL:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:493    .text.__get_MTVAL:0000000000000006 .L0 
+Drivers/src/core_riscv.c:243    .text.__get_MTVAL:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:502    .text.__get_MTVAL:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:504    .text.__get_MTVAL:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:506    .text.__get_MTVAL:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:507    .text.__get_MTVAL:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:509    .text.__get_MTVAL:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:511    .text.__get_MTVAL:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:518    .text.__set_MTVAL:0000000000000000 __set_MTVAL
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:521    .text.__set_MTVAL:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:522    .text.__set_MTVAL:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:522    .text.__set_MTVAL:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:523    .text.__set_MTVAL:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:525    .text.__set_MTVAL:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:527    .text.__set_MTVAL:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:530    .text.__set_MTVAL:000000000000000a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:537    .text.__set_MTVAL:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:539    .text.__set_MTVAL:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:540    .text.__set_MTVAL:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:542    .text.__set_MTVAL:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:544    .text.__set_MTVAL:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:551    .text.__get_MVENDORID:0000000000000000 __get_MVENDORID
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:554    .text.__get_MVENDORID:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:555    .text.__get_MVENDORID:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:555    .text.__get_MVENDORID:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:556    .text.__get_MVENDORID:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:558    .text.__get_MVENDORID:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:560    .text.__get_MVENDORID:0000000000000006 .L0 
+Drivers/src/core_riscv.c:270    .text.__get_MVENDORID:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:569    .text.__get_MVENDORID:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:571    .text.__get_MVENDORID:0000000000000012 .L0 
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 23
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:573    .text.__get_MVENDORID:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:574    .text.__get_MVENDORID:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:576    .text.__get_MVENDORID:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:578    .text.__get_MVENDORID:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:585    .text.__get_MARCHID:0000000000000000 __get_MARCHID
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:588    .text.__get_MARCHID:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:589    .text.__get_MARCHID:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:589    .text.__get_MARCHID:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:590    .text.__get_MARCHID:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:592    .text.__get_MARCHID:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:594    .text.__get_MARCHID:0000000000000006 .L0 
+Drivers/src/core_riscv.c:285    .text.__get_MARCHID:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:603    .text.__get_MARCHID:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:605    .text.__get_MARCHID:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:607    .text.__get_MARCHID:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:608    .text.__get_MARCHID:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:610    .text.__get_MARCHID:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:612    .text.__get_MARCHID:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:619    .text.__get_MIMPID:0000000000000000 __get_MIMPID
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:622    .text.__get_MIMPID:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:623    .text.__get_MIMPID:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:623    .text.__get_MIMPID:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:624    .text.__get_MIMPID:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:626    .text.__get_MIMPID:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:628    .text.__get_MIMPID:0000000000000006 .L0 
+Drivers/src/core_riscv.c:300    .text.__get_MIMPID:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:637    .text.__get_MIMPID:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:639    .text.__get_MIMPID:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:641    .text.__get_MIMPID:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:642    .text.__get_MIMPID:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:644    .text.__get_MIMPID:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:646    .text.__get_MIMPID:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:653    .text.__get_MHARTID:0000000000000000 __get_MHARTID
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:656    .text.__get_MHARTID:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:657    .text.__get_MHARTID:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:657    .text.__get_MHARTID:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:658    .text.__get_MHARTID:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:660    .text.__get_MHARTID:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:662    .text.__get_MHARTID:0000000000000006 .L0 
+Drivers/src/core_riscv.c:315    .text.__get_MHARTID:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:671    .text.__get_MHARTID:000000000000000e .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:673    .text.__get_MHARTID:0000000000000012 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:675    .text.__get_MHARTID:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:676    .text.__get_MHARTID:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:678    .text.__get_MHARTID:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:680    .text.__get_MHARTID:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:687    .text.__get_SP:0000000000000000 __get_SP
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:690    .text.__get_SP:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:691    .text.__get_SP:0000000000000000 $x
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:691    .text.__get_SP:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:692    .text.__get_SP:0000000000000002 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:694    .text.__get_SP:0000000000000004 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:696    .text.__get_SP:0000000000000006 .L0 
+Drivers/src/core_riscv.c:330    .text.__get_SP:0000000000000006 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:705    .text.__get_SP:000000000000000c .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:707    .text.__get_SP:0000000000000010 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:709    .text.__get_SP:0000000000000014 .L0 
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 24
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:710    .text.__get_SP:0000000000000014 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:712    .text.__get_SP:0000000000000016 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:714    .text.__get_SP:0000000000000018 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:0000000000000063 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:00000000000000ad .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:00000000000000b9 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:0000000000000106 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:000000000000014f .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:00000000000001a3 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:00000000000001e8 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:00000000000001f5 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:0000000000000202 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:0000000000000213 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:000000000000021d .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:0000000000000226 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:000000000000022f .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:000000000000023a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4086   .debug_line_str:000000000000024c .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:45     .text.__get_MSTATUS:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:78     .text.__set_MSTATUS:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:112    .text.__get_MISA:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:145    .text.__set_MISA:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:179    .text.__get_MIE:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:212    .text.__set_MIE:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:246    .text.__get_MTVEC:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:279    .text.__set_MTVEC:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:313    .text.__get_MSCRATCH:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:346    .text.__set_MSCRATCH:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:380    .text.__get_MEPC:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:413    .text.__set_MEPC:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:447    .text.__get_MCAUSE:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:480    .text.__set_MCAUSE:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:514    .text.__get_MTVAL:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:547    .text.__set_MTVAL:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:581    .text.__get_MVENDORID:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:615    .text.__get_MARCHID:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:649    .text.__get_MIMPID:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:683    .text.__get_MHARTID:000000000000001a .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:717    .text.__get_SP:0000000000000018 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:1149   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3707   .debug_str:00000000000021bb .LASF512
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4082   .debug_line_str:0000000000000000 .LASF0
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4084   .debug_line_str:0000000000000019 .LASF1
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:1443   .debug_rnglists:000000000000000c .LLRL0
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3057   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:1510   .debug_macro:0000000000000000 .Ldebug_macro0
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3245   .debug_str:00000000000009d9 .LASF478
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3913   .debug_str:0000000000002cdf .LASF479
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3749   .debug_str:00000000000024cd .LASF480
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3997   .debug_str:0000000000003135 .LASF481
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3059   .debug_str:0000000000000000 .LASF482
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3917   .debug_str:0000000000002cfb .LASF487
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3871   .debug_str:0000000000002ac4 .LASF483
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3563   .debug_str:00000000000019cc .LASF484
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3309   .debug_str:0000000000000cb7 .LASF485
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3129   .debug_str:0000000000000457 .LASF486
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 25
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3255   .debug_str:0000000000000a32 .LASF488
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3283   .debug_str:0000000000000b51 .LASF489
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:688    .text.__get_SP:0000000000000000 .LFB20
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:715    .text.__get_SP:0000000000000018 .LFE20
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3277   .debug_str:0000000000000b1e .LASF491
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4037   .debug_str:000000000000334d .LASF490
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:654    .text.__get_MHARTID:0000000000000000 .LFB19
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:681    .text.__get_MHARTID:000000000000001a .LFE19
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3861   .debug_str:0000000000002a57 .LASF492
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:620    .text.__get_MIMPID:0000000000000000 .LFB18
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:647    .text.__get_MIMPID:000000000000001a .LFE18
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3405   .debug_str:000000000000118a .LASF493
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:586    .text.__get_MARCHID:0000000000000000 .LFB17
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:613    .text.__get_MARCHID:000000000000001a .LFE17
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3809   .debug_str:0000000000002780 .LASF494
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:552    .text.__get_MVENDORID:0000000000000000 .LFB16
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:579    .text.__get_MVENDORID:000000000000001a .LFE16
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3831   .debug_str:00000000000028e1 .LASF496
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:519    .text.__set_MTVAL:0000000000000000 .LFB15
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:545    .text.__set_MTVAL:000000000000001a .LFE15
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3355   .debug_str:0000000000000f08 .LASF498
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3511   .debug_str:0000000000001763 .LASF495
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:485    .text.__get_MTVAL:0000000000000000 .LFB14
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:512    .text.__get_MTVAL:000000000000001a .LFE14
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3385   .debug_str:0000000000001063 .LASF497
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:452    .text.__set_MCAUSE:0000000000000000 .LFB13
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:478    .text.__set_MCAUSE:000000000000001a .LFE13
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3673   .debug_str:0000000000001fb1 .LASF499
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:418    .text.__get_MCAUSE:0000000000000000 .LFB12
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:445    .text.__get_MCAUSE:000000000000001a .LFE12
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3445   .debug_str:00000000000013d3 .LASF500
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:385    .text.__set_MEPC:0000000000000000 .LFB11
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:411    .text.__set_MEPC:000000000000001a .LFE11
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4065   .debug_str:000000000000354c .LASF501
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:351    .text.__get_MEPC:0000000000000000 .LFB10
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:378    .text.__get_MEPC:000000000000001a .LFE10
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3789   .debug_str:000000000000268f .LASF502
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:318    .text.__set_MSCRATCH:0000000000000000 .LFB9
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:344    .text.__set_MSCRATCH:000000000000001a .LFE9
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3631   .debug_str:0000000000001dbb .LASF503
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:284    .text.__get_MSCRATCH:0000000000000000 .LFB8
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:311    .text.__get_MSCRATCH:000000000000001a .LFE8
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3233   .debug_str:0000000000000950 .LASF504
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:251    .text.__set_MTVEC:0000000000000000 .LFB7
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:277    .text.__set_MTVEC:000000000000001a .LFE7
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3799   .debug_str:0000000000002709 .LASF505
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:217    .text.__get_MTVEC:0000000000000000 .LFB6
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:244    .text.__get_MTVEC:000000000000001a .LFE6
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3891   .debug_str:0000000000002bdb .LASF506
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:184    .text.__set_MIE:0000000000000000 .LFB5
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:210    .text.__set_MIE:000000000000001a .LFE5
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3195   .debug_str:00000000000007a4 .LASF507
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:150    .text.__get_MIE:0000000000000000 .LFB4
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:177    .text.__get_MIE:000000000000001a .LFE4
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3231   .debug_str:0000000000000945 .LASF508
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:117    .text.__set_MISA:0000000000000000 .LFB3
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:143    .text.__set_MISA:000000000000001a .LFE3
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 26
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3837   .debug_str:000000000000291a .LASF509
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:83     .text.__get_MISA:0000000000000000 .LFB2
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:110    .text.__get_MISA:000000000000001a .LFE2
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3993   .debug_str:000000000000310a .LASF510
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:50     .text.__set_MSTATUS:0000000000000000 .LFB1
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:76     .text.__set_MSTATUS:000000000000001a .LFE1
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4007   .debug_str:0000000000003192 .LASF511
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:15     .text.__get_MSTATUS:0000000000000000 .LFB0
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:43     .text.__get_MSTATUS:000000000000001a .LFE0
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:722    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:1585   .debug_macro:0000000000000000 .Ldebug_macro2
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4045   .debug_str:00000000000033de .LASF318
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3553   .debug_str:000000000000195a .LASF319
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3655   .debug_str:0000000000001ec0 .LASF320
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:2538   .debug_macro:0000000000000000 .Ldebug_macro3
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:2558   .debug_macro:0000000000000000 .Ldebug_macro4
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:2623   .debug_macro:0000000000000000 .Ldebug_macro5
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:2664   .debug_macro:0000000000000000 .Ldebug_macro6
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:2789   .debug_macro:0000000000000000 .Ldebug_macro7
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:2845   .debug_macro:0000000000000000 .Ldebug_macro8
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3257   .debug_str:0000000000000a3b .LASF475
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3939   .debug_str:0000000000002e40 .LASF476
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3345   .debug_str:0000000000000e89 .LASF477
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3615   .debug_str:0000000000001d08 .LASF2
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3525   .debug_str:0000000000001811 .LASF3
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3665   .debug_str:0000000000001f54 .LASF4
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3207   .debug_str:0000000000000810 .LASF5
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3887   .debug_str:0000000000002bb4 .LASF6
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3303   .debug_str:0000000000000c6d .LASF7
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3125   .debug_str:0000000000000406 .LASF8
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3651   .debug_str:0000000000001e9b .LASF9
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3705   .debug_str:00000000000021a6 .LASF10
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3223   .debug_str:00000000000008d9 .LASF11
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3333   .debug_str:0000000000000df7 .LASF12
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3701   .debug_str:0000000000002171 .LASF13
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3157   .debug_str:00000000000005c6 .LASF14
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3909   .debug_str:0000000000002cbc .LASF15
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3589   .debug_str:0000000000001b3d .LASF16
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3579   .debug_str:0000000000001a9e .LASF17
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3971   .debug_str:0000000000002fc6 .LASF18
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3617   .debug_str:0000000000001d13 .LASF19
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3815   .debug_str:00000000000027e1 .LASF20
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3177   .debug_str:0000000000000681 .LASF21
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4001   .debug_str:000000000000314d .LASF22
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3649   .debug_str:0000000000001e87 .LASF23
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3331   .debug_str:0000000000000ddd .LASF24
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3139   .debug_str:00000000000004e5 .LASF25
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3565   .debug_str:00000000000019da .LASF26
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4005   .debug_str:0000000000003179 .LASF27
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3361   .debug_str:0000000000000f40 .LASF28
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3145   .debug_str:0000000000000539 .LASF29
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3729   .debug_str:000000000000239e .LASF30
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3191   .debug_str:0000000000000743 .LASF31
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3689   .debug_str:000000000000209e .LASF32
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3835   .debug_str:0000000000002905 .LASF33
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4039   .debug_str:000000000000335b .LASF34
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3935   .debug_str:0000000000002df7 .LASF35
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 27
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3937   .debug_str:0000000000002e25 .LASF36
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3161   .debug_str:00000000000005f0 .LASF37
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3313   .debug_str:0000000000000cf1 .LASF38
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3635   .debug_str:0000000000001de2 .LASF39
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3973   .debug_str:0000000000002fd7 .LASF40
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3715   .debug_str:00000000000022c8 .LASF41
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3141   .debug_str:00000000000004f9 .LASF42
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3703   .debug_str:0000000000002184 .LASF43
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4063   .debug_str:0000000000003534 .LASF44
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3781   .debug_str:000000000000262a .LASF45
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3165   .debug_str:0000000000000619 .LASF46
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3753   .debug_str:00000000000024ee .LASF47
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3657   .debug_str:0000000000001ed1 .LASF48
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3817   .debug_str:00000000000027f8 .LASF49
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3423   .debug_str:0000000000001277 .LASF50
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3829   .debug_str:00000000000028bf .LASF51
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3985   .debug_str:0000000000003095 .LASF52
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3317   .debug_str:0000000000000d16 .LASF53
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3535   .debug_str:000000000000188b .LASF54
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3319   .debug_str:0000000000000d36 .LASF55
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3825   .debug_str:0000000000002880 .LASF56
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3575   .debug_str:0000000000001a73 .LASF57
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3439   .debug_str:0000000000001358 .LASF58
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3711   .debug_str:000000000000228c .LASF59
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3153   .debug_str:0000000000000582 .LASF60
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3337   .debug_str:0000000000000e24 .LASF61
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3413   .debug_str:0000000000001201 .LASF62
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3967   .debug_str:0000000000002f96 .LASF63
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3241   .debug_str:000000000000099c .LASF64
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3065   .debug_str:000000000000003c .LASF65
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3473   .debug_str:0000000000001580 .LASF66
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3757   .debug_str:0000000000002523 .LASF67
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3305   .debug_str:0000000000000c79 .LASF68
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3923   .debug_str:0000000000002d4e .LASF69
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3263   .debug_str:0000000000000a66 .LASF70
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3751   .debug_str:00000000000024d7 .LASF71
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3213   .debug_str:0000000000000859 .LASF72
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3725   .debug_str:000000000000235f .LASF73
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3155   .debug_str:00000000000005af .LASF74
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3637   .debug_str:0000000000001dfd .LASF75
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3435   .debug_str:0000000000001323 .LASF76
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3841   .debug_str:0000000000002935 .LASF77
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3201   .debug_str:00000000000007d1 .LASF78
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3783   .debug_str:0000000000002644 .LASF79
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3123   .debug_str:00000000000003f6 .LASF80
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3293   .debug_str:0000000000000be8 .LASF81
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3227   .debug_str:0000000000000914 .LASF82
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3643   .debug_str:0000000000001e43 .LASF83
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3819   .debug_str:0000000000002815 .LASF84
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3851   .debug_str:00000000000029e1 .LASF85
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3699   .debug_str:000000000000215f .LASF86
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3109   .debug_str:00000000000002d6 .LASF87
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3427   .debug_str:00000000000012d4 .LASF88
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3737   .debug_str:0000000000002402 .LASF89
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3955   .debug_str:0000000000002ee9 .LASF90
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3691   .debug_str:00000000000020cb .LASF91
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3349   .debug_str:0000000000000eb1 .LASF92
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 28
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3979   .debug_str:0000000000003046 .LASF93
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3879   .debug_str:0000000000002b3c .LASF94
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3187   .debug_str:0000000000000713 .LASF95
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3527   .debug_str:000000000000182a .LASF96
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3391   .debug_str:00000000000010b4 .LASF97
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3697   .debug_str:0000000000002132 .LASF98
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3717   .debug_str:00000000000022f0 .LASF99
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3315   .debug_str:0000000000000d04 .LASF100
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3639   .debug_str:0000000000001e16 .LASF101
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3733   .debug_str:00000000000023ce .LASF102
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3311   .debug_str:0000000000000cce .LASF103
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3515   .debug_str:0000000000001786 .LASF104
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3517   .debug_str:0000000000001799 .LASF105
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3675   .debug_str:0000000000001fbe .LASF106
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3601   .debug_str:0000000000001c1c .LASF107
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3181   .debug_str:00000000000006aa .LASF108
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3543   .debug_str:00000000000018ec .LASF109
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3513   .debug_str:000000000000176f .LASF110
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3209   .debug_str:0000000000000822 .LASF111
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3597   .debug_str:0000000000001bf1 .LASF112
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3249   .debug_str:00000000000009f6 .LASF113
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4053   .debug_str:000000000000345f .LASF114
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4025   .debug_str:00000000000032c1 .LASF115
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3931   .debug_str:0000000000002db6 .LASF116
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3499   .debug_str:00000000000016cd .LASF117
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3807   .debug_str:000000000000276b .LASF118
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3357   .debug_str:0000000000000f0e .LASF119
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3797   .debug_str:00000000000026f0 .LASF120
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3653   .debug_str:0000000000001eb1 .LASF121
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3299   .debug_str:0000000000000c39 .LASF122
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3135   .debug_str:00000000000004c7 .LASF123
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3771   .debug_str:00000000000025c3 .LASF124
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3079   .debug_str:0000000000000113 .LASF125
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3849   .debug_str:00000000000029b6 .LASF126
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3857   .debug_str:0000000000002a2d .LASF127
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3143   .debug_str:000000000000051c .LASF128
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4013   .debug_str:0000000000003208 .LASF129
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3281   .debug_str:0000000000000b33 .LASF130
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3077   .debug_str:00000000000000fb .LASF131
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3603   .debug_str:0000000000001c41 .LASF132
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3629   .debug_str:0000000000001da3 .LASF133
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3273   .debug_str:0000000000000ae0 .LASF134
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4077   .debug_str:00000000000035c3 .LASF135
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3393   .debug_str:00000000000010d2 .LASF136
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3471   .debug_str:0000000000001560 .LASF137
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3803   .debug_str:000000000000273f .LASF138
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3801   .debug_str:0000000000002715 .LASF139
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3893   .debug_str:0000000000002be5 .LASF140
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3573   .debug_str:0000000000001a5f .LASF141
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4033   .debug_str:000000000000331c .LASF142
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3529   .debug_str:000000000000183e .LASF143
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3625   .debug_str:0000000000001d71 .LASF144
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3491   .debug_str:0000000000001680 .LASF145
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3963   .debug_str:0000000000002f5e .LASF146
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3925   .debug_str:0000000000002d62 .LASF147
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3327   .debug_str:0000000000000d88 .LASF148
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3459   .debug_str:0000000000001496 .LASF149
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 29
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3279   .debug_str:0000000000000b25 .LASF150
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4017   .debug_str:000000000000323e .LASF151
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3069   .debug_str:0000000000000074 .LASF152
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3907   .debug_str:0000000000002ca8 .LASF153
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3441   .debug_str:0000000000001381 .LASF154
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3731   .debug_str:00000000000023b8 .LASF155
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3475   .debug_str:00000000000015a2 .LASF156
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3663   .debug_str:0000000000001f18 .LASF157
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3919   .debug_str:0000000000002d06 .LASF158
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3959   .debug_str:0000000000002f0a .LASF159
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3847   .debug_str:0000000000002978 .LASF160
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4075   .debug_str:00000000000035ae .LASF161
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3607   .debug_str:0000000000001c7a .LASF162
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3969   .debug_str:0000000000002fae .LASF163
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3159   .debug_str:00000000000005d9 .LASF164
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3151   .debug_str:000000000000056e .LASF165
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4073   .debug_str:000000000000359f .LASF166
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3107   .debug_str:00000000000002be .LASF167
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3477   .debug_str:00000000000015d9 .LASF168
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3621   .debug_str:0000000000001d30 .LASF169
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3991   .debug_str:00000000000030f3 .LASF170
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4079   .debug_str:00000000000035db .LASF171
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3407   .debug_str:0000000000001198 .LASF172
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3977   .debug_str:0000000000002fff .LASF173
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3567   .debug_str:00000000000019e9 .LASF174
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4059   .debug_str:00000000000034d3 .LASF175
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3085   .debug_str:0000000000000187 .LASF176
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4035   .debug_str:0000000000003338 .LASF177
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3965   .debug_str:0000000000002f7f .LASF178
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3375   .debug_str:0000000000000fed .LASF179
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3531   .debug_str:000000000000184e .LASF180
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3097   .debug_str:0000000000000234 .LASF181
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3911   .debug_str:0000000000002ccf .LASF182
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3735   .debug_str:00000000000023e8 .LASF183
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3645   .debug_str:0000000000001e55 .LASF184
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3341   .debug_str:0000000000000e54 .LASF185
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4055   .debug_str:000000000000347f .LASF186
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3859   .debug_str:0000000000002a44 .LASF187
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3927   .debug_str:0000000000002d78 .LASF188
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3425   .debug_str:000000000000129a .LASF189
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3679   .debug_str:0000000000001ff5 .LASF190
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3193   .debug_str:000000000000076a .LASF191
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3443   .debug_str:0000000000001397 .LASF192
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3215   .debug_str:000000000000086c .LASF193
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4071   .debug_str:0000000000003589 .LASF194
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3671   .debug_str:0000000000001f99 .LASF195
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3779   .debug_str:0000000000002611 .LASF196
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3229   .debug_str:000000000000092d .LASF197
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3089   .debug_str:00000000000001d6 .LASF198
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3485   .debug_str:000000000000163e .LASF199
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3479   .debug_str:00000000000015f3 .LASF200
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3197   .debug_str:00000000000007ae .LASF201
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3537   .debug_str:00000000000018aa .LASF202
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3897   .debug_str:0000000000002c23 .LASF203
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3301   .debug_str:0000000000000c55 .LASF204
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4057   .debug_str:0000000000003498 .LASF205
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3127   .debug_str:0000000000000417 .LASF206
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 30
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3183   .debug_str:00000000000006c2 .LASF207
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3745   .debug_str:000000000000247b .LASF208
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3695   .debug_str:00000000000020f0 .LASF209
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3267   .debug_str:0000000000000a9d .LASF210
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3063   .debug_str:0000000000000023 .LASF211
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3295   .debug_str:0000000000000c03 .LASF212
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3667   .debug_str:0000000000001f66 .LASF213
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3185   .debug_str:00000000000006fd .LASF214
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3219   .debug_str:00000000000008be .LASF215
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3961   .debug_str:0000000000002f44 .LASF216
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3383   .debug_str:0000000000001047 .LASF217
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3067   .debug_str:000000000000005d .LASF218
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3359   .debug_str:0000000000000f27 .LASF219
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3463   .debug_str:00000000000014b7 .LASF220
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3585   .debug_str:0000000000001add .LASF221
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3821   .debug_str:0000000000002827 .LASF222
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3133   .debug_str:000000000000048b .LASF223
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3287   .debug_str:0000000000000b83 .LASF224
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4049   .debug_str:0000000000003406 .LASF225
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3487   .debug_str:000000000000164e .LASF226
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3339   .debug_str:0000000000000e3b .LASF227
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3061   .debug_str:0000000000000009 .LASF228
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3265   .debug_str:0000000000000a84 .LASF229
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3095   .debug_str:000000000000021c .LASF230
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3421   .debug_str:0000000000001265 .LASF231
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3291   .debug_str:0000000000000bcc .LASF232
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3687   .debug_str:0000000000002080 .LASF233
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3323   .debug_str:0000000000000d62 .LASF234
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3399   .debug_str:000000000000111b .LASF235
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3853   .debug_str:00000000000029f2 .LASF236
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3115   .debug_str:0000000000000326 .LASF237
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4021   .debug_str:0000000000003273 .LASF238
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3401   .debug_str:0000000000001136 .LASF239
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3811   .debug_str:0000000000002790 .LASF240
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4009   .debug_str:00000000000031a0 .LASF241
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4067   .debug_str:0000000000003557 .LASF242
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3483   .debug_str:0000000000001624 .LASF243
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3243   .debug_str:00000000000009be .LASF244
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4069   .debug_str:000000000000356f .LASF245
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3451   .debug_str:0000000000001439 .LASF246
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3551   .debug_str:0000000000001948 .LASF247
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3765   .debug_str:0000000000002588 .LASF248
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3755   .debug_str:0000000000002506 .LASF249
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3075   .debug_str:00000000000000e3 .LASF250
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4031   .debug_str:0000000000003302 .LASF251
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3103   .debug_str:000000000000028c .LASF252
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3613   .debug_str:0000000000001cca .LASF253
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4041   .debug_str:0000000000003381 .LASF254
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3595   .debug_str:0000000000001bb3 .LASF255
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3447   .debug_str:00000000000013de .LASF256
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3329   .debug_str:0000000000000d98 .LASF257
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3493   .debug_str:0000000000001696 .LASF258
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3235   .debug_str:000000000000095c .LASF259
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3989   .debug_str:00000000000030d8 .LASF260
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3569   .debug_str:0000000000001a2b .LASF261
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3633   .debug_str:0000000000001dca .LASF262
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3377   .debug_str:0000000000001005 .LASF263
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 31
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3271   .debug_str:0000000000000ac4 .LASF264
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3389   .debug_str:0000000000001096 .LASF265
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3173   .debug_str:000000000000065b .LASF266
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3677   .debug_str:0000000000001fda .LASF267
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4029   .debug_str:00000000000032e8 .LASF268
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3593   .debug_str:0000000000001b74 .LASF269
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3469   .debug_str:000000000000151c .LASF270
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3739   .debug_str:0000000000002414 .LASF271
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3083   .debug_str:0000000000000146 .LASF272
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3071   .debug_str:000000000000008d .LASF273
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3379   .debug_str:0000000000001017 .LASF274
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3763   .debug_str:000000000000256e .LASF275
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3605   .debug_str:0000000000001c5f .LASF276
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3335   .debug_str:0000000000000e0a .LASF277
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3743   .debug_str:0000000000002466 .LASF278
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3869   .debug_str:0000000000002aad .LASF279
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3429   .debug_str:00000000000012e7 .LASF280
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3453   .debug_str:0000000000001450 .LASF281
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3163   .debug_str:0000000000000605 .LASF282
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3465   .debug_str:00000000000014d0 .LASF283
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4019   .debug_str:0000000000003255 .LASF284
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3539   .debug_str:00000000000018c0 .LASF285
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3111   .debug_str:00000000000002ed .LASF286
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3875   .debug_str:0000000000002af4 .LASF287
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3503   .debug_str:0000000000001706 .LASF288
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3949   .debug_str:0000000000002ea0 .LASF289
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3995   .debug_str:0000000000003118 .LASF290
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3549   .debug_str:000000000000192a .LASF291
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3905   .debug_str:0000000000002c89 .LASF292
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3587   .debug_str:0000000000001b19 .LASF293
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3855   .debug_str:0000000000002a0c .LASF294
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3599   .debug_str:0000000000001c00 .LASF295
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4061   .debug_str:0000000000003518 .LASF296
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3685   .debug_str:000000000000206b .LASF297
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3117   .debug_str:0000000000000365 .LASF298
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3363   .debug_str:0000000000000f5d .LASF299
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3975   .debug_str:0000000000002ff5 .LASF300
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3403   .debug_str:0000000000001175 .LASF301
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3509   .debug_str:0000000000001752 .LASF302
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3915   .debug_str:0000000000002ced .LASF303
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3773   .debug_str:00000000000025e5 .LASF304
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3217   .debug_str:00000000000008ad .LASF305
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3455   .debug_str:0000000000001460 .LASF306
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3865   .debug_str:0000000000002a8a .LASF307
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3105   .debug_str:00000000000002a6 .LASF308
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3777   .debug_str:00000000000025fd .LASF309
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3147   .debug_str:0000000000000553 .LASF310
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3307   .debug_str:0000000000000ca5 .LASF311
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3883   .debug_str:0000000000002b7c .LASF312
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3433   .debug_str:0000000000001311 .LASF313
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3647   .debug_str:0000000000001e71 .LASF314
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3901   .debug_str:0000000000002c57 .LASF315
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3175   .debug_str:0000000000000674 .LASF316
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4023   .debug_str:00000000000032b7 .LASF317
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3179   .debug_str:0000000000000694 .LASF321
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3347   .debug_str:0000000000000e99 .LASF322
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3325   .debug_str:0000000000000d7b .LASF323
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 32
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3237   .debug_str:0000000000000976 .LASF324
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3481   .debug_str:000000000000160c .LASF325
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3119   .debug_str:0000000000000379 .LASF326
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3721   .debug_str:0000000000002329 .LASF327
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3839   .debug_str:0000000000002925 .LASF328
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3409   .debug_str:00000000000011da .LASF329
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3137   .debug_str:00000000000004d7 .LASF330
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3951   .debug_str:0000000000002ebf .LASF331
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3813   .debug_str:00000000000027d1 .LASF332
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3641   .debug_str:0000000000001e2b .LASF333
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3495   .debug_str:00000000000016ae .LASF334
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3247   .debug_str:00000000000009e5 .LASF335
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3741   .debug_str:0000000000002453 .LASF336
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3395   .debug_str:00000000000010f1 .LASF337
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3417   .debug_str:000000000000123d .LASF338
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3845   .debug_str:0000000000002963 .LASF339
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3791   .debug_str:000000000000269e .LASF340
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3921   .debug_str:0000000000002d3d .LASF341
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3113   .debug_str:000000000000030f .LASF342
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3505   .debug_str:0000000000001727 .LASF343
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3559   .debug_str:00000000000019a2 .LASF344
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3275   .debug_str:0000000000000b08 .LASF345
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3761   .debug_str:0000000000002559 .LASF346
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3253   .debug_str:0000000000000a1e .LASF347
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3073   .debug_str:00000000000000d3 .LASF348
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3767   .debug_str:00000000000025a3 .LASF349
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3547   .debug_str:0000000000001915 .LASF350
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3411   .debug_str:00000000000011ec .LASF351
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3369   .debug_str:0000000000000fb9 .LASF352
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3953   .debug_str:0000000000002ecf .LASF353
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3523   .debug_str:00000000000017f6 .LASF354
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3545   .debug_str:00000000000018fa .LASF355
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3489   .debug_str:0000000000001665 .LASF356
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3945   .debug_str:0000000000002e82 .LASF357
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3501   .debug_str:00000000000016f6 .LASF358
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3899   .debug_str:0000000000002c3b .LASF359
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3371   .debug_str:0000000000000fce .LASF360
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3171   .debug_str:0000000000000652 .LASF361
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3091   .debug_str:00000000000001ec .LASF362
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3087   .debug_str:00000000000001d0 .LASF363
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3199   .debug_str:00000000000007c9 .LASF364
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3775   .debug_str:00000000000025f3 .LASF365
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3999   .debug_str:0000000000003148 .LASF366
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3289   .debug_str:0000000000000bc2 .LASF367
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3957   .debug_str:0000000000002efe .LASF368
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3203   .debug_str:00000000000007f4 .LASF369
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3149   .debug_str:0000000000000565 .LASF370
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3619   .debug_str:0000000000001d25 .LASF371
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3941   .debug_str:0000000000002e4c .LASF372
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3261   .debug_str:0000000000000a5f .LASF373
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3577   .debug_str:0000000000001a96 .LASF374
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3497   .debug_str:00000000000016bd .LASF375
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3259   .debug_str:0000000000000a4f .LASF376
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3661   .debug_str:0000000000001f0c .LASF377
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3805   .debug_str:000000000000275f .LASF378
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3769   .debug_str:00000000000025b7 .LASF379
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3461   .debug_str:00000000000014aa .LASF380
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 33
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3723   .debug_str:0000000000002356 .LASF381
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3867   .debug_str:0000000000002aa3 .LASF382
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3221   .debug_str:00000000000008cf .LASF383
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3437   .debug_str:000000000000134a .LASF384
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3169   .debug_str:0000000000000644 .LASF385
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3321   .debug_str:0000000000000d54 .LASF386
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3541   .debug_str:00000000000018de .LASF387
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3251   .debug_str:0000000000000a0f .LASF388
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3269   .debug_str:0000000000000ab4 .LASF389
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3167   .debug_str:0000000000000632 .LASF390
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3239   .debug_str:0000000000000989 .LASF391
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3693   .debug_str:00000000000020dd .LASF392
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3431   .debug_str:00000000000012fe .LASF393
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3205   .debug_str:00000000000007fc .LASF394
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3747   .debug_str:00000000000024b9 .LASF395
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3683   .debug_str:0000000000002058 .LASF396
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3583   .debug_str:0000000000001ac9 .LASF397
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3759   .debug_str:0000000000002545 .LASF398
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4027   .debug_str:00000000000032d5 .LASF399
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3351   .debug_str:0000000000000ed5 .LASF400
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3713   .debug_str:00000000000022b4 .LASF401
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3581   .debug_str:0000000000001ab5 .LASF402
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3843   .debug_str:000000000000294e .LASF403
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3555   .debug_str:0000000000001975 .LASF404
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3889   .debug_str:0000000000002bc6 .LASF405
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3903   .debug_str:0000000000002c70 .LASF406
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3609   .debug_str:0000000000001c91 .LASF407
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3627   .debug_str:0000000000001d89 .LASF408
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3571   .debug_str:0000000000001a45 .LASF409
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3795   .debug_str:00000000000026d8 .LASF410
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3709   .debug_str:0000000000002273 .LASF411
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4003   .debug_str:0000000000003160 .LASF412
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3557   .debug_str:0000000000001989 .LASF413
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3719   .debug_str:0000000000002308 .LASF414
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3211   .debug_str:000000000000083d .LASF415
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3659   .debug_str:0000000000001eee .LASF416
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4047   .debug_str:00000000000033e9 .LASF417
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3419   .debug_str:000000000000124d .LASF418
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4043   .debug_str:00000000000033c4 .LASF419
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3365   .debug_str:0000000000000f74 .LASF420
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3415   .debug_str:0000000000001219 .LASF421
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3533   .debug_str:0000000000001865 .LASF422
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3353   .debug_str:0000000000000ee9 .LASF423
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3397   .debug_str:0000000000001101 .LASF424
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3367   .debug_str:0000000000000f9d .LASF425
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3727   .debug_str:0000000000002373 .LASF426
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3885   .debug_str:0000000000002b8e .LASF427
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3933   .debug_str:0000000000002dcf .LASF428
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3611   .debug_str:0000000000001cab .LASF429
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3787   .debug_str:0000000000002675 .LASF430
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3297   .debug_str:0000000000000c1d .LASF431
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3519   .debug_str:00000000000017af .LASF432
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3387   .debug_str:0000000000001070 .LASF433
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3101   .debug_str:0000000000000264 .LASF434
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3981   .debug_str:000000000000305c .LASF435
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3449   .debug_str:000000000000141f .LASF436
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3521   .debug_str:00000000000017da .LASF437
+GAS LISTING C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s 			page 34
+
+
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3093   .debug_str:00000000000001f1 .LASF438
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3457   .debug_str:0000000000001470 .LASF439
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3225   .debug_str:00000000000008ec .LASF440
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3467   .debug_str:00000000000014f5 .LASF441
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4011   .debug_str:00000000000031e6 .LASF442
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3895   .debug_str:0000000000002bff .LASF443
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3943   .debug_str:0000000000002e59 .LASF444
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3591   .debug_str:0000000000001b50 .LASF445
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3863   .debug_str:0000000000002a64 .LASF446
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3285   .debug_str:0000000000000b5a .LASF447
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3681   .debug_str:0000000000002034 .LASF448
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3877   .debug_str:0000000000002b16 .LASF449
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3121   .debug_str:00000000000003cd .LASF450
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3793   .debug_str:00000000000026b4 .LASF451
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3929   .debug_str:0000000000002d90 .LASF452
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3987   .debug_str:00000000000030bc .LASF453
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3081   .debug_str:0000000000000129 .LASF454
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3343   .debug_str:0000000000000e6b .LASF455
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3823   .debug_str:0000000000002868 .LASF456
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3623   .debug_str:0000000000001d45 .LASF457
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3131   .debug_str:0000000000000464 .LASF458
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3873   .debug_str:0000000000002ad6 .LASF459
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4015   .debug_str:000000000000321f .LASF460
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3881   .debug_str:0000000000002b62 .LASF461
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3507   .debug_str:0000000000001738 .LASF462
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3833   .debug_str:00000000000028ed .LASF463
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3785   .debug_str:000000000000265d .LASF464
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:4051   .debug_str:0000000000003449 .LASF465
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3381   .debug_str:000000000000102f .LASF466
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3373   .debug_str:0000000000000fd5 .LASF467
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3561   .debug_str:00000000000019b2 .LASF468
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3189   .debug_str:000000000000072b .LASF469
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3669   .debug_str:0000000000001f7f .LASF470
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3947   .debug_str:0000000000002e88 .LASF471
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3099   .debug_str:000000000000024a .LASF472
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3983   .debug_str:000000000000307b .LASF473
+C:\Users\SOLDER~1\AppData\Local\Temp\cc5HxSOu.s:3827   .debug_str:00000000000028a3 .LASF474
+                           .group:0000000000000000 wm4.0.cc27e0d2094b492664a2491ca1ae43b0
+                           .group:0000000000000000 wm4._newlib_version.h.4.529115dae5e4f67702b1de0b6e841f38
+                           .group:0000000000000000 wm4.features.h.33.3e67abe6fb64142d4f6fa9496796153c
+                           .group:0000000000000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:0000000000000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:0000000000000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:0000000000000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+
+NO UNDEFINED SYMBOLS

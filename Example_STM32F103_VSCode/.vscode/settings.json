@@ -1,8 +1,0 @@
-{
-    "cortex-debug.variableUseNaturalFormat": false,
-    "files.associations": {
-        "stm32f103xx_it.h": "c",
-        "main.h": "c",
-        "stm32f1xx.h": "c"
-    }
-}

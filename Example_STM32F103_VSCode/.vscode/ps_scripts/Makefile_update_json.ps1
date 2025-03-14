@@ -184,54 +184,8 @@ Write-Host "string replacement 'args: $BUILD_DIR/$TARGET.map' " -ForegroundColor
 ####################################################### BONUS ######################################################################
 
 Write-Host "Bonus :) Update files:" -ForegroundColor DarkBlue
-############################ Читаем и правим файл .vscode/ps_scripts/monitor_resume_part1.ps1
-Write-Host "file .vscode/ps_scripts/monitor_resume_part1.ps1" -ForegroundColor DarkBlue
 
-# Путь к OPEN_OCD
-$content = Get-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" -Raw -Encoding utf8
-$updatedContent = $content -replace '(\$OPEN_OCD_BIN_PATH\s*=\s*).*', "`$OPEN_OCD_BIN_PATH = `"$OPEN_OCD_BIN_PATH`""
-Set-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" $updatedContent -Encoding utf8
 
-# Путь к INTERFACE и TARGET
-
-# Исходная строка
-$text = $OPEN_OCD_INTERFACE_AND_TARGET_PATH
-# Разделение строки по пробелу
-$variables = $text -split ' '
-# Присвоение значений переменным
-$OPEN_OCD_INTERFACE = $variables[0] 
-$OPEN_OCD_TARGET = $variables[1]
- 
-# OpenOCD interface
-$content = Get-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" -Raw -Encoding utf8
-$updatedContent = $content -replace '(\$OPEN_OCD_INTERFACE_PATH\s*=\s*).*', "`$OPEN_OCD_INTERFACE_PATH = `"$OPEN_OCD_INTERFACE`""
-Set-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" $updatedContent -Encoding utf8
-Start-Sleep -Milliseconds $DELAY
-
-# OpenOCD target
-$content = Get-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" -Raw -Encoding utf8
-$updatedContent = $content -replace '(\$OPEN_OCD_TARGET_PATH\s*=\s*).*', "`$OPEN_OCD_TARGET_PATH = `"$OPEN_OCD_TARGET`""
-Set-Content ".vscode/ps_scripts/monitor_resume_part1.ps1" $updatedContent -Encoding utf8
-Write-Host "Success" -ForegroundColor Green
-
-############################ Читаем и правим файл .vscode/ps_scripts/monitor_resume_part2.ps1
-Write-Host "file .vscode/ps_scripts/monitor_resume_part1.ps1" -ForegroundColor DarkBlue
-
-# arm-none-eabi-gdb.exe
-$content = Get-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" -Raw -Encoding utf8
-$updatedContent = $content -replace '(\$GNU_TOOLCHAIN_GDB_PATH\s*=\s*).*', "`$GNU_TOOLCHAIN_GDB_PATH = `"$GNU_TOOLCHAIN_GDB_PATH`""
-Set-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" $updatedContent -Encoding utf8
-Write-Host "Success" -ForegroundColor Green
-
-$content = Get-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" -Raw -Encoding utf8
-$updatedContent = $content -replace '(\$BUILD_DIR\s*=\s*).*', "`$BUILD_DIR = `"$BUILD_DIR`""
-Set-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" $updatedContent -Encoding utf8
-Write-Host "Success" -ForegroundColor Gree
-
-$content = Get-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" -Raw -Encoding utf8
-$updatedContent = $content -replace '(\$TARGET\s*=\s*).*', "`$TARGET = `"$TARGET`""
-Set-Content ".vscode/ps_scripts/monitor_resume_part2.ps1" $updatedContent -Encoding utf8
-Write-Host "Success" -ForegroundColor Green
 
 
 ############################ Читаем и правим файл .vscode/ps_scripts/Build_Analyzer.ps1

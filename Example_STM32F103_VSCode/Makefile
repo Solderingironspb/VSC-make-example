@@ -11,13 +11,13 @@
 # Пути для проекта
 ######################################################################################
 # GNU Arm Embedded Toolchain:
-GNU_TOOLCHAIN = C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin
+GNU_TOOLCHAIN = C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin
 GNU_TOOLCHAIN_GCC_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-gcc.exe
 GNU_TOOLCHAIN_GDB_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-gdb.exe
 GNU_TOOLCHAIN_SIZE_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-size.exe
 
 # OpenOCD:
-OPEN_OCD_PATH = C:/ST/tools/OpenOCD-20240916-0.12.0
+OPEN_OCD_PATH = C:/dev_tools/STM32_tools/OpenOCD-20240916-0.12.0
 OPEN_OCD_BIN_PATH = $(OPEN_OCD_PATH)/bin/openocd.exe
 
 # OpenOCD, кофигурационные файлы под St-Link и микроконтроллер:
@@ -25,7 +25,7 @@ OPEN_OCD_INTERFACE_PATH = $(OPEN_OCD_PATH)/share/openocd/scripts/interface/stlin
 OPEN_OCD_TARGET_PATH = $(OPEN_OCD_PATH)/share/openocd/scripts/target/stm32f1x.cfg
 
 # SVD файл для описания периферии микроконтроллера
-SVD_FILE_PATH = C:/ST/tools/cmsis-svd-stm32/stm32f1/STM32F103.svd
+SVD_FILE_PATH = C:/dev_tools/STM32_tools/cmsis-svd-stm32/stm32f1/STM32F103.svd
 
 #####################################################################################
 # Название проекта
@@ -191,6 +191,9 @@ flash: all
 
 erase: 
 	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "init; reset halt; stm32f1x mass_erase 0; reset run; exit"
+
+resume:
+	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "init; reset halt; resume; exit"
 ##########################################################################
 # dependencies
 ##########################################################################

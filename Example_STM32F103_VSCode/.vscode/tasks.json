@@ -1,4 +1,4 @@
-{
+﻿{
     "version": "2.0.0",
     "tasks": [
         /*=============================== Сборка проекта ===================================*/
@@ -26,7 +26,7 @@
         {
             "label": "Clean Project", //Очистка проекта
             "type": "shell",
-            "command": "make -j4 clean", // Команда для сборки проекта
+            "command": "make -j12 clean", // Команда для сборки проекта
             "problemMatcher": [],
             "icon": {
                 "color": "terminal.ansiRed",
@@ -98,7 +98,7 @@
         {
             "label": "Monitor resume", //Продолжить работу мк после отладки
             "type": "shell",
-            "command": ".vscode/ps_scripts/monitor_resume.bat",
+            "command": "make resume",
             "icon": {
                 "color": "terminal.ansiGreen",
                 "id": "vscode"
@@ -135,6 +135,14 @@
 
     ]
 }
+
+
+
+
+
+
+
+
 
 
 

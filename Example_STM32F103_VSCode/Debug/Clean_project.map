@@ -1,76 +1,76 @@
 Archive member included to satisfy reference by file (symbol)
 
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (exit)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o) (__stdio_exit_handler)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (_fwalk_sglue)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (exit)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o) (__stdio_exit_handler)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (_fwalk_sglue)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
                               Debug/main.o (sprintf)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (__sread)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (memset)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o) (_close_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o) (errno)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o) (_impure_ptr)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o) (_lseek_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o) (_read_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o) (_write_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (__sread)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (memset)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o) (_close_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o) (errno)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o) (_impure_ptr)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o) (_lseek_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o) (_read_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o) (_write_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
                               Debug/syscalls.o (__errno)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (__libc_init_array)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (__retarget_lock_init_recursive)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (__libc_init_array)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (__retarget_lock_init_recursive)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
                               Debug/main.o (strlen)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o) (_free_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (_malloc_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o) (__malloc_lock)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o) (_svfprintf_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (_printf_i)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (_fflush_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (memmove)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o) (_sbrk_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (memchr)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (memcpy)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (_realloc_r)
-C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
-                              C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o) (_malloc_usable_size_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o) (_free_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (_malloc_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o) (__malloc_lock)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o) (_svfprintf_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (_printf_i)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o) (_fflush_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (memmove)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o) (_sbrk_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (memchr)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (memcpy)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o) (_realloc_r)
+C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
+                              C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o) (_malloc_usable_size_r)
 
 Discarded input sections
 
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
- .data          0x00000000        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
- .rodata        0x00000000       0x24 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
- .text          0x00000000       0x7c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
- .ARM.extab     0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
- .ARM.exidx     0x00000000       0x10 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+ .data          0x00000000        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .rodata        0x00000000       0x24 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .text          0x00000000       0x7c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.extab     0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.exidx     0x00000000       0x10 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
  .ARM.attributes
-                0x00000000       0x1b C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+                0x00000000       0x1b C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
  .group         0x00000000        0xc Debug/main.o
  .group         0x00000000        0xc Debug/main.o
  .group         0x00000000        0xc Debug/main.o
@@ -474,7 +474,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 Debug/syscalls.o
  .debug_macro   0x00000000      0x12c Debug/syscalls.o
  .debug_macro   0x00000000       0xce Debug/syscalls.o
- .debug_line    0x00000000      0x69e Debug/syscalls.o
+ .debug_line    0x00000000      0x6df Debug/syscalls.o
  .debug_str     0x00000000     0x9847 Debug/syscalls.o
  .comment       0x00000000       0x44 Debug/syscalls.o
  .debug_frame   0x00000000      0x2ac Debug/syscalls.o
@@ -571,212 +571,212 @@ Discarded input sections
  .text          0x00000000       0x14 Debug/startup_stm32f103c8tx.o
  .data          0x00000000        0x0 Debug/startup_stm32f103c8tx.o
  .bss           0x00000000        0x0 Debug/startup_stm32f103c8tx.o
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
- .text.exit     0x00000000       0x24 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
- .debug_frame   0x00000000       0x28 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
+ .text.exit     0x00000000       0x24 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
+ .debug_frame   0x00000000       0x28 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .text.std      0x00000000       0x6c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-exit.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .text.std      0x00000000       0x6c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.stdio_exit_handler
-                0x00000000       0x18 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000       0x18 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.cleanup_stdio
-                0x00000000       0x40 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000       0x40 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.__fp_lock
-                0x00000000       0x18 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000       0x18 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.__fp_unlock
-                0x00000000       0x18 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000       0x18 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.global_stdio_init.part.0
-                0x00000000       0x3c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000       0x3c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.__sfp_lock_acquire
-                0x00000000        0xc C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000        0xc C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.__sfp_lock_release
-                0x00000000        0xc C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .text.__sfp    0x00000000       0xa4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .text.__sinit  0x00000000       0x30 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000        0xc C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .text.__sfp    0x00000000       0xa4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .text.__sinit  0x00000000       0x30 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.__fp_lock_all
-                0x00000000       0x1c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000       0x1c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .text.__fp_unlock_all
-                0x00000000       0x1c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .data.__sglue  0x00000000        0xc C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000000       0x1c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .data.__sglue  0x00000000        0xc C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .bss.__stdio_exit_handler
-                0x00000000        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
+                0x00000000        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
  .text._fwalk_sglue
-                0x00000000       0x3c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
- .debug_frame   0x00000000       0x34 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
+                0x00000000       0x3c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
+ .debug_frame   0x00000000       0x34 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fwalk.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
  .text._sprintf_r
-                0x00000000       0x38 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
- .text.__sread  0x00000000       0x22 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+                0x00000000       0x38 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+ .text.__sread  0x00000000       0x22 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
  .text.__seofread
-                0x00000000        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+                0x00000000        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
  .text.__swrite
-                0x00000000       0x38 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
- .text.__sseek  0x00000000       0x24 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+                0x00000000       0x38 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+ .text.__sseek  0x00000000       0x24 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
  .text.__sclose
-                0x00000000        0x8 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
- .debug_frame   0x00000000       0x88 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+                0x00000000        0x8 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+ .debug_frame   0x00000000       0x88 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
- .text.memset   0x00000000       0x10 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
- .debug_frame   0x00000000       0x20 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-stdio.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
+ .text.memset   0x00000000       0x10 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
+ .debug_frame   0x00000000       0x20 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
  .text._close_r
-                0x00000000       0x20 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
- .debug_frame   0x00000000       0x2c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
+                0x00000000       0x20 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
+ .debug_frame   0x00000000       0x2c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-closer.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
  .text._reclaim_reent
-                0x00000000       0xac C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
+                0x00000000       0xac C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
  .text._lseek_r
-                0x00000000       0x24 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
- .debug_frame   0x00000000       0x2c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
+                0x00000000       0x24 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
+ .debug_frame   0x00000000       0x2c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
- .text._read_r  0x00000000       0x24 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
- .debug_frame   0x00000000       0x2c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lseekr.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
+ .text._read_r  0x00000000       0x24 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
+ .debug_frame   0x00000000       0x2c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-readr.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
  .text._write_r
-                0x00000000       0x24 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
- .debug_frame   0x00000000       0x2c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
+                0x00000000       0x24 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
+ .debug_frame   0x00000000       0x2c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-writer.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .text.__retarget_lock_init
-                0x00000000        0x2 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x2 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .text.__retarget_lock_init_recursive
-                0x00000000        0x2 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x2 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .text.__retarget_lock_close
-                0x00000000        0x2 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x2 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .text.__retarget_lock_close_recursive
-                0x00000000        0x2 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x2 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .text.__retarget_lock_acquire
-                0x00000000        0x2 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x2 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .text.__retarget_lock_try_acquire
-                0x00000000        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .text.__retarget_lock_try_acquire_recursive
-                0x00000000        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .text.__retarget_lock_release
-                0x00000000        0x2 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x2 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .bss.__lock___arc4random_mutex
-                0x00000000        0x1 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x1 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .bss.__lock___dd_hash_mutex
-                0x00000000        0x1 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x1 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .bss.__lock___tz_mutex
-                0x00000000        0x1 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x1 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .bss.__lock___env_recursive_mutex
-                0x00000000        0x1 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x1 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .bss.__lock___at_quick_exit_mutex
-                0x00000000        0x1 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x1 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .bss.__lock___atexit_recursive_mutex
-                0x00000000        0x1 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x00000000        0x1 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .bss.__lock___sfp_recursive_mutex
-                0x00000000        0x1 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
- .ARM.extab     0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
- .eh_frame      0x00000000       0x28 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+                0x00000000        0x1 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
+ .ARM.extab     0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
+ .eh_frame      0x00000000       0x28 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
  .text.__ssprint_r
-                0x00000000       0xfa C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+                0x00000000       0xfa C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
  .text.__sflush_r
-                0x00000000      0x100 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+                0x00000000      0x100 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
  .text._fflush_r
-                0x00000000       0x50 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
- .text.fflush   0x00000000       0x28 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
- .debug_frame   0x00000000       0x5c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+                0x00000000       0x50 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+ .text.fflush   0x00000000       0x28 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+ .debug_frame   0x00000000       0x5c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
- .rodata        0x00000000       0x24 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
- .eh_frame      0x00000000        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-fflush.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
+ .rodata        0x00000000       0x24 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
+ .eh_frame      0x00000000        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
  .ARM.attributes
-                0x00000000       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
- .text          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
- .data          0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
- .bss           0x00000000        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+                0x00000000       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
+ .text          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+ .data          0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+ .bss           0x00000000        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
 
 Memory Configuration
 
@@ -787,9 +787,9 @@ FLASH            0x08000000         0x00010000         xr
 
 Linker script and memory map
 
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
 LOAD Debug/main.o
 LOAD Debug/stm32f103xx_CMSIS.o
 LOAD Debug/stm32f103xx_it.o
@@ -798,19 +798,19 @@ LOAD Debug/sysmem.o
 LOAD Debug/system_stm32f1xx.o
 LOAD Debug/startup_stm32f103c8tx.o
 START GROUP
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 END GROUP
 START GROUP
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp\libgcc.a
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp\libgcc.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a
 END GROUP
 START GROUP
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp\libgcc.a
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp\libgcc.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a
 END GROUP
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtend.o
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
                 0x20005000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
                 0x00000100                        _Min_Heap_Size = 0x100
                 0x00000200                        _Min_Stack_Size = 0x200
@@ -825,8 +825,8 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
 .text           0x0800010c     0x149c
                 0x0800010c                        . = ALIGN (0x4)
  *(.text)
- .text          0x0800010c       0x40 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
- .text          0x0800014c       0x10 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
+ .text          0x0800010c       0x40 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .text          0x0800014c       0x10 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
                 0x0800014c                strlen
  *(.text*)
  .text.main     0x0800015c       0x6c Debug/main.o
@@ -939,75 +939,75 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
                 0x08000c3c                I2C1_ER_IRQHandler
                 0x08000c3c                USBWakeUp_IRQHandler
  *fill*         0x08000c3e        0x2 
- .text.sprintf  0x08000c40       0x40 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
+ .text.sprintf  0x08000c40       0x40 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
                 0x08000c40                siprintf
                 0x08000c40                sprintf
- .text.__errno  0x08000c80        0xc C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+ .text.__errno  0x08000c80        0xc C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
                 0x08000c80                __errno
  .text.__libc_init_array
-                0x08000c8c       0x48 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+                0x08000c8c       0x48 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
                 0x08000c8c                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x08000cd4        0x2 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x08000cd4        0x2 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
                 0x08000cd4                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08000cd6        0x2 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x08000cd6        0x2 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
                 0x08000cd6                __retarget_lock_release_recursive
- .text._free_r  0x08000cd8       0x90 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
+ .text._free_r  0x08000cd8       0x90 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
                 0x08000cd8                _free_r
  .text.sbrk_aligned
-                0x08000d68       0x44 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+                0x08000d68       0x44 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
  .text._malloc_r
-                0x08000dac      0x100 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+                0x08000dac      0x100 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
                 0x08000dac                _malloc_r
  .text.__malloc_lock
-                0x08000eac        0xc C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
+                0x08000eac        0xc C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
                 0x08000eac                __malloc_lock
  .text.__malloc_unlock
-                0x08000eb8        0xc C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
+                0x08000eb8        0xc C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
                 0x08000eb8                __malloc_unlock
  .text.__ssputs_r
-                0x08000ec4       0xb6 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+                0x08000ec4       0xb6 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
                 0x08000ec4                __ssputs_r
  *fill*         0x08000f7a        0x2 
  .text._svfprintf_r
-                0x08000f7c      0x1f8 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+                0x08000f7c      0x1f8 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
                 0x08000f7c                _svfiprintf_r
                 0x08000f7c                _svfprintf_r
  .text._printf_common
-                0x08001174       0xe4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x08001174       0xe4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
                 0x08001174                _printf_common
  .text._printf_i
-                0x08001258      0x240 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x08001258      0x240 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
                 0x08001258                _printf_i
- .text.memmove  0x08001498       0x34 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
+ .text.memmove  0x08001498       0x34 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
                 0x08001498                memmove
- .text._sbrk_r  0x080014cc       0x20 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
+ .text._sbrk_r  0x080014cc       0x20 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
                 0x080014cc                _sbrk_r
- .text.memchr   0x080014ec       0x1c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
+ .text.memchr   0x080014ec       0x1c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
                 0x080014ec                memchr
- .text.memcpy   0x08001508       0x1c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+ .text.memcpy   0x08001508       0x1c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
                 0x08001508                memcpy
  .text._realloc_r
-                0x08001524       0x5c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
+                0x08001524       0x5c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
                 0x08001524                _realloc_r
  .text._malloc_usable_size_r
-                0x08001580       0x10 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
+                0x08001580       0x10 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
                 0x08001580                _malloc_usable_size_r
  *(.glue_7)
  .glue_7        0x08001590        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x08001590        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08001590        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x08001590        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x08001590        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+ .init          0x08001590        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
                 0x08001590                _init
- .init          0x08001594        0x8 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x08001594        0x8 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x0800159c        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+ .fini          0x0800159c        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
                 0x0800159c                _fini
- .fini          0x080015a0        0x8 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+ .fini          0x080015a0        0x8 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
                 0x080015a8                        . = ALIGN (0x4)
                 0x080015a8                        _etext = .
 
@@ -1018,7 +1018,7 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
  .v4_bx         0x080015a8        0x0 linker stubs
 
 .iplt           0x080015a8        0x0
- .iplt          0x080015a8        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .iplt          0x080015a8        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
 
 .rodata         0x080015a8       0x74
                 0x080015a8                        . = ALIGN (0x4)
@@ -1026,9 +1026,9 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
  .rodata        0x080015a8       0x41 Debug/main.o
  *(.rodata*)
  .rodata._svfprintf_r.str1.1
-                0x080015e9       0x11 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+                0x080015e9       0x11 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x080015fa       0x22 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x080015fa       0x22 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
                 0x0800161c                        . = ALIGN (0x4)
 
 .ARM.extab      0x0800161c        0x0
@@ -1040,12 +1040,12 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
                 0x0800161c                        . = ALIGN (0x4)
                 0x0800161c                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800161c        0x8 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
+ .ARM.exidx     0x0800161c        0x8 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
                 0x08001624                        __exidx_end = .
                 0x08001624                        . = ALIGN (0x4)
 
 .rel.dyn        0x08001624        0x0
- .rel.iplt      0x08001624        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .rel.iplt      0x08001624        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
 
 .preinit_array  0x08001624        0x0
                 0x08001624                        . = ALIGN (0x4)
@@ -1059,7 +1059,7 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
                 0x08001624                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08001624        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .init_array    0x08001624        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x08001628                        PROVIDE (__init_array_end = .)
                 0x08001628                        . = ALIGN (0x4)
 
@@ -1068,7 +1068,7 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08001628        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x08001628        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
                 0x0800162c                        . = ALIGN (0x4)
                 0x0800162c                        _sidata = LOADADDR (.data)
@@ -1083,10 +1083,10 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
                 0x20000000                Timeout_blink
  *fill*         0x20000002        0x2 
  .data._impure_ptr
-                0x20000004        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
+                0x20000004        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
                 0x20000004                _impure_ptr
  .data._impure_data
-                0x20000008       0x4c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
+                0x20000008       0x4c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
                 0x20000008                _impure_data
  *(.RamFunc)
  *(.RamFunc*)
@@ -1094,14 +1094,14 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
                 0x20000054                        _edata = .
 
 .igot.plt       0x20000054        0x0 load address 0x08001680
- .igot.plt      0x20000054        0x0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .igot.plt      0x20000054        0x0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x20000054                        . = ALIGN (0x4)
 
 .bss            0x20000054      0x2d4 load address 0x08001680
                 0x20000054                        _sbss = .
                 0x20000054                        __bss_start__ = _sbss
  *(.bss)
- .bss           0x20000054       0x1c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .bss           0x20000054       0x1c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.bss*)
  .bss.Counter   0x20000070        0x4 Debug/main.o
                 0x20000070                Counter
@@ -1129,19 +1129,19 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
  *fill*         0x200001db        0x1 
  .bss.__sbrk_heap_end
                 0x200001dc        0x4 Debug/sysmem.o
- .bss.__sf      0x200001e0      0x138 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .bss.__sf      0x200001e0      0x138 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
                 0x200001e0                __sf
- .bss.errno     0x20000318        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
+ .bss.errno     0x20000318        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
                 0x20000318                errno
  .bss.__lock___malloc_recursive_mutex
-                0x2000031c        0x1 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x2000031c        0x1 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
                 0x2000031c                __lock___malloc_recursive_mutex
  *fill*         0x2000031d        0x3 
  .bss.__malloc_sbrk_start
-                0x20000320        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+                0x20000320        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
                 0x20000320                __malloc_sbrk_start
  .bss.__malloc_free_list
-                0x20000324        0x4 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+                0x20000324        0x4 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
                 0x20000324                __malloc_free_list
  *(COMMON)
                 0x20000328                        . = ALIGN (0x4)
@@ -1168,9 +1168,9 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
                 0x00000000       0x29
  *(.ARM.attributes)
  .ARM.attributes
-                0x00000000       0x1d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+                0x00000000       0x1d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
  .ARM.attributes
-                0x0000001d       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0000001d       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
  .ARM.attributes
                 0x0000004a       0x2d Debug/main.o
  .ARM.attributes
@@ -1184,50 +1184,50 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
  .ARM.attributes
                 0x0000012b       0x21 Debug/startup_stm32f103c8tx.o
  .ARM.attributes
-                0x0000014c       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x0000014c       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
  .ARM.attributes
-                0x00000179       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
+                0x00000179       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
  .ARM.attributes
-                0x000001a6       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
+                0x000001a6       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
  .ARM.attributes
-                0x000001d3       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
+                0x000001d3       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
  .ARM.attributes
-                0x00000200       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+                0x00000200       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
  .ARM.attributes
-                0x0000022d       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+                0x0000022d       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
  .ARM.attributes
-                0x0000025a       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+                0x0000025a       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
  .ARM.attributes
-                0x00000287       0x17 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
+                0x00000287       0x17 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-strlen.o)
  .ARM.attributes
-                0x0000029e       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
+                0x0000029e       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
  .ARM.attributes
-                0x000002cb       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+                0x000002cb       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
  .ARM.attributes
-                0x000002f8       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
+                0x000002f8       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
  .ARM.attributes
-                0x00000325       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+                0x00000325       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
  .ARM.attributes
-                0x00000352       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00000352       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x0000037f       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
+                0x0000037f       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
  .ARM.attributes
-                0x000003ac       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
+                0x000003ac       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
  .ARM.attributes
-                0x000003d9       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
+                0x000003d9       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
  .ARM.attributes
-                0x00000406       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+                0x00000406       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
  .ARM.attributes
-                0x00000433       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
+                0x00000433       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
  .ARM.attributes
-                0x00000460       0x2d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
+                0x00000460       0x2d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
  .ARM.attributes
-                0x0000048d       0x1d C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+                0x0000048d       0x1d C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
 OUTPUT(Debug/Clean_project.elf elf32-littlearm)
 LOAD linker stubs
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc.a
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
-LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp\libgcc.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
+LOAD C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp\libgcc.a
 
 .debug_info     0x00000000     0x1ee2
  .debug_info    0x00000000      0x315 Debug/main.o
@@ -1320,13 +1320,13 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
  .debug_macro   0x00010f85       0xff Debug/sysmem.o
  .debug_macro   0x00011084       0xc8 Debug/system_stm32f1xx.o
 
-.debug_line     0x00000000     0x25e5
- .debug_line    0x00000000      0x46e Debug/main.o
- .debug_line    0x0000046e     0x1561 Debug/stm32f103xx_CMSIS.o
- .debug_line    0x000019cf      0x4aa Debug/stm32f103xx_it.o
- .debug_line    0x00001e79      0x36e Debug/sysmem.o
- .debug_line    0x000021e7      0x385 Debug/system_stm32f1xx.o
- .debug_line    0x0000256c       0x79 Debug/startup_stm32f103c8tx.o
+.debug_line     0x00000000     0x271d
+ .debug_line    0x00000000      0x4af Debug/main.o
+ .debug_line    0x000004af     0x15a2 Debug/stm32f103xx_CMSIS.o
+ .debug_line    0x00001a51      0x4eb Debug/stm32f103xx_it.o
+ .debug_line    0x00001f3c      0x3af Debug/sysmem.o
+ .debug_line    0x000022eb      0x3b9 Debug/system_stm32f1xx.o
+ .debug_line    0x000026a4       0x79 Debug/startup_stm32f103c8tx.o
 
 .debug_str      0x00000000    0x58fd8
  .debug_str     0x00000000    0x58075 Debug/main.o
@@ -1356,23 +1356,23 @@ LOAD C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.
  .debug_frame   0x0000072c       0x30 Debug/stm32f103xx_it.o
  .debug_frame   0x0000075c       0x34 Debug/sysmem.o
  .debug_frame   0x00000790       0x58 Debug/system_stm32f1xx.o
- .debug_frame   0x000007e8      0x144 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .debug_frame   0x0000092c       0x6c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
- .debug_frame   0x00000998       0x38 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
- .debug_frame   0x000009d0       0x20 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
- .debug_frame   0x000009f0       0x2c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
- .debug_frame   0x00000a1c       0xb0 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
- .debug_frame   0x00000acc       0x38 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
- .debug_frame   0x00000b04       0x50 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
- .debug_frame   0x00000b54       0x30 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
- .debug_frame   0x00000b84       0x90 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
- .debug_frame   0x00000c14       0x60 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_frame   0x00000c74       0x28 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
- .debug_frame   0x00000c9c       0x2c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
- .debug_frame   0x00000cc8       0x28 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
- .debug_frame   0x00000cf0       0x28 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
- .debug_frame   0x00000d18       0x3c C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
- .debug_frame   0x00000d54       0x20 C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
+ .debug_frame   0x000007e8      0x144 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .debug_frame   0x0000092c       0x6c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sprintf.o)
+ .debug_frame   0x00000998       0x38 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reent.o)
+ .debug_frame   0x000009d0       0x20 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+ .debug_frame   0x000009f0       0x2c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+ .debug_frame   0x00000a1c       0xb0 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-lock.o)
+ .debug_frame   0x00000acc       0x38 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-freer.o)
+ .debug_frame   0x00000b04       0x50 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mallocr.o)
+ .debug_frame   0x00000b54       0x30 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-mlock.o)
+ .debug_frame   0x00000b84       0x90 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+ .debug_frame   0x00000c14       0x60 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000c74       0x28 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memmove.o)
+ .debug_frame   0x00000c9c       0x2c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-sbrkr.o)
+ .debug_frame   0x00000cc8       0x28 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memchr-stub.o)
+ .debug_frame   0x00000cf0       0x28 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x00000d18       0x3c C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-reallocr.o)
+ .debug_frame   0x00000d54       0x20 C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-msizer.o)
 
 .debug_line_str
                 0x00000000       0x77

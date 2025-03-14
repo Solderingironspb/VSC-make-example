@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
   30:Drivers/CMSIS/core_cm3.h **** 
   31:Drivers/CMSIS/core_cm3.h **** #ifndef __CORE_CM3_H_GENERIC
   32:Drivers/CMSIS/core_cm3.h **** #define __CORE_CM3_H_GENERIC
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 2
 
 
   33:Drivers/CMSIS/core_cm3.h **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
   87:Drivers/CMSIS/core_cm3.h **** 
   88:Drivers/CMSIS/core_cm3.h **** #elif defined ( __GNUC__ )
   89:Drivers/CMSIS/core_cm3.h ****   #if defined (__VFP_FP__) && !defined(__SOFTFP__)
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 3
 
 
   90:Drivers/CMSIS/core_cm3.h ****     #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  144:Drivers/CMSIS/core_cm3.h **** 
  145:Drivers/CMSIS/core_cm3.h ****   #ifndef __NVIC_PRIO_BITS
  146:Drivers/CMSIS/core_cm3.h ****     #define __NVIC_PRIO_BITS          3U
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 4
 
 
  147:Drivers/CMSIS/core_cm3.h ****     #warning "__NVIC_PRIO_BITS not defined in device header file; using default!"
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  201:Drivers/CMSIS/core_cm3.h ****  */
  202:Drivers/CMSIS/core_cm3.h **** 
  203:Drivers/CMSIS/core_cm3.h **** /**
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 5
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 5
 
 
  204:Drivers/CMSIS/core_cm3.h ****   \brief  Union type to access the Application Program Status Register (APSR).
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  258:Drivers/CMSIS/core_cm3.h **** typedef union
  259:Drivers/CMSIS/core_cm3.h **** {
  260:Drivers/CMSIS/core_cm3.h ****   struct
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 6
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 6
 
 
  261:Drivers/CMSIS/core_cm3.h ****   {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  315:Drivers/CMSIS/core_cm3.h ****     uint32_t _reserved1:30;              /*!< bit:  2..31  Reserved */
  316:Drivers/CMSIS/core_cm3.h ****   } b;                                   /*!< Structure used for bit  access */
  317:Drivers/CMSIS/core_cm3.h ****   uint32_t w;                            /*!< Type      used for word access */
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 7
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 7
 
 
  318:Drivers/CMSIS/core_cm3.h **** } CONTROL_Type;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  372:Drivers/CMSIS/core_cm3.h ****   \brief  Structure type to access the System Control Block (SCB).
  373:Drivers/CMSIS/core_cm3.h ****  */
  374:Drivers/CMSIS/core_cm3.h **** typedef struct
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 8
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 8
 
 
  375:Drivers/CMSIS/core_cm3.h **** {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  429:Drivers/CMSIS/core_cm3.h **** #define SCB_ICSR_PENDSTCLR_Msk             (1UL << SCB_ICSR_PENDSTCLR_Pos)                /*!< SCB 
  430:Drivers/CMSIS/core_cm3.h **** 
  431:Drivers/CMSIS/core_cm3.h **** #define SCB_ICSR_ISRPREEMPT_Pos            23U                                            /*!< SCB 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 9
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 9
 
 
  432:Drivers/CMSIS/core_cm3.h **** #define SCB_ICSR_ISRPREEMPT_Msk            (1UL << SCB_ICSR_ISRPREEMPT_Pos)               /*!< SCB 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  486:Drivers/CMSIS/core_cm3.h **** 
  487:Drivers/CMSIS/core_cm3.h **** #define SCB_SCR_SLEEPONEXIT_Pos             1U                                            /*!< SCB 
  488:Drivers/CMSIS/core_cm3.h **** #define SCB_SCR_SLEEPONEXIT_Msk            (1UL << SCB_SCR_SLEEPONEXIT_Pos)               /*!< SCB 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 10
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 10
 
 
  489:Drivers/CMSIS/core_cm3.h **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  543:Drivers/CMSIS/core_cm3.h **** #define SCB_SHCSR_USGFAULTACT_Pos           3U                                            /*!< SCB 
  544:Drivers/CMSIS/core_cm3.h **** #define SCB_SHCSR_USGFAULTACT_Msk          (1UL << SCB_SHCSR_USGFAULTACT_Pos)             /*!< SCB 
  545:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 11
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 11
 
 
  546:Drivers/CMSIS/core_cm3.h **** #define SCB_SHCSR_BUSFAULTACT_Pos           1U                                            /*!< SCB 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  600:Drivers/CMSIS/core_cm3.h **** 
  601:Drivers/CMSIS/core_cm3.h **** #define SCB_CFSR_UNALIGNED_Pos            (SCB_CFSR_USGFAULTSR_Pos + 8U)                  /*!< SCB 
  602:Drivers/CMSIS/core_cm3.h **** #define SCB_CFSR_UNALIGNED_Msk            (1UL << SCB_CFSR_UNALIGNED_Pos)                 /*!< SCB 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 12
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 12
 
 
  603:Drivers/CMSIS/core_cm3.h **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  657:Drivers/CMSIS/core_cm3.h ****         uint32_t RESERVED0[1U];
  658:Drivers/CMSIS/core_cm3.h ****   __IM  uint32_t ICTR;                   /*!< Offset: 0x004 (R/ )  Interrupt Controller Type Regist
  659:Drivers/CMSIS/core_cm3.h **** #if defined (__CM3_REV) && (__CM3_REV >= 0x200U)
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 13
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 13
 
 
  660:Drivers/CMSIS/core_cm3.h ****   __IOM uint32_t ACTLR;                  /*!< Offset: 0x008 (R/W)  Auxiliary Control Register */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  714:Drivers/CMSIS/core_cm3.h **** 
  715:Drivers/CMSIS/core_cm3.h **** /* SysTick Reload Register Definitions */
  716:Drivers/CMSIS/core_cm3.h **** #define SysTick_LOAD_RELOAD_Pos             0U                                            /*!< SysT
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 14
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 14
 
 
  717:Drivers/CMSIS/core_cm3.h **** #define SysTick_LOAD_RELOAD_Msk            (0xFFFFFFUL /*<< SysTick_LOAD_RELOAD_Pos*/)    /*!< SysT
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  771:Drivers/CMSIS/core_cm3.h ****   __IM  uint32_t PID7;                   /*!< Offset: 0xFDC (R/ )  ITM Peripheral Identification Re
  772:Drivers/CMSIS/core_cm3.h ****   __IM  uint32_t PID0;                   /*!< Offset: 0xFE0 (R/ )  ITM Peripheral Identification Re
  773:Drivers/CMSIS/core_cm3.h ****   __IM  uint32_t PID1;                   /*!< Offset: 0xFE4 (R/ )  ITM Peripheral Identification Re
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 15
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 15
 
 
  774:Drivers/CMSIS/core_cm3.h ****   __IM  uint32_t PID2;                   /*!< Offset: 0xFE8 (R/ )  ITM Peripheral Identification Re
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  828:Drivers/CMSIS/core_cm3.h **** #define ITM_LSR_ByteAcc_Msk                (1UL << ITM_LSR_ByteAcc_Pos)                   /*!< ITM 
  829:Drivers/CMSIS/core_cm3.h **** 
  830:Drivers/CMSIS/core_cm3.h **** #define ITM_LSR_Access_Pos                  1U                                            /*!< ITM 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 16
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 16
 
 
  831:Drivers/CMSIS/core_cm3.h **** #define ITM_LSR_Access_Msk                 (1UL << ITM_LSR_Access_Pos)                    /*!< ITM 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  885:Drivers/CMSIS/core_cm3.h **** 
  886:Drivers/CMSIS/core_cm3.h **** #define DWT_CTRL_NOCYCCNT_Pos              25U                                         /*!< DWT CTR
  887:Drivers/CMSIS/core_cm3.h **** #define DWT_CTRL_NOCYCCNT_Msk              (0x1UL << DWT_CTRL_NOCYCCNT_Pos)            /*!< DWT CTR
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 17
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 17
 
 
  888:Drivers/CMSIS/core_cm3.h **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  942:Drivers/CMSIS/core_cm3.h **** 
  943:Drivers/CMSIS/core_cm3.h **** /* DWT LSU Count Register Definitions */
  944:Drivers/CMSIS/core_cm3.h **** #define DWT_LSUCNT_LSUCNT_Pos               0U                                         /*!< DWT LSU
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 18
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 18
 
 
  945:Drivers/CMSIS/core_cm3.h **** #define DWT_LSUCNT_LSUCNT_Msk              (0xFFUL /*<< DWT_LSUCNT_LSUCNT_Pos*/)       /*!< DWT LSU
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  999:Drivers/CMSIS/core_cm3.h ****   __IOM uint32_t CSPSR;                  /*!< Offset: 0x004 (R/W)  Current Parallel Port Size Regis
 1000:Drivers/CMSIS/core_cm3.h ****         uint32_t RESERVED0[2U];
 1001:Drivers/CMSIS/core_cm3.h ****   __IOM uint32_t ACPR;                   /*!< Offset: 0x010 (R/W)  Asynchronous Clock Prescaler Reg
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 19
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 19
 
 
 1002:Drivers/CMSIS/core_cm3.h ****         uint32_t RESERVED1[55U];
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1056:Drivers/CMSIS/core_cm3.h **** /* TPI Integration ETM Data Register Definitions (FIFO0) */
 1057:Drivers/CMSIS/core_cm3.h **** #define TPI_FIFO0_ITM_ATVALID_Pos          29U                                         /*!< TPI FIF
 1058:Drivers/CMSIS/core_cm3.h **** #define TPI_FIFO0_ITM_ATVALID_Msk          (0x3UL << TPI_FIFO0_ITM_ATVALID_Pos)        /*!< TPI FIF
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 20
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 20
 
 
 1059:Drivers/CMSIS/core_cm3.h **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1113:Drivers/CMSIS/core_cm3.h **** 
 1114:Drivers/CMSIS/core_cm3.h **** /* TPI Integration Mode Control Register Definitions */
 1115:Drivers/CMSIS/core_cm3.h **** #define TPI_ITCTRL_Mode_Pos                 0U                                         /*!< TPI ITC
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 21
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 21
 
 
 1116:Drivers/CMSIS/core_cm3.h **** #define TPI_ITCTRL_Mode_Msk                (0x3UL /*<< TPI_ITCTRL_Mode_Pos*/)          /*!< TPI ITC
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1170:Drivers/CMSIS/core_cm3.h ****   __IOM uint32_t RASR_A3;                /*!< Offset: 0x028 (R/W)  MPU Alias 3 Region Attribute and
 1171:Drivers/CMSIS/core_cm3.h **** } MPU_Type;
 1172:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 22
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 22
 
 
 1173:Drivers/CMSIS/core_cm3.h **** #define MPU_TYPE_RALIASES                  4U
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1227:Drivers/CMSIS/core_cm3.h **** 
 1228:Drivers/CMSIS/core_cm3.h **** #define MPU_RASR_B_Pos                     16U                                            /*!< MPU 
 1229:Drivers/CMSIS/core_cm3.h **** #define MPU_RASR_B_Msk                     (1UL << MPU_RASR_B_Pos)                        /*!< MPU 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 23
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 23
 
 
 1230:Drivers/CMSIS/core_cm3.h **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1284:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DHCSR_C_SNAPSTALL_Pos     5U                                            /*!< Core
 1285:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DHCSR_C_SNAPSTALL_Msk    (1UL << CoreDebug_DHCSR_C_SNAPSTALL_Pos)       /*!< Core
 1286:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 24
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 24
 
 
 1287:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DHCSR_C_MASKINTS_Pos      3U                                            /*!< Core
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1341:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DEMCR_VC_MMERR_Msk       (1UL << CoreDebug_DEMCR_VC_MMERR_Pos)          /*!< Core
 1342:Drivers/CMSIS/core_cm3.h **** 
 1343:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DEMCR_VC_CORERESET_Pos    0U                                            /*!< Core
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 25
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 25
 
 
 1344:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DEMCR_VC_CORERESET_Msk   (1UL /*<< CoreDebug_DEMCR_VC_CORERESET_Pos*/)  /*!< Core
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1398:Drivers/CMSIS/core_cm3.h **** #define TPI                 ((TPI_Type       *)     TPI_BASE      )   /*!< TPI configuration struct
 1399:Drivers/CMSIS/core_cm3.h **** #define CoreDebug           ((CoreDebug_Type *)     CoreDebug_BASE)   /*!< Core Debug configuration
 1400:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 26
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 26
 
 
 1401:Drivers/CMSIS/core_cm3.h **** #if defined (__MPU_PRESENT) && (__MPU_PRESENT == 1U)
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1455:Drivers/CMSIS/core_cm3.h ****   #endif
 1456:Drivers/CMSIS/core_cm3.h ****   #include CMSIS_VECTAB_VIRTUAL_HEADER_FILE
 1457:Drivers/CMSIS/core_cm3.h **** #else
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 27
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 27
 
 
 1458:Drivers/CMSIS/core_cm3.h ****   #define NVIC_SetVector              __NVIC_SetVector
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1512:Drivers/CMSIS/core_cm3.h **** {
   27              		.loc 2 1512 1
   28              		.cfi_startproc
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 28
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 28
 
 
   29              		@ args = 0, pretend = 0, frame = 8
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
   79              		.align	1
   80              		.global	CMSIS_Debug_init
   81              		.syntax unified
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 29
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 29
 
 
   82              		.thumb
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
   41:Core/Src/stm32f103xx_CMSIS.c **** 	*  JTCK / SWCLK PA14
   42:Core/Src/stm32f103xx_CMSIS.c **** 	*  JTDI PA15
   43:Core/Src/stm32f103xx_CMSIS.c **** 	*  JTDO / TRACESWO PB3
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 30
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 30
 
 
   44:Core/Src/stm32f103xx_CMSIS.c **** 	*  NJTRST PB4
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  119 002e 4FF4B032 		mov	r2, #90112
  120 0032 9A61     		str	r2, [r3, #24]
   76:Core/Src/stm32f103xx_CMSIS.c **** 	GPIOA->LCKR = GPIO_LCKR_LCK13 | GPIO_LCKR_LCK14;
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 31
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 31
 
 
  121              		.loc 1 76 7
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
   93:Core/Src/stm32f103xx_CMSIS.c ****  ***************************************************************************************
   94:Core/Src/stm32f103xx_CMSIS.c ****  */
   95:Core/Src/stm32f103xx_CMSIS.c **** void CMSIS_RCC_SystemClock_72MHz(void) {
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 32
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 32
 
 
  161              		.loc 1 95 40
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  124:Core/Src/stm32f103xx_CMSIS.c **** 	*/
  125:Core/Src/stm32f103xx_CMSIS.c **** 
  126:Core/Src/stm32f103xx_CMSIS.c **** 	/**
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 33
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 33
 
 
  127:Core/Src/stm32f103xx_CMSIS.c **** 	*  Bits 7:3 HSITRIM[4:0]: Internal high-speed clock trimming
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  169:Core/Src/stm32f103xx_CMSIS.c **** 	*  HSE oscillator clock to fall down after HSEON reset.
  170:Core/Src/stm32f103xx_CMSIS.c **** 	*  0: HSE oscillator not ready
  171:Core/Src/stm32f103xx_CMSIS.c **** 	*  1: HSE oscillator ready
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 34
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 34
 
 
  172:Core/Src/stm32f103xx_CMSIS.c **** 	*/
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  210:Core/Src/stm32f103xx_CMSIS.c **** 	//while (READ_BIT(RCC->CR, RCC_CR_PLLRDY) == 0) ; //Тут мы должны дожидаться 
  211:Core/Src/stm32f103xx_CMSIS.c **** 
  212:Core/Src/stm32f103xx_CMSIS.c **** 	/**
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 35
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 35
 
 
  213:Core/Src/stm32f103xx_CMSIS.c **** 	*  Bits 31:26 Reserved, must be kept at reset value.
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  222              		.loc 1 259 2
  223 0060 304B     		ldr	r3, .L13
  224 0062 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 36
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 36
 
 
  225 0064 2F4A     		ldr	r2, .L13
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  298:Core/Src/stm32f103xx_CMSIS.c **** 	*  Bits 31:6 Reserved, must be kept at reset value
  299:Core/Src/stm32f103xx_CMSIS.c **** 	*/
  300:Core/Src/stm32f103xx_CMSIS.c **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 37
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 37
 
 
  301:Core/Src/stm32f103xx_CMSIS.c **** 	// Вот теперь можно вернуться обратно к пункту 7.3.2 Clock co
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  259 00ae 43F40043 		orr	r3, r3, #32768
  260 00b2 5360     		str	r3, [r2, #4]
  337:Core/Src/stm32f103xx_CMSIS.c **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 38
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 38
 
 
  338:Core/Src/stm32f103xx_CMSIS.c **** 	/**
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  273 00c8 164B     		ldr	r3, .L13
  274 00ca 5B68     		ldr	r3, [r3, #4]
  275 00cc 23F47013 		bic	r3, r3, #3932160
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 39
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 39
 
 
  276 00d0 144A     		ldr	r2, .L13
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  419:Core/Src/stm32f103xx_CMSIS.c **** 	*/
  420:Core/Src/stm32f103xx_CMSIS.c **** 
  421:Core/Src/stm32f103xx_CMSIS.c **** 	SET_BIT(RCC->CR, RCC_CR_PLLON); //Запустим PLL
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 40
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 40
 
 
  291              		.loc 1 421 2
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  327 0124 00100240 		.word	1073876992
  328 0128 00200240 		.word	1073881088
  329              		.cfi_endproc
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 41
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 41
 
 
  330              	.LFE69:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  475:Core/Src/stm32f103xx_CMSIS.c **** 
  476:Core/Src/stm32f103xx_CMSIS.c **** 	CLEAR_BIT(SysTick->CTRL, SysTick_CTRL_ENABLE_Msk); //Выключим таймер для пров
  351              		.loc 1 476 2
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 42
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 42
 
 
  352 0004 154B     		ldr	r3, .L16
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  514:Core/Src/stm32f103xx_CMSIS.c **** 	*  activated when counting from 1 to 0.
  515:Core/Src/stm32f103xx_CMSIS.c **** 	*  The RELOAD value is calculated according to its use :
  516:Core/Src/stm32f103xx_CMSIS.c **** 	*  l To generate a multi - shot timer with a period of N processor clock cycles, use a RELOAD
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 43
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 43
 
 
  517:Core/Src/stm32f103xx_CMSIS.c **** 	*  value of N - 1. For example, if the SysTick interrupt is required every 100 clock pulses, set
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  393 0056 BD46     		mov	sp, r7
  394              		.cfi_def_cfa_register 13
  395              		@ sp needed
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 44
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 44
 
 
  396 0058 80BC     		pop	{r7}
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  440              		@ args = 0, pretend = 0, frame = 8
  441              		@ frame_needed = 1, uses_anonymous_args = 0
  442              		@ link register save eliminated.
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 45
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 45
 
 
  443 0000 80B4     		push	{r7}
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  573:Core/Src/stm32f103xx_CMSIS.c ****  ******************************************************************************
  574:Core/Src/stm32f103xx_CMSIS.c ****  */
  575:Core/Src/stm32f103xx_CMSIS.c **** __WEAK void SysTick_Handler(void) {
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 46
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 46
 
 
  491              		.loc 1 575 35
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  588:Core/Src/stm32f103xx_CMSIS.c **** }
  533              		.loc 1 588 1
  534 0032 00BF     		nop
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 47
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 47
 
 
  535 0034 BD46     		mov	sp, r7
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  620:Core/Src/stm32f103xx_CMSIS.c ****  *  CRL предназначен для пина с 0 по 7
  621:Core/Src/stm32f103xx_CMSIS.c ****  *  CRH предназначен для пина с 8 по 15
  622:Core/Src/stm32f103xx_CMSIS.c ****  */
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 48
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 48
 
 
  623:Core/Src/stm32f103xx_CMSIS.c **** 
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  560              		.loc 1 676 45
  561              		.cfi_startproc
  562              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 49
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 49
 
 
  563              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  682:Core/Src/stm32f103xx_CMSIS.c **** //Служебная функция
  683:Core/Src/stm32f103xx_CMSIS.c **** static void CMSIS_GPIO_MODE_Set(GPIO_TypeDef *GPIO, uint8_t GPIO_Pin, uint8_t Reg, uint8_t Data) {
  614              		.loc 1 683 98
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 50
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 50
 
 
  615              		.cfi_startproc
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  654 0032 1A68     		ldr	r2, [r3]
  655 0034 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  656 0036 0321     		movs	r1, #3
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 51
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 51
 
 
  657 0038 01FA03F3 		lsl	r3, r1, r3
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  706              		.cfi_endproc
  707              	.LFE74:
  709              		.section	.text.CMSIS_GPIO_SPEED_Set,"ax",%progbits
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 52
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 52
 
 
  710              		.align	1
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  708:Core/Src/stm32f103xx_CMSIS.c **** 		CMSIS_GPIO_MODE_Set(GPIO, GPIO_Pin, Reg, 0b00);
  754              		.loc 1 708 3
  755 002a FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 53
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 53
 
 
  756 002c F978     		ldrb	r1, [r7, #3]	@ zero_extendqisi2
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  796 006a 0323     		movs	r3, #3
  797 006c 7868     		ldr	r0, [r7, #4]
  798 006e FFF7FEFF 		bl	CMSIS_GPIO_MODE_Set
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 54
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 54
 
 
  799              	.L43:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  844 001c 21E0     		b	.L48
  845              	.L45:
  722:Core/Src/stm32f103xx_CMSIS.c **** 		break;
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 55
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 55
 
 
  846              		.loc 1 722 3
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  898              	.LFE76:
  900              		.section	.text.CMSIS_GPIO_Reg_Set,"ax",%progbits
  901              		.align	1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 56
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 56
 
 
  902              		.syntax unified
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  747:Core/Src/stm32f103xx_CMSIS.c **** 		case(GPIO_OUTPUT_OPEN_DRAIN):
  748:Core/Src/stm32f103xx_CMSIS.c **** 			CMSIS_GPIO_CNF_Set(GPIO, Reg, 0b11, *(&CNF_Pos));
  749:Core/Src/stm32f103xx_CMSIS.c **** 			break;
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 57
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 57
 
 
  750:Core/Src/stm32f103xx_CMSIS.c **** 		}
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  739:Core/Src/stm32f103xx_CMSIS.c **** 		}
  965              		.loc 1 739 4
  966 0050 00BF     		nop
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 58
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 58
 
 
  967              	.L56:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1012 0094 B9000000 		.word	.L63+1
  1013 0098 DD000000 		.word	.L61+1
  1014              		.p2align 1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 59
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 59
 
 
  1015              	.L65:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  766:Core/Src/stm32f103xx_CMSIS.c **** 			break;
  1061              		.loc 1 766 4
  1062 00e8 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 60
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 60
 
 
  1063 00ea DA68     		ldr	r2, [r3, #12]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  789:Core/Src/stm32f103xx_CMSIS.c ****  *		           GPIO_SPEED_10_MHZ,
  790:Core/Src/stm32f103xx_CMSIS.c ****  *		           GPIO_SPEED_2_MHZ,
  791:Core/Src/stm32f103xx_CMSIS.c ****  *		           GPIO_SPEED_50_MHZ 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 61
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 61
 
 
  792:Core/Src/stm32f103xx_CMSIS.c ****  ***************************************************************************************
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1146 0040 2E4A     		ldr	r2, .L78+4
  1147 0042 43F00803 		orr	r3, r3, #8
  1148 0046 9361     		str	r3, [r2, #24]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 62
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 62
 
 
  1149 0048 1FE0     		b	.L71
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1194 0092 FFF7FEFF 		bl	CMSIS_GPIO_SPEED_Set
  809:Core/Src/stm32f103xx_CMSIS.c **** 	
  810:Core/Src/stm32f103xx_CMSIS.c **** 	if (GPIO_Pin < 8) {
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 63
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 63
 
 
  1195              		.loc 1 810 15
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1236              		.loc 1 816 3
  1237 00d6 7878     		ldrb	r0, [r7, #1]	@ zero_extendqisi2
  1238 00d8 BA78     		ldrb	r2, [r7, #2]	@ zero_extendqisi2
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 64
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 64
 
 
  1239 00da F91C     		adds	r1, r7, #3
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1287 0004 00AF     		add	r7, sp, #0
  1288              		.cfi_def_cfa_register 7
  1289 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 65
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 65
 
 
  827:Core/Src/stm32f103xx_CMSIS.c **** 	GPIOC->BSRR = GPIO_BSRR_BR13;
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1332              		@ args = 0, pretend = 0, frame = 0
  1333              		@ frame_needed = 1, uses_anonymous_args = 0
  1334              		@ link register save eliminated.
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 66
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 66
 
 
  1335 0000 80B4     		push	{r7}
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1384              		.global	CMSIS_RCC_AFIO_enable
  1385              		.syntax unified
  1386              		.thumb
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 67
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 67
 
 
  1387              		.thumb_func
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1406 000e 9361     		str	r3, [r2, #24]
  883:Core/Src/stm32f103xx_CMSIS.c **** }
  1407              		.loc 1 883 1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 68
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 68
 
 
  1408 0010 00BF     		nop
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1444 0006 9B68     		ldr	r3, [r3, #8]
  1445 0008 23F00F03 		bic	r3, r3, #15
  1446 000c 034A     		ldr	r2, .L90
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 69
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 69
 
 
  1447 000e 43F00103 		orr	r3, r3, #1
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1492 0012 1B68     		ldr	r3, [r3]
  1493 0014 23F00C03 		bic	r3, r3, #12
  1494 0018 094A     		ldr	r2, .L93+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 70
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 70
 
 
  1495 001a 43F00803 		orr	r3, r3, #8
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1536              		@ args = 0, pretend = 0, frame = 0
  1537              		@ frame_needed = 1, uses_anonymous_args = 0
  1538 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 71
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 71
 
 
  1539              		.cfi_def_cfa_offset 8
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  967:Core/Src/stm32f103xx_CMSIS.c **** 
  968:Core/Src/stm32f103xx_CMSIS.c **** 	/**
  969:Core/Src/stm32f103xx_CMSIS.c **** 	*   10.3.5 Software interrupt event register (EXTI_SWIER)
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 72
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 72
 
 
  970:Core/Src/stm32f103xx_CMSIS.c **** 	*   Используется для софтварного запуска прерывания
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1572              		.syntax unified
  1573              		.thumb
  1574              		.thumb_func
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 73
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 73
 
 
  1576              	EXTI0_IRQHandler:
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1022:Core/Src/stm32f103xx_CMSIS.c ****  *  Рассмотрим все регистры, разберемся куда смотреть и
 1023:Core/Src/stm32f103xx_CMSIS.c ****  ***************************************************************************************
 1024:Core/Src/stm32f103xx_CMSIS.c ****  */
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 74
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 74
 
 
 1025:Core/Src/stm32f103xx_CMSIS.c ****  /**
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1079:Core/Src/stm32f103xx_CMSIS.c ****  *  Он обновляется аппаратно и выдает текущее направле�
 1080:Core/Src/stm32f103xx_CMSIS.c **** 
 1081:Core/Src/stm32f103xx_CMSIS.c ****  */
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 75
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 75
 
 
 1082:Core/Src/stm32f103xx_CMSIS.c **** 
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1659              		.loc 1 1095 2
  1660 0040 184B     		ldr	r3, .L102+4
  1661 0042 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 76
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 76
 
 
  1662 0044 174A     		ldr	r2, .L102+4
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1110:Core/Src/stm32f103xx_CMSIS.c **** 	SET_BIT(TIM3->CR1, TIM_CR1_CEN); //Запуск таймера
  1702              		.loc 1 1110 2
  1703 0090 044B     		ldr	r3, .L102+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 77
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 77
 
 
  1704 0092 1B68     		ldr	r3, [r3]
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1753 0022 1B68     		ldr	r3, [r3]
  1754 0024 1C4A     		ldr	r2, .L105+4
  1755 0026 43F04073 		orr	r3, r3, #50331648
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 78
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 78
 
 
  1756 002a 1360     		str	r3, [r2]
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1798 007e 43F00203 		orr	r3, r3, #2
  1799 0082 1362     		str	r3, [r2, #32]
 1130:Core/Src/stm32f103xx_CMSIS.c **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 79
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 79
 
 
 1131:Core/Src/stm32f103xx_CMSIS.c **** 	TIM3->CCR1 = 5;
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1849 0010 214B     		ldr	r3, .L108+4
  1850 0012 1B68     		ldr	r3, [r3]
  1851 0014 23F04043 		bic	r3, r3, #-1073741824
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 80
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 80
 
 
  1852 0018 1F4A     		ldr	r2, .L108+4
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1894 006e 1B6A     		ldr	r3, [r3, #32]
  1895 0070 0A4A     		ldr	r2, .L108+8
  1896 0072 43F01003 		orr	r3, r3, #16
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 81
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 81
 
 
  1897 0076 1362     		str	r3, [r2, #32]
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1946              		.loc 1 1156 6
  1947 0004 074B     		ldr	r3, .L113
  1948 0006 1B69     		ldr	r3, [r3, #16]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 82
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 82
 
 
  1949 0008 03F00103 		and	r3, r3, #1
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  1997 0006 9B69     		ldr	r3, [r3, #24]
  1998 0008 2B4A     		ldr	r2, .L116
  1999 000a 43F40063 		orr	r3, r3, #2048
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 83
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 83
 
 
  2000 000e 9361     		str	r3, [r2, #24]
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1176:Core/Src/stm32f103xx_CMSIS.c **** 	MODIFY_REG(TIM1->CR1, TIM_CR1_CKD_Msk, 0b00 << TIM_CR1_CKD_Pos); //Предделение выкл
  2043              		.loc 1 1176 2
  2044 0064 154B     		ldr	r3, .L116+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 84
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 84
 
 
  2045 0066 1B68     		ldr	r3, [r3]
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1193:Core/Src/stm32f103xx_CMSIS.c **** 
 1194:Core/Src/stm32f103xx_CMSIS.c **** 
 1195:Core/Src/stm32f103xx_CMSIS.c **** }
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 85
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 85
 
 
  2083              		.loc 1 1195 1
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2133 0020 1D4B     		ldr	r3, .L119+4
  2134 0022 5B68     		ldr	r3, [r3, #4]
  2135 0024 1C4A     		ldr	r2, .L119+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 86
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 86
 
 
  2136 0026 43F00303 		orr	r3, r3, #3
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2178 007c 074A     		ldr	r2, .L119+8
  2179 007e 23F00203 		bic	r3, r3, #2
  2180 0082 1362     		str	r3, [r2, #32]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 87
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 87
 
 
 1214:Core/Src/stm32f103xx_CMSIS.c **** 
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2229              		.loc 1 1221 2
  2230 0010 214B     		ldr	r3, .L122+4
  2231 0012 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 88
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 88
 
 
  2232 0014 23F0C003 		bic	r3, r3, #192
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2274 006c 0B4B     		ldr	r3, .L122+8
  2275 006e 1B6A     		ldr	r3, [r3, #32]
  2276 0070 0A4A     		ldr	r2, .L122+8
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 89
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 89
 
 
  2277 0072 43F01003 		orr	r3, r3, #16
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1240:Core/Src/stm32f103xx_CMSIS.c **** 	if (READ_BIT(TIM1->SR, TIM_SR_UIF)) {
  2327              		.loc 1 1240 6
  2328 0004 074B     		ldr	r3, .L127
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 90
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 90
 
 
  2329 0006 1B69     		ldr	r3, [r3, #16]
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1255:Core/Src/stm32f103xx_CMSIS.c **** //внутренних источников.
 1256:Core/Src/stm32f103xx_CMSIS.c **** //Аналого-цифровое преобразование различных каналов м
 1257:Core/Src/stm32f103xx_CMSIS.c **** //Результат АЦП сохраняется в 16-разрядном регистре дан
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 91
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 91
 
 
 1258:Core/Src/stm32f103xx_CMSIS.c **** 
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1312:Core/Src/stm32f103xx_CMSIS.c ****    * Рекомендуется калибровать АЦП один раз при включен
 1313:Core/Src/stm32f103xx_CMSIS.c ****    * калибровки заканчивается.
 1314:Core/Src/stm32f103xx_CMSIS.c ****    *
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 92
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 92
 
 
 1315:Core/Src/stm32f103xx_CMSIS.c ****    * Важно: перед началом калибровки АЦП должен находит�
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2384 0004 8E4B     		ldr	r3, .L131
  2385 0006 5B69     		ldr	r3, [r3, #20]
  2386 0008 8D4A     		ldr	r2, .L131
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 93
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 93
 
 
  2387 000a 43F00103 		orr	r3, r3, #1
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2433 005a 23F44063 		bic	r3, r3, #3072
  2434 005e 794A     		ldr	r2, .L131+4
  2435 0060 43F48063 		orr	r3, r3, #1024
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 94
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 94
 
 
  2436 0064 1360     		str	r3, [r2]
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2480 00ba 43F00403 		orr	r3, r3, #4
  2481 00be 9361     		str	r3, [r2, #24]
 1376:Core/Src/stm32f103xx_CMSIS.c **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 95
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 95
 
 
 1377:Core/Src/stm32f103xx_CMSIS.c **** 	/*Настройка ножек PA0 и PA1 на аналоговый вход*/
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1395:Core/Src/stm32f103xx_CMSIS.c **** 
 1396:Core/Src/stm32f103xx_CMSIS.c **** 	//Прерывание по АЦП: инжектированные каналы (вкл/выкл)
 1397:Core/Src/stm32f103xx_CMSIS.c **** 	CLEAR_BIT(ADC1->CR1, ADC_CR1_JEOCIE); //JEOC interrupt disabled
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 96
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 96
 
 
  2518              		.loc 1 1397 2
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2560 015e 5360     		str	r3, [r2, #4]
 1410:Core/Src/stm32f103xx_CMSIS.c **** 	CLEAR_BIT(ADC1->CR1, ADC_CR1_JAWDEN); //Analog watchdog disabled on injected channels
  2561              		.loc 1 1410 2
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 97
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 97
 
 
  2562 0160 3C4B     		ldr	r3, .L131+20
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2596 01a0 9B68     		ldr	r3, [r3, #8]
  2597 01a2 03F00403 		and	r3, r3, #4
  2598 01a6 002B     		cmp	r3, #0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 98
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 98
 
 
  2599 01a8 F9D1     		bne	.L130
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2635 01ee 1B69     		ldr	r3, [r3, #16]
  2636 01f0 184A     		ldr	r2, .L131+20
  2637 01f2 43F00703 		orr	r3, r3, #7
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 99
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 99
 
 
  2638 01f6 1361     		str	r3, [r2, #16]
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2679 0248 4C240140 		.word	1073816652
  2680 024c 00000000 		.word	ADC_RAW_Data
  2681 0250 00080140 		.word	1073809408
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 100
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 100
 
 
  2682 0254 00240140 		.word	1073816576
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2727              	.L136:
  2728 001c 00240140 		.word	1073816576
  2729              		.cfi_endproc
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 101
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 101
 
 
  2730              	.LFE95:
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1480:Core/Src/stm32f103xx_CMSIS.c **** 	}
  2774              		.loc 1 1480 3
  2775 002a 054B     		ldr	r3, .L142
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 102
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 102
 
 
  2776 002c 5B68     		ldr	r3, [r3, #4]
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1491:Core/Src/stm32f103xx_CMSIS.c **** */
 1492:Core/Src/stm32f103xx_CMSIS.c **** 
 1493:Core/Src/stm32f103xx_CMSIS.c **** /*Универсальный синхронный/асинхронный приемопередат
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 103
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 103
 
 
 1494:Core/Src/stm32f103xx_CMSIS.c **** полнодюплексного обмена данными с внешним оборудован
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1548:Core/Src/stm32f103xx_CMSIS.c ****  * - Two receiver wakeup modes: Address bit (MSB, 9th bit), Idle line
 1549:Core/Src/stm32f103xx_CMSIS.c **** 
 1550:Core/Src/stm32f103xx_CMSIS.c ****  Для любой двунаправленной связи USART требуется как мин
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 104
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 104
 
 
 1551:Core/Src/stm32f103xx_CMSIS.c ****  для передачи данных Tx.
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1605:Core/Src/stm32f103xx_CMSIS.c **** 
 1606:Core/Src/stm32f103xx_CMSIS.c ****   Внимание!
 1607:Core/Src/stm32f103xx_CMSIS.c ****   Бит TE не должен сбрасываться во время передачи данны�
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 105
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 105
 
 
 1608:Core/Src/stm32f103xx_CMSIS.c ****   повреждению данных на выводе TX, поскольку счетчики с�
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2850 002c 474B     		ldr	r3, .L145+4
  2851 002e 5B68     		ldr	r3, [r3, #4]
  2852 0030 464A     		ldr	r2, .L145+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 106
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 106
 
 
  2853 0032 43F03003 		orr	r3, r3, #48
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2875 0060 3B4B     		ldr	r3, .L145+8
  2876 0062 9B68     		ldr	r3, [r3, #8]
  2877 0064 23F47F43 		bic	r3, r3, #65280
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 107
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 107
 
 
  2878 0068 23F0F003 		bic	r3, r3, #240
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2922 00c4 224A     		ldr	r2, .L145+8
  2923 00c6 23F08003 		bic	r3, r3, #128
  2924 00ca D360     		str	r3, [r2, #12]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 108
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 108
 
 
 1674:Core/Src/stm32f103xx_CMSIS.c **** 	CLEAR_BIT(USART1->CR1, USART_CR1_TCIE); //Transmission complete interrupt disabled
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  2969              		.loc 1 1683 14
  2970 0122 0022     		movs	r2, #0
  2971 0124 1A61     		str	r2, [r3, #16]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 109
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 109
 
 
 1684:Core/Src/stm32f103xx_CMSIS.c **** 	CLEAR_BIT(USART1->CR2, USART_CR2_STOP); //1 стоп бит.
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3014              		@ args = 0, pretend = 0, frame = 0
  3015              		@ frame_needed = 1, uses_anonymous_args = 0
  3016 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 110
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 110
 
 
  3017              		.cfi_def_cfa_offset 8
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1709:Core/Src/stm32f103xx_CMSIS.c **** 
 1710:Core/Src/stm32f103xx_CMSIS.c **** 	//Запустим тактирование USART2
 1711:Core/Src/stm32f103xx_CMSIS.c **** 	SET_BIT(RCC->APB1ENR, RCC_APB1ENR_USART2EN);
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 111
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 111
 
 
  3060              		.loc 1 1711 2
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3084 0088 314A     		ldr	r2, .L148+8
  3085 008a 43F40053 		orr	r3, r3, #8192
  3086 008e D360     		str	r3, [r2, #12]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 112
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 112
 
 
 1742:Core/Src/stm32f103xx_CMSIS.c **** 	CLEAR_BIT(USART2->CR1, USART_CR1_M); //Word lenght 1 Start bit, 8 Data bits, n Stop bit
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3132 00e8 194A     		ldr	r2, .L148+8
  3133 00ea 43F01003 		orr	r3, r3, #16
  3134 00ee D360     		str	r3, [r2, #12]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 113
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 113
 
 
 1751:Core/Src/stm32f103xx_CMSIS.c **** 	SET_BIT(USART2->CR1, USART_CR1_TE); //Transmitter is enabled
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3179 013c 9A61     		str	r2, [r3, #24]
 1761:Core/Src/stm32f103xx_CMSIS.c **** 
 1762:Core/Src/stm32f103xx_CMSIS.c **** 	NVIC_EnableIRQ(USART2_IRQn); //Включим прерывания по USART2
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 114
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 114
 
 
  3180              		.loc 1 1762 2
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3224              		.loc 1 1774 28
  3225 0014 104B     		ldr	r3, .L154+4
  3226 0016 1B8D     		ldrh	r3, [r3, #40]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 115
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 115
 
 
  3227 0018 1946     		mov	r1, r3
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3272              	.L155:
  3273              		.align	2
  3274              	.L154:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 116
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 116
 
 
  3275 0054 00380140 		.word	1073821696
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3324 002a 0B4B     		ldr	r3, .L160+4
  3325 002c 1A85     		strh	r2, [r3, #40]	@ movhi
  3326              	.L157:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 117
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 117
 
 
 1791:Core/Src/stm32f103xx_CMSIS.c **** 	}
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1800:Core/Src/stm32f103xx_CMSIS.c **** 
 1801:Core/Src/stm32f103xx_CMSIS.c **** /**
 1802:Core/Src/stm32f103xx_CMSIS.c ****  ******************************************************************************
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 118
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 118
 
 
 1803:Core/Src/stm32f103xx_CMSIS.c ****  *  @breif Функция отправки данных по USART
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3414              	.L164:
 1814:Core/Src/stm32f103xx_CMSIS.c **** 			if (!Timeout_counter_ms) {
  3415              		.loc 1 1814 10
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 119
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 119
 
 
  3416 002a FB68     		ldr	r3, [r7, #12]
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3459              	.L168:
 1822:Core/Src/stm32f103xx_CMSIS.c **** 	while (READ_BIT(USART->SR, USART_SR_TC) == 0) { //Ожидаем отправки данных
  3460              		.loc 1 1822 9
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 120
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 120
 
 
  3461 0066 FB68     		ldr	r3, [r7, #12]
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1844:Core/Src/stm32f103xx_CMSIS.c ****  * в параллельный и наоборот. Прерывания включаются ил�
 1845:Core/Src/stm32f103xx_CMSIS.c ****  * Интерфейс имеет вывод данных (SDA) и вывод синхронизац
 1846:Core/Src/stm32f103xx_CMSIS.c ****  * Его можно подключить с стандартной скоростью до 100 к�
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 121
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 121
 
 
 1847:Core/Src/stm32f103xx_CMSIS.c ****  */
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3515              	.L173:
  3516              		.loc 1 1882 9 discriminator 1
  3517 0012 0C4B     		ldr	r3, .L175
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 122
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 122
 
 
  3518 0014 1B68     		ldr	r3, [r3]
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1893:Core/Src/stm32f103xx_CMSIS.c ****  *  @breif Функция инициализации шины I2C1. Sm.
 1894:Core/Src/stm32f103xx_CMSIS.c ****  *************************************************************************************
 1895:Core/Src/stm32f103xx_CMSIS.c ****  */
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 123
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 123
 
 
 1896:Core/Src/stm32f103xx_CMSIS.c **** 
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3605 0040 544B     		ldr	r3, .L178+4
  3606 0042 1B68     		ldr	r3, [r3]
  3607 0044 534A     		ldr	r2, .L178+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 124
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 124
 
 
  3608 0046 43F04063 		orr	r3, r3, #201326592
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3648              		.loc 1 1922 2
  3649 0098 3F4B     		ldr	r3, .L178+8
  3650 009a 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 125
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 125
 
 
  3651 009c 3E4A     		ldr	r2, .L178+8
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 1932:Core/Src/stm32f103xx_CMSIS.c **** 	CLEAR_BIT(I2C1->CR2, I2C_CR2_DMAEN); //DMA requests disabled
  3696              		.loc 1 1932 2
  3697 00f8 274B     		ldr	r3, .L178+8
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 126
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 126
 
 
  3698 00fa 5B68     		ldr	r3, [r3, #4]
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3740 0148 134A     		ldr	r2, .L178+8
  3741 014a 23F40043 		bic	r3, r3, #32768
  3742 014e D361     		str	r3, [r2, #28]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 127
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 127
 
 
 1945:Core/Src/stm32f103xx_CMSIS.c **** 	//SET_BIT(I2C1->CCR, I2C_CCR_FS); //Fast mode I2C
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3782              		.section	.text.CMSIS_I2C_Adress_Device_Scan,"ax",%progbits
  3783              		.align	1
  3784              		.global	CMSIS_I2C_Adress_Device_Scan
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 128
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 128
 
 
  3785              		.syntax unified
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3822 0026 414B     		ldr	r3, .L192
  3823 0028 9B68     		ldr	r3, [r3, #8]
  3824 002a 03F08003 		and	r3, r3, #128
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 129
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 129
 
 
  3825              		.loc 1 1978 45 discriminator 1
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3865              	.L184:
 1993:Core/Src/stm32f103xx_CMSIS.c **** 		}
 1994:Core/Src/stm32f103xx_CMSIS.c **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 130
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 130
 
 
 1995:Core/Src/stm32f103xx_CMSIS.c **** 		return false;
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3905 00ac F3D0     		beq	.L187
 2008:Core/Src/stm32f103xx_CMSIS.c **** 		}
 2009:Core/Src/stm32f103xx_CMSIS.c **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 131
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 131
 
 
 2010:Core/Src/stm32f103xx_CMSIS.c **** 	}
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  3944 00e2 002B     		cmp	r3, #0
  3945 00e4 EDD0     		beq	.L190
  3946              	.L189:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 132
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 132
 
 
 2022:Core/Src/stm32f103xx_CMSIS.c **** 		}
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2038:Core/Src/stm32f103xx_CMSIS.c **** 	}
 2039:Core/Src/stm32f103xx_CMSIS.c **** }
  3985              		.loc 1 2039 1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 133
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 133
 
 
  3986 0124 1846     		mov	r0, r3
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4028 0012 3B81     		strh	r3, [r7, #8]	@ movhi
 2054:Core/Src/stm32f103xx_CMSIS.c **** 
 2055:Core/Src/stm32f103xx_CMSIS.c **** 	/*-------------------Проверка занятости шины-------------------*/
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 134
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 134
 
 
 2056:Core/Src/stm32f103xx_CMSIS.c **** 	if (READ_BIT(I2C->SR2, I2C_SR2_BUSY)) {
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2070:Core/Src/stm32f103xx_CMSIS.c **** 		if (I2C->CR1 != 1) {
  4069              		.loc 1 2070 10
  4070 0058 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 135
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 135
 
 
  4071 005a 1B68     		ldr	r3, [r3]
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2085:Core/Src/stm32f103xx_CMSIS.c **** 		//Ожидаем до момента, пока не сработает Start condition generated
 2086:Core/Src/stm32f103xx_CMSIS.c **** 
 2087:Core/Src/stm32f103xx_CMSIS.c **** 		if (!Timeout_counter_ms) {
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 136
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 136
 
 
  4111              		.loc 1 2087 7
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4149 00ce 01D1     		bne	.L202
 2102:Core/Src/stm32f103xx_CMSIS.c **** 			return false;
  4150              		.loc 1 2102 11
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 137
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 137
 
 
  4151 00d0 0023     		movs	r3, #0
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2115:Core/Src/stm32f103xx_CMSIS.c **** 			I2C->DR = *(data + i); //Запись байта
  4189              		.loc 1 2115 21
  4190 0106 FB8A     		ldrh	r3, [r7, #22]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 138
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 138
 
 
  4191 0108 7A68     		ldr	r2, [r7, #4]
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4234 014c 0133     		adds	r3, r3, #1
  4235 014e FB82     		strh	r3, [r7, #22]	@ movhi
  4236              	.L206:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 139
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 139
 
 
 2114:Core/Src/stm32f103xx_CMSIS.c **** 			I2C->DR = *(data + i); //Запись байта
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4274              		@ sp needed
  4275 0188 80BD     		pop	{r7, pc}
  4276              	.L211:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 140
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 140
 
 
  4277 018a 00BF     		.align	2
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4317 001c 002B     		cmp	r3, #0
  4318 001e 2DD0     		beq	.L213
 2156:Core/Src/stm32f103xx_CMSIS.c **** 		//Если шина занята
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 141
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 141
 
 
 2157:Core/Src/stm32f103xx_CMSIS.c **** 
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4358              		.loc 1 2171 4
  4359 0060 FB68     		ldr	r3, [r7, #12]
  4360 0062 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 142
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 142
 
 
  4361 0064 23F00102 		bic	r2, r3, #1
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2187:Core/Src/stm32f103xx_CMSIS.c **** 			return false;
  4400              		.loc 1 2187 11
  4401 00a4 0023     		movs	r3, #0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 143
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 143
 
 
  4402 00a6 8DE0     		b	.L217
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2197:Core/Src/stm32f103xx_CMSIS.c **** 	while ((READ_BIT(I2C->SR1, I2C_SR1_AF) == 0) && (READ_BIT(I2C->SR1, I2C_SR1_ADDR) == 0)) {
  4440              		.loc 1 2197 10
  4441 00da FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 144
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 144
 
 
  4442 00dc 5B69     		ldr	r3, [r3, #20]
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4480              		.loc 1 2214 7
  4481 0112 9A42     		cmp	r2, r3
  4482 0114 1DDA     		bge	.L225
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 145
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 145
 
 
 2215:Core/Src/stm32f103xx_CMSIS.c **** 				SET_BIT(I2C->CR1, I2C_CR1_ACK); //Если мы хотим принять следующий б
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4524              	.L225:
 2226:Core/Src/stm32f103xx_CMSIS.c **** 			} else {
 2227:Core/Src/stm32f103xx_CMSIS.c **** 				CLEAR_BIT(I2C->CR1, I2C_CR1_ACK); //Если мы знаем, что следующий при�
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 146
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 146
 
 
  4525              		.loc 1 2227 5
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4567 0192 1344     		add	r3, r3, r2
  4568              		.loc 1 2237 17
  4569 0194 CAB2     		uxtb	r2, r1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 147
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 147
 
 
  4570 0196 1A70     		strb	r2, [r3]
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4611              		.align	2
  4612              	.L232:
  4613 01cc 000C0140 		.word	1073810432
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 148
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 148
 
 
  4614 01d0 00000000 		.word	Timeout_counter_ms
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4652 001e 03F00203 		and	r3, r3, #2
  4653              		.loc 1 2266 5
  4654 0022 002B     		cmp	r3, #0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 149
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 149
 
 
  4655 0024 2DD0     		beq	.L235
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2281:Core/Src/stm32f103xx_CMSIS.c **** 			//Если в CR1 что-то лишнее, то перезагрузим I2C
 2282:Core/Src/stm32f103xx_CMSIS.c **** 			CLEAR_BIT(I2C->CR1, I2C_CR1_PE);
  4695              		.loc 1 2282 4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 150
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 150
 
 
  4696 0066 7B68     		ldr	r3, [r7, #4]
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4735 00a6 002B     		cmp	r3, #0
  4736 00a8 01D1     		bne	.L240
 2298:Core/Src/stm32f103xx_CMSIS.c **** 			return false;
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 151
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 151
 
 
  4737              		.loc 1 2298 11
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4774              		.loc 1 2308 10
  4775 00da 7B68     		ldr	r3, [r7, #4]
  4776 00dc 5B69     		ldr	r3, [r3, #20]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 152
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 152
 
 
  4777 00de 03F48063 		and	r3, r3, #1024
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4816              		.loc 1 2324 39
  4817 0116 3B46     		mov	r3, r7
  4818 0118 1344     		add	r3, r3, r2
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 153
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 153
 
 
  4819              		.loc 1 2324 14
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4862              	.L246:
 2323:Core/Src/stm32f103xx_CMSIS.c **** 			I2C->DR = *((uint8_t*)&Adress_data + (Size_adress - 1 - i)); //Запись байта
  4863              		.loc 1 2323 26 discriminator 1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 154
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 154
 
 
  4864 015e BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4904 0196 7B68     		ldr	r3, [r7, #4]
  4905 0198 5B69     		ldr	r3, [r3, #20]
  4906 019a 23F48062 		bic	r2, r3, #1024
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 155
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 155
 
 
  4907 019e 7B68     		ldr	r3, [r7, #4]
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4945 01d8 7B68     		ldr	r3, [r7, #4]
  4946 01da 1A60     		str	r2, [r3]
 2359:Core/Src/stm32f103xx_CMSIS.c **** 		CLEAR_BIT(I2C->SR1, I2C_SR1_AF); //Сбрасываем бит AF
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 156
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 156
 
 
  4947              		.loc 1 2359 3
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  4984              		@ frame_needed = 1, uses_anonymous_args = 0
  4985 0000 80B5     		push	{r7, lr}
  4986              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 157
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 157
 
 
  4987              		.cfi_offset 7, -8
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5029              		.loc 1 2390 7
  5030 0046 7B68     		ldr	r3, [r7, #4]
  5031 0048 9B69     		ldr	r3, [r3, #24]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 158
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 158
 
 
  5032 004a 03F00103 		and	r3, r3, #1
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5071 008c 1A60     		str	r2, [r3]
 2406:Core/Src/stm32f103xx_CMSIS.c **** 	SET_BIT(I2C->CR1, I2C_CR1_START); //Стартуем.
  5072              		.loc 1 2406 2
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 159
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 159
 
 
  5073 008e 7B68     		ldr	r3, [r7, #4]
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2421:Core/Src/stm32f103xx_CMSIS.c **** 
 2422:Core/Src/stm32f103xx_CMSIS.c **** 	Timeout_counter_ms = Timeout_ms;
  5111              		.loc 1 2422 21
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 160
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 160
 
 
  5112 00c6 694A     		ldr	r2, .L284+4
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2435:Core/Src/stm32f103xx_CMSIS.c **** 		I2C->SR1;
  5150              		.loc 1 2435 6
  5151 0100 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 161
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 161
 
 
  5152 0102 5B69     		ldr	r3, [r3, #20]
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2447:Core/Src/stm32f103xx_CMSIS.c **** 					CLEAR_BIT(I2C->SR1, I2C_SR1_AF); //Сбрасываем бит AF
  5195              		.loc 1 2447 6
  5196 013e 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 162
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 162
 
 
  5197 0140 5B69     		ldr	r3, [r3, #20]
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2458:Core/Src/stm32f103xx_CMSIS.c **** 			//Ожидаем до момента, пока не сработает Start condition generated
 2459:Core/Src/stm32f103xx_CMSIS.c **** 
 2460:Core/Src/stm32f103xx_CMSIS.c **** 			if (!Timeout_counter_ms) {
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 163
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 163
 
 
  5237              		.loc 1 2460 8
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5275 01b2 1B68     		ldr	r3, [r3]
  5276              		.loc 1 2474 7
  5277 01b4 002B     		cmp	r3, #0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 164
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 164
 
 
  5278 01b6 01D1     		bne	.L274
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5315              		.loc 1 2487 4
  5316 01ec 36E0     		b	.L278
  5317              	.L283:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 165
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 165
 
 
 2488:Core/Src/stm32f103xx_CMSIS.c **** 				if (i < Size_data - 1) {
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5364 0236 7B68     		ldr	r3, [r7, #4]
  5365 0238 1A60     		str	r2, [r3]
 2496:Core/Src/stm32f103xx_CMSIS.c **** 					while (READ_BIT(I2C->SR1, I2C_SR1_RXNE) == 0) ; //Подождем, пока сдвиговы�
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 166
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 166
 
 
  5366              		.loc 1 2496 12
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5411 0278 7B68     		ldr	r3, [r7, #4]
  5412 027a 1A60     		str	r2, [r3]
 2504:Core/Src/stm32f103xx_CMSIS.c **** 			CLEAR_BIT(I2C->SR1, I2C_SR1_AF); //Сбрасываем бит AF
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 167
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 167
 
 
  5413              		.loc 1 2504 4
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2516:Core/Src/stm32f103xx_CMSIS.c **** 
 2517:Core/Src/stm32f103xx_CMSIS.c **** /*================================= НАСТРОЙКА SPI ========================================
 2518:Core/Src/stm32f103xx_CMSIS.c **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 168
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 168
 
 
 2519:Core/Src/stm32f103xx_CMSIS.c **** /**
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5459              		.cfi_startproc
  5460              		@ args = 0, pretend = 0, frame = 0
  5461              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 169
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 169
 
 
  5462              		@ link register save eliminated.
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2602:Core/Src/stm32f103xx_CMSIS.c **** 	 * 010: fPCLK/8
 2603:Core/Src/stm32f103xx_CMSIS.c **** 	 * 011: fPCLK/16
 2604:Core/Src/stm32f103xx_CMSIS.c **** 	 * 100: fPCLK/32
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 170
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 170
 
 
 2605:Core/Src/stm32f103xx_CMSIS.c **** 	 * 101: fPCLK/64
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2616:Core/Src/stm32f103xx_CMSIS.c **** 	SET_BIT(SPI1->CR1, SPI_CR1_MSTR); //1: Master configuration
  5529              		.loc 1 2616 2
  5530 0080 414B     		ldr	r3, .L287+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 171
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 171
 
 
  5531 0082 1B68     		ldr	r3, [r3]
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5572 00d4 2C4B     		ldr	r3, .L287+4
  5573 00d6 5B68     		ldr	r3, [r3, #4]
  5574 00d8 2B4A     		ldr	r2, .L287+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 172
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 172
 
 
  5575 00da 23F00203 		bic	r3, r3, #2
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5617 0130 164A     		ldr	r2, .L287+8
  5618 0132 43F40003 		orr	r3, r3, #8388608
  5619 0136 1360     		str	r3, [r2]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 173
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 173
 
 
 2642:Core/Src/stm32f103xx_CMSIS.c **** 	//MISO - PA6:
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5666 018c 00080140 		.word	1073809408
  5667              		.cfi_endproc
  5668              	.LFE109:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 174
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 174
 
 
  5670              		.section	.text.CMSIS_SPI_Data_Transmit_8BIT,"ax",%progbits
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5710              	.LBB9:
 2665:Core/Src/stm32f103xx_CMSIS.c **** 		//(При этом очищается бит TXE)
 2666:Core/Src/stm32f103xx_CMSIS.c ****         
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 175
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 175
 
 
 2667:Core/Src/stm32f103xx_CMSIS.c **** 		for (uint16_t i = 1; i < Size_data; i++) {
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5753 005c 0133     		adds	r3, r3, #1
  5754 005e FB82     		strh	r3, [r7, #22]	@ movhi
  5755              	.L291:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 176
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 176
 
 
 2667:Core/Src/stm32f103xx_CMSIS.c **** 			Timeout_counter_ms = Timeout_ms;
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5793              		.loc 1 2689 8
  5794 0090 094B     		ldr	r3, .L300
  5795 0092 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 177
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 177
 
 
  5796              		.loc 1 2689 7
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5841              	CMSIS_SPI_Data_Transmit_16BIT:
  5842              	.LFB111:
 2700:Core/Src/stm32f103xx_CMSIS.c **** 
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 178
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 178
 
 
 2701:Core/Src/stm32f103xx_CMSIS.c **** /**
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5880              	.L308:
 2718:Core/Src/stm32f103xx_CMSIS.c **** 			Timeout_counter_ms = Timeout_ms;
  5881              		.loc 1 2718 23
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 179
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 179
 
 
  5882 002c 234A     		ldr	r2, .L313
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5925 0068 E0D3     		bcc	.L308
  5926              	.LBE10:
 2726:Core/Src/stm32f103xx_CMSIS.c **** 		}
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 180
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 180
 
 
 2727:Core/Src/stm32f103xx_CMSIS.c **** 		Timeout_counter_ms = Timeout_ms;
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  5965 009a 0023     		movs	r3, #0
  5966 009c 08E0     		b	.L306
  5967              	.L311:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 181
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 181
 
 
 2736:Core/Src/stm32f103xx_CMSIS.c **** 		while (READ_BIT(SPI->SR, SPI_SR_BSY)) {
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2756:Core/Src/stm32f103xx_CMSIS.c ****  *  @param  Size_data - Размер, сколько байт хотим принять.
 2757:Core/Src/stm32f103xx_CMSIS.c ****  *  @retval  Возвращает статус приема. True - Успешно. False - Оши�
 2758:Core/Src/stm32f103xx_CMSIS.c ****  **************************************************************************************************
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 182
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 182
 
 
 2759:Core/Src/stm32f103xx_CMSIS.c ****  */
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2769:Core/Src/stm32f103xx_CMSIS.c **** 		}
 2770:Core/Src/stm32f103xx_CMSIS.c ****         
 2771:Core/Src/stm32f103xx_CMSIS.c **** 		//Начнем прием данных
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 183
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 183
 
 
 2772:Core/Src/stm32f103xx_CMSIS.c **** 		for (uint16_t i = 0; i < Size_data; i++) {
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6094 006e CAB2     		uxtb	r2, r1
  6095 0070 1A70     		strb	r2, [r3]
 2772:Core/Src/stm32f103xx_CMSIS.c **** 			SPI->DR = 0; //Запустим тактирование, чтоб считать 8 бит
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 184
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 184
 
 
  6096              		.loc 1 2772 40 discriminator 2
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6135 00a4 0023     		movs	r3, #0
  6136              	.L321:
 2795:Core/Src/stm32f103xx_CMSIS.c **** 	}
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 185
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 185
 
 
 2796:Core/Src/stm32f103xx_CMSIS.c **** }
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2808:Core/Src/stm32f103xx_CMSIS.c **** 	if (!READ_BIT(SPI->SR, SPI_SR_BSY)) {
  6181              		.loc 1 2808 7
  6182 0010 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 186
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 186
 
 
  6183 0012 9B68     		ldr	r3, [r3, #8]
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6223 004a 05E0     		b	.L333
  6224              	.L335:
 2823:Core/Src/stm32f103xx_CMSIS.c **** 				//Ждем, пока буфер на прием не заполнится
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 187
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 187
 
 
 2824:Core/Src/stm32f103xx_CMSIS.c **** 				if (!Timeout_counter_ms) {
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6267 0086 1360     		str	r3, [r2]
 2832:Core/Src/stm32f103xx_CMSIS.c **** 		while (READ_BIT(SPI->SR, SPI_SR_BSY)) {
  6268              		.loc 1 2832 9
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 188
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 188
 
 
  6269 0088 05E0     		b	.L337
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6312              		.section	.text.FLASH_Unlock,"ax",%progbits
  6313              		.align	1
  6314              		.global	FLASH_Unlock
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 189
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 189
 
 
  6315              		.syntax unified
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6334 0006 054A     		ldr	r2, .L342+4
  6335 0008 5A60     		str	r2, [r3, #4]
 2880:Core/Src/stm32f103xx_CMSIS.c **** 	FLASH->KEYR = 0xCDEF89AB; //KEY2
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 190
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 190
 
 
  6336              		.loc 1 2880 7
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6380 0006 1B69     		ldr	r3, [r3, #16]
  6381 0008 034A     		ldr	r2, .L345
  6382 000a 43F08003 		orr	r3, r3, #128
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 191
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 191
 
 
  6383 000e 1361     		str	r3, [r2, #16]
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6426 000e 03F08003 		and	r3, r3, #128
  6427              		.loc 1 2905 5
  6428 0012 002B     		cmp	r3, #0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 192
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 192
 
 
  6429 0014 01D0     		beq	.L348
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2914:Core/Src/stm32f103xx_CMSIS.c **** 	FLASH_Lock(); //Заблокируем память
  6475              		.loc 1 2914 2
  6476 0060 FFF7FEFF 		bl	FLASH_Lock
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 193
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 193
 
 
 2915:Core/Src/stm32f103xx_CMSIS.c **** }
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6517              		.loc 1 2930 6
  6518 000e FB88     		ldrh	r3, [r7, #6]	@ movhi
  6519 0010 03F00103 		and	r3, r3, #1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 194
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 194
 
 
  6520 0014 9BB2     		uxth	r3, r3
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6564 0058 1146     		mov	r1, r2
  6565              		.loc 1 2940 24 discriminator 3
  6566 005a FA68     		ldr	r2, [r7, #12]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 195
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 195
 
 
  6567 005c 0A44     		add	r2, r2, r1
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6611 0096 FFF7FEFF 		bl	FLASH_Page_erase
 2949:Core/Src/stm32f103xx_CMSIS.c **** 		//Если память заблокирована, то разблокируем ее
 2950:Core/Src/stm32f103xx_CMSIS.c **** 		if (READ_BIT(FLASH->CR, FLASH_CR_LOCK)) {
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 196
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 196
 
 
  6612              		.loc 1 2950 7
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6658 00da 3A69     		ldr	r2, [r7, #16]
  6659 00dc 9A42     		cmp	r2, r3
  6660 00de EDDB     		blt	.L361
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 197
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 197
 
 
  6661              	.L364:
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6709              		.thumb
  6710              		.thumb_func
  6712              	FLASH_Read_data:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 198
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 198
 
 
  6713              	.LFB118:
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6748              		.loc 1 2982 53 discriminator 3
  6749 0026 FB8A     		ldrh	r3, [r7, #22]
  6750 0028 5B00     		lsls	r3, r3, #1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 199
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 199
 
 
  6751 002a 1A46     		mov	r2, r3
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
 2990:Core/Src/stm32f103xx_CMSIS.c **** 		for (uint16_t i = 0; i < Size; i++) {
 2991:Core/Src/stm32f103xx_CMSIS.c **** 			*((uint16_t*)Data + i) = *(uint16_t*)(Adress + i * 2);
 2992:Core/Src/stm32f103xx_CMSIS.c **** 		}
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 200
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 200
 
 
 2993:Core/Src/stm32f103xx_CMSIS.c **** 	}
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6837 0098 ECD3     		bcc	.L373
  6838              	.L374:
  6839              	.LBE16:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 201
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 201
 
 
  6840              		.loc 1 2994 1
@@ -12017,190 +12017,190 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 1
  6854              		.text
  6855              	.Letext0:
  6856              		.file 3 "Drivers/CMSIS/stm32f103xb.h"
- 6857              		.file 4 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
- 6858              		.file 5 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
+ 6857              		.file 4 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
+ 6858              		.file 5 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
  6859              		.file 6 "Core/Inc/stm32f103xx_CMSIS.h"
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 202
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 202
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f103xx_CMSIS.c
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:19     .text.__NVIC_EnableIRQ:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:24     .text.__NVIC_EnableIRQ:00000000 __NVIC_EnableIRQ
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:74     .text.__NVIC_EnableIRQ:00000034 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:79     .text.CMSIS_Debug_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:85     .text.CMSIS_Debug_init:00000000 CMSIS_Debug_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:146    .text.CMSIS_Debug_init:00000050 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:153    .text.CMSIS_RCC_SystemClock_72MHz:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:159    .text.CMSIS_RCC_SystemClock_72MHz:00000000 CMSIS_RCC_SystemClock_72MHz
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:327    .text.CMSIS_RCC_SystemClock_72MHz:00000124 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:333    .text.CMSIS_SysTick_Timer_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:339    .text.CMSIS_SysTick_Timer_init:00000000 CMSIS_SysTick_Timer_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:403    .text.CMSIS_SysTick_Timer_init:0000005c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:413    .bss.SysTimer_ms:00000000 SysTimer_ms
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:410    .bss.SysTimer_ms:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:420    .bss.Delay_counter_ms:00000000 Delay_counter_ms
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:417    .bss.Delay_counter_ms:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:427    .bss.Timeout_counter_ms:00000000 Timeout_counter_ms
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:424    .bss.Timeout_counter_ms:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:430    .text.Delay_ms:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:436    .text.Delay_ms:00000000 Delay_ms
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:478    .text.Delay_ms:00000024 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:483    .text.SysTick_Handler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:489    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:545    .text.SysTick_Handler:0000003c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:552    .text.CMSIS_PC13_OUTPUT_Push_Pull_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:558    .text.CMSIS_PC13_OUTPUT_Push_Pull_init:00000000 CMSIS_PC13_OUTPUT_Push_Pull_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:601    .text.CMSIS_PC13_OUTPUT_Push_Pull_init:00000034 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:607    .text.CMSIS_GPIO_MODE_Set:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:612    .text.CMSIS_GPIO_MODE_Set:00000000 CMSIS_GPIO_MODE_Set
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:710    .text.CMSIS_GPIO_SPEED_Set:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:715    .text.CMSIS_GPIO_SPEED_Set:00000000 CMSIS_GPIO_SPEED_Set
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:812    .text.CMSIS_GPIO_CNF_Set:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:817    .text.CMSIS_GPIO_CNF_Set:00000000 CMSIS_GPIO_CNF_Set
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:901    .text.CMSIS_GPIO_Reg_Set:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:906    .text.CMSIS_GPIO_Reg_Set:00000000 CMSIS_GPIO_Reg_Set
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1010   .text.CMSIS_GPIO_Reg_Set:0000008c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1014   .text.CMSIS_GPIO_Reg_Set:0000009c $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1092   .text.CMSIS_GPIO_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1098   .text.CMSIS_GPIO_init:00000000 CMSIS_GPIO_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1259   .text.CMSIS_GPIO_init:000000f8 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1269   .text.CMSIS_Blink_PC13:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1275   .text.CMSIS_Blink_PC13:00000000 CMSIS_Blink_PC13
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1317   .text.CMSIS_Blink_PC13:0000002c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1322   .text.CMSIS_PA8_MCO_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1328   .text.CMSIS_PA8_MCO_init:00000000 CMSIS_PA8_MCO_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1377   .text.CMSIS_PA8_MCO_init:00000040 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1383   .text.CMSIS_RCC_AFIO_enable:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1389   .text.CMSIS_RCC_AFIO_enable:00000000 CMSIS_RCC_AFIO_enable
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1419   .text.CMSIS_RCC_AFIO_enable:00000018 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1424   .text.CMSIS_AFIO_EXTICR1_B0_select:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1430   .text.CMSIS_AFIO_EXTICR1_B0_select:00000000 CMSIS_AFIO_EXTICR1_B0_select
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1461   .text.CMSIS_AFIO_EXTICR1_B0_select:0000001c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1466   .text.CMSIS_PB0_INPUT_Pull_Down_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1472   .text.CMSIS_PB0_INPUT_Pull_Down_init:00000000 CMSIS_PB0_INPUT_Pull_Down_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1520   .text.CMSIS_PB0_INPUT_Pull_Down_init:0000003c $d
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 203
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:19     .text.__NVIC_EnableIRQ:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:24     .text.__NVIC_EnableIRQ:00000000 __NVIC_EnableIRQ
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:74     .text.__NVIC_EnableIRQ:00000034 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:79     .text.CMSIS_Debug_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:85     .text.CMSIS_Debug_init:00000000 CMSIS_Debug_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:146    .text.CMSIS_Debug_init:00000050 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:153    .text.CMSIS_RCC_SystemClock_72MHz:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:159    .text.CMSIS_RCC_SystemClock_72MHz:00000000 CMSIS_RCC_SystemClock_72MHz
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:327    .text.CMSIS_RCC_SystemClock_72MHz:00000124 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:333    .text.CMSIS_SysTick_Timer_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:339    .text.CMSIS_SysTick_Timer_init:00000000 CMSIS_SysTick_Timer_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:403    .text.CMSIS_SysTick_Timer_init:0000005c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:413    .bss.SysTimer_ms:00000000 SysTimer_ms
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:410    .bss.SysTimer_ms:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:420    .bss.Delay_counter_ms:00000000 Delay_counter_ms
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:417    .bss.Delay_counter_ms:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:427    .bss.Timeout_counter_ms:00000000 Timeout_counter_ms
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:424    .bss.Timeout_counter_ms:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:430    .text.Delay_ms:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:436    .text.Delay_ms:00000000 Delay_ms
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:478    .text.Delay_ms:00000024 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:483    .text.SysTick_Handler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:489    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:545    .text.SysTick_Handler:0000003c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:552    .text.CMSIS_PC13_OUTPUT_Push_Pull_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:558    .text.CMSIS_PC13_OUTPUT_Push_Pull_init:00000000 CMSIS_PC13_OUTPUT_Push_Pull_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:601    .text.CMSIS_PC13_OUTPUT_Push_Pull_init:00000034 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:607    .text.CMSIS_GPIO_MODE_Set:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:612    .text.CMSIS_GPIO_MODE_Set:00000000 CMSIS_GPIO_MODE_Set
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:710    .text.CMSIS_GPIO_SPEED_Set:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:715    .text.CMSIS_GPIO_SPEED_Set:00000000 CMSIS_GPIO_SPEED_Set
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:812    .text.CMSIS_GPIO_CNF_Set:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:817    .text.CMSIS_GPIO_CNF_Set:00000000 CMSIS_GPIO_CNF_Set
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:901    .text.CMSIS_GPIO_Reg_Set:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:906    .text.CMSIS_GPIO_Reg_Set:00000000 CMSIS_GPIO_Reg_Set
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1010   .text.CMSIS_GPIO_Reg_Set:0000008c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1014   .text.CMSIS_GPIO_Reg_Set:0000009c $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1092   .text.CMSIS_GPIO_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1098   .text.CMSIS_GPIO_init:00000000 CMSIS_GPIO_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1259   .text.CMSIS_GPIO_init:000000f8 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1269   .text.CMSIS_Blink_PC13:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1275   .text.CMSIS_Blink_PC13:00000000 CMSIS_Blink_PC13
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1317   .text.CMSIS_Blink_PC13:0000002c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1322   .text.CMSIS_PA8_MCO_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1328   .text.CMSIS_PA8_MCO_init:00000000 CMSIS_PA8_MCO_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1377   .text.CMSIS_PA8_MCO_init:00000040 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1383   .text.CMSIS_RCC_AFIO_enable:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1389   .text.CMSIS_RCC_AFIO_enable:00000000 CMSIS_RCC_AFIO_enable
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1419   .text.CMSIS_RCC_AFIO_enable:00000018 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1424   .text.CMSIS_AFIO_EXTICR1_B0_select:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1430   .text.CMSIS_AFIO_EXTICR1_B0_select:00000000 CMSIS_AFIO_EXTICR1_B0_select
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1461   .text.CMSIS_AFIO_EXTICR1_B0_select:0000001c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1466   .text.CMSIS_PB0_INPUT_Pull_Down_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1472   .text.CMSIS_PB0_INPUT_Pull_Down_init:00000000 CMSIS_PB0_INPUT_Pull_Down_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1520   .text.CMSIS_PB0_INPUT_Pull_Down_init:0000003c $d
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 203
 
 
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1526   .text.CMSIS_EXTI_0_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1532   .text.CMSIS_EXTI_0_init:00000000 CMSIS_EXTI_0_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1565   .text.CMSIS_EXTI_0_init:00000028 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1570   .text.EXTI0_IRQHandler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1576   .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1606   .text.EXTI0_IRQHandler:00000018 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1611   .text.CMSIS_TIM3_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1617   .text.CMSIS_TIM3_init:00000000 CMSIS_TIM3_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1714   .text.CMSIS_TIM3_init:000000a0 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1720   .text.CMSIS_TIM3_PWM_CHANNEL1_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1726   .text.CMSIS_TIM3_PWM_CHANNEL1_init:00000000 CMSIS_TIM3_PWM_CHANNEL1_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1817   .text.CMSIS_TIM3_PWM_CHANNEL1_init:00000094 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1824   .text.CMSIS_TIM3_PWM_CHANNEL2_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1830   .text.CMSIS_TIM3_PWM_CHANNEL2_init:00000000 CMSIS_TIM3_PWM_CHANNEL2_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1921   .text.CMSIS_TIM3_PWM_CHANNEL2_init:00000094 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1928   .text.TIM3_IRQHandler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1934   .text.TIM3_IRQHandler:00000000 TIM3_IRQHandler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1972   .text.TIM3_IRQHandler:00000024 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1977   .text.CMSIS_TIM1_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:1983   .text.CMSIS_TIM1_init:00000000 CMSIS_TIM1_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2095   .text.CMSIS_TIM1_init:000000b8 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2101   .text.CMSIS_TIM1_PWM_CHANNEL1_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2107   .text.CMSIS_TIM1_PWM_CHANNEL1_init:00000000 CMSIS_TIM1_PWM_CHANNEL1_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2198   .text.CMSIS_TIM1_PWM_CHANNEL1_init:00000094 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2205   .text.CMSIS_TIM1_PWM_CHANNEL2_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2211   .text.CMSIS_TIM1_PWM_CHANNEL2_init:00000000 CMSIS_TIM1_PWM_CHANNEL2_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2302   .text.CMSIS_TIM1_PWM_CHANNEL2_init:00000094 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2309   .text.TIM1_UP_IRQHandler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2315   .text.TIM1_UP_IRQHandler:00000000 TIM1_UP_IRQHandler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2353   .text.TIM1_UP_IRQHandler:00000024 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2362   .bss.ADC_RAW_Data:00000000 ADC_RAW_Data
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2359   .bss.ADC_RAW_Data:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2365   .text.CMSIS_ADC_DMA_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2371   .text.CMSIS_ADC_DMA_init:00000000 CMSIS_ADC_DMA_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2677   .text.CMSIS_ADC_DMA_init:00000240 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2687   .text.ADC1_2_IRQHandler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2693   .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2728   .text.ADC1_2_IRQHandler:0000001c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2733   .text.DMA1_Channel1_IRQHandler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2739   .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2793   .text.DMA1_Channel1_IRQHandler:00000040 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2802   .bss.husart1:00000000 husart1
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2799   .bss.husart1:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2809   .bss.husart2:00000000 husart2
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2806   .bss.husart2:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2812   .text.CMSIS_USART1_Init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2818   .text.CMSIS_USART1_Init:00000000 CMSIS_USART1_Init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:2997   .text.CMSIS_USART1_Init:00000148 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3004   .text.CMSIS_USART2_Init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3010   .text.CMSIS_USART2_Init:00000000 CMSIS_USART2_Init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3189   .text.CMSIS_USART2_Init:00000148 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3196   .text.USART1_IRQHandler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3202   .text.USART1_IRQHandler:00000000 USART1_IRQHandler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3275   .text.USART1_IRQHandler:00000054 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3281   .text.USART2_IRQHandler:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3287   .text.USART2_IRQHandler:00000000 USART2_IRQHandler
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3360   .text.USART2_IRQHandler:00000054 $d
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 204
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1526   .text.CMSIS_EXTI_0_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1532   .text.CMSIS_EXTI_0_init:00000000 CMSIS_EXTI_0_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1565   .text.CMSIS_EXTI_0_init:00000028 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1570   .text.EXTI0_IRQHandler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1576   .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1606   .text.EXTI0_IRQHandler:00000018 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1611   .text.CMSIS_TIM3_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1617   .text.CMSIS_TIM3_init:00000000 CMSIS_TIM3_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1714   .text.CMSIS_TIM3_init:000000a0 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1720   .text.CMSIS_TIM3_PWM_CHANNEL1_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1726   .text.CMSIS_TIM3_PWM_CHANNEL1_init:00000000 CMSIS_TIM3_PWM_CHANNEL1_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1817   .text.CMSIS_TIM3_PWM_CHANNEL1_init:00000094 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1824   .text.CMSIS_TIM3_PWM_CHANNEL2_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1830   .text.CMSIS_TIM3_PWM_CHANNEL2_init:00000000 CMSIS_TIM3_PWM_CHANNEL2_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1921   .text.CMSIS_TIM3_PWM_CHANNEL2_init:00000094 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1928   .text.TIM3_IRQHandler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1934   .text.TIM3_IRQHandler:00000000 TIM3_IRQHandler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1972   .text.TIM3_IRQHandler:00000024 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1977   .text.CMSIS_TIM1_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:1983   .text.CMSIS_TIM1_init:00000000 CMSIS_TIM1_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2095   .text.CMSIS_TIM1_init:000000b8 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2101   .text.CMSIS_TIM1_PWM_CHANNEL1_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2107   .text.CMSIS_TIM1_PWM_CHANNEL1_init:00000000 CMSIS_TIM1_PWM_CHANNEL1_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2198   .text.CMSIS_TIM1_PWM_CHANNEL1_init:00000094 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2205   .text.CMSIS_TIM1_PWM_CHANNEL2_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2211   .text.CMSIS_TIM1_PWM_CHANNEL2_init:00000000 CMSIS_TIM1_PWM_CHANNEL2_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2302   .text.CMSIS_TIM1_PWM_CHANNEL2_init:00000094 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2309   .text.TIM1_UP_IRQHandler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2315   .text.TIM1_UP_IRQHandler:00000000 TIM1_UP_IRQHandler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2353   .text.TIM1_UP_IRQHandler:00000024 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2362   .bss.ADC_RAW_Data:00000000 ADC_RAW_Data
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2359   .bss.ADC_RAW_Data:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2365   .text.CMSIS_ADC_DMA_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2371   .text.CMSIS_ADC_DMA_init:00000000 CMSIS_ADC_DMA_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2677   .text.CMSIS_ADC_DMA_init:00000240 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2687   .text.ADC1_2_IRQHandler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2693   .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2728   .text.ADC1_2_IRQHandler:0000001c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2733   .text.DMA1_Channel1_IRQHandler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2739   .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2793   .text.DMA1_Channel1_IRQHandler:00000040 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2802   .bss.husart1:00000000 husart1
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2799   .bss.husart1:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2809   .bss.husart2:00000000 husart2
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2806   .bss.husart2:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2812   .text.CMSIS_USART1_Init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2818   .text.CMSIS_USART1_Init:00000000 CMSIS_USART1_Init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:2997   .text.CMSIS_USART1_Init:00000148 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3004   .text.CMSIS_USART2_Init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3010   .text.CMSIS_USART2_Init:00000000 CMSIS_USART2_Init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3189   .text.CMSIS_USART2_Init:00000148 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3196   .text.USART1_IRQHandler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3202   .text.USART1_IRQHandler:00000000 USART1_IRQHandler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3275   .text.USART1_IRQHandler:00000054 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3281   .text.USART2_IRQHandler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3287   .text.USART2_IRQHandler:00000000 USART2_IRQHandler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3360   .text.USART2_IRQHandler:00000054 $d
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 204
 
 
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3366   .text.CMSIS_USART_Transmit:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3372   .text.CMSIS_USART_Transmit:00000000 CMSIS_USART_Transmit
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3484   .text.CMSIS_USART_Transmit:00000080 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3489   .text.CMSIS_I2C_Reset:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3495   .text.CMSIS_I2C_Reset:00000000 CMSIS_I2C_Reset
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3551   .text.CMSIS_I2C_Reset:00000044 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3556   .text.CMSIS_I2C1_Init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3562   .text.CMSIS_I2C1_Init:00000000 CMSIS_I2C1_Init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3776   .text.CMSIS_I2C1_Init:00000190 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3783   .text.CMSIS_I2C_Adress_Device_Scan:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3789   .text.CMSIS_I2C_Adress_Device_Scan:00000000 CMSIS_I2C_Adress_Device_Scan
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:3996   .text.CMSIS_I2C_Adress_Device_Scan:0000012c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4002   .text.CMSIS_I2C_Data_Transmit:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4008   .text.CMSIS_I2C_Data_Transmit:00000000 CMSIS_I2C_Data_Transmit
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4279   .text.CMSIS_I2C_Data_Transmit:0000018c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4285   .text.CMSIS_I2C_Data_Receive:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4291   .text.CMSIS_I2C_Data_Receive:00000000 CMSIS_I2C_Data_Receive
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4613   .text.CMSIS_I2C_Data_Receive:000001cc $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4619   .text.CMSIS_I2C_MemWrite:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4625   .text.CMSIS_I2C_MemWrite:00000000 CMSIS_I2C_MemWrite
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4967   .text.CMSIS_I2C_MemWrite:000001f4 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4973   .text.CMSIS_I2C_MemRead:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:4979   .text.CMSIS_I2C_MemRead:00000000 CMSIS_I2C_MemRead
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5404   .text.CMSIS_I2C_MemRead:00000268 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5408   .text.CMSIS_I2C_MemRead:00000270 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5450   .text.CMSIS_SPI1_init:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5456   .text.CMSIS_SPI1_init:00000000 CMSIS_SPI1_init
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5664   .text.CMSIS_SPI1_init:00000184 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5671   .text.CMSIS_SPI_Data_Transmit_8BIT:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5677   .text.CMSIS_SPI_Data_Transmit_8BIT:00000000 CMSIS_SPI_Data_Transmit_8BIT
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5830   .text.CMSIS_SPI_Data_Transmit_8BIT:000000b8 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5835   .text.CMSIS_SPI_Data_Transmit_16BIT:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5841   .text.CMSIS_SPI_Data_Transmit_16BIT:00000000 CMSIS_SPI_Data_Transmit_16BIT
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:5995   .text.CMSIS_SPI_Data_Transmit_16BIT:000000bc $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6000   .text.CMSIS_SPI_Data_Receive_8BIT:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6006   .text.CMSIS_SPI_Data_Receive_8BIT:00000000 CMSIS_SPI_Data_Receive_8BIT
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6151   .text.CMSIS_SPI_Data_Receive_8BIT:000000b0 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6156   .text.CMSIS_SPI_Data_Receive_16BIT:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6162   .text.CMSIS_SPI_Data_Receive_16BIT:00000000 CMSIS_SPI_Data_Receive_16BIT
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6308   .text.CMSIS_SPI_Data_Receive_16BIT:000000b4 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6313   .text.FLASH_Unlock:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6319   .text.FLASH_Unlock:00000000 FLASH_Unlock
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6353   .text.FLASH_Unlock:00000018 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6360   .text.FLASH_Lock:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6366   .text.FLASH_Lock:00000000 FLASH_Lock
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6396   .text.FLASH_Lock:00000018 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6401   .text.FLASH_Page_erase:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6407   .text.FLASH_Page_erase:00000000 FLASH_Page_erase
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6488   .text.FLASH_Page_erase:0000006c $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6493   .text.FLASH_Page_write:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6499   .text.FLASH_Page_write:00000000 FLASH_Page_write
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6701   .text.FLASH_Page_write:00000114 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6706   .text.FLASH_Read_data:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s:6712   .text.FLASH_Read_data:00000000 FLASH_Read_data
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3366   .text.CMSIS_USART_Transmit:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3372   .text.CMSIS_USART_Transmit:00000000 CMSIS_USART_Transmit
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3484   .text.CMSIS_USART_Transmit:00000080 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3489   .text.CMSIS_I2C_Reset:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3495   .text.CMSIS_I2C_Reset:00000000 CMSIS_I2C_Reset
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3551   .text.CMSIS_I2C_Reset:00000044 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3556   .text.CMSIS_I2C1_Init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3562   .text.CMSIS_I2C1_Init:00000000 CMSIS_I2C1_Init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3776   .text.CMSIS_I2C1_Init:00000190 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3783   .text.CMSIS_I2C_Adress_Device_Scan:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3789   .text.CMSIS_I2C_Adress_Device_Scan:00000000 CMSIS_I2C_Adress_Device_Scan
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:3996   .text.CMSIS_I2C_Adress_Device_Scan:0000012c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4002   .text.CMSIS_I2C_Data_Transmit:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4008   .text.CMSIS_I2C_Data_Transmit:00000000 CMSIS_I2C_Data_Transmit
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4279   .text.CMSIS_I2C_Data_Transmit:0000018c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4285   .text.CMSIS_I2C_Data_Receive:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4291   .text.CMSIS_I2C_Data_Receive:00000000 CMSIS_I2C_Data_Receive
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4613   .text.CMSIS_I2C_Data_Receive:000001cc $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4619   .text.CMSIS_I2C_MemWrite:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4625   .text.CMSIS_I2C_MemWrite:00000000 CMSIS_I2C_MemWrite
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4967   .text.CMSIS_I2C_MemWrite:000001f4 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4973   .text.CMSIS_I2C_MemRead:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:4979   .text.CMSIS_I2C_MemRead:00000000 CMSIS_I2C_MemRead
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5404   .text.CMSIS_I2C_MemRead:00000268 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5408   .text.CMSIS_I2C_MemRead:00000270 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5450   .text.CMSIS_SPI1_init:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5456   .text.CMSIS_SPI1_init:00000000 CMSIS_SPI1_init
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5664   .text.CMSIS_SPI1_init:00000184 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5671   .text.CMSIS_SPI_Data_Transmit_8BIT:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5677   .text.CMSIS_SPI_Data_Transmit_8BIT:00000000 CMSIS_SPI_Data_Transmit_8BIT
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5830   .text.CMSIS_SPI_Data_Transmit_8BIT:000000b8 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5835   .text.CMSIS_SPI_Data_Transmit_16BIT:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5841   .text.CMSIS_SPI_Data_Transmit_16BIT:00000000 CMSIS_SPI_Data_Transmit_16BIT
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:5995   .text.CMSIS_SPI_Data_Transmit_16BIT:000000bc $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6000   .text.CMSIS_SPI_Data_Receive_8BIT:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6006   .text.CMSIS_SPI_Data_Receive_8BIT:00000000 CMSIS_SPI_Data_Receive_8BIT
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6151   .text.CMSIS_SPI_Data_Receive_8BIT:000000b0 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6156   .text.CMSIS_SPI_Data_Receive_16BIT:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6162   .text.CMSIS_SPI_Data_Receive_16BIT:00000000 CMSIS_SPI_Data_Receive_16BIT
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6308   .text.CMSIS_SPI_Data_Receive_16BIT:000000b4 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6313   .text.FLASH_Unlock:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6319   .text.FLASH_Unlock:00000000 FLASH_Unlock
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6353   .text.FLASH_Unlock:00000018 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6360   .text.FLASH_Lock:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6366   .text.FLASH_Lock:00000000 FLASH_Lock
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6396   .text.FLASH_Lock:00000018 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6401   .text.FLASH_Page_erase:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6407   .text.FLASH_Page_erase:00000000 FLASH_Page_erase
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6488   .text.FLASH_Page_erase:0000006c $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6493   .text.FLASH_Page_write:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6499   .text.FLASH_Page_write:00000000 FLASH_Page_write
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6701   .text.FLASH_Page_write:00000114 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6706   .text.FLASH_Read_data:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s:6712   .text.FLASH_Read_data:00000000 FLASH_Read_data
                            .group:00000000 wm4.0.19985633071831f0b299129da8e30081
                            .group:00000000 wm4.stm32f1xx.h.39.e0fd8367a5cdd5162ca3988080106388
                            .group:00000000 wm4.stm32f103xb.h.38.ec967d5ad9d3269cb0788eebda048e38
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccq9TW8A.s 			page 205
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccWLLU9U.s 			page 205
 
 
                            .group:00000000 wm4._newlib_version.h.4.6d111ab2e95434b664b53815e5c8ccba

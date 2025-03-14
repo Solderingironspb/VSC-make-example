@@ -8,7 +8,7 @@
 #   Яндекс Дзен: https://dzen.ru/id/622208eed2eb4c6d0cd16749
 
 #Укажите путь до arm-none-eabi-size.exe
-$GNU_TOOLCHAIN_SIZE_PATH = "C:\ST\tools\gnu-tools-for-stm32.12.3\tools\bin\arm-none-eabi-size.exe"
+$GNU_TOOLCHAIN_SIZE_PATH = "C:\dev_tools\STM32_tools\gnu-tools-for-stm32.12.3\tools\bin\arm-none-eabi-size.exe"
 
 # Путь к .elf файлу
 $elfFile = $args[0]
@@ -169,6 +169,10 @@ $data | Format-Table -AutoSize
 } else {
     Write-Host "Ошибка: Не удалось извлечь данные из вывода arm-none-eabi-size." -ForegroundColor Red
 }
+
+
+
+
 
 
 

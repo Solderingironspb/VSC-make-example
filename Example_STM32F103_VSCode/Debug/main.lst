@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 1
   41              		.align	1
   42              		.global	main
   43              		.syntax unified
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 2
 
 
   44              		.thumb
@@ -68,10 +68,12 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 1
    1:Core/Src/main.c **** #include "main.h"
    2:Core/Src/main.c **** 
    3:Core/Src/main.c **** uint32_t Counter = 0;
-   4:Core/Src/main.c **** unsigned char Text[256] = {0,};
-   5:Core/Src/main.c **** 
-   6:Core/Src/main.c **** int main(void) {
-  49              		.loc 1 6 16
+   4:Core/Src/main.c **** unsigned char Text[256] = {
+   5:Core/Src/main.c ****     0,
+   6:Core/Src/main.c **** };
+   7:Core/Src/main.c **** 
+   8:Core/Src/main.c **** int main(void) {
+  49              		.loc 1 8 16
   50              		.cfi_startproc
   51              		@ args = 0, pretend = 0, frame = 0
   52              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -83,20 +85,20 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 1
   58              		.cfi_def_cfa_offset 16
   59 0004 02AF     		add	r7, sp, #8
   60              		.cfi_def_cfa 7, 8
-   7:Core/Src/main.c ****     CMSIS_Debug_init();
-  61              		.loc 1 7 5
+   9:Core/Src/main.c ****     CMSIS_Debug_init();
+  61              		.loc 1 9 5
   62 0006 FFF7FEFF 		bl	CMSIS_Debug_init
-   8:Core/Src/main.c ****     CMSIS_RCC_SystemClock_72MHz();
-  63              		.loc 1 8 5
+  10:Core/Src/main.c ****     CMSIS_RCC_SystemClock_72MHz();
+  63              		.loc 1 10 5
   64 000a FFF7FEFF 		bl	CMSIS_RCC_SystemClock_72MHz
-   9:Core/Src/main.c ****     CMSIS_SysTick_Timer_init();
-  65              		.loc 1 9 5
+  11:Core/Src/main.c ****     CMSIS_SysTick_Timer_init();
+  65              		.loc 1 11 5
   66 000e FFF7FEFF 		bl	CMSIS_SysTick_Timer_init
-  10:Core/Src/main.c ****     CMSIS_USART1_Init();  // 115200 8N1
-  67              		.loc 1 10 5
+  12:Core/Src/main.c ****     CMSIS_USART1_Init();  // 115200 8N1
+  67              		.loc 1 12 5
   68 0012 FFF7FEFF 		bl	CMSIS_USART1_Init
-  11:Core/Src/main.c ****     CMSIS_GPIO_init(GPIOC, 13, GPIO_GENERAL_PURPOSE_OUTPUT, GPIO_OUTPUT_PUSH_PULL, GPIO_SPEED_50_MH
-  69              		.loc 1 11 5
+  13:Core/Src/main.c ****     CMSIS_GPIO_init(GPIOC, 13, GPIO_GENERAL_PURPOSE_OUTPUT, GPIO_OUTPUT_PUSH_PULL, GPIO_SPEED_50_MH
+  69              		.loc 1 13 5
   70 0016 0323     		movs	r3, #3
   71 0018 0093     		str	r3, [sp]
   72 001a 0023     		movs	r3, #0
@@ -105,40 +107,39 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 1
   75 0020 0D48     		ldr	r0, .L3
   76 0022 FFF7FEFF 		bl	CMSIS_GPIO_init
   77              	.L2:
-  12:Core/Src/main.c **** 
-  13:Core/Src/main.c ****    
-  14:Core/Src/main.c ****     while (1) {
-  15:Core/Src/main.c ****         Counter++;
-  78              		.loc 1 15 16 discriminator 1
+  14:Core/Src/main.c **** 
+  15:Core/Src/main.c ****     while (1) {
+  16:Core/Src/main.c ****         Counter++;
+  78              		.loc 1 16 16 discriminator 1
   79 0026 0D4B     		ldr	r3, .L3+4
   80 0028 1B68     		ldr	r3, [r3]
   81 002a 0133     		adds	r3, r3, #1
   82 002c 0B4A     		ldr	r2, .L3+4
   83 002e 1360     		str	r3, [r2]
-  16:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
-  84              		.loc 1 16 9 discriminator 1
+  17:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
+  84              		.loc 1 17 9 discriminator 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 3
+
+
   85 0030 0A4B     		ldr	r3, .L3+4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 3
-
-
   86 0032 1B68     		ldr	r3, [r3]
   87 0034 1A46     		mov	r2, r3
   88 0036 0A49     		ldr	r1, .L3+8
   89 0038 0A48     		ldr	r0, .L3+12
   90 003a FFF7FEFF 		bl	sprintf
-  17:Core/Src/main.c ****         CMSIS_USART_Transmit(USART1, (unsigned char*)&Text, strlen((const char*)Text), 100);
-  91              		.loc 1 17 61 discriminator 1
+  18:Core/Src/main.c ****         CMSIS_USART_Transmit(USART1, (unsigned char*)&Text, strlen((const char*)Text), 100);
+  91              		.loc 1 18 61 discriminator 1
   92 003e 0948     		ldr	r0, .L3+12
   93 0040 FFF7FEFF 		bl	strlen
   94 0044 0346     		mov	r3, r0
-  95              		.loc 1 17 9 discriminator 1
+  95              		.loc 1 18 9 discriminator 1
   96 0046 9AB2     		uxth	r2, r3
   97 0048 6423     		movs	r3, #100
   98 004a 0649     		ldr	r1, .L3+12
   99 004c 0648     		ldr	r0, .L3+16
  100 004e FFF7FEFF 		bl	CMSIS_USART_Transmit
-  15:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
- 101              		.loc 1 15 16 discriminator 1
+  16:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
+ 101              		.loc 1 16 16 discriminator 1
  102 0052 00BF     		nop
  103 0054 E7E7     		b	.L2
  104              	.L4:
@@ -153,26 +154,26 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 1
  113              	.LFE68:
  115              		.text
  116              	.Letext0:
- 117              		.file 2 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
- 118              		.file 3 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
+ 117              		.file 2 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
+ 118              		.file 3 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
  119              		.file 4 "Drivers/CMSIS/stm32f103xb.h"
  120              		.file 5 "Core/Inc/stm32f103xx_CMSIS.h"
- 121              		.file 6 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/incl
- 122              		.file 7 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
- 123              		.file 8 "C:\\ST\\tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eabi/12.3.1/../.
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 4
+ 121              		.file 6 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
+ 122              		.file 7 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
+ 123              		.file 8 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s:23     .bss.Counter:00000000 Counter
-C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s:20     .bss.Counter:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s:30     .bss.Text:00000000 Text
-C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s:27     .bss.Text:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s:33     .rodata:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s:41     .text.main:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s:47     .text.main:00000000 main
-C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s:107    .text.main:00000058 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:23     .bss.Counter:00000000 Counter
+C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:20     .bss.Counter:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:30     .bss.Text:00000000 Text
+C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:27     .bss.Text:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:33     .rodata:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:41     .text.main:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:47     .text.main:00000000 main
+C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:107    .text.main:00000058 $d
                            .group:00000000 wm4.0.19985633071831f0b299129da8e30081
                            .group:00000000 wm4.stm32f1xx.h.39.e0fd8367a5cdd5162ca3988080106388
                            .group:00000000 wm4.stm32f103xb.h.38.ec967d5ad9d3269cb0788eebda048e38
@@ -220,7 +221,7 @@ CMSIS_SysTick_Timer_init
 CMSIS_USART1_Init
 CMSIS_GPIO_init
 sprintf
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccOXk18q.s 			page 5
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 5
 
 
 strlen
