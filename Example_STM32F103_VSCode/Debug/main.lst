@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 1
   41              		.align	1
   42              		.global	main
   43              		.syntax unified
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s 			page 2
 
 
   44              		.thumb
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 1
   83 002e 1360     		str	r3, [r2]
   17:Core/Src/main.c ****         sprintf((char*)Text, "Привет мир!\r\nСчетчик досчитал до %ld\r\n"
   84              		.loc 1 17 9 discriminator 1
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s 			page 3
 
 
   85 0030 0A4B     		ldr	r3, .L3+4
@@ -161,19 +161,19 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 1
  121              		.file 6 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
  122              		.file 7 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
  123              		.file 8 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:23     .bss.Counter:00000000 Counter
-C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:20     .bss.Counter:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:30     .bss.Text:00000000 Text
-C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:27     .bss.Text:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:33     .rodata:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:41     .text.main:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:47     .text.main:00000000 main
-C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s:107    .text.main:00000058 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s:23     .bss.Counter:00000000 Counter
+C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s:20     .bss.Counter:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s:30     .bss.Text:00000000 Text
+C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s:27     .bss.Text:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s:33     .rodata:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s:41     .text.main:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s:47     .text.main:00000000 main
+C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s:107    .text.main:00000058 $d
                            .group:00000000 wm4.0.19985633071831f0b299129da8e30081
                            .group:00000000 wm4.stm32f1xx.h.39.e0fd8367a5cdd5162ca3988080106388
                            .group:00000000 wm4.stm32f103xb.h.38.ec967d5ad9d3269cb0788eebda048e38
@@ -221,7 +221,7 @@ CMSIS_SysTick_Timer_init
 CMSIS_USART1_Init
 CMSIS_GPIO_init
 sprintf
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccFpjuCc.s 			page 5
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cce06Mrd.s 			page 5
 
 
 strlen

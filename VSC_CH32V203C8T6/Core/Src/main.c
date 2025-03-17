@@ -3,7 +3,7 @@
 
 uint32_t Counter = 12;
 
-#define DEBUG_USE   //Использовать DEBUG по USART
+//#define DEBUG_USE   //Использовать DEBUG по USART
 
 int main(void) {
     RVMSIS_Debug_init(); //Настройка дебага
@@ -19,7 +19,7 @@ int main(void) {
         GPIOC->BSHR = GPIO_BSHR_BS13;
         Delay_ms(100);
         GPIOC->BSHR = GPIO_BSHR_BR13;
-        Delay_ms(200);
+        Delay_ms(100);
         Counter++;
     }
 }

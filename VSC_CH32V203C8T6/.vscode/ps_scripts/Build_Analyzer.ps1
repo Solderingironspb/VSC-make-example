@@ -8,7 +8,7 @@
 #   Яндекс Дзен: https://dzen.ru/id/622208eed2eb4c6d0cd16749
 
 #Укажите путь до arm-none-eabi-size.exe
-$GNU_TOOLCHAIN_SIZE_PATH = "C:\dev_tools\STM32_tools\gnu-tools-for-stm32.12.3\tools\bin\arm-none-eabi-size.exe"
+$GNU_TOOLCHAIN_SIZE_PATH = "C:\dev_tools\CH32_tools\RISC-V_Embedded_GCC12\bin\riscv-none-elf-size.exe"
 
 # Путь к .elf файлу
 $elfFile = $args[0]
@@ -93,7 +93,7 @@ $sizeOutput = & $GNU_TOOLCHAIN_SIZE_PATH -A $elfFile
 
 # Извлечение значений
 # Список интересующих нас секций
-$sections = @('.isr_vector', '.text', '.rodata', '.ARM', '.init_array', '.fini_array', '.data', '.bss', '._user_heap_stack')
+$sections = @('.init', '.vector', '.text', '.fini', '.dalign', '.dlalign', '.data', '.bss', '.stack')
 
 # Создаем хэш-таблицу для хранения результатов
 $sectionSizes = @{}
@@ -114,8 +114,8 @@ foreach ($section in $sections) {
 # Например, можно получить размер секции .text так:
 
 # Расчет FLASH и RAM
-[int]$ramUsed = $sectionSizes['.data'] + $sectionSizes['.bss'] + $sectionSizes['._user_heap_stack']
-[int]$flashUsed = $sectionSizes['.isr_vector'] + $sectionSizes['.rodata'] + $sectionSizes['.init_array'] + $sectionSizes['.fini_array'] + $sectionSizes['.text'] + $sectionSizes['.data']
+[int]$ramUsed = $sectionSizes['.dalign'] + $sectionSizes['.data'] + $sectionSizes['.bss']+ $sectionSizes['.stack']
+[int]$flashUsed = $sectionSizes['.init'] + $sectionSizes['.vector'] + $sectionSizes['.text'] + $sectionSizes['.fini'] + $sectionSizes['.dalign'] + $sectionSizes['.dlalign']+ $sectionSizes['.data']+ $sectionSizes['.bss']
     
 
 # Размеры памяти (замените на свои значения)
@@ -156,6 +156,9 @@ $data = @(
 
 # Вывод таблицы
 $data | Format-Table -AutoSize 
+
+
+
 
 
 

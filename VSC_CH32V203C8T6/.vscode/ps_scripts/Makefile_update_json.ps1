@@ -21,7 +21,7 @@ $GNU_TOOLCHAIN_GDB_PATH = $args[6] #Путь до arm-none-eabi-gdb.exe
 $OPEN_OCD_BIN_PATH = $args[7] #Путь до OpenOCD.exe
 $OPEN_OCD_INTERFACE_AND_TARGET_PATH = $args[8] #Путь до интерфейса stlink и target файла микроконтроллера
 $SVD_FILE_PATH = $args[9] #SVD файл для описания периферии микроконтроллера
-
+$GNU_TOOLCHAIN_SIZE_PATH = $args[10] #Путь до arm-none-eabi-size.exe
 
 
 
@@ -180,4 +180,15 @@ Write-Host "string replacement 'args: $BUILD_DIR/$TARGET.map' " -ForegroundColor
 (Get-Content .vscode/tasks.json -Raw -Encoding utf8) -replace '([\"''])([^\"'']*\.map)([\"''])', "`$1$BUILD_DIR/$TARGET.map`$3" | Out-File .vscode/tasks.json -Encoding utf8
 ################################################# Читаем и правим файл launch.json #################################################
 
+Write-Host "Bonus :) Update files:" -ForegroundColor DarkBlue
 
+
+
+
+############################ Читаем и правим файл .vscode/ps_scripts/Build_Analyzer.ps1
+Write-Host "file .vscode/ps_scripts/Build_Analyzer.ps1" -ForegroundColor DarkBlue
+$newPath = $GNU_TOOLCHAIN_SIZE_PATH.Replace("/", "\")
+$content = Get-Content ".vscode/ps_scripts/Build_Analyzer.ps1" -Raw -Encoding utf8
+$updatedContent = $content -replace '(\$GNU_TOOLCHAIN_SIZE_PATH\s*=\s*).*', "`$GNU_TOOLCHAIN_SIZE_PATH = `"$newPath`""
+Set-Content ".vscode/ps_scripts/Build_Analyzer.ps1" $updatedContent -Encoding utf8
+Write-Host "Success" -ForegroundColor Green
