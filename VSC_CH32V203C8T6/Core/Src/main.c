@@ -19,7 +19,7 @@ int main(void) {
         GPIOC->BSHR = GPIO_BSHR_BS13;
         Delay_ms(100);
         GPIOC->BSHR = GPIO_BSHR_BR13;
-        Delay_ms(100);
+        Delay_ms(200);
         Counter++;
     }
 }

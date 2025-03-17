@@ -1723,7 +1723,7 @@ Disassembly of section .text:
     102c:	400117b7          	lui	a5,0x40011
     1030:	20000737          	lui	a4,0x20000
     1034:	cb98                	sw	a4,16(a5)
-    1036:	06400513          	li	a0,100
+    1036:	0c800513          	li	a0,200
     103a:	edeff0ef          	jal	ra,718 <Delay_ms>
     103e:	200007b7          	lui	a5,0x20000
     1042:	0607a783          	lw	a5,96(a5) # 20000060 <Counter>

@@ -30,6 +30,8 @@
 4) Скрипты **OpenOCD** для **interface** и **target** (Допустим конфиги для ST-Link v2 и STM32F103C8T6)
 5) *.svd файл под микроконтроллер, который даст возможность просматривать периферию мк во время отладки
 
+### **Ребят, у меня есть готовая сборка этого всего, можете скачать ее и сэкономить свое время. Сборка для работы с STM32 и CH32V:** https://disk.yandex.ru/d/RYFyzLmHSNbnng
+
 Для начала нам понадобится утилита **make** 
 
 **make** — это утилита, автоматизирующая процесс преобразования файлов из одной формы в другую. Чаще всего это компиляция исходного кода в объектные файлы и последующая компоновка в исполняемые файлы или библиотеки.
@@ -58,7 +60,7 @@
 ![Image](https://github.com/user-attachments/assets/8e5d9a8f-4d85-4e65-81ec-83789c51fd6d)
 
 ## Установка arm-none-eabi и OpenOCD
-Как-то в сообществе Embedded программистов выработалась такая привычка, что используй то, что дает производитель. Возможность получить непонятный косяк в работе резко уменьшается. Если мы работали до этого в **CubeIDE 1.7.0**, то нет особой необходимости что-то скачивать из интернета. У Вас уже все есть. (Не совсем верное утверждение, т.к. есть нюансы).
+Как-то в сообществе Embedded программистов выработалась такая привычка, что используй то, что дает производитель. Возможность получить непонятный косяк в работе резко уменьшается. Если мы работали до этого в **CubeIDE 1.7.0**, то нет особой необходимости что-то скачивать из интернета. У Вас уже все есть. **(Не совсем верное утверждение, т.к. есть нюансы).**
 
 Допустим я работаю в **CubeIDE 1.7.0**. 
 
@@ -117,7 +119,6 @@ https://developer.arm.com/downloads/-/gnu-rm
 
 ![Image](https://github.com/user-attachments/assets/fc8c0ec5-d877-4132-8342-3484ad121d79)
 
-Кто ранее по моим видео работал в **VisualGDB** - думаю узнают структуру папок.
 
 Для примера у нас STM32F103C8T6 и st-link v2
 
@@ -154,12 +155,17 @@ if { [info exists CPUTAPID] } {
 
 ![Image](https://github.com/user-attachments/assets/19dbddca-f59e-4ea4-8180-862db74e86dd)
 
-На этом подготовительные работы закончены. Теперь самое сложное - создать Makefile под проект.
+На этом подготовительные работы закончены. 
+
+### **Повторю еще раз, у меня есть готовая сборка этого всего, можете скачать ее и сэкономить свое время. Сборка для работы с STM32 и CH32V:** https://disk.yandex.ru/d/RYFyzLmHSNbnng
+
+
+Теперь самое сложное - создать Makefile под проект.
 
 Я постарался сделать максимально доступно для понимания. Комментарии и все такое. 
 
 Признаюсь - создание первого Makefile под STM32F103C8T6 у меня заняло неделю красноглазиния.
-Он не такой, каким выдает его **CubeMX**. все делалось для того, чтоб создать универсальную портянку, дабы имелась возможность быстро создавать проекты под разные мк, а также автоматизировать подхватку этих значений из Makefile с последующей подстановкой их в настройки **.vscode**, используя скрипты на **powershell**. Иначе проект можно несколько часов собирать, что уже перехочется так работать вообще....
+Он не такой, каким выдает его **CubeMX** при создании проекта. Все делалось для того, чтоб создать универсальную портянку, дабы имелась возможность быстро создавать проекты под разные мк, а также автоматизировать подхватку этих значений из Makefile с последующей подстановкой их в настройки **.vscode**, используя скрипты на **powershell**. Иначе проект можно несколько часов собирать, что уже перехочется так работать вообще....
 
 **Тестовый проект:** https://github.com/Solderingironspb/VSC-make-example/tree/main/Example_STM32F103_VSCode
 
@@ -179,13 +185,13 @@ if { [info exists CPUTAPID] } {
 # Пути для проекта
 ######################################################################################
 # GNU Arm Embedded Toolchain:
-GNU_TOOLCHAIN = C:/ST/tools/gnu-tools-for-stm32.12.3/tools/bin
+GNU_TOOLCHAIN = C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin
 GNU_TOOLCHAIN_GCC_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-gcc.exe
 GNU_TOOLCHAIN_GDB_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-gdb.exe
 GNU_TOOLCHAIN_SIZE_PATH = $(GNU_TOOLCHAIN)/arm-none-eabi-size.exe
 
 # OpenOCD:
-OPEN_OCD_PATH = C:/ST/tools/OpenOCD-20240916-0.12.0
+OPEN_OCD_PATH = C:/dev_tools/STM32_tools/OpenOCD-20240916-0.12.0
 OPEN_OCD_BIN_PATH = $(OPEN_OCD_PATH)/bin/openocd.exe
 
 # OpenOCD, кофигурационные файлы под St-Link и микроконтроллер:
@@ -193,7 +199,7 @@ OPEN_OCD_INTERFACE_PATH = $(OPEN_OCD_PATH)/share/openocd/scripts/interface/stlin
 OPEN_OCD_TARGET_PATH = $(OPEN_OCD_PATH)/share/openocd/scripts/target/stm32f1x.cfg
 
 # SVD файл для описания периферии микроконтроллера
-SVD_FILE_PATH = C:/ST/tools/cmsis-svd-stm32/stm32f1/STM32F103.svd
+SVD_FILE_PATH = C:/dev_tools/STM32_tools/cmsis-svd-stm32/stm32f1/STM32F103.svd
 
 #####################################################################################
 # Название проекта
@@ -359,6 +365,9 @@ flash: all
 
 erase: 
 	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "init; reset halt; stm32f1x mass_erase 0; reset run; exit"
+
+resume:
+	$(OPEN_OCD_BIN_PATH) -f $(OPEN_OCD_INTERFACE_PATH) -f $(OPEN_OCD_TARGET_PATH) -c "init; reset halt; resume; exit"
 ##########################################################################
 # dependencies
 ##########################################################################
@@ -515,9 +524,9 @@ End address - Это Origin + Length
 
 Открываем powershell и подключаемся к STM32F103C8T6 через консоль при помощи OpenOCD:
 
-`C:\ST\tools\OpenOCD-20240916-0.12.0\bin\openocd.exe -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\interface\stlink.cfg -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\target\stm32f1x.cfg`
+`C:\dev_tools\STM32_tools\OpenOCD-20240916-0.12.0\bin\openocd.exe -f C:\dev_tools\STM32_tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\interface\stlink.cfg -f C:\dev_tools\STM32_tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\target\stm32f1x.cfg`
 
-![Image](https://github.com/user-attachments/assets/276eb94d-9c97-4ef6-baae-01c9a9e3660f)
+![Image](https://github.com/user-attachments/assets/256ea287-b818-4fcc-8d38-960124f7261a)
 
 Подключение произошло успешно. Попробуем теперь подключиться к микроконтроллеру через telnet. Это окно не закрываем. Нам понадобится еще один терминал. 
 
@@ -530,7 +539,7 @@ End address - Это Origin + Length
 
 По итогу имеем 2 окна:
 
-![Image](https://github.com/user-attachments/assets/187247fb-2d26-44e6-9b6f-fd5930d959d3)
+![Image](https://github.com/user-attachments/assets/46c66c31-fe3b-4024-9eaa-8c5c9a926f39)
 
 В правом окне вводим `halt`, чтоб остановить работу МК.
 
@@ -540,7 +549,7 @@ End address - Это Origin + Length
 
 Завершим сеанс `exit`
 
-![Image](https://github.com/user-attachments/assets/d75c5945-1bb4-4150-b6f6-e943c40eab29)
+![Image](https://github.com/user-attachments/assets/9c303ad7-a1cb-4e75-a998-51cd7e990056)
 
 ### Как залить скомпилированную прошивку на микроконтроллер?
 
@@ -548,7 +557,7 @@ End address - Это Origin + Length
 
 Подключаемся к МК через OpenOCD:
 
-`C:\ST\tools\OpenOCD-20240916-0.12.0\bin\openocd.exe -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\interface\stlink.cfg -f C:\ST\tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\target\stm32f1x.cfg`
+`C:\dev_tools\STM32_tools\OpenOCD-20240916-0.12.0\bin\openocd.exe -f C:\dev_tools\STM32_tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\interface\stlink.cfg -f C:\dev_tools\STM32_tools\OpenOCD-20240916-0.12.0\share\openocd\scripts\target\stm32f1x.cfg`
 
 Подключаемся через Telnet(Во втором окне powershell): `telnet localhost 4444`
 
@@ -560,17 +569,12 @@ End address - Это Origin + Length
 
 Завершим сеанс `exit`
 
-![Image](https://github.com/user-attachments/assets/8e070d0a-d6e5-4808-94f7-910d308b0db8)
+![Image](https://github.com/user-attachments/assets/7b4ba8d0-7edd-4dd3-9c91-2867292c438c)
 
+Обо всем другом расскажу в видео:
 
+![Image](https://github.com/user-attachments/assets/dd7ab307-325e-4aec-ac74-13d38e427951)
 
-
-
-
-
-
-
-
-
+**Здесь будет видео**
 
 **Материал находится в доработке*
