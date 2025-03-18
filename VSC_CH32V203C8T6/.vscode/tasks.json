@@ -1,11 +1,11 @@
-﻿{
+{
     "version": "2.0.0",
     "tasks": [
         /*=============================== Сборка проекта ===================================*/
         {
             "label": "Build Project", //Сборка проекта
             "type": "shell",
-            "command": "make -j12 all", // Команда для сборки проекта
+            "command": "make -j4 all", // Команда для сборки проекта
             "icon": {
                 "color": "terminal.ansiYellow",
                 "id": "tools"
@@ -25,7 +25,7 @@
         {
             "label": "Clean Project", //Очистка проекта
             "type": "shell",
-            "command": "make -j4 clean", // Команда для сборки проекта
+            "command": "make -j12 clean", // Команда для сборки проекта
             "problemMatcher": [],
             "icon": {
                 "color": "terminal.ansiRed",
@@ -70,6 +70,32 @@
             "detail": "Получение информации о памяти"
         },
         /*===================== Получить инфо по используемой памяти ========================*/
+        /*===================== Поиск файлов для Makefile ========================*/
+        {
+            "label": "Find files for Makefile v1.0", //Получить информацию по состоянию памяти
+            "type": "shell",
+            "command": "powershell.exe",
+            "icon": {
+                "color": "terminal.ansiCyan",
+                "id": "book"
+            },
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass", //Политика для powershell, чтоб дал запустить скрипт
+                "-File",
+                "Find files for Makefile v1.0.ps1" //Расположение скрипта
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "echo": false, // Отключает вывод команды задачи (* Executing task: ...)
+                "reveal": "always", // Показывает терминал (если нужно)
+                "focus": false, // Не переводить фокус на терминал
+                "panel": "dedicated", // Использовать отдельный терминал
+                "clear": true //Стереть все, что было в терминале
+            },
+            "detail": "Поиск файлов для Makefile"
+        },
+        /*===================== Поиск файлов для Makefile ========================*/
         /*================ Обновить JSON файлы в соответствии с Makefile ====================*/
         {
             "label": "Makefile: Update JSON files (Experimental)", //Обновление JSON файлов в соответствии с Makefile
@@ -128,4 +154,6 @@
         /*==== Общая задача, которая будет билдить проект и выводить, сколько прошивка заняла места ====*/
     ]
 }
+
+
 

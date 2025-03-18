@@ -110,4 +110,3 @@ foreach ($file in $ldFiles) {
 }
 
 Write-Host ""
-Read-Host
