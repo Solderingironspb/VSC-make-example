@@ -530,7 +530,19 @@ End address - Это Origin + Length
 
 Подключение произошло успешно. Попробуем теперь подключиться к микроконтроллеру через telnet. Это окно не закрываем. Нам понадобится еще один терминал. 
 
-Если у Вас Telnet не работает - воспользуйтесь инструкцией по установке Telnet на powershell: https://remontka.pro/enable-telnet-windows/
+### Если у Вас Telnet не работает - установите его:
+
+Заходим в "**Включение или отключение компонентов Windows**" и поставим галочку в "**Клиент Telnet**".
+
+![Image](https://github.com/user-attachments/assets/8dfd13ba-ebd6-4fc3-8d50-290f5792bb0b)
+
+Далее открываем **powershell** от имени администратора и вводим:
+
+`Enable-WindowsOptionalFeature -Online -FeatureName TelnetClient`
+
+![Image](https://github.com/user-attachments/assets/73efb283-2da0-49d9-8cb3-a94af0ae9639)
+
+После установки перезагружаем **powershell** и все должно работать.
 
 Подключимся к мк по telnet:
 `telnet localhost 4444`
