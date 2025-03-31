@@ -1,0 +1,14 @@
+﻿{
+    "configurations": [
+        {
+            "name": "Clean_project", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "includePath": ["${workspaceFolder}/Core/Inc//**", "${workspaceFolder}/Drivers/STM32F1xx_HAL_Driver/Inc//**", "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F1xx/Include//**", "${workspaceFolder}/Drivers/CMSIS/Include//**", "${workspaceFolder}/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy//**"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "defines": ["DEBUG", "STM32F103xB", "USE_HAL_DRIVER"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "intelliSenseMode": "gcc-arm", //Стандартно "gcc-arm"
+            "compilerPath": "C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/bin/arm-none-eabi-gcc.exe", //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "compilerArgs": ["-mcpu=cortex-m3", "-mfloat-abi=soft", "-specs=nano.specs", "-g3", "-O0", "-std=gnu11", "-DDEBUG", "-DSTM32F103xB", "-DUSE_HAL_DRIVER", "-ICore/Inc/", "-IDrivers/STM32F1xx_HAL_Driver/Inc/", "-IDrivers/CMSIS/Device/ST/STM32F1xx/Include/", "-IDrivers/CMSIS/Include/", "-IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy/", "-Wall", "-fdata-sections", "-ffunction-sections", "-fstack-usage", "-MMD", "-MP", "-MF"], //Данную строку можно обновить через Makefile:Update JSON files (Experimental)
+            "cStandard": "c11" //Стандартно C11
+        }
+    ],
+    "version": 4
+}

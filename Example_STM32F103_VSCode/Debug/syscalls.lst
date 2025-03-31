@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,25 +17,25 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.file 1 "Core/Src/syscalls.c"
-  18              		.global	__env
-  19              		.section	.bss.__env,"aw",%nobits
-  20              		.align	2
-  23              	__env:
-  24 0000 00000000 		.space	4
-  25              		.global	environ
-  26              		.section	.data.environ,"aw"
-  27              		.align	2
-  30              	environ:
-  31 0000 00000000 		.word	__env
-  32              		.section	.text.initialise_monitor_handles,"ax",%progbits
-  33              		.align	1
-  34              		.global	initialise_monitor_handles
-  35              		.syntax unified
-  36              		.thumb
-  37              		.thumb_func
-  39              	initialise_monitor_handles:
-  40              	.LFB25:
+  17              		.global	__env
+  18              		.section	.bss.__env,"aw",%nobits
+  19              		.align	2
+  22              	__env:
+  23 0000 00000000 		.space	4
+  24              		.global	environ
+  25              		.section	.data.environ,"aw"
+  26              		.align	2
+  29              	environ:
+  30 0000 00000000 		.word	__env
+  31              		.section	.text.initialise_monitor_handles,"ax",%progbits
+  32              		.align	1
+  33              		.global	initialise_monitor_handles
+  34              		.syntax unified
+  35              		.thumb
+  36              		.thumb_func
+  38              	initialise_monitor_handles:
+  39              	.LFB25:
+  40              		.file 1 "Core/Src/syscalls.c"
    1:Core/Src/syscalls.c **** /**
    2:Core/Src/syscalls.c ****  ******************************************************************************
    3:Core/Src/syscalls.c ****  * @file      syscalls.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 1
   20:Core/Src/syscalls.c ****  *
   21:Core/Src/syscalls.c ****  ******************************************************************************
   22:Core/Src/syscalls.c ****  */
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 2
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 2
 
 
   23:Core/Src/syscalls.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 1
   74              		@ args = 0, pretend = 0, frame = 0
   75              		@ frame_needed = 1, uses_anonymous_args = 0
   76              		@ link register save eliminated.
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 3
 
 
   77 0000 80B4     		push	{r7}
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 1
   52:Core/Src/syscalls.c **** }
  127              		.loc 1 52 1
  128 0018 1846     		mov	r0, r3
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 4
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 4
 
 
  129 001a 0837     		adds	r7, r7, #8
@@ -220,811 +220,807 @@ ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 1
  164              	.L7:
   56:Core/Src/syscalls.c ****     while (1) {} /* Make sure we hang here */
  165              		.loc 1 56 11 discriminator 1
- 166 0012 00BF     		nop
- 167 0014 FDE7     		b	.L7
- 168              		.cfi_endproc
- 169              	.LFE28:
- 171              		.section	.text._read,"ax",%progbits
- 172              		.align	1
- 173              		.weak	_read
- 174              		.syntax unified
- 175              		.thumb
- 176              		.thumb_func
- 178              	_read:
- 179              	.LFB29:
+ 166 0012 FEE7     		b	.L7
+ 167              		.cfi_endproc
+ 168              	.LFE28:
+ 170              		.section	.text._read,"ax",%progbits
+ 171              		.align	1
+ 172              		.weak	_read
+ 173              		.syntax unified
+ 174              		.thumb
+ 175              		.thumb_func
+ 177              	_read:
+ 178              	.LFB29:
   57:Core/Src/syscalls.c **** }
   58:Core/Src/syscalls.c **** 
   59:Core/Src/syscalls.c **** __attribute__((weak)) int _read(int file, char *ptr, int len) {
- 180              		.loc 1 59 63
- 181              		.cfi_startproc
- 182              		@ args = 0, pretend = 0, frame = 24
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 5
+ 179              		.loc 1 59 63
+ 180              		.cfi_startproc
+ 181              		@ args = 0, pretend = 0, frame = 24
+ 182              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 5
 
 
- 183              		@ frame_needed = 1, uses_anonymous_args = 0
- 184 0000 80B5     		push	{r7, lr}
- 185              		.cfi_def_cfa_offset 8
- 186              		.cfi_offset 7, -8
- 187              		.cfi_offset 14, -4
- 188 0002 86B0     		sub	sp, sp, #24
- 189              		.cfi_def_cfa_offset 32
- 190 0004 00AF     		add	r7, sp, #0
- 191              		.cfi_def_cfa_register 7
- 192 0006 F860     		str	r0, [r7, #12]
- 193 0008 B960     		str	r1, [r7, #8]
- 194 000a 7A60     		str	r2, [r7, #4]
+ 183 0000 80B5     		push	{r7, lr}
+ 184              		.cfi_def_cfa_offset 8
+ 185              		.cfi_offset 7, -8
+ 186              		.cfi_offset 14, -4
+ 187 0002 86B0     		sub	sp, sp, #24
+ 188              		.cfi_def_cfa_offset 32
+ 189 0004 00AF     		add	r7, sp, #0
+ 190              		.cfi_def_cfa_register 7
+ 191 0006 F860     		str	r0, [r7, #12]
+ 192 0008 B960     		str	r1, [r7, #8]
+ 193 000a 7A60     		str	r2, [r7, #4]
   60:Core/Src/syscalls.c ****     int DataIdx;
   61:Core/Src/syscalls.c **** 
   62:Core/Src/syscalls.c ****     for (DataIdx = 0; DataIdx < len; DataIdx++) {
- 195              		.loc 1 62 18
- 196 000c 0023     		movs	r3, #0
- 197 000e 7B61     		str	r3, [r7, #20]
- 198              		.loc 1 62 5
- 199 0010 0AE0     		b	.L9
- 200              	.L10:
+ 194              		.loc 1 62 18
+ 195 000c 0023     		movs	r3, #0
+ 196 000e 7B61     		str	r3, [r7, #20]
+ 197              		.loc 1 62 5
+ 198 0010 0AE0     		b	.L9
+ 199              	.L10:
   63:Core/Src/syscalls.c ****         *ptr++ = __io_getchar();
- 201              		.loc 1 63 18 discriminator 3
- 202 0012 FFF7FEFF 		bl	__io_getchar
- 203 0016 0146     		mov	r1, r0
- 204              		.loc 1 63 13 discriminator 3
- 205 0018 BB68     		ldr	r3, [r7, #8]
- 206 001a 5A1C     		adds	r2, r3, #1
- 207 001c BA60     		str	r2, [r7, #8]
- 208              		.loc 1 63 16 discriminator 3
- 209 001e CAB2     		uxtb	r2, r1
- 210 0020 1A70     		strb	r2, [r3]
+ 200              		.loc 1 63 18 discriminator 3
+ 201 0012 FFF7FEFF 		bl	__io_getchar
+ 202 0016 0146     		mov	r1, r0
+ 203              		.loc 1 63 13 discriminator 3
+ 204 0018 BB68     		ldr	r3, [r7, #8]
+ 205 001a 5A1C     		adds	r2, r3, #1
+ 206 001c BA60     		str	r2, [r7, #8]
+ 207              		.loc 1 63 16 discriminator 3
+ 208 001e CAB2     		uxtb	r2, r1
+ 209 0020 1A70     		strb	r2, [r3]
   62:Core/Src/syscalls.c ****         *ptr++ = __io_getchar();
- 211              		.loc 1 62 45 discriminator 3
- 212 0022 7B69     		ldr	r3, [r7, #20]
- 213 0024 0133     		adds	r3, r3, #1
- 214 0026 7B61     		str	r3, [r7, #20]
- 215              	.L9:
+ 210              		.loc 1 62 45 discriminator 3
+ 211 0022 7B69     		ldr	r3, [r7, #20]
+ 212 0024 0133     		adds	r3, r3, #1
+ 213 0026 7B61     		str	r3, [r7, #20]
+ 214              	.L9:
   62:Core/Src/syscalls.c ****         *ptr++ = __io_getchar();
- 216              		.loc 1 62 31 discriminator 1
- 217 0028 7A69     		ldr	r2, [r7, #20]
- 218 002a 7B68     		ldr	r3, [r7, #4]
- 219 002c 9A42     		cmp	r2, r3
- 220 002e F0DB     		blt	.L10
+ 215              		.loc 1 62 5 discriminator 1
+ 216 0028 7A69     		ldr	r2, [r7, #20]
+ 217 002a 7B68     		ldr	r3, [r7, #4]
+ 218 002c 9A42     		cmp	r2, r3
+ 219 002e F0DB     		blt	.L10
   64:Core/Src/syscalls.c ****     }
   65:Core/Src/syscalls.c **** 
   66:Core/Src/syscalls.c ****     return len;
- 221              		.loc 1 66 12
- 222 0030 7B68     		ldr	r3, [r7, #4]
+ 220              		.loc 1 66 12
+ 221 0030 7B68     		ldr	r3, [r7, #4]
   67:Core/Src/syscalls.c **** }
- 223              		.loc 1 67 1
- 224 0032 1846     		mov	r0, r3
- 225 0034 1837     		adds	r7, r7, #24
- 226              		.cfi_def_cfa_offset 8
- 227 0036 BD46     		mov	sp, r7
- 228              		.cfi_def_cfa_register 13
- 229              		@ sp needed
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 6
+ 222              		.loc 1 67 1
+ 223 0032 1846     		mov	r0, r3
+ 224 0034 1837     		adds	r7, r7, #24
+ 225              		.cfi_def_cfa_offset 8
+ 226 0036 BD46     		mov	sp, r7
+ 227              		.cfi_def_cfa_register 13
+ 228              		@ sp needed
+ 229 0038 80BD     		pop	{r7, pc}
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 6
 
 
- 230 0038 80BD     		pop	{r7, pc}
- 231              		.cfi_endproc
- 232              	.LFE29:
- 234              		.section	.text._write,"ax",%progbits
- 235              		.align	1
- 236              		.weak	_write
- 237              		.syntax unified
- 238              		.thumb
- 239              		.thumb_func
- 241              	_write:
- 242              	.LFB30:
+ 230              		.cfi_endproc
+ 231              	.LFE29:
+ 233              		.section	.text._write,"ax",%progbits
+ 234              		.align	1
+ 235              		.weak	_write
+ 236              		.syntax unified
+ 237              		.thumb
+ 238              		.thumb_func
+ 240              	_write:
+ 241              	.LFB30:
   68:Core/Src/syscalls.c **** 
   69:Core/Src/syscalls.c **** __attribute__((weak)) int _write(int file, char *ptr, int len) {
- 243              		.loc 1 69 64
- 244              		.cfi_startproc
- 245              		@ args = 0, pretend = 0, frame = 24
- 246              		@ frame_needed = 1, uses_anonymous_args = 0
- 247 0000 80B5     		push	{r7, lr}
- 248              		.cfi_def_cfa_offset 8
- 249              		.cfi_offset 7, -8
- 250              		.cfi_offset 14, -4
- 251 0002 86B0     		sub	sp, sp, #24
- 252              		.cfi_def_cfa_offset 32
- 253 0004 00AF     		add	r7, sp, #0
- 254              		.cfi_def_cfa_register 7
- 255 0006 F860     		str	r0, [r7, #12]
- 256 0008 B960     		str	r1, [r7, #8]
- 257 000a 7A60     		str	r2, [r7, #4]
+ 242              		.loc 1 69 64
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 24
+ 245              		@ frame_needed = 1, uses_anonymous_args = 0
+ 246 0000 80B5     		push	{r7, lr}
+ 247              		.cfi_def_cfa_offset 8
+ 248              		.cfi_offset 7, -8
+ 249              		.cfi_offset 14, -4
+ 250 0002 86B0     		sub	sp, sp, #24
+ 251              		.cfi_def_cfa_offset 32
+ 252 0004 00AF     		add	r7, sp, #0
+ 253              		.cfi_def_cfa_register 7
+ 254 0006 F860     		str	r0, [r7, #12]
+ 255 0008 B960     		str	r1, [r7, #8]
+ 256 000a 7A60     		str	r2, [r7, #4]
   70:Core/Src/syscalls.c ****     int DataIdx;
   71:Core/Src/syscalls.c **** 
   72:Core/Src/syscalls.c ****     for (DataIdx = 0; DataIdx < len; DataIdx++) {
- 258              		.loc 1 72 18
- 259 000c 0023     		movs	r3, #0
- 260 000e 7B61     		str	r3, [r7, #20]
- 261              		.loc 1 72 5
- 262 0010 09E0     		b	.L13
- 263              	.L14:
+ 257              		.loc 1 72 18
+ 258 000c 0023     		movs	r3, #0
+ 259 000e 7B61     		str	r3, [r7, #20]
+ 260              		.loc 1 72 5
+ 261 0010 09E0     		b	.L13
+ 262              	.L14:
   73:Core/Src/syscalls.c ****         __io_putchar(*ptr++);
- 264              		.loc 1 73 26 discriminator 3
- 265 0012 BB68     		ldr	r3, [r7, #8]
- 266 0014 5A1C     		adds	r2, r3, #1
- 267 0016 BA60     		str	r2, [r7, #8]
- 268              		.loc 1 73 22 discriminator 3
- 269 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 270              		.loc 1 73 9 discriminator 3
- 271 001a 1846     		mov	r0, r3
- 272 001c FFF7FEFF 		bl	__io_putchar
+ 263              		.loc 1 73 26 discriminator 3
+ 264 0012 BB68     		ldr	r3, [r7, #8]
+ 265 0014 5A1C     		adds	r2, r3, #1
+ 266 0016 BA60     		str	r2, [r7, #8]
+ 267              		.loc 1 73 22 discriminator 3
+ 268 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 269              		.loc 1 73 9 discriminator 3
+ 270 001a 1846     		mov	r0, r3
+ 271 001c FFF7FEFF 		bl	__io_putchar
   72:Core/Src/syscalls.c ****         __io_putchar(*ptr++);
- 273              		.loc 1 72 45 discriminator 3
- 274 0020 7B69     		ldr	r3, [r7, #20]
- 275 0022 0133     		adds	r3, r3, #1
- 276 0024 7B61     		str	r3, [r7, #20]
- 277              	.L13:
+ 272              		.loc 1 72 45 discriminator 3
+ 273 0020 7B69     		ldr	r3, [r7, #20]
+ 274 0022 0133     		adds	r3, r3, #1
+ 275 0024 7B61     		str	r3, [r7, #20]
+ 276              	.L13:
   72:Core/Src/syscalls.c ****         __io_putchar(*ptr++);
- 278              		.loc 1 72 31 discriminator 1
- 279 0026 7A69     		ldr	r2, [r7, #20]
- 280 0028 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 7
+ 277              		.loc 1 72 5 discriminator 1
+ 278 0026 7A69     		ldr	r2, [r7, #20]
+ 279 0028 7B68     		ldr	r3, [r7, #4]
+ 280 002a 9A42     		cmp	r2, r3
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 7
 
 
- 281 002a 9A42     		cmp	r2, r3
- 282 002c F1DB     		blt	.L14
+ 281 002c F1DB     		blt	.L14
   74:Core/Src/syscalls.c ****     }
   75:Core/Src/syscalls.c ****     return len;
- 283              		.loc 1 75 12
- 284 002e 7B68     		ldr	r3, [r7, #4]
+ 282              		.loc 1 75 12
+ 283 002e 7B68     		ldr	r3, [r7, #4]
   76:Core/Src/syscalls.c **** }
- 285              		.loc 1 76 1
- 286 0030 1846     		mov	r0, r3
- 287 0032 1837     		adds	r7, r7, #24
- 288              		.cfi_def_cfa_offset 8
- 289 0034 BD46     		mov	sp, r7
- 290              		.cfi_def_cfa_register 13
- 291              		@ sp needed
- 292 0036 80BD     		pop	{r7, pc}
- 293              		.cfi_endproc
- 294              	.LFE30:
- 296              		.section	.text._close,"ax",%progbits
- 297              		.align	1
- 298              		.global	_close
- 299              		.syntax unified
- 300              		.thumb
- 301              		.thumb_func
- 303              	_close:
- 304              	.LFB31:
+ 284              		.loc 1 76 1
+ 285 0030 1846     		mov	r0, r3
+ 286 0032 1837     		adds	r7, r7, #24
+ 287              		.cfi_def_cfa_offset 8
+ 288 0034 BD46     		mov	sp, r7
+ 289              		.cfi_def_cfa_register 13
+ 290              		@ sp needed
+ 291 0036 80BD     		pop	{r7, pc}
+ 292              		.cfi_endproc
+ 293              	.LFE30:
+ 295              		.section	.text._close,"ax",%progbits
+ 296              		.align	1
+ 297              		.global	_close
+ 298              		.syntax unified
+ 299              		.thumb
+ 300              		.thumb_func
+ 302              	_close:
+ 303              	.LFB31:
   77:Core/Src/syscalls.c **** 
   78:Core/Src/syscalls.c **** int _close(int file) {
- 305              		.loc 1 78 22
- 306              		.cfi_startproc
- 307              		@ args = 0, pretend = 0, frame = 8
- 308              		@ frame_needed = 1, uses_anonymous_args = 0
- 309              		@ link register save eliminated.
- 310 0000 80B4     		push	{r7}
- 311              		.cfi_def_cfa_offset 4
- 312              		.cfi_offset 7, -4
- 313 0002 83B0     		sub	sp, sp, #12
- 314              		.cfi_def_cfa_offset 16
- 315 0004 00AF     		add	r7, sp, #0
- 316              		.cfi_def_cfa_register 7
- 317 0006 7860     		str	r0, [r7, #4]
+ 304              		.loc 1 78 22
+ 305              		.cfi_startproc
+ 306              		@ args = 0, pretend = 0, frame = 8
+ 307              		@ frame_needed = 1, uses_anonymous_args = 0
+ 308              		@ link register save eliminated.
+ 309 0000 80B4     		push	{r7}
+ 310              		.cfi_def_cfa_offset 4
+ 311              		.cfi_offset 7, -4
+ 312 0002 83B0     		sub	sp, sp, #12
+ 313              		.cfi_def_cfa_offset 16
+ 314 0004 00AF     		add	r7, sp, #0
+ 315              		.cfi_def_cfa_register 7
+ 316 0006 7860     		str	r0, [r7, #4]
   79:Core/Src/syscalls.c ****     return -1;
- 318              		.loc 1 79 12
- 319 0008 4FF0FF33 		mov	r3, #-1
+ 317              		.loc 1 79 12
+ 318 0008 4FF0FF33 		mov	r3, #-1
   80:Core/Src/syscalls.c **** }
- 320              		.loc 1 80 1
- 321 000c 1846     		mov	r0, r3
- 322 000e 0C37     		adds	r7, r7, #12
- 323              		.cfi_def_cfa_offset 4
- 324 0010 BD46     		mov	sp, r7
- 325              		.cfi_def_cfa_register 13
- 326              		@ sp needed
- 327 0012 80BC     		pop	{r7}
- 328              		.cfi_restore 7
- 329              		.cfi_def_cfa_offset 0
- 330 0014 7047     		bx	lr
- 331              		.cfi_endproc
- 332              	.LFE31:
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 8
+ 319              		.loc 1 80 1
+ 320 000c 1846     		mov	r0, r3
+ 321 000e 0C37     		adds	r7, r7, #12
+ 322              		.cfi_def_cfa_offset 4
+ 323 0010 BD46     		mov	sp, r7
+ 324              		.cfi_def_cfa_register 13
+ 325              		@ sp needed
+ 326 0012 80BC     		pop	{r7}
+ 327              		.cfi_restore 7
+ 328              		.cfi_def_cfa_offset 0
+ 329 0014 7047     		bx	lr
+ 330              		.cfi_endproc
+ 331              	.LFE31:
+ 333              		.section	.text._fstat,"ax",%progbits
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 8
 
 
- 334              		.section	.text._fstat,"ax",%progbits
- 335              		.align	1
- 336              		.global	_fstat
- 337              		.syntax unified
- 338              		.thumb
- 339              		.thumb_func
- 341              	_fstat:
- 342              	.LFB32:
+ 334              		.align	1
+ 335              		.global	_fstat
+ 336              		.syntax unified
+ 337              		.thumb
+ 338              		.thumb_func
+ 340              	_fstat:
+ 341              	.LFB32:
   81:Core/Src/syscalls.c **** 
   82:Core/Src/syscalls.c **** int _fstat(int file, struct stat *st) {
- 343              		.loc 1 82 39
- 344              		.cfi_startproc
- 345              		@ args = 0, pretend = 0, frame = 8
- 346              		@ frame_needed = 1, uses_anonymous_args = 0
- 347              		@ link register save eliminated.
- 348 0000 80B4     		push	{r7}
- 349              		.cfi_def_cfa_offset 4
- 350              		.cfi_offset 7, -4
- 351 0002 83B0     		sub	sp, sp, #12
- 352              		.cfi_def_cfa_offset 16
- 353 0004 00AF     		add	r7, sp, #0
- 354              		.cfi_def_cfa_register 7
- 355 0006 7860     		str	r0, [r7, #4]
- 356 0008 3960     		str	r1, [r7]
+ 342              		.loc 1 82 39
+ 343              		.cfi_startproc
+ 344              		@ args = 0, pretend = 0, frame = 8
+ 345              		@ frame_needed = 1, uses_anonymous_args = 0
+ 346              		@ link register save eliminated.
+ 347 0000 80B4     		push	{r7}
+ 348              		.cfi_def_cfa_offset 4
+ 349              		.cfi_offset 7, -4
+ 350 0002 83B0     		sub	sp, sp, #12
+ 351              		.cfi_def_cfa_offset 16
+ 352 0004 00AF     		add	r7, sp, #0
+ 353              		.cfi_def_cfa_register 7
+ 354 0006 7860     		str	r0, [r7, #4]
+ 355 0008 3960     		str	r1, [r7]
   83:Core/Src/syscalls.c ****     st->st_mode = S_IFCHR;
- 357              		.loc 1 83 17
- 358 000a 3B68     		ldr	r3, [r7]
- 359 000c 4FF40052 		mov	r2, #8192
- 360 0010 5A60     		str	r2, [r3, #4]
+ 356              		.loc 1 83 17
+ 357 000a 3B68     		ldr	r3, [r7]
+ 358 000c 4FF40052 		mov	r2, #8192
+ 359 0010 5A60     		str	r2, [r3, #4]
   84:Core/Src/syscalls.c ****     return 0;
- 361              		.loc 1 84 12
- 362 0012 0023     		movs	r3, #0
+ 360              		.loc 1 84 12
+ 361 0012 0023     		movs	r3, #0
   85:Core/Src/syscalls.c **** }
- 363              		.loc 1 85 1
- 364 0014 1846     		mov	r0, r3
- 365 0016 0C37     		adds	r7, r7, #12
- 366              		.cfi_def_cfa_offset 4
- 367 0018 BD46     		mov	sp, r7
- 368              		.cfi_def_cfa_register 13
- 369              		@ sp needed
- 370 001a 80BC     		pop	{r7}
- 371              		.cfi_restore 7
- 372              		.cfi_def_cfa_offset 0
- 373 001c 7047     		bx	lr
- 374              		.cfi_endproc
- 375              	.LFE32:
- 377              		.section	.text._isatty,"ax",%progbits
- 378              		.align	1
- 379              		.global	_isatty
- 380              		.syntax unified
- 381              		.thumb
- 382              		.thumb_func
- 384              	_isatty:
- 385              	.LFB33:
+ 362              		.loc 1 85 1
+ 363 0014 1846     		mov	r0, r3
+ 364 0016 0C37     		adds	r7, r7, #12
+ 365              		.cfi_def_cfa_offset 4
+ 366 0018 BD46     		mov	sp, r7
+ 367              		.cfi_def_cfa_register 13
+ 368              		@ sp needed
+ 369 001a 80BC     		pop	{r7}
+ 370              		.cfi_restore 7
+ 371              		.cfi_def_cfa_offset 0
+ 372 001c 7047     		bx	lr
+ 373              		.cfi_endproc
+ 374              	.LFE32:
+ 376              		.section	.text._isatty,"ax",%progbits
+ 377              		.align	1
+ 378              		.global	_isatty
+ 379              		.syntax unified
+ 380              		.thumb
+ 381              		.thumb_func
+ 383              	_isatty:
+ 384              	.LFB33:
   86:Core/Src/syscalls.c **** 
   87:Core/Src/syscalls.c **** int _isatty(int file) {
- 386              		.loc 1 87 23
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 9
+ 385              		.loc 1 87 23
+ 386              		.cfi_startproc
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 9
 
 
- 387              		.cfi_startproc
- 388              		@ args = 0, pretend = 0, frame = 8
- 389              		@ frame_needed = 1, uses_anonymous_args = 0
- 390              		@ link register save eliminated.
- 391 0000 80B4     		push	{r7}
- 392              		.cfi_def_cfa_offset 4
- 393              		.cfi_offset 7, -4
- 394 0002 83B0     		sub	sp, sp, #12
- 395              		.cfi_def_cfa_offset 16
- 396 0004 00AF     		add	r7, sp, #0
- 397              		.cfi_def_cfa_register 7
- 398 0006 7860     		str	r0, [r7, #4]
+ 387              		@ args = 0, pretend = 0, frame = 8
+ 388              		@ frame_needed = 1, uses_anonymous_args = 0
+ 389              		@ link register save eliminated.
+ 390 0000 80B4     		push	{r7}
+ 391              		.cfi_def_cfa_offset 4
+ 392              		.cfi_offset 7, -4
+ 393 0002 83B0     		sub	sp, sp, #12
+ 394              		.cfi_def_cfa_offset 16
+ 395 0004 00AF     		add	r7, sp, #0
+ 396              		.cfi_def_cfa_register 7
+ 397 0006 7860     		str	r0, [r7, #4]
   88:Core/Src/syscalls.c ****     return 1;
- 399              		.loc 1 88 12
- 400 0008 0123     		movs	r3, #1
+ 398              		.loc 1 88 12
+ 399 0008 0123     		movs	r3, #1
   89:Core/Src/syscalls.c **** }
- 401              		.loc 1 89 1
- 402 000a 1846     		mov	r0, r3
- 403 000c 0C37     		adds	r7, r7, #12
- 404              		.cfi_def_cfa_offset 4
- 405 000e BD46     		mov	sp, r7
- 406              		.cfi_def_cfa_register 13
- 407              		@ sp needed
- 408 0010 80BC     		pop	{r7}
- 409              		.cfi_restore 7
- 410              		.cfi_def_cfa_offset 0
- 411 0012 7047     		bx	lr
- 412              		.cfi_endproc
- 413              	.LFE33:
- 415              		.section	.text._lseek,"ax",%progbits
- 416              		.align	1
- 417              		.global	_lseek
- 418              		.syntax unified
- 419              		.thumb
- 420              		.thumb_func
- 422              	_lseek:
- 423              	.LFB34:
+ 400              		.loc 1 89 1
+ 401 000a 1846     		mov	r0, r3
+ 402 000c 0C37     		adds	r7, r7, #12
+ 403              		.cfi_def_cfa_offset 4
+ 404 000e BD46     		mov	sp, r7
+ 405              		.cfi_def_cfa_register 13
+ 406              		@ sp needed
+ 407 0010 80BC     		pop	{r7}
+ 408              		.cfi_restore 7
+ 409              		.cfi_def_cfa_offset 0
+ 410 0012 7047     		bx	lr
+ 411              		.cfi_endproc
+ 412              	.LFE33:
+ 414              		.section	.text._lseek,"ax",%progbits
+ 415              		.align	1
+ 416              		.global	_lseek
+ 417              		.syntax unified
+ 418              		.thumb
+ 419              		.thumb_func
+ 421              	_lseek:
+ 422              	.LFB34:
   90:Core/Src/syscalls.c **** 
   91:Core/Src/syscalls.c **** int _lseek(int file, int ptr, int dir) {
- 424              		.loc 1 91 40
- 425              		.cfi_startproc
- 426              		@ args = 0, pretend = 0, frame = 16
- 427              		@ frame_needed = 1, uses_anonymous_args = 0
- 428              		@ link register save eliminated.
- 429 0000 80B4     		push	{r7}
- 430              		.cfi_def_cfa_offset 4
- 431              		.cfi_offset 7, -4
- 432 0002 85B0     		sub	sp, sp, #20
- 433              		.cfi_def_cfa_offset 24
- 434 0004 00AF     		add	r7, sp, #0
- 435              		.cfi_def_cfa_register 7
- 436 0006 F860     		str	r0, [r7, #12]
- 437 0008 B960     		str	r1, [r7, #8]
- 438 000a 7A60     		str	r2, [r7, #4]
+ 423              		.loc 1 91 40
+ 424              		.cfi_startproc
+ 425              		@ args = 0, pretend = 0, frame = 16
+ 426              		@ frame_needed = 1, uses_anonymous_args = 0
+ 427              		@ link register save eliminated.
+ 428 0000 80B4     		push	{r7}
+ 429              		.cfi_def_cfa_offset 4
+ 430              		.cfi_offset 7, -4
+ 431 0002 85B0     		sub	sp, sp, #20
+ 432              		.cfi_def_cfa_offset 24
+ 433 0004 00AF     		add	r7, sp, #0
+ 434              		.cfi_def_cfa_register 7
+ 435 0006 F860     		str	r0, [r7, #12]
+ 436 0008 B960     		str	r1, [r7, #8]
+ 437 000a 7A60     		str	r2, [r7, #4]
   92:Core/Src/syscalls.c ****     return 0;
- 439              		.loc 1 92 12
- 440 000c 0023     		movs	r3, #0
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 10
-
-
+ 438              		.loc 1 92 12
+ 439 000c 0023     		movs	r3, #0
   93:Core/Src/syscalls.c **** }
- 441              		.loc 1 93 1
- 442 000e 1846     		mov	r0, r3
- 443 0010 1437     		adds	r7, r7, #20
- 444              		.cfi_def_cfa_offset 4
- 445 0012 BD46     		mov	sp, r7
- 446              		.cfi_def_cfa_register 13
- 447              		@ sp needed
- 448 0014 80BC     		pop	{r7}
- 449              		.cfi_restore 7
- 450              		.cfi_def_cfa_offset 0
- 451 0016 7047     		bx	lr
- 452              		.cfi_endproc
- 453              	.LFE34:
- 455              		.section	.text._open,"ax",%progbits
- 456              		.align	1
- 457              		.global	_open
- 458              		.syntax unified
- 459              		.thumb
- 460              		.thumb_func
- 462              	_open:
- 463              	.LFB35:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 10
+
+
+ 440              		.loc 1 93 1
+ 441 000e 1846     		mov	r0, r3
+ 442 0010 1437     		adds	r7, r7, #20
+ 443              		.cfi_def_cfa_offset 4
+ 444 0012 BD46     		mov	sp, r7
+ 445              		.cfi_def_cfa_register 13
+ 446              		@ sp needed
+ 447 0014 80BC     		pop	{r7}
+ 448              		.cfi_restore 7
+ 449              		.cfi_def_cfa_offset 0
+ 450 0016 7047     		bx	lr
+ 451              		.cfi_endproc
+ 452              	.LFE34:
+ 454              		.section	.text._open,"ax",%progbits
+ 455              		.align	1
+ 456              		.global	_open
+ 457              		.syntax unified
+ 458              		.thumb
+ 459              		.thumb_func
+ 461              	_open:
+ 462              	.LFB35:
   94:Core/Src/syscalls.c **** 
   95:Core/Src/syscalls.c **** int _open(char *path, int flags, ...) {
- 464              		.loc 1 95 39
- 465              		.cfi_startproc
- 466              		@ args = 4, pretend = 12, frame = 8
- 467              		@ frame_needed = 1, uses_anonymous_args = 1
- 468              		@ link register save eliminated.
- 469 0000 0EB4     		push	{r1, r2, r3}
- 470              		.cfi_def_cfa_offset 12
- 471              		.cfi_offset 1, -12
- 472              		.cfi_offset 2, -8
- 473              		.cfi_offset 3, -4
- 474 0002 80B4     		push	{r7}
- 475              		.cfi_def_cfa_offset 16
- 476              		.cfi_offset 7, -16
- 477 0004 82B0     		sub	sp, sp, #8
- 478              		.cfi_def_cfa_offset 24
- 479 0006 00AF     		add	r7, sp, #0
- 480              		.cfi_def_cfa_register 7
- 481 0008 7860     		str	r0, [r7, #4]
+ 463              		.loc 1 95 39
+ 464              		.cfi_startproc
+ 465              		@ args = 4, pretend = 12, frame = 8
+ 466              		@ frame_needed = 1, uses_anonymous_args = 1
+ 467              		@ link register save eliminated.
+ 468 0000 0EB4     		push	{r1, r2, r3}
+ 469              		.cfi_def_cfa_offset 12
+ 470              		.cfi_offset 1, -12
+ 471              		.cfi_offset 2, -8
+ 472              		.cfi_offset 3, -4
+ 473 0002 80B4     		push	{r7}
+ 474              		.cfi_def_cfa_offset 16
+ 475              		.cfi_offset 7, -16
+ 476 0004 82B0     		sub	sp, sp, #8
+ 477              		.cfi_def_cfa_offset 24
+ 478 0006 00AF     		add	r7, sp, #0
+ 479              		.cfi_def_cfa_register 7
+ 480 0008 7860     		str	r0, [r7, #4]
   96:Core/Src/syscalls.c ****     /* Pretend like we always fail */
   97:Core/Src/syscalls.c ****     return -1;
- 482              		.loc 1 97 12
- 483 000a 4FF0FF33 		mov	r3, #-1
+ 481              		.loc 1 97 12
+ 482 000a 4FF0FF33 		mov	r3, #-1
   98:Core/Src/syscalls.c **** }
- 484              		.loc 1 98 1
- 485 000e 1846     		mov	r0, r3
- 486 0010 0837     		adds	r7, r7, #8
- 487              		.cfi_def_cfa_offset 16
- 488 0012 BD46     		mov	sp, r7
- 489              		.cfi_def_cfa_register 13
- 490              		@ sp needed
- 491 0014 80BC     		pop	{r7}
- 492              		.cfi_restore 7
- 493              		.cfi_def_cfa_offset 12
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 11
+ 483              		.loc 1 98 1
+ 484 000e 1846     		mov	r0, r3
+ 485 0010 0837     		adds	r7, r7, #8
+ 486              		.cfi_def_cfa_offset 16
+ 487 0012 BD46     		mov	sp, r7
+ 488              		.cfi_def_cfa_register 13
+ 489              		@ sp needed
+ 490 0014 80BC     		pop	{r7}
+ 491              		.cfi_restore 7
+ 492              		.cfi_def_cfa_offset 12
+ 493 0016 03B0     		add	sp, sp, #12
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 11
 
 
- 494 0016 03B0     		add	sp, sp, #12
- 495              		.cfi_restore 3
- 496              		.cfi_restore 2
- 497              		.cfi_restore 1
- 498              		.cfi_def_cfa_offset 0
- 499 0018 7047     		bx	lr
- 500              		.cfi_endproc
- 501              	.LFE35:
- 503              		.section	.text._wait,"ax",%progbits
- 504              		.align	1
- 505              		.global	_wait
- 506              		.syntax unified
- 507              		.thumb
- 508              		.thumb_func
- 510              	_wait:
- 511              	.LFB36:
+ 494              		.cfi_restore 3
+ 495              		.cfi_restore 2
+ 496              		.cfi_restore 1
+ 497              		.cfi_def_cfa_offset 0
+ 498 0018 7047     		bx	lr
+ 499              		.cfi_endproc
+ 500              	.LFE35:
+ 502              		.section	.text._wait,"ax",%progbits
+ 503              		.align	1
+ 504              		.global	_wait
+ 505              		.syntax unified
+ 506              		.thumb
+ 507              		.thumb_func
+ 509              	_wait:
+ 510              	.LFB36:
   99:Core/Src/syscalls.c **** 
  100:Core/Src/syscalls.c **** int _wait(int *status) {
- 512              		.loc 1 100 24
- 513              		.cfi_startproc
- 514              		@ args = 0, pretend = 0, frame = 8
- 515              		@ frame_needed = 1, uses_anonymous_args = 0
- 516 0000 80B5     		push	{r7, lr}
- 517              		.cfi_def_cfa_offset 8
- 518              		.cfi_offset 7, -8
- 519              		.cfi_offset 14, -4
- 520 0002 82B0     		sub	sp, sp, #8
- 521              		.cfi_def_cfa_offset 16
- 522 0004 00AF     		add	r7, sp, #0
- 523              		.cfi_def_cfa_register 7
- 524 0006 7860     		str	r0, [r7, #4]
+ 511              		.loc 1 100 24
+ 512              		.cfi_startproc
+ 513              		@ args = 0, pretend = 0, frame = 8
+ 514              		@ frame_needed = 1, uses_anonymous_args = 0
+ 515 0000 80B5     		push	{r7, lr}
+ 516              		.cfi_def_cfa_offset 8
+ 517              		.cfi_offset 7, -8
+ 518              		.cfi_offset 14, -4
+ 519 0002 82B0     		sub	sp, sp, #8
+ 520              		.cfi_def_cfa_offset 16
+ 521 0004 00AF     		add	r7, sp, #0
+ 522              		.cfi_def_cfa_register 7
+ 523 0006 7860     		str	r0, [r7, #4]
  101:Core/Src/syscalls.c ****     errno = ECHILD;
- 525              		.loc 1 101 5
- 526 0008 FFF7FEFF 		bl	__errno
- 527 000c 0346     		mov	r3, r0
- 528              		.loc 1 101 11
- 529 000e 0A22     		movs	r2, #10
- 530 0010 1A60     		str	r2, [r3]
+ 524              		.loc 1 101 5
+ 525 0008 FFF7FEFF 		bl	__errno
+ 526 000c 0346     		mov	r3, r0
+ 527              		.loc 1 101 11
+ 528 000e 0A22     		movs	r2, #10
+ 529 0010 1A60     		str	r2, [r3]
  102:Core/Src/syscalls.c ****     return -1;
- 531              		.loc 1 102 12
- 532 0012 4FF0FF33 		mov	r3, #-1
+ 530              		.loc 1 102 12
+ 531 0012 4FF0FF33 		mov	r3, #-1
  103:Core/Src/syscalls.c **** }
- 533              		.loc 1 103 1
- 534 0016 1846     		mov	r0, r3
- 535 0018 0837     		adds	r7, r7, #8
- 536              		.cfi_def_cfa_offset 8
- 537 001a BD46     		mov	sp, r7
- 538              		.cfi_def_cfa_register 13
- 539              		@ sp needed
- 540 001c 80BD     		pop	{r7, pc}
- 541              		.cfi_endproc
- 542              	.LFE36:
- 544              		.section	.text._unlink,"ax",%progbits
- 545              		.align	1
- 546              		.global	_unlink
- 547              		.syntax unified
- 548              		.thumb
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 12
+ 532              		.loc 1 103 1
+ 533 0016 1846     		mov	r0, r3
+ 534 0018 0837     		adds	r7, r7, #8
+ 535              		.cfi_def_cfa_offset 8
+ 536 001a BD46     		mov	sp, r7
+ 537              		.cfi_def_cfa_register 13
+ 538              		@ sp needed
+ 539 001c 80BD     		pop	{r7, pc}
+ 540              		.cfi_endproc
+ 541              	.LFE36:
+ 543              		.section	.text._unlink,"ax",%progbits
+ 544              		.align	1
+ 545              		.global	_unlink
+ 546              		.syntax unified
+ 547              		.thumb
+ 548              		.thumb_func
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 12
 
 
- 549              		.thumb_func
- 551              	_unlink:
- 552              	.LFB37:
+ 550              	_unlink:
+ 551              	.LFB37:
  104:Core/Src/syscalls.c **** 
  105:Core/Src/syscalls.c **** int _unlink(char *name) {
- 553              		.loc 1 105 25
- 554              		.cfi_startproc
- 555              		@ args = 0, pretend = 0, frame = 8
- 556              		@ frame_needed = 1, uses_anonymous_args = 0
- 557 0000 80B5     		push	{r7, lr}
- 558              		.cfi_def_cfa_offset 8
- 559              		.cfi_offset 7, -8
- 560              		.cfi_offset 14, -4
- 561 0002 82B0     		sub	sp, sp, #8
- 562              		.cfi_def_cfa_offset 16
- 563 0004 00AF     		add	r7, sp, #0
- 564              		.cfi_def_cfa_register 7
- 565 0006 7860     		str	r0, [r7, #4]
+ 552              		.loc 1 105 25
+ 553              		.cfi_startproc
+ 554              		@ args = 0, pretend = 0, frame = 8
+ 555              		@ frame_needed = 1, uses_anonymous_args = 0
+ 556 0000 80B5     		push	{r7, lr}
+ 557              		.cfi_def_cfa_offset 8
+ 558              		.cfi_offset 7, -8
+ 559              		.cfi_offset 14, -4
+ 560 0002 82B0     		sub	sp, sp, #8
+ 561              		.cfi_def_cfa_offset 16
+ 562 0004 00AF     		add	r7, sp, #0
+ 563              		.cfi_def_cfa_register 7
+ 564 0006 7860     		str	r0, [r7, #4]
  106:Core/Src/syscalls.c ****     errno = ENOENT;
- 566              		.loc 1 106 5
- 567 0008 FFF7FEFF 		bl	__errno
- 568 000c 0346     		mov	r3, r0
- 569              		.loc 1 106 11
- 570 000e 0222     		movs	r2, #2
- 571 0010 1A60     		str	r2, [r3]
+ 565              		.loc 1 106 5
+ 566 0008 FFF7FEFF 		bl	__errno
+ 567 000c 0346     		mov	r3, r0
+ 568              		.loc 1 106 11
+ 569 000e 0222     		movs	r2, #2
+ 570 0010 1A60     		str	r2, [r3]
  107:Core/Src/syscalls.c ****     return -1;
- 572              		.loc 1 107 12
- 573 0012 4FF0FF33 		mov	r3, #-1
+ 571              		.loc 1 107 12
+ 572 0012 4FF0FF33 		mov	r3, #-1
  108:Core/Src/syscalls.c **** }
- 574              		.loc 1 108 1
- 575 0016 1846     		mov	r0, r3
- 576 0018 0837     		adds	r7, r7, #8
- 577              		.cfi_def_cfa_offset 8
- 578 001a BD46     		mov	sp, r7
- 579              		.cfi_def_cfa_register 13
- 580              		@ sp needed
- 581 001c 80BD     		pop	{r7, pc}
- 582              		.cfi_endproc
- 583              	.LFE37:
- 585              		.section	.text._times,"ax",%progbits
- 586              		.align	1
- 587              		.global	_times
- 588              		.syntax unified
- 589              		.thumb
- 590              		.thumb_func
- 592              	_times:
- 593              	.LFB38:
+ 573              		.loc 1 108 1
+ 574 0016 1846     		mov	r0, r3
+ 575 0018 0837     		adds	r7, r7, #8
+ 576              		.cfi_def_cfa_offset 8
+ 577 001a BD46     		mov	sp, r7
+ 578              		.cfi_def_cfa_register 13
+ 579              		@ sp needed
+ 580 001c 80BD     		pop	{r7, pc}
+ 581              		.cfi_endproc
+ 582              	.LFE37:
+ 584              		.section	.text._times,"ax",%progbits
+ 585              		.align	1
+ 586              		.global	_times
+ 587              		.syntax unified
+ 588              		.thumb
+ 589              		.thumb_func
+ 591              	_times:
+ 592              	.LFB38:
  109:Core/Src/syscalls.c **** 
  110:Core/Src/syscalls.c **** int _times(struct tms *buf) {
- 594              		.loc 1 110 29
- 595              		.cfi_startproc
- 596              		@ args = 0, pretend = 0, frame = 8
- 597              		@ frame_needed = 1, uses_anonymous_args = 0
- 598              		@ link register save eliminated.
- 599 0000 80B4     		push	{r7}
- 600              		.cfi_def_cfa_offset 4
- 601              		.cfi_offset 7, -4
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 13
+ 593              		.loc 1 110 29
+ 594              		.cfi_startproc
+ 595              		@ args = 0, pretend = 0, frame = 8
+ 596              		@ frame_needed = 1, uses_anonymous_args = 0
+ 597              		@ link register save eliminated.
+ 598 0000 80B4     		push	{r7}
+ 599              		.cfi_def_cfa_offset 4
+ 600              		.cfi_offset 7, -4
+ 601 0002 83B0     		sub	sp, sp, #12
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 13
 
 
- 602 0002 83B0     		sub	sp, sp, #12
- 603              		.cfi_def_cfa_offset 16
- 604 0004 00AF     		add	r7, sp, #0
- 605              		.cfi_def_cfa_register 7
- 606 0006 7860     		str	r0, [r7, #4]
+ 602              		.cfi_def_cfa_offset 16
+ 603 0004 00AF     		add	r7, sp, #0
+ 604              		.cfi_def_cfa_register 7
+ 605 0006 7860     		str	r0, [r7, #4]
  111:Core/Src/syscalls.c ****     return -1;
- 607              		.loc 1 111 12
- 608 0008 4FF0FF33 		mov	r3, #-1
+ 606              		.loc 1 111 12
+ 607 0008 4FF0FF33 		mov	r3, #-1
  112:Core/Src/syscalls.c **** }
- 609              		.loc 1 112 1
- 610 000c 1846     		mov	r0, r3
- 611 000e 0C37     		adds	r7, r7, #12
- 612              		.cfi_def_cfa_offset 4
- 613 0010 BD46     		mov	sp, r7
- 614              		.cfi_def_cfa_register 13
- 615              		@ sp needed
- 616 0012 80BC     		pop	{r7}
- 617              		.cfi_restore 7
- 618              		.cfi_def_cfa_offset 0
- 619 0014 7047     		bx	lr
- 620              		.cfi_endproc
- 621              	.LFE38:
- 623              		.section	.text._stat,"ax",%progbits
- 624              		.align	1
- 625              		.global	_stat
- 626              		.syntax unified
- 627              		.thumb
- 628              		.thumb_func
- 630              	_stat:
- 631              	.LFB39:
+ 608              		.loc 1 112 1
+ 609 000c 1846     		mov	r0, r3
+ 610 000e 0C37     		adds	r7, r7, #12
+ 611              		.cfi_def_cfa_offset 4
+ 612 0010 BD46     		mov	sp, r7
+ 613              		.cfi_def_cfa_register 13
+ 614              		@ sp needed
+ 615 0012 80BC     		pop	{r7}
+ 616              		.cfi_restore 7
+ 617              		.cfi_def_cfa_offset 0
+ 618 0014 7047     		bx	lr
+ 619              		.cfi_endproc
+ 620              	.LFE38:
+ 622              		.section	.text._stat,"ax",%progbits
+ 623              		.align	1
+ 624              		.global	_stat
+ 625              		.syntax unified
+ 626              		.thumb
+ 627              		.thumb_func
+ 629              	_stat:
+ 630              	.LFB39:
  113:Core/Src/syscalls.c **** 
  114:Core/Src/syscalls.c **** int _stat(char *file, struct stat *st) {
- 632              		.loc 1 114 40
- 633              		.cfi_startproc
- 634              		@ args = 0, pretend = 0, frame = 8
- 635              		@ frame_needed = 1, uses_anonymous_args = 0
- 636              		@ link register save eliminated.
- 637 0000 80B4     		push	{r7}
- 638              		.cfi_def_cfa_offset 4
- 639              		.cfi_offset 7, -4
- 640 0002 83B0     		sub	sp, sp, #12
- 641              		.cfi_def_cfa_offset 16
- 642 0004 00AF     		add	r7, sp, #0
- 643              		.cfi_def_cfa_register 7
- 644 0006 7860     		str	r0, [r7, #4]
- 645 0008 3960     		str	r1, [r7]
+ 631              		.loc 1 114 40
+ 632              		.cfi_startproc
+ 633              		@ args = 0, pretend = 0, frame = 8
+ 634              		@ frame_needed = 1, uses_anonymous_args = 0
+ 635              		@ link register save eliminated.
+ 636 0000 80B4     		push	{r7}
+ 637              		.cfi_def_cfa_offset 4
+ 638              		.cfi_offset 7, -4
+ 639 0002 83B0     		sub	sp, sp, #12
+ 640              		.cfi_def_cfa_offset 16
+ 641 0004 00AF     		add	r7, sp, #0
+ 642              		.cfi_def_cfa_register 7
+ 643 0006 7860     		str	r0, [r7, #4]
+ 644 0008 3960     		str	r1, [r7]
  115:Core/Src/syscalls.c ****     st->st_mode = S_IFCHR;
- 646              		.loc 1 115 17
- 647 000a 3B68     		ldr	r3, [r7]
- 648 000c 4FF40052 		mov	r2, #8192
- 649 0010 5A60     		str	r2, [r3, #4]
+ 645              		.loc 1 115 17
+ 646 000a 3B68     		ldr	r3, [r7]
+ 647 000c 4FF40052 		mov	r2, #8192
+ 648 0010 5A60     		str	r2, [r3, #4]
  116:Core/Src/syscalls.c ****     return 0;
- 650              		.loc 1 116 12
- 651 0012 0023     		movs	r3, #0
+ 649              		.loc 1 116 12
+ 650 0012 0023     		movs	r3, #0
  117:Core/Src/syscalls.c **** }
- 652              		.loc 1 117 1
- 653 0014 1846     		mov	r0, r3
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 14
+ 651              		.loc 1 117 1
+ 652 0014 1846     		mov	r0, r3
+ 653 0016 0C37     		adds	r7, r7, #12
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 14
 
 
- 654 0016 0C37     		adds	r7, r7, #12
- 655              		.cfi_def_cfa_offset 4
- 656 0018 BD46     		mov	sp, r7
- 657              		.cfi_def_cfa_register 13
- 658              		@ sp needed
- 659 001a 80BC     		pop	{r7}
- 660              		.cfi_restore 7
- 661              		.cfi_def_cfa_offset 0
- 662 001c 7047     		bx	lr
- 663              		.cfi_endproc
- 664              	.LFE39:
- 666              		.section	.text._link,"ax",%progbits
- 667              		.align	1
- 668              		.global	_link
- 669              		.syntax unified
- 670              		.thumb
- 671              		.thumb_func
- 673              	_link:
- 674              	.LFB40:
+ 654              		.cfi_def_cfa_offset 4
+ 655 0018 BD46     		mov	sp, r7
+ 656              		.cfi_def_cfa_register 13
+ 657              		@ sp needed
+ 658 001a 80BC     		pop	{r7}
+ 659              		.cfi_restore 7
+ 660              		.cfi_def_cfa_offset 0
+ 661 001c 7047     		bx	lr
+ 662              		.cfi_endproc
+ 663              	.LFE39:
+ 665              		.section	.text._link,"ax",%progbits
+ 666              		.align	1
+ 667              		.global	_link
+ 668              		.syntax unified
+ 669              		.thumb
+ 670              		.thumb_func
+ 672              	_link:
+ 673              	.LFB40:
  118:Core/Src/syscalls.c **** 
  119:Core/Src/syscalls.c **** int _link(char *old, char *new) {
- 675              		.loc 1 119 33
- 676              		.cfi_startproc
- 677              		@ args = 0, pretend = 0, frame = 8
- 678              		@ frame_needed = 1, uses_anonymous_args = 0
- 679 0000 80B5     		push	{r7, lr}
- 680              		.cfi_def_cfa_offset 8
- 681              		.cfi_offset 7, -8
- 682              		.cfi_offset 14, -4
- 683 0002 82B0     		sub	sp, sp, #8
- 684              		.cfi_def_cfa_offset 16
- 685 0004 00AF     		add	r7, sp, #0
- 686              		.cfi_def_cfa_register 7
- 687 0006 7860     		str	r0, [r7, #4]
- 688 0008 3960     		str	r1, [r7]
+ 674              		.loc 1 119 33
+ 675              		.cfi_startproc
+ 676              		@ args = 0, pretend = 0, frame = 8
+ 677              		@ frame_needed = 1, uses_anonymous_args = 0
+ 678 0000 80B5     		push	{r7, lr}
+ 679              		.cfi_def_cfa_offset 8
+ 680              		.cfi_offset 7, -8
+ 681              		.cfi_offset 14, -4
+ 682 0002 82B0     		sub	sp, sp, #8
+ 683              		.cfi_def_cfa_offset 16
+ 684 0004 00AF     		add	r7, sp, #0
+ 685              		.cfi_def_cfa_register 7
+ 686 0006 7860     		str	r0, [r7, #4]
+ 687 0008 3960     		str	r1, [r7]
  120:Core/Src/syscalls.c ****     errno = EMLINK;
- 689              		.loc 1 120 5
- 690 000a FFF7FEFF 		bl	__errno
- 691 000e 0346     		mov	r3, r0
- 692              		.loc 1 120 11
- 693 0010 1F22     		movs	r2, #31
- 694 0012 1A60     		str	r2, [r3]
+ 688              		.loc 1 120 5
+ 689 000a FFF7FEFF 		bl	__errno
+ 690 000e 0346     		mov	r3, r0
+ 691              		.loc 1 120 11
+ 692 0010 1F22     		movs	r2, #31
+ 693 0012 1A60     		str	r2, [r3]
  121:Core/Src/syscalls.c ****     return -1;
- 695              		.loc 1 121 12
- 696 0014 4FF0FF33 		mov	r3, #-1
+ 694              		.loc 1 121 12
+ 695 0014 4FF0FF33 		mov	r3, #-1
  122:Core/Src/syscalls.c **** }
- 697              		.loc 1 122 1
- 698 0018 1846     		mov	r0, r3
- 699 001a 0837     		adds	r7, r7, #8
- 700              		.cfi_def_cfa_offset 8
- 701 001c BD46     		mov	sp, r7
- 702              		.cfi_def_cfa_register 13
- 703              		@ sp needed
- 704 001e 80BD     		pop	{r7, pc}
- 705              		.cfi_endproc
- 706              	.LFE40:
- 708              		.section	.text._fork,"ax",%progbits
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 15
+ 696              		.loc 1 122 1
+ 697 0018 1846     		mov	r0, r3
+ 698 001a 0837     		adds	r7, r7, #8
+ 699              		.cfi_def_cfa_offset 8
+ 700 001c BD46     		mov	sp, r7
+ 701              		.cfi_def_cfa_register 13
+ 702              		@ sp needed
+ 703 001e 80BD     		pop	{r7, pc}
+ 704              		.cfi_endproc
+ 705              	.LFE40:
+ 707              		.section	.text._fork,"ax",%progbits
+ 708              		.align	1
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 15
 
 
- 709              		.align	1
- 710              		.global	_fork
- 711              		.syntax unified
- 712              		.thumb
- 713              		.thumb_func
- 715              	_fork:
- 716              	.LFB41:
+ 709              		.global	_fork
+ 710              		.syntax unified
+ 711              		.thumb
+ 712              		.thumb_func
+ 714              	_fork:
+ 715              	.LFB41:
  123:Core/Src/syscalls.c **** 
  124:Core/Src/syscalls.c **** int _fork(void) {
- 717              		.loc 1 124 17
- 718              		.cfi_startproc
- 719              		@ args = 0, pretend = 0, frame = 0
- 720              		@ frame_needed = 1, uses_anonymous_args = 0
- 721 0000 80B5     		push	{r7, lr}
- 722              		.cfi_def_cfa_offset 8
- 723              		.cfi_offset 7, -8
- 724              		.cfi_offset 14, -4
- 725 0002 00AF     		add	r7, sp, #0
- 726              		.cfi_def_cfa_register 7
+ 716              		.loc 1 124 17
+ 717              		.cfi_startproc
+ 718              		@ args = 0, pretend = 0, frame = 0
+ 719              		@ frame_needed = 1, uses_anonymous_args = 0
+ 720 0000 80B5     		push	{r7, lr}
+ 721              		.cfi_def_cfa_offset 8
+ 722              		.cfi_offset 7, -8
+ 723              		.cfi_offset 14, -4
+ 724 0002 00AF     		add	r7, sp, #0
+ 725              		.cfi_def_cfa_register 7
  125:Core/Src/syscalls.c ****     errno = EAGAIN;
- 727              		.loc 1 125 5
- 728 0004 FFF7FEFF 		bl	__errno
- 729 0008 0346     		mov	r3, r0
- 730              		.loc 1 125 11
- 731 000a 0B22     		movs	r2, #11
- 732 000c 1A60     		str	r2, [r3]
+ 726              		.loc 1 125 5
+ 727 0004 FFF7FEFF 		bl	__errno
+ 728 0008 0346     		mov	r3, r0
+ 729              		.loc 1 125 11
+ 730 000a 0B22     		movs	r2, #11
+ 731 000c 1A60     		str	r2, [r3]
  126:Core/Src/syscalls.c ****     return -1;
- 733              		.loc 1 126 12
- 734 000e 4FF0FF33 		mov	r3, #-1
+ 732              		.loc 1 126 12
+ 733 000e 4FF0FF33 		mov	r3, #-1
  127:Core/Src/syscalls.c **** }
- 735              		.loc 1 127 1
- 736 0012 1846     		mov	r0, r3
- 737 0014 80BD     		pop	{r7, pc}
- 738              		.cfi_endproc
- 739              	.LFE41:
- 741              		.section	.text._execve,"ax",%progbits
- 742              		.align	1
- 743              		.global	_execve
- 744              		.syntax unified
- 745              		.thumb
- 746              		.thumb_func
- 748              	_execve:
- 749              	.LFB42:
+ 734              		.loc 1 127 1
+ 735 0012 1846     		mov	r0, r3
+ 736 0014 80BD     		pop	{r7, pc}
+ 737              		.cfi_endproc
+ 738              	.LFE41:
+ 740              		.section	.text._execve,"ax",%progbits
+ 741              		.align	1
+ 742              		.global	_execve
+ 743              		.syntax unified
+ 744              		.thumb
+ 745              		.thumb_func
+ 747              	_execve:
+ 748              	.LFB42:
  128:Core/Src/syscalls.c **** 
  129:Core/Src/syscalls.c **** int _execve(char *name, char **argv, char **env) {
- 750              		.loc 1 129 50
- 751              		.cfi_startproc
- 752              		@ args = 0, pretend = 0, frame = 16
- 753              		@ frame_needed = 1, uses_anonymous_args = 0
- 754 0000 80B5     		push	{r7, lr}
- 755              		.cfi_def_cfa_offset 8
- 756              		.cfi_offset 7, -8
- 757              		.cfi_offset 14, -4
- 758 0002 84B0     		sub	sp, sp, #16
- 759              		.cfi_def_cfa_offset 24
- 760 0004 00AF     		add	r7, sp, #0
- 761              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 16
+ 749              		.loc 1 129 50
+ 750              		.cfi_startproc
+ 751              		@ args = 0, pretend = 0, frame = 16
+ 752              		@ frame_needed = 1, uses_anonymous_args = 0
+ 753 0000 80B5     		push	{r7, lr}
+ 754              		.cfi_def_cfa_offset 8
+ 755              		.cfi_offset 7, -8
+ 756              		.cfi_offset 14, -4
+ 757 0002 84B0     		sub	sp, sp, #16
+ 758              		.cfi_def_cfa_offset 24
+ 759 0004 00AF     		add	r7, sp, #0
+ 760              		.cfi_def_cfa_register 7
+ 761 0006 F860     		str	r0, [r7, #12]
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 16
 
 
- 762 0006 F860     		str	r0, [r7, #12]
- 763 0008 B960     		str	r1, [r7, #8]
- 764 000a 7A60     		str	r2, [r7, #4]
+ 762 0008 B960     		str	r1, [r7, #8]
+ 763 000a 7A60     		str	r2, [r7, #4]
  130:Core/Src/syscalls.c ****     errno = ENOMEM;
- 765              		.loc 1 130 5
- 766 000c FFF7FEFF 		bl	__errno
- 767 0010 0346     		mov	r3, r0
- 768              		.loc 1 130 11
- 769 0012 0C22     		movs	r2, #12
- 770 0014 1A60     		str	r2, [r3]
+ 764              		.loc 1 130 5
+ 765 000c FFF7FEFF 		bl	__errno
+ 766 0010 0346     		mov	r3, r0
+ 767              		.loc 1 130 11
+ 768 0012 0C22     		movs	r2, #12
+ 769 0014 1A60     		str	r2, [r3]
  131:Core/Src/syscalls.c ****     return -1;
- 771              		.loc 1 131 12
- 772 0016 4FF0FF33 		mov	r3, #-1
+ 770              		.loc 1 131 12
+ 771 0016 4FF0FF33 		mov	r3, #-1
  132:Core/Src/syscalls.c **** }
- 773              		.loc 1 132 1
- 774 001a 1846     		mov	r0, r3
- 775 001c 1037     		adds	r7, r7, #16
- 776              		.cfi_def_cfa_offset 8
- 777 001e BD46     		mov	sp, r7
- 778              		.cfi_def_cfa_register 13
- 779              		@ sp needed
- 780 0020 80BD     		pop	{r7, pc}
- 781              		.cfi_endproc
- 782              	.LFE42:
- 784              		.weak	__io_putchar
- 785              		.weak	__io_getchar
- 786              		.text
- 787              	.Letext0:
- 788              		.file 2 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
- 789              		.file 3 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
- 790              		.file 4 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
- 791              		.file 5 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
- 792              		.file 6 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
- 793              		.file 7 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
- 794              		.file 8 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
- 795              		.file 9 "C:\\dev_tools\\STM32_tools\\gnu-tools-for-stm32.12.3\\tools\\bin\\../lib/gcc/arm-none-eab
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 17
+ 772              		.loc 1 132 1
+ 773 001a 1846     		mov	r0, r3
+ 774 001c 1037     		adds	r7, r7, #16
+ 775              		.cfi_def_cfa_offset 8
+ 776 001e BD46     		mov	sp, r7
+ 777              		.cfi_def_cfa_register 13
+ 778              		@ sp needed
+ 779 0020 80BD     		pop	{r7, pc}
+ 780              		.cfi_endproc
+ 781              	.LFE42:
+ 783              		.weak	__io_putchar
+ 784              		.weak	__io_getchar
+ 785              		.text
+ 786              	.Letext0:
+ 787              		.file 2 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\mach
+ 788              		.file 3 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\sys\
+ 789              		.file 4 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\sys\
+ 790              		.file 5 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\sys\
+ 791              		.file 6 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\sys\
+ 792              		.file 7 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\sys\
+ 793              		.file 8 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\sys\
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 syscalls.c
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:23     .bss.__env:00000000 __env
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:20     .bss.__env:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:30     .data.environ:00000000 environ
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:27     .data.environ:00000000 $d
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:33     .text.initialise_monitor_handles:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:39     .text.initialise_monitor_handles:00000000 initialise_monitor_handles
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:64     .text._getpid:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:70     .text._getpid:00000000 _getpid
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:97     .text._kill:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:103    .text._kill:00000000 _kill
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:139    .text._exit:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:145    .text._exit:00000000 _exit
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:172    .text._read:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:178    .text._read:00000000 _read
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:235    .text._write:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:241    .text._write:00000000 _write
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:297    .text._close:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:303    .text._close:00000000 _close
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:335    .text._fstat:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:341    .text._fstat:00000000 _fstat
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:378    .text._isatty:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:384    .text._isatty:00000000 _isatty
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:416    .text._lseek:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:422    .text._lseek:00000000 _lseek
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:456    .text._open:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:462    .text._open:00000000 _open
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:504    .text._wait:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:510    .text._wait:00000000 _wait
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:545    .text._unlink:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:551    .text._unlink:00000000 _unlink
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:586    .text._times:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:592    .text._times:00000000 _times
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:624    .text._stat:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:630    .text._stat:00000000 _stat
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:667    .text._link:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:673    .text._link:00000000 _link
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:709    .text._fork:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:715    .text._fork:00000000 _fork
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:742    .text._execve:00000000 $t
-C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s:748    .text._execve:00000000 _execve
-                           .group:00000000 wm4.0.19985633071831f0b299129da8e30081
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:22     .bss.__env:00000000 __env
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:19     .bss.__env:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:29     .data.environ:00000000 environ
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:26     .data.environ:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:32     .text.initialise_monitor_handles:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:38     .text.initialise_monitor_handles:00000000 initialise_monitor_handles
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:64     .text._getpid:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:70     .text._getpid:00000000 _getpid
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:97     .text._kill:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:103    .text._kill:00000000 _kill
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:139    .text._exit:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:145    .text._exit:00000000 _exit
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:171    .text._read:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:177    .text._read:00000000 _read
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:234    .text._write:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:240    .text._write:00000000 _write
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:296    .text._close:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:302    .text._close:00000000 _close
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:334    .text._fstat:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:340    .text._fstat:00000000 _fstat
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:377    .text._isatty:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:383    .text._isatty:00000000 _isatty
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:415    .text._lseek:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:421    .text._lseek:00000000 _lseek
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:455    .text._open:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:461    .text._open:00000000 _open
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:503    .text._wait:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:509    .text._wait:00000000 _wait
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:544    .text._unlink:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:550    .text._unlink:00000000 _unlink
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:585    .text._times:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:591    .text._times:00000000 _times
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:623    .text._stat:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:629    .text._stat:00000000 _stat
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:666    .text._link:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:672    .text._link:00000000 _link
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:708    .text._fork:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:714    .text._fork:00000000 _fork
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:741    .text._execve:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s:747    .text._execve:00000000 _execve
+                           .group:00000000 wm4.0.57948b105342b2a9a91afe6dac72b4ef
                            .group:00000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
-                           .group:00000000 wm4._newlib_version.h.4.6d111ab2e95434b664b53815e5c8ccba
-                           .group:00000000 wm4.newlib.h.27.1876b21bc5137b157ce358abcff3c525
-                           .group:00000000 wm4.ieeefp.h.77.0ee3146e9d892bb10bc0066c30189af1
-                           .group:00000000 wm4.features.h.22.7877b139107948f7dadcf3660cc79cfd
-                           .group:00000000 wm4.config.h.224.88344135d9de3e7ea139102cd6493448
+                           .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
+                           .group:00000000 wm4.newlib.h.34.314a350541e36f4baea3ec77033a1a03
+                           .group:00000000 wm4.ieeefp.h.77.25247dc27dbe3b23bfe98c2dc18f6ac5
+                           .group:00000000 wm4.features.h.22.fad1cec3bc7ff06488171438dbdcfd02
+                           .group:00000000 wm4.config.h.224.79362c3cdb280fe0b8d95bd0bc4d5c54
                            .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
-                           .group:00000000 wm4.stddef.h.39.3e0425629195acf083c9561151306b4d
+                           .group:00000000 wm4.stddef.h.39.144cf5ddcd53cbfdac30259dc1a6c87f
                            .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
-                           .group:00000000 wm4.stddef.h.158.5f30652bb2ea05b142c1bbee9108c999
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
                            .group:00000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
-                           .group:00000000 wm4._types.h.127.3bdfe3ff8ea2d0985b03d9cbe93480e3
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
                            .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
                            .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
-ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccM6vP2Y.s 			page 18
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccca4so3.s 			page 18
 
 
-                           .group:00000000 wm4.reent.h.77.d3ad9b68cecd3d0750f846779418c40d
+                           .group:00000000 wm4.reent.h.77.32fd7d280fc2a40b0797abce5beaf6e3
                            .group:00000000 wm4.assert.h.11.db24e541f16414db224bf986d21017e2
-                           .group:00000000 wm4.reent.h.459.ffeecb0c1128ac004a9c6d672f068107
-                           .group:00000000 wm4.errno.h.18.87873c1c5b242e8a4fdc43daa9aad824
-                           .group:00000000 wm4.cdefs.h.49.f93868eb904b9ca05b5c0257d31128ca
+                           .group:00000000 wm4.reent.h.504.40d20ade344680fbcb6a0178bf7ae09e
+                           .group:00000000 wm4.errno.h.14.6a5939d3ae7434a1e97991a97123b12d
+                           .group:00000000 wm4.cdefs.h.49.39045112216f6a021dbdffe3bf5accce
                            .group:00000000 wm4.types.h.40.8b6acba56cefbb11746718204edc8f5e
                            .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
                            .group:00000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
                            .group:00000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
                            .group:00000000 wm4._timeval.h.32.bec3221fa7a9bb0bdde696c9c57e47d2
                            .group:00000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
-                           .group:00000000 wm4.select.h.19.8f92964f85316d866d3bb193a38b5ac3
-                           .group:00000000 wm4.types.h.51.e2a6e4379b4797ffcc4841f8498fd61b
+                           .group:00000000 wm4.select.h.19.40cd3f2bfc456b193b790c2754690ebf
+                           .group:00000000 wm4.types.h.51.5571ec98f267d17d3c670b7a3ba33afa
                            .group:00000000 wm4.sched.h.22.c60982713a5c428609783c78f9c78d95
                            .group:00000000 wm4._pthreadtypes.h.36.fcee9961c35163dde6267ef772ad1972
-                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
-                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
-                           .group:00000000 wm4.signal.h.31.1e41f887ed1384065c2378e275de5bce
+                           .group:00000000 wm4.signal.h.30.5277b477a5ebb7d1254c1af3095d1011
                            .group:00000000 wm4.signal.h.18.14c8d0c03fc1e06775633fad7399cfc7
                            .group:00000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
-                           .group:00000000 wm4.stddef.h.158.bfed30416c9480cd13bc4a25427d538f
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
                            .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
                            .group:00000000 wm4.stdio.h.47.1f5845210bb9053bbca9ed76fc4018da
                            .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
-                           .group:00000000 wm4.stdio.h.87.408e5d973372126daeef099c555b2753
+                           .group:00000000 wm4.stdio.h.81.60a2ded7dae310b81f9d6907fe5e3dbf
                            .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
                            .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
                            .group:00000000 wm4.stdlib.h.56.f4862cfbf4363a1db01842d5bdf72c18
