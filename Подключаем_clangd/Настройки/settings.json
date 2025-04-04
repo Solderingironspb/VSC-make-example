@@ -1,0 +1,83 @@
+{
+    "window.openFilesInNewWindow": "off",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "security.workspace.trust.banner": "never",
+    "makefile.configureOnOpen": true,
+    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, ColumnLimit: 0, BinPackParameters: true, BinPackArguments: true, AllowShortBlocksOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, IncludeBlocks: Merge, BraceWrapping: { AfterFunction: false, AfterClass: false, AfterControlStatement: false, AfterEnum: false, AfterNamespace: false, AfterStruct: false, AfterUnion: false, BeforeCatch: false, BeforeElse: false, IndentBraces: false }, BreakBeforeBraces: Attach, IndentWidth: 4}",
+    "C_Cpp.clang_format_style": "",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "none",
+    "chat.commandCenter.enabled": false,
+    "editor.fontFamily": "Consolas",
+    "editor.fontSize": 13,
+    "editor.lineHeight": 1.25,
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true,
+    "editor.quickSuggestionsDelay": 0,
+    "editor.glyphMargin": true,
+    "editor.stickyScroll.enabled": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.codeActionsOnSave": {},
+    "editor.bracketPairColorization.enabled": false, //Отключить разукрашивание скобок
+    "explorer.compactFolders": false,
+    "debug.console.fontSize": 13,
+    "security.workspace.trust.enabled": false,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
+    "workbench.activityBar.location": "top",
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.showExitAlert": false,
+    "terminal.integrated.lineHeight": 0,
+    "terminal.integrated.fontFamily": "Consolas",
+    "terminal.integrated.fontSize": 13,
+    "debug.toolBarLocation": "floating",
+    "mrsplugin.search.engineUsedEncoding": "UTF-8",
+    "window.commandCenter": false,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyleInactive": "underline",
+    "ShortcutMenuBar.navigateBack": false,
+    "ShortcutMenuBar.navigateForward": false,
+    "ShortcutMenuBar.openFilesList": false,
+    "ShortcutMenuBar.toggleTerminal": false,
+    "ShortcutMenuBar.beautify": false,
+    "ShortcutMenuBar.userButton01Command": "workbench.action.tasks.runTask|Build Project",
+    "macros": {
+        "stopDebugAndSwitchToExplorer": [
+            "workbench.action.debug.stop", // Остановить отладку
+            "workbench.view.explorer", // Переключиться на Explorer
+            "outline.focus" // Перевести фокус на Outline
+        ]
+    },
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Default Dark+",
+    "terminal.integrated.env.windows": {
+        "LANG": "ru_RU.UTF-8"
+    },
+    "terminal.integrated.detectLocale": "on",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "clangd.path": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\19.1.2\\clangd_19.1.2\\bin\\clangd.exe",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "editor.tabSize": 4, // Размер табуляции (в пробелах)
+    "editor.detectIndentation": false, // Отключает автоопределение отступов
+    "[c]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true // Использовать пробелы вместо табов
+    },
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "clangd.arguments": [
+        "--enable-config",
+        "--header-insertion=never" //Убрать подсказки в готовых функциях.
+    ],
+    "clangd.completion.enableSnippets": false,
+    "clangd.completion.includeInsertion": false, //Отключить автоподключение инклюдов
+    "editor.inlayHints.parameterNames.enabled": "none",
+    "editor.inlayHints.enabled": "off", // Полностью отключает все inline-подсказки
+}
