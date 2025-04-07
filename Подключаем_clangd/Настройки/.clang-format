@@ -18,3 +18,4 @@ BraceWrapping:
   IndentBraces: false
 BreakBeforeBraces: Attach
 IndentWidth: 4
+AlignConsecutiveMacros: true
