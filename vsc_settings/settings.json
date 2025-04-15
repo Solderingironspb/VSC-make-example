@@ -8,7 +8,6 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.startupEditor": "none",
     "chat.commandCenter.enabled": false,
-    "editor.fontFamily": "Consolas",
     "editor.fontSize": 13,
     "editor.lineHeight": 1.25,
     "window.zoomLevel": 0,
@@ -18,10 +17,7 @@
     "editor.stickyScroll.enabled": false,
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.codeActionsOnSave": {
-        
-    
-    },
+    "editor.codeActionsOnSave": {},
     "editor.bracketPairColorization.enabled": false, //Отключить разукрашивание скобок
     "explorer.compactFolders": false,
     "debug.console.fontSize": 13,
@@ -55,9 +51,40 @@
         ]
     },
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Solderingiron theme light",
+    "workbench.colorTheme": "Default Dark+",
     "terminal.integrated.env.windows": {
         "LANG": "ru_RU.UTF-8"
     },
     "terminal.integrated.detectLocale": "on",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "clangd.path": "c:\\Users\\Solderingiron\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\19.1.2\\clangd_19.1.2\\bin\\clangd.exe",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "editor.tabSize": 4, // Размер табуляции (в пробелах)
+    "editor.detectIndentation": false, // Отключает автоопределение отступов
+    "[c]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true // Использовать пробелы вместо табов
+    },
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "clangd.arguments": [
+        "--enable-config", // Разрешает использование .clangd-файлов (если есть)
+        "--header-insertion=never", // Отключает авто-добавление include при автодополнении
+        "--unused-arg=-mabi=*",  // Игнорировать ЛЮБОЙ флаг -mabi (полезно для RISC-V)
+        "-Wno-unused-includes", // Отключает предупреждения о неиспользуемых includes
+    ],
+    "clangd.completion.enableSnippets": false,
+    "clangd.completion.includeInsertion": false,
+    "editor.inlayHints.parameterNames.enabled": "none",
+    "editor.inlayHints.enabled": "off", // Полностью отключает все inline-подсказки
+    "clangd.diagnostics": {     //Игнорировать ошибку, что используем комментарии в JSON файлах
+        "suppress": [
+            "521"
+        ],
+        "unused-imports": false  // Отключает все предупреждения о неиспользуемых инклюдах
+    }
 }
