@@ -8,7 +8,6 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.startupEditor": "none",
     "chat.commandCenter.enabled": false,
-    "editor.fontFamily": "Consolas",
     "editor.fontSize": 13,
     "editor.lineHeight": 1.25,
     "window.zoomLevel": 0,
@@ -59,7 +58,7 @@
     "terminal.integrated.detectLocale": "on",
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "clangd.path": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\19.1.2\\clangd_19.1.2\\bin\\clangd.exe",
+    "clangd.path": "c:\\Users\\Solderingiron\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\19.1.2\\clangd_19.1.2\\bin\\clangd.exe",
     "C_Cpp.default.intelliSenseMode": "gcc-arm",
     "C_Cpp.intelliSenseEngine": "disabled",
     "editor.tabSize": 4, // Размер табуляции (в пробелах)
@@ -73,11 +72,17 @@
         "editor.insertSpaces": true
     },
     "clangd.arguments": [
-        "--enable-config",
-        "--header-insertion=never" //Убрать подсказки в готовых функциях.
+        "--enable-config", // Разрешает использование .clangd-файлов (если есть)
+        "--header-insertion=never" // Отключает авто-добавление include при автодополнении
     ],
     "clangd.completion.enableSnippets": false,
-    "clangd.completion.includeInsertion": false, //Отключить автоподключение инклюдов
+    "clangd.completion.includeInsertion": false,
     "editor.inlayHints.parameterNames.enabled": "none",
     "editor.inlayHints.enabled": "off", // Полностью отключает все inline-подсказки
+    "clangd.diagnostics": {     //Игнорировать ошибку, что используем комментарии в JSON файлах
+        "suppress": [
+            "521"
+        ],
+        "unused-imports": false  // Отключает все предупреждения о неиспользуемых инклюдах
+    }
 }
