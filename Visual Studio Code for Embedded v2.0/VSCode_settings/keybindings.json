@@ -1,0 +1,41 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "-workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "macros.stopDebugAndSwitchToExplorer"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorTextFocus && !editorHasSelection"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorTextFocus && !editorHasSelection"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+7",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus"
+    }
+]
