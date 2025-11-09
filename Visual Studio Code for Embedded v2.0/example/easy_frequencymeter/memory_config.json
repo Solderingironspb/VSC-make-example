@@ -1,0 +1,113 @@
+{
+  "memory_blocks": {
+    "RAM": {
+      "origin": "0x20000000",
+      "length": "20K",
+      "bytes": 20480,
+      "attributes": "xrw",
+      "type": "RAM"
+    },
+    "FLASH": {
+      "origin": "0x08000000",
+      "length": "64K",
+      "bytes": 65536,
+      "attributes": "rx",
+      "type": "FLASH"
+    }
+  },
+  "sections": [
+    {
+      "name": ".ARM",
+      "location": "FLASH",
+      "load_memory": "FLASH",
+      "type": "FLASH",
+      "description": "Only in FLASH",
+      "memory_type": "FLASH"
+    },
+    {
+      "name": ".ARM.extab",
+      "location": "FLASH",
+      "load_memory": "FLASH",
+      "type": "FLASH",
+      "description": "Only in FLASH",
+      "memory_type": "FLASH"
+    },
+    {
+      "name": "._user_heap_stack",
+      "location": "RAM",
+      "load_memory": "RAM",
+      "type": "RAM",
+      "description": "Only in RAM",
+      "memory_type": "RAM"
+    },
+    {
+      "name": ".bss",
+      "location": "RAM",
+      "load_memory": "RAM",
+      "type": "RAM",
+      "description": "Only in RAM",
+      "memory_type": "RAM"
+    },
+    {
+      "name": ".data",
+      "location": "RAM",
+      "load_memory": "FLASH",
+      "type": "FLASH -> RAM",
+      "description": "Stored in FLASH, executed in RAM",
+      "memory_type": "RAM"
+    },
+    {
+      "name": ".fini_array",
+      "location": "FLASH",
+      "load_memory": "FLASH",
+      "type": "FLASH",
+      "description": "Only in FLASH",
+      "memory_type": "FLASH"
+    },
+    {
+      "name": ".init_array",
+      "location": "FLASH",
+      "load_memory": "FLASH",
+      "type": "FLASH",
+      "description": "Only in FLASH",
+      "memory_type": "FLASH"
+    },
+    {
+      "name": ".isr_vector",
+      "location": "FLASH",
+      "load_memory": "FLASH",
+      "type": "FLASH",
+      "description": "Only in FLASH",
+      "memory_type": "FLASH"
+    },
+    {
+      "name": ".preinit_array",
+      "location": "FLASH",
+      "load_memory": "FLASH",
+      "type": "FLASH",
+      "description": "Only in FLASH",
+      "memory_type": "FLASH"
+    },
+    {
+      "name": ".rodata",
+      "location": "FLASH",
+      "load_memory": "FLASH",
+      "type": "FLASH",
+      "description": "Only in FLASH",
+      "memory_type": "FLASH"
+    },
+    {
+      "name": ".text",
+      "location": "FLASH",
+      "load_memory": "FLASH",
+      "type": "FLASH",
+      "description": "Only in FLASH",
+      "memory_type": "FLASH"
+    }
+  ],
+  "summary": {
+    "total_memory_blocks": 2,
+    "total_sections": 11,
+    "at_sections": 1
+  }
+}
