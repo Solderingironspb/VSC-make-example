@@ -584,9 +584,6 @@ End address - Это Origin + Length
 ![Image](https://github.com/user-attachments/assets/7b4ba8d0-7edd-4dd3-9c91-2867292c438c)
 
 Обо всем другом расскажу в видео:
-
-![Image](https://github.com/user-attachments/assets/dd7ab307-325e-4aec-ac74-13d38e427951)
-
-**Здесь будет видео**
+Видео: [Visual Studio Code. Программирование и отладка STM32, CH32V. Сборка проекта и автоматизации.](https://youtu.be/cZ5HpFFIQF4) 
 
 **Материал находится в доработке*
