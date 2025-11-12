@@ -68,6 +68,7 @@
   "clangd.path": "c:\\Users\\Solderingiron\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\21.1.0\\clangd_21.1.0\\bin\\clangd.exe",
     "C_Cpp.default.intelliSenseMode": "gcc-arm",
     "C_Cpp.intelliSenseEngine": "default", //Глабально мы оставим работу Intelli Sence
+    "clangd.enable": false,
     "editor.tabSize": 4, // Размер табуляции (в пробелах)
     "editor.detectIndentation": false, // Отключает автоопределение отступов
     "[c]": {
