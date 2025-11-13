@@ -1,0 +1,76 @@
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc514Cnb.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32g0xx_hal_tim_ex.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata.CHANNEL_OFFSET_TAB,"a"
+  18              		.align	2
+  21              	CHANNEL_OFFSET_TAB:
+  22 0000 081C3044 		.ascii	"\010\0340DXl\200"
+  22      586C80
+  23              		.text
+  24              	.Letext0:
+  25              		.file 1 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\mach
+  26              		.file 2 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\sys\
+  27              		.file 3 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\cc514Cnb.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g0xx_hal_tim_ex.c
+C:\Users\SOLDER~1\AppData\Local\Temp\cc514Cnb.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\cc514Cnb.s:21     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+                           .group:00000000 wm4.0.ce2174df78b5e7e201137e53a944683b
+                           .group:00000000 wm4.stm32g0xx_hal_conf.h.22.f3b4c8a17ba50cc89fe005ef37cfde0b
+                           .group:00000000 wm4.stm32g0xx.h.37.5a9f8125e40e7648b060333e40f62f29
+                           .group:00000000 wm4.stm32g0b1xx.h.35.ea3d3123f4f9d957a250bae99e64a76a
+                           .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.cmsis_version.h.32.46e8eccfa2cfeaae11d008bb2823a3ed
+                           .group:00000000 wm4.core_cm0plus.h.66.bb83319bcb10b4c5f12c477f85f2aa51
+                           .group:00000000 wm4.cmsis_gcc.h.26.3852c8780590c9ce1f1416062e7b5c50
+                           .group:00000000 wm4.core_cm0plus.h.127.cfee784d07c850b645554dc8add78e69
+                           .group:00000000 wm4.mpu_armv7.h.32.4049752bb5792d4e15357775e9506cfc
+                           .group:00000000 wm4.stm32g0b1xx.h.746.bfa4ac6173fc12a5660b2663138c43c6
+                           .group:00000000 wm4.stm32g0xx.h.154.7f8452780a6fe1b4b4d5bfbf416cea0c
+                           .group:00000000 wm4.stm32_hal_legacy.h.23.8204ee8757931211f76d0a58e48fbc10
+                           .group:00000000 wm4.stddef.h.39.144cf5ddcd53cbfdac30259dc1a6c87f
+                           .group:00000000 wm4.stm32g0xx_hal_def.h.58.8864c0cbcc9f115e2b60cb5b26c97681
+                           .group:00000000 wm4.stm32g0xx_ll_rcc.h.22.0acb6e234e0c9dd824d5ae94d2255d27
+                           .group:00000000 wm4.stm32g0xx_hal_rcc.h.45.9d8ea209a0c78cb58ebb56490aac86b7
+                           .group:00000000 wm4.stm32g0xx_hal_rcc_ex.h.22.f02f6ee2ad5849c62806285dc2458572
+                           .group:00000000 wm4.stm32g0xx_hal_gpio.h.22.535484a852a6778b843bb3da28cf2e7f
+                           .group:00000000 wm4.stm32g0xx_hal_gpio_ex.h.22.8ed9fb71a71b1ba33986aed3e2e0c038
+                           .group:00000000 wm4.stm32g0xx_ll_dmamux.h.22.ceb8da0f936ad8d3a3cf99bf566a1bbb
+                           .group:00000000 wm4.stm32g0xx_ll_dma.h.79.11feec6a595fdaf000eee790775aeadb
+                           .group:00000000 wm4.stm32g0xx_hal_dma.h.167.6e309bdb62950a8ad7717c0d3c99c2c6
+                           .group:00000000 wm4.stm32g0xx_hal_dma_ex.h.22.2ef8f6de3bb2aff42b1fe2d638a80b81
+                           .group:00000000 wm4.stm32g0xx_hal_dma.h.753.6c10575ede232c7693da11786ea64b19
+                           .group:00000000 wm4.stm32g0xx_hal_cortex.h.22.035255f86bb9c4cf9407b236fae02d7b
+                           .group:00000000 wm4.stm32g0xx_hal_exti.h.22.ba97ede010f68db79b6e6187bf6cf4c3
+                           .group:00000000 wm4.stm32g0xx_hal_flash.h.22.3c137fa2b3cd908314ec67aae8def15d
+                           .group:00000000 wm4.stm32g0xx_hal_flash_ex.h.22.e03d9aac672c3cb3ad09b6ec3b4eab0f
+                           .group:00000000 wm4.stm32g0xx_hal_flash.h.876.72a619cb409e30f9bb8e89b1aac3eb5c
+                           .group:00000000 wm4.stm32g0xx_hal_pwr.h.22.b8edd65e2e3e580a578cbb4ea8c6cc96
+                           .group:00000000 wm4.stm32g0xx_hal_pwr_ex.h.22.cc870e0034fdd0d095f0da86501ff279
+                           .group:00000000 wm4.stm32g0xx_hal.h.67.58bd6a2fda6373a1cf869821501b5f54
+
+NO UNDEFINED SYMBOLS

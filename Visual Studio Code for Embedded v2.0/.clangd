@@ -1,0 +1,29 @@
+CompileFlags:
+  Compiler: C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/arm-none-eabi
+  Add:
+    - -isystem
+    - C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/arm-none-eabi/include
+    - -isystem
+    - C:/dev_tools/STM32_tools/gnu-tools-for-stm32.12.3/tools/arm-none-eabi/include/sys
+    - --target=arm-none-eabi
+    - -D__GNUC__
+    - -DDEBUG 
+    - -DUSE_HAL_DRIVER 
+    - -DSTM32G0B1xx
+    - -Wno-unknown-pragmas 
+    - -include
+    - stdint.h
+    - -include
+    - Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.
+    - -include
+    - Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h
+    - -ferror-limit=0
+  Remove:
+    - -mslow-flash-data
+
+Diagnostics:
+  UnusedIncludes: None
+  Suppress:
+    - pp_including_mainfile_in_preamble
+    - unused-includes
+   

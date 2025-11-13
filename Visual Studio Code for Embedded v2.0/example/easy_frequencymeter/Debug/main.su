@@ -1,6 +1,0 @@
-Drivers/CMSIS/core_cm3.h:1512:22:__NVIC_EnableIRQ	16	static
-Drivers/CMSIS/core_cm3.h:1640:22:__NVIC_SetPriority	16	static
-Core/Src/main.c:11:6:SysTick_Handler	4	static
-Core/Src/main.c:33:6:TIM3_IRQHandler	16	static
-Core/Src/main.c:71:6:CMSIS_TIM3_Capture_mode	8	static
-Core/Src/main.c:150:5:main	8	static

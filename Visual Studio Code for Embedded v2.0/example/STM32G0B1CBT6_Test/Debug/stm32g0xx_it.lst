@@ -1,0 +1,365 @@
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32g0xx_it.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata.CHANNEL_OFFSET_TAB,"a"
+  18              		.align	2
+  21              	CHANNEL_OFFSET_TAB:
+  22 0000 081C3044 		.ascii	"\010\0340DXl\200"
+  22      586C80
+  23              		.section	.text.NMI_Handler,"ax",%progbits
+  24              		.align	1
+  25              		.global	NMI_Handler
+  26              		.syntax unified
+  27              		.code	16
+  28              		.thumb_func
+  30              	NMI_Handler:
+  31              	.LFB355:
+  32              		.file 1 "Core/Src/stm32g0xx_it.c"
+   1:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/stm32g0xx_it.c **** /**
+   3:Core/Src/stm32g0xx_it.c ****   ******************************************************************************
+   4:Core/Src/stm32g0xx_it.c ****   * @file    stm32g0xx_it.c
+   5:Core/Src/stm32g0xx_it.c ****   * @brief   Interrupt Service Routines.
+   6:Core/Src/stm32g0xx_it.c ****   ******************************************************************************
+   7:Core/Src/stm32g0xx_it.c ****   * @attention
+   8:Core/Src/stm32g0xx_it.c ****   *
+   9:Core/Src/stm32g0xx_it.c ****   * <h2><center>&copy; Copyright (c) 2025 STMicroelectronics.
+  10:Core/Src/stm32g0xx_it.c ****   * All rights reserved.</center></h2>
+  11:Core/Src/stm32g0xx_it.c ****   *
+  12:Core/Src/stm32g0xx_it.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Core/Src/stm32g0xx_it.c ****   * the "License"; You may not use this file except in compliance with the
+  14:Core/Src/stm32g0xx_it.c ****   * License. You may obtain a copy of the License at:
+  15:Core/Src/stm32g0xx_it.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Core/Src/stm32g0xx_it.c ****   *
+  17:Core/Src/stm32g0xx_it.c ****   ******************************************************************************
+  18:Core/Src/stm32g0xx_it.c ****   */
+  19:Core/Src/stm32g0xx_it.c **** /* USER CODE END Header */
+  20:Core/Src/stm32g0xx_it.c **** 
+  21:Core/Src/stm32g0xx_it.c **** /* Includes ------------------------------------------------------------------*/
+  22:Core/Src/stm32g0xx_it.c **** #include "main.h"
+  23:Core/Src/stm32g0xx_it.c **** #include "stm32g0xx_it.h"
+  24:Core/Src/stm32g0xx_it.c **** /* Private includes ----------------------------------------------------------*/
+  25:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN Includes */
+  26:Core/Src/stm32g0xx_it.c **** /* USER CODE END Includes */
+  27:Core/Src/stm32g0xx_it.c **** 
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s 			page 2
+
+
+  28:Core/Src/stm32g0xx_it.c **** /* Private typedef -----------------------------------------------------------*/
+  29:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN TD */
+  30:Core/Src/stm32g0xx_it.c **** 
+  31:Core/Src/stm32g0xx_it.c **** /* USER CODE END TD */
+  32:Core/Src/stm32g0xx_it.c **** 
+  33:Core/Src/stm32g0xx_it.c **** /* Private define ------------------------------------------------------------*/
+  34:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN PD */
+  35:Core/Src/stm32g0xx_it.c **** 
+  36:Core/Src/stm32g0xx_it.c **** /* USER CODE END PD */
+  37:Core/Src/stm32g0xx_it.c **** 
+  38:Core/Src/stm32g0xx_it.c **** /* Private macro -------------------------------------------------------------*/
+  39:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN PM */
+  40:Core/Src/stm32g0xx_it.c **** 
+  41:Core/Src/stm32g0xx_it.c **** /* USER CODE END PM */
+  42:Core/Src/stm32g0xx_it.c **** 
+  43:Core/Src/stm32g0xx_it.c **** /* Private variables ---------------------------------------------------------*/
+  44:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN PV */
+  45:Core/Src/stm32g0xx_it.c **** 
+  46:Core/Src/stm32g0xx_it.c **** /* USER CODE END PV */
+  47:Core/Src/stm32g0xx_it.c **** 
+  48:Core/Src/stm32g0xx_it.c **** /* Private function prototypes -----------------------------------------------*/
+  49:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN PFP */
+  50:Core/Src/stm32g0xx_it.c **** 
+  51:Core/Src/stm32g0xx_it.c **** /* USER CODE END PFP */
+  52:Core/Src/stm32g0xx_it.c **** 
+  53:Core/Src/stm32g0xx_it.c **** /* Private user code ---------------------------------------------------------*/
+  54:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN 0 */
+  55:Core/Src/stm32g0xx_it.c **** 
+  56:Core/Src/stm32g0xx_it.c **** /* USER CODE END 0 */
+  57:Core/Src/stm32g0xx_it.c **** 
+  58:Core/Src/stm32g0xx_it.c **** /* External variables --------------------------------------------------------*/
+  59:Core/Src/stm32g0xx_it.c **** 
+  60:Core/Src/stm32g0xx_it.c **** /* USER CODE BEGIN EV */
+  61:Core/Src/stm32g0xx_it.c **** 
+  62:Core/Src/stm32g0xx_it.c **** /* USER CODE END EV */
+  63:Core/Src/stm32g0xx_it.c **** 
+  64:Core/Src/stm32g0xx_it.c **** /******************************************************************************/
+  65:Core/Src/stm32g0xx_it.c **** /*           Cortex-M0+ Processor Interruption and Exception Handlers          */
+  66:Core/Src/stm32g0xx_it.c **** /******************************************************************************/
+  67:Core/Src/stm32g0xx_it.c **** /**
+  68:Core/Src/stm32g0xx_it.c ****   * @brief This function handles Non maskable interrupt.
+  69:Core/Src/stm32g0xx_it.c ****   */
+  70:Core/Src/stm32g0xx_it.c **** void NMI_Handler(void)
+  71:Core/Src/stm32g0xx_it.c **** {
+  33              		.loc 1 71 1
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37 0000 80B5     		push	{r7, lr}
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 00AF     		add	r7, sp, #0
+  42              		.cfi_def_cfa_register 7
+  72:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+  73:Core/Src/stm32g0xx_it.c **** 
+  74:Core/Src/stm32g0xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s 			page 3
+
+
+  75:Core/Src/stm32g0xx_it.c ****   HAL_RCC_NMI_IRQHandler();
+  43              		.loc 1 75 3
+  44 0004 FFF7FEFF 		bl	HAL_RCC_NMI_IRQHandler
+  45              	.L2:
+  76:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+  77:Core/Src/stm32g0xx_it.c ****   while (1)
+  46              		.loc 1 77 9 discriminator 1
+  47 0008 FEE7     		b	.L2
+  48              		.cfi_endproc
+  49              	.LFE355:
+  51              		.section	.text.HardFault_Handler,"ax",%progbits
+  52              		.align	1
+  53              		.global	HardFault_Handler
+  54              		.syntax unified
+  55              		.code	16
+  56              		.thumb_func
+  58              	HardFault_Handler:
+  59              	.LFB356:
+  78:Core/Src/stm32g0xx_it.c ****   {
+  79:Core/Src/stm32g0xx_it.c ****   }
+  80:Core/Src/stm32g0xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
+  81:Core/Src/stm32g0xx_it.c **** }
+  82:Core/Src/stm32g0xx_it.c **** 
+  83:Core/Src/stm32g0xx_it.c **** /**
+  84:Core/Src/stm32g0xx_it.c ****   * @brief This function handles Hard fault interrupt.
+  85:Core/Src/stm32g0xx_it.c ****   */
+  86:Core/Src/stm32g0xx_it.c **** void HardFault_Handler(void)
+  87:Core/Src/stm32g0xx_it.c **** {
+  60              		.loc 1 87 1
+  61              		.cfi_startproc
+  62              		@ args = 0, pretend = 0, frame = 0
+  63              		@ frame_needed = 1, uses_anonymous_args = 0
+  64 0000 80B5     		push	{r7, lr}
+  65              		.cfi_def_cfa_offset 8
+  66              		.cfi_offset 7, -8
+  67              		.cfi_offset 14, -4
+  68 0002 00AF     		add	r7, sp, #0
+  69              		.cfi_def_cfa_register 7
+  70              	.L4:
+  88:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN HardFault_IRQn 0 */
+  89:Core/Src/stm32g0xx_it.c **** 
+  90:Core/Src/stm32g0xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
+  91:Core/Src/stm32g0xx_it.c ****   while (1)
+  71              		.loc 1 91 9 discriminator 1
+  72 0004 FEE7     		b	.L4
+  73              		.cfi_endproc
+  74              	.LFE356:
+  76              		.section	.text.SVC_Handler,"ax",%progbits
+  77              		.align	1
+  78              		.global	SVC_Handler
+  79              		.syntax unified
+  80              		.code	16
+  81              		.thumb_func
+  83              	SVC_Handler:
+  84              	.LFB357:
+  92:Core/Src/stm32g0xx_it.c ****   {
+  93:Core/Src/stm32g0xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s 			page 4
+
+
+  94:Core/Src/stm32g0xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
+  95:Core/Src/stm32g0xx_it.c ****   }
+  96:Core/Src/stm32g0xx_it.c **** }
+  97:Core/Src/stm32g0xx_it.c **** 
+  98:Core/Src/stm32g0xx_it.c **** /**
+  99:Core/Src/stm32g0xx_it.c ****   * @brief This function handles System service call via SWI instruction.
+ 100:Core/Src/stm32g0xx_it.c ****   */
+ 101:Core/Src/stm32g0xx_it.c **** void SVC_Handler(void)
+ 102:Core/Src/stm32g0xx_it.c **** {
+  85              		.loc 1 102 1
+  86              		.cfi_startproc
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 1, uses_anonymous_args = 0
+  89 0000 80B5     		push	{r7, lr}
+  90              		.cfi_def_cfa_offset 8
+  91              		.cfi_offset 7, -8
+  92              		.cfi_offset 14, -4
+  93 0002 00AF     		add	r7, sp, #0
+  94              		.cfi_def_cfa_register 7
+ 103:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN SVC_IRQn 0 */
+ 104:Core/Src/stm32g0xx_it.c **** 
+ 105:Core/Src/stm32g0xx_it.c ****   /* USER CODE END SVC_IRQn 0 */
+ 106:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN SVC_IRQn 1 */
+ 107:Core/Src/stm32g0xx_it.c **** 
+ 108:Core/Src/stm32g0xx_it.c ****   /* USER CODE END SVC_IRQn 1 */
+ 109:Core/Src/stm32g0xx_it.c **** }
+  95              		.loc 1 109 1
+  96 0004 C046     		nop
+  97 0006 BD46     		mov	sp, r7
+  98              		@ sp needed
+  99 0008 80BD     		pop	{r7, pc}
+ 100              		.cfi_endproc
+ 101              	.LFE357:
+ 103              		.section	.text.PendSV_Handler,"ax",%progbits
+ 104              		.align	1
+ 105              		.global	PendSV_Handler
+ 106              		.syntax unified
+ 107              		.code	16
+ 108              		.thumb_func
+ 110              	PendSV_Handler:
+ 111              	.LFB358:
+ 110:Core/Src/stm32g0xx_it.c **** 
+ 111:Core/Src/stm32g0xx_it.c **** /**
+ 112:Core/Src/stm32g0xx_it.c ****   * @brief This function handles Pendable request for system service.
+ 113:Core/Src/stm32g0xx_it.c ****   */
+ 114:Core/Src/stm32g0xx_it.c **** void PendSV_Handler(void)
+ 115:Core/Src/stm32g0xx_it.c **** {
+ 112              		.loc 1 115 1
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 1, uses_anonymous_args = 0
+ 116 0000 80B5     		push	{r7, lr}
+ 117              		.cfi_def_cfa_offset 8
+ 118              		.cfi_offset 7, -8
+ 119              		.cfi_offset 14, -4
+ 120 0002 00AF     		add	r7, sp, #0
+ 121              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s 			page 5
+
+
+ 116:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 0 */
+ 117:Core/Src/stm32g0xx_it.c **** 
+ 118:Core/Src/stm32g0xx_it.c ****   /* USER CODE END PendSV_IRQn 0 */
+ 119:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 1 */
+ 120:Core/Src/stm32g0xx_it.c **** 
+ 121:Core/Src/stm32g0xx_it.c ****   /* USER CODE END PendSV_IRQn 1 */
+ 122:Core/Src/stm32g0xx_it.c **** }
+ 122              		.loc 1 122 1
+ 123 0004 C046     		nop
+ 124 0006 BD46     		mov	sp, r7
+ 125              		@ sp needed
+ 126 0008 80BD     		pop	{r7, pc}
+ 127              		.cfi_endproc
+ 128              	.LFE358:
+ 130              		.section	.text.SysTick_Handler,"ax",%progbits
+ 131              		.align	1
+ 132              		.global	SysTick_Handler
+ 133              		.syntax unified
+ 134              		.code	16
+ 135              		.thumb_func
+ 137              	SysTick_Handler:
+ 138              	.LFB359:
+ 123:Core/Src/stm32g0xx_it.c **** 
+ 124:Core/Src/stm32g0xx_it.c **** /**
+ 125:Core/Src/stm32g0xx_it.c ****   * @brief This function handles System tick timer.
+ 126:Core/Src/stm32g0xx_it.c ****   */
+ 127:Core/Src/stm32g0xx_it.c **** void SysTick_Handler(void)
+ 128:Core/Src/stm32g0xx_it.c **** {
+ 139              		.loc 1 128 1
+ 140              		.cfi_startproc
+ 141              		@ args = 0, pretend = 0, frame = 0
+ 142              		@ frame_needed = 1, uses_anonymous_args = 0
+ 143 0000 80B5     		push	{r7, lr}
+ 144              		.cfi_def_cfa_offset 8
+ 145              		.cfi_offset 7, -8
+ 146              		.cfi_offset 14, -4
+ 147 0002 00AF     		add	r7, sp, #0
+ 148              		.cfi_def_cfa_register 7
+ 129:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 0 */
+ 130:Core/Src/stm32g0xx_it.c **** 
+ 131:Core/Src/stm32g0xx_it.c ****   /* USER CODE END SysTick_IRQn 0 */
+ 132:Core/Src/stm32g0xx_it.c ****   HAL_IncTick();
+ 149              		.loc 1 132 3
+ 150 0004 FFF7FEFF 		bl	HAL_IncTick
+ 133:Core/Src/stm32g0xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 1 */
+ 134:Core/Src/stm32g0xx_it.c **** 
+ 135:Core/Src/stm32g0xx_it.c ****   /* USER CODE END SysTick_IRQn 1 */
+ 136:Core/Src/stm32g0xx_it.c **** }
+ 151              		.loc 1 136 1
+ 152 0008 C046     		nop
+ 153 000a BD46     		mov	sp, r7
+ 154              		@ sp needed
+ 155 000c 80BD     		pop	{r7, pc}
+ 156              		.cfi_endproc
+ 157              	.LFE359:
+ 159              		.text
+ 160              	.Letext0:
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s 			page 6
+
+
+ 161              		.file 2 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\mach
+ 162              		.file 3 "c:\\dev_tools\\stm32_tools\\gnu-tools-for-stm32.12.3\\tools\\arm-none-eabi\\include\\sys\
+ 163              		.file 4 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ARM GAS  C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g0xx_it.c
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:21     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:24     .text.NMI_Handler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:30     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:52     .text.HardFault_Handler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:58     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:77     .text.SVC_Handler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:83     .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:104    .text.PendSV_Handler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:110    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:131    .text.SysTick_Handler:00000000 $t
+C:\Users\SOLDER~1\AppData\Local\Temp\ccmyJDIc.s:137    .text.SysTick_Handler:00000000 SysTick_Handler
+                           .group:00000000 wm4.0.ce2174df78b5e7e201137e53a944683b
+                           .group:00000000 wm4.stm32g0xx_hal_conf.h.22.f3b4c8a17ba50cc89fe005ef37cfde0b
+                           .group:00000000 wm4.stm32g0xx.h.37.5a9f8125e40e7648b060333e40f62f29
+                           .group:00000000 wm4.stm32g0b1xx.h.35.ea3d3123f4f9d957a250bae99e64a76a
+                           .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.cmsis_version.h.32.46e8eccfa2cfeaae11d008bb2823a3ed
+                           .group:00000000 wm4.core_cm0plus.h.66.bb83319bcb10b4c5f12c477f85f2aa51
+                           .group:00000000 wm4.cmsis_gcc.h.26.3852c8780590c9ce1f1416062e7b5c50
+                           .group:00000000 wm4.core_cm0plus.h.127.cfee784d07c850b645554dc8add78e69
+                           .group:00000000 wm4.mpu_armv7.h.32.4049752bb5792d4e15357775e9506cfc
+                           .group:00000000 wm4.stm32g0b1xx.h.746.bfa4ac6173fc12a5660b2663138c43c6
+                           .group:00000000 wm4.stm32g0xx.h.154.7f8452780a6fe1b4b4d5bfbf416cea0c
+                           .group:00000000 wm4.stm32_hal_legacy.h.23.8204ee8757931211f76d0a58e48fbc10
+                           .group:00000000 wm4.stddef.h.39.144cf5ddcd53cbfdac30259dc1a6c87f
+                           .group:00000000 wm4.stm32g0xx_hal_def.h.58.8864c0cbcc9f115e2b60cb5b26c97681
+                           .group:00000000 wm4.stm32g0xx_ll_rcc.h.22.0acb6e234e0c9dd824d5ae94d2255d27
+                           .group:00000000 wm4.stm32g0xx_hal_rcc.h.45.9d8ea209a0c78cb58ebb56490aac86b7
+                           .group:00000000 wm4.stm32g0xx_hal_rcc_ex.h.22.f02f6ee2ad5849c62806285dc2458572
+                           .group:00000000 wm4.stm32g0xx_hal_gpio.h.22.535484a852a6778b843bb3da28cf2e7f
+                           .group:00000000 wm4.stm32g0xx_hal_gpio_ex.h.22.8ed9fb71a71b1ba33986aed3e2e0c038
+                           .group:00000000 wm4.stm32g0xx_ll_dmamux.h.22.ceb8da0f936ad8d3a3cf99bf566a1bbb
+                           .group:00000000 wm4.stm32g0xx_ll_dma.h.79.11feec6a595fdaf000eee790775aeadb
+                           .group:00000000 wm4.stm32g0xx_hal_dma.h.167.6e309bdb62950a8ad7717c0d3c99c2c6
+                           .group:00000000 wm4.stm32g0xx_hal_dma_ex.h.22.2ef8f6de3bb2aff42b1fe2d638a80b81
+                           .group:00000000 wm4.stm32g0xx_hal_dma.h.753.6c10575ede232c7693da11786ea64b19
+                           .group:00000000 wm4.stm32g0xx_hal_cortex.h.22.035255f86bb9c4cf9407b236fae02d7b
+                           .group:00000000 wm4.stm32g0xx_hal_exti.h.22.ba97ede010f68db79b6e6187bf6cf4c3
+                           .group:00000000 wm4.stm32g0xx_hal_flash.h.22.3c137fa2b3cd908314ec67aae8def15d
+                           .group:00000000 wm4.stm32g0xx_hal_flash_ex.h.22.e03d9aac672c3cb3ad09b6ec3b4eab0f
+                           .group:00000000 wm4.stm32g0xx_hal_flash.h.876.72a619cb409e30f9bb8e89b1aac3eb5c
+                           .group:00000000 wm4.stm32g0xx_hal_pwr.h.22.b8edd65e2e3e580a578cbb4ea8c6cc96
+                           .group:00000000 wm4.stm32g0xx_hal_pwr_ex.h.22.cc870e0034fdd0d095f0da86501ff279
+                           .group:00000000 wm4.stm32g0xx_hal.h.67.58bd6a2fda6373a1cf869821501b5f54
+
+UNDEFINED SYMBOLS
+HAL_RCC_NMI_IRQHandler
+HAL_IncTick
